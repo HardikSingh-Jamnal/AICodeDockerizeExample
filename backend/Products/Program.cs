@@ -27,7 +27,7 @@ builder.Services.AddCors(options =>
 // Add Entity Framework
 builder.Services.AddDbContext<ProductsDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection") ??
-                     "Host=localhost;Port=5432;Database=products_db;Username=user;Password=password"));
+                     "Host=products-db;Port=5432;Database=products_db;Username=user;Password=password"));
 
 // Add MediatR
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));

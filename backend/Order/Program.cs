@@ -1,4 +1,5 @@
 using FluentValidation;
+using MassTransit;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Order.Data;
@@ -21,10 +22,32 @@ builder.Services.AddCors(options =>
     });
 });
 
+// Add MassTransit
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("rabbitmq", "/", h =>
+        {
+            h.Username("admin");
+            h.Password("password");
+        });
+
+        cfg.ConfigureEndpoints(context);
+    });
+});
+
+// Add Redis
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("Redis") ?? "order-cache:6379";
+});
+
+
 // Add Entity Framework
 builder.Services.AddDbContext<OrderDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection") ??
-                     "Host=localhost;Port=5433;Database=order_db;Username=user;Password=password"));
+                     "Host=order-db;Port=5432;Database=order_db;Username=user;Password=password"));
 
 // Add MediatR
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));

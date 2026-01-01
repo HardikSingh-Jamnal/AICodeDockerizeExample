@@ -1,4 +1,6 @@
+using Contracts;
 using FluentValidation;
+using MassTransit;
 using MediatR;
 using Order.Data;
 using Order.Entities;
@@ -31,10 +33,12 @@ public class CreateOrderValidator : AbstractValidator<CreateOrderCommand>
 public class CreateOrderHandler : IRequestHandler<CreateOrderCommand, int>
 {
     private readonly OrderDbContext _context;
+    private readonly IPublishEndpoint _publishEndpoint;
 
-    public CreateOrderHandler(OrderDbContext context)
+    public CreateOrderHandler(OrderDbContext context, IPublishEndpoint publishEndpoint)
     {
         _context = context;
+        _publishEndpoint = publishEndpoint;
     }
 
     public async Task<int> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
@@ -58,6 +62,14 @@ public class CreateOrderHandler : IRequestHandler<CreateOrderCommand, int>
         _context.Orders.Add(order);
         await _context.SaveChangesAsync(cancellationToken);
 
+        await _publishEndpoint.Publish(new OrderPlaced
+        {
+            OrderId = Guid.NewGuid(),
+            ProductIds = order.OrderItems.Select(x=> new Guid($"{x.ProductId:D8}-0000-0000-0000-000000000000")).ToArray(),
+            TotalAmount = order.TotalAmount,
+            OrderDate = DateTime.UtcNow
+        }, cancellationToken);
+        
         return order.Id;
     }
 }

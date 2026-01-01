@@ -1,4 +1,6 @@
+using Billing.Consumers;
 using FluentValidation;
+using MassTransit;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Billing.Data;
@@ -22,10 +24,37 @@ builder.Services.AddCors(options =>
     });
 });
 
+// Add MassTransit
+builder.Services.AddMassTransit(x =>
+{
+    x.AddConsumer<OrderPlacedConsumer>();
+
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("rabbitmq", "/", h =>
+        {
+            h.Username("admin");
+            h.Password("password");
+        });
+
+        cfg.ReceiveEndpoint("order-placed", e =>
+        {
+            e.ConfigureConsumer<OrderPlacedConsumer>(context);
+        });
+    });
+});
+
+// Add Redis
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("Redis") ?? "billing-cache:6379";
+});
+
+
 // Add Entity Framework
 builder.Services.AddDbContext<BillingDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection") ??
-                     "Host=localhost;Port=5434;Database=billing_db;Username=user;Password=password"));
+                     "Host=billing-db;Port=5432;Database=billing_db;Username=user;Password=password"));
 
 // Add MediatR
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
