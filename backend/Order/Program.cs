@@ -1,8 +1,25 @@
+using FluentValidation;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Order.Data;
+using Order.Features.GetOrders;
+using Order.Features.CreateOrder;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+// Add Entity Framework
+builder.Services.AddDbContext<OrderDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ??
+                        "Server=localhost;Database=OrderDB;Trusted_Connection=true;TrustServerCertificate=true;"));
+
+// Add MediatR
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
+
+// Add FluentValidation
+builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
 
 var app = builder.Build();
 
@@ -14,28 +31,24 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
+// Order endpoints
+app.MapGet("/orders", async (IMediator mediator) =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
+    return await mediator.Send(new GetOrdersQuery());
 })
-.WithName("GetWeatherForecast");
+.WithName("GetOrders");
+
+app.MapPost("/orders", async (CreateOrderCommand command, IMediator mediator) =>
+{
+    var validator = new CreateOrderValidator();
+    var validationResult = await validator.ValidateAsync(command);
+    
+    if (!validationResult.IsValid)
+        return Results.BadRequest(validationResult.Errors);
+    
+    var id = await mediator.Send(command);
+    return Results.Created($"/orders/{id}", new { Id = id });
+})
+.WithName("CreateOrder");
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

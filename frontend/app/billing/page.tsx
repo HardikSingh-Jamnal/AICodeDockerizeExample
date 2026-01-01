@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function BillingPage() {
   return (
@@ -9,5 +9,5 @@ export default function BillingPage() {
       <h1>Billing Details</h1>
       <p>Billing details will go here</p>
     </div>
-  )
+  );
 }
