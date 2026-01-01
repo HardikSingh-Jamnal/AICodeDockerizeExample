@@ -1,0 +1,127 @@
+version: '3.8'
+
+services:
+  # Backend Services
+  products-api:
+    build:
+      context: ./backend/Products
+      dockerfile: Dockerfile
+    ports:
+      - "5001:80"
+    depends_on:
+      - products-db
+      - products-cache
+      - rabbitmq
+    networks:
+      - backend-network
+
+  order-api:
+    build:
+      context: ./backend/Order
+      dockerfile: Dockerfile
+    ports:
+      - "5002:80"
+    depends_on:
+      - order-db
+      - order-cache
+      - rabbitmq
+    networks:
+      - backend-network
+
+  billing-api:
+    build:
+      context: ./backend/Billing
+      dockerfile: Dockerfile
+    ports:
+      - "5003:80"
+    depends_on:
+      - billing-db
+      - billing-cache
+      - rabbitmq
+    networks:
+      - backend-network
+
+  # Databases
+  products-db:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=products_db
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - products-db-data:/var/lib/postgresql/data
+    networks:
+      - backend-network
+
+  order-db:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=order_db
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - order-db-data:/var/lib/postgresql/data
+    networks:
+      - backend-network
+
+  billing-db:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=billing_db
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - billing-db-data:/var/lib/postgresql/data
+    networks:
+      - backend-network
+
+  # Caches
+  products-cache:
+    image: redis:6.2
+    networks:
+      - backend-network
+
+  order-cache:
+    image: redis:6.2
+    networks:
+      - backend-network
+
+  billing-cache:
+    image: redis:6.2
+    networks:
+      - backend-network
+
+  # Message Broker
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672" # AMQP protocol
+      - "15672:15672" # Management UI
+    networks:
+      - backend-network
+
+  # Frontend Service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - products-api
+      - order-api
+      - billing-api
+    networks:
+      - frontend-network
+      - backend-network
+
+volumes:
+  products-db-data:
+  order-db-data:
+  billing-db-data:
+
+networks:
+  frontend-network:
+    driver: bridge
+  backend-network:
+    driver: bridge
