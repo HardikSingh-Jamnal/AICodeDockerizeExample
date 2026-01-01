@@ -2,9 +2,9 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Products.Data;
 
 #nullable disable
@@ -12,7 +12,7 @@ using Products.Data;
 namespace Products.Migrations
 {
     [DbContext(typeof(ProductsDbContext))]
-    [Migration("20260101054632_InitialCreate")]
+    [Migration("20260101073334_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -21,50 +21,50 @@ namespace Products.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "9.0.0")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+                .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("Products.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Category")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("now() at time zone 'utc'");
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("character varying(500)");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("character varying(200)");
 
                     b.Property<decimal>("Price")
                         .HasPrecision(18, 2)
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("numeric(18,2)");
 
                     b.Property<int>("StockQuantity")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
@@ -75,7 +75,7 @@ namespace Products.Migrations
                         {
                             Id = 1,
                             Category = "Electronics",
-                            CreatedAt = new DateTime(2026, 1, 1, 5, 46, 32, 258, DateTimeKind.Utc).AddTicks(4787),
+                            CreatedAt = new DateTime(2026, 1, 1, 7, 33, 33, 687, DateTimeKind.Utc).AddTicks(5733),
                             Description = "High-performance laptop",
                             IsActive = true,
                             Name = "Laptop",
@@ -86,7 +86,7 @@ namespace Products.Migrations
                         {
                             Id = 2,
                             Category = "Electronics",
-                            CreatedAt = new DateTime(2026, 1, 1, 5, 46, 32, 258, DateTimeKind.Utc).AddTicks(5438),
+                            CreatedAt = new DateTime(2026, 1, 1, 7, 33, 33, 687, DateTimeKind.Utc).AddTicks(6409),
                             Description = "Wireless optical mouse",
                             IsActive = true,
                             Name = "Mouse",
@@ -97,7 +97,7 @@ namespace Products.Migrations
                         {
                             Id = 3,
                             Category = "Electronics",
-                            CreatedAt = new DateTime(2026, 1, 1, 5, 46, 32, 258, DateTimeKind.Utc).AddTicks(5440),
+                            CreatedAt = new DateTime(2026, 1, 1, 7, 33, 33, 687, DateTimeKind.Utc).AddTicks(6411),
                             Description = "Mechanical keyboard",
                             IsActive = true,
                             Name = "Keyboard",

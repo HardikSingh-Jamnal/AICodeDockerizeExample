@@ -9,11 +9,16 @@ RUN npm run build
 # production environment
 FROM node:18-alpine
 WORKDIR /app
-COPY --from=build /app/.next ./.next
+
+# Copy the standalone output and required files
+COPY --from=build /app/.next/standalone ./
+COPY --from=build /app/.next/static ./.next/static
 COPY --from=build /app/public ./public
-COPY --from=build /app/package.json ./package.json
-COPY --from=build /app/node_modules ./node_modules
+
+# Ensure the server listens on all interfaces (0.0.0.0) not just localhost
+ENV HOSTNAME "0.0.0.0"
+ENV PORT 3000
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["node", "server.js"]

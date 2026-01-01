@@ -20,7 +20,7 @@ public class BillingDbContext : DbContext
             entity.HasKey(e => e.Id);
             entity.Property(e => e.Amount).HasPrecision(18, 2);
             entity.Property(e => e.TaxAmount).HasPrecision(18, 2);
-            entity.Property(e => e.BillingDate).HasDefaultValueSql("GETUTCDATE()");
+            entity.Property(e => e.BillingDate).HasDefaultValueSql("now() at time zone 'utc'");
             entity.Property(e => e.Status).HasConversion<int>();
             entity.HasIndex(e => e.OrderId).IsUnique();
         });

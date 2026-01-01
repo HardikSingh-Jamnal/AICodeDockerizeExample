@@ -20,7 +20,7 @@ public class OrderDbContext : DbContext
         {
             entity.HasKey(e => e.Id);
             entity.Property(e => e.TotalAmount).HasPrecision(18, 2);
-            entity.Property(e => e.OrderDate).HasDefaultValueSql("GETUTCDATE()");
+            entity.Property(e => e.OrderDate).HasDefaultValueSql("now() at time zone 'utc'");
             entity.Property(e => e.Status).HasConversion<int>();
             
             entity.HasMany(e => e.OrderItems)
