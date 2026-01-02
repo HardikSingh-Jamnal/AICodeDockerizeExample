@@ -1,7 +1,10 @@
+using System.Text.Json;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Transport.Data;
+using Transport.Entities;
+using Transport.Events;
 
 namespace Transport.Features.UpdateTransport;
 
@@ -86,6 +89,35 @@ public class UpdateTransportHandler : IRequestHandler<UpdateTransportCommand, bo
         transport.ActualCost = request.ActualCost;
         transport.UpdatedAt = DateTime.UtcNow;
 
+        // Create domain event
+        var transportUpdatedEvent = new TransportUpdatedEvent
+        {
+            TransportId = transport.TransportId,
+            CarrierId = transport.CarrierId,
+            PurchaseId = transport.PurchaseId,
+            PickupCity = transport.PickupCity,
+            PickupStateCode = transport.PickupStateCode,
+            DeliveryCity = transport.DeliveryCity,
+            DeliveryStateCode = transport.DeliveryStateCode,
+            ScheduleDate = transport.ScheduleDate,
+            Status = transport.Status,
+            EstimatedCost = transport.EstimatedCost,
+            ActualCost = transport.ActualCost,
+            CreatedAt = transport.CreatedAt,
+            UpdatedAt = transport.UpdatedAt,
+            EventTimestamp = DateTime.UtcNow
+        };
+
+        // Create outbox message for reliable event publishing
+        var outboxMessage = new OutboxMessage
+        {
+            Id = Guid.NewGuid(),
+            EventType = transportUpdatedEvent.EventType,
+            Payload = JsonSerializer.Serialize(transportUpdatedEvent),
+            CreatedAt = DateTime.UtcNow
+        };
+
+        _context.OutboxMessages.Add(outboxMessage);
         await _context.SaveChangesAsync(cancellationToken);
         return true;
     }
