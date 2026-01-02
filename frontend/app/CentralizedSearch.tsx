@@ -123,7 +123,7 @@ export default function CentralizedSearchMock() {
     setLoading(true);
     setError(null);
 
-    const params: any = { query };
+    const params: any = { query, userRole: role };
     if (role === "Seller") params.sellerId = accountId;
     if (role === "Buyer") params.buyerId = accountId;
     if (role === "Carrier") params.carrierId = accountId;
@@ -187,11 +187,11 @@ export default function CentralizedSearchMock() {
     }
     setAutocompleteLoading(true);
     searchService
-      .autocomplete(query)
+      .autocomplete(query, role)
       .then((suggestions) => setAutocompleteSuggestions(suggestions))
       .catch(() => setAutocompleteSuggestions([]))
       .finally(() => setAutocompleteLoading(false));
-  }, [query]);
+  }, [query, role]);
 
   const searchSuggestions = autocompleteSuggestions.map((s) => s.text);
 

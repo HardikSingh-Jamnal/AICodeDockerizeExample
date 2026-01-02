@@ -47,6 +47,7 @@ export interface SearchParams {
   buyerId?: string;
   carrierId?: string;
   query?: string;
+  userRole?: string;
 }
 
 // API Functions
@@ -73,8 +74,11 @@ export const searchApi = {
      * @param query - The search query string
      * @returns Array of autocomplete suggestions
      */
-    autocomplete: async (query: string): Promise<AutocompleteSuggestion[]> => {
-      const url = `${API_BASE_URL}/api/search/autocomplete?q=${encodeURIComponent(query)}`;
+    autocomplete: async (query: string, userRole?: string): Promise<AutocompleteSuggestion[]> => {
+      const queryParams = new URLSearchParams();
+      queryParams.append('q', query);
+      if (userRole) queryParams.append('userRole', userRole);
+      const url = `${API_BASE_URL}/api/search/autocomplete?${queryParams.toString()}`;
       return apiRequest<AutocompleteSuggestion[]>(url);
     },
   /**
@@ -88,6 +92,7 @@ export const searchApi = {
     if (params.buyerId) queryParams.append('buyerId', params.buyerId);
     if (params.carrierId) queryParams.append('carrierId', params.carrierId);
     if (params.query) queryParams.append('q', params.query);
+    if (params.userRole) queryParams.append('userRole', params.userRole);
     const url = `${API_BASE_URL}/api/search?${queryParams.toString()}`;
     return apiRequest<SearchResults>(url);
   },
@@ -100,8 +105,8 @@ export const searchService = {
     /**
      * Get autocomplete suggestions for a query
      */
-    autocomplete: async (query: string): Promise<AutocompleteSuggestion[]> => {
-      return searchApi.autocomplete(query);
+    autocomplete: async (query: string, userRole?: string): Promise<AutocompleteSuggestion[]> => {
+      return searchApi.autocomplete(query, userRole);
     },
   /**
    * Search with accountId and optional query
