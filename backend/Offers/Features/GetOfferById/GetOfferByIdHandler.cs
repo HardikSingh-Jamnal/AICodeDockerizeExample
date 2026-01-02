@@ -16,7 +16,7 @@ public record GetOfferByIdQuery(Guid OfferId) : IRequest<OfferDto?>;
 public record OfferDto
 {
     public Guid OfferId { get; init; }
-    public int SellerId { get; init; }
+    public Guid SellerId { get; init; }
     public string Vin { get; init; } = string.Empty;
     public string Make { get; init; } = string.Empty;
     public string Model { get; init; } = string.Empty;

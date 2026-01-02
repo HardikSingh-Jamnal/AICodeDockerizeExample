@@ -14,7 +14,7 @@ namespace Offers.Features.CreateOffer;
 /// Command to create a new vehicle offer.
 /// </summary>
 public record CreateOfferCommand(
-    int SellerId,
+    Guid SellerId,
     string Vin,
     string Make,
     string Model,
@@ -37,7 +37,7 @@ public class CreateOfferValidator : AbstractValidator<CreateOfferCommand>
     public CreateOfferValidator()
     {
         RuleFor(x => x.SellerId)
-            .GreaterThan(0)
+            .NotNull()
             .WithMessage("Seller ID must be a positive integer");
 
         RuleFor(x => x.Vin)
@@ -121,7 +121,7 @@ public class CreateOfferHandler : IRequestHandler<CreateOfferCommand, CreateOffe
         var exists = await _offerRepository.ExistsAsync(request.SellerId, request.Vin, cancellationToken);
         if (exists)
         {
-            return new CreateOfferResult(0, false, 
+            return new CreateOfferResult(default, false, 
                 $"An offer with VIN {request.Vin} already exists for this seller");
         }
 

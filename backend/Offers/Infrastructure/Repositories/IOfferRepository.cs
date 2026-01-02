@@ -9,9 +9,9 @@ namespace Offers.Infrastructure.Repositories;
 public interface IOfferRepository
 {
     Task<Offer?> GetByIdAsync(Guid offerId, CancellationToken cancellationToken = default);
-    Task<IEnumerable<Offer>> GetAllAsync(int? sellerId = null, OfferStatus? status = null, int page = 1, int pageSize = 20, CancellationToken cancellationToken = default);
-    Task<int> GetTotalCountAsync(int? sellerId = null, OfferStatus? status = null, CancellationToken cancellationToken = default);
-    Task<bool> ExistsAsync(int sellerId, string vin, CancellationToken cancellationToken = default);
+    Task<IEnumerable<Offer>> GetAllAsync(Guid? sellerId = null, OfferStatus? status = null, int page = 1, int pageSize = 20, CancellationToken cancellationToken = default);
+    Task<int> GetTotalCountAsync(Guid? sellerId = null, OfferStatus? status = null, CancellationToken cancellationToken = default);
+    Task<bool> ExistsAsync(Guid sellerId, string vin, CancellationToken cancellationToken = default);
     Task<Offer> AddAsync(Offer offer, CancellationToken cancellationToken = default);
     Task UpdateAsync(Offer offer, CancellationToken cancellationToken = default);
 }
