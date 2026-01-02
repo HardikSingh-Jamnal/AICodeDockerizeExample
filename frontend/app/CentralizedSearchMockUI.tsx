@@ -1,5 +1,13 @@
-import React, { useState } from "react";
-import { Search, Package, ShoppingCart, Truck, User, Filter } from "lucide-react";
+import React, { useState, useRef, useEffect } from "react";
+import { Search, Package, ShoppingCart, Truck, User, ChevronDown, ChevronUp, X } from "lucide-react";
+
+// Mock account ids for each role
+const accountIdsByRole: Record<string, string[]> = {
+  Seller: ["seller-001", "seller-002", "seller-003", "seller-xyz"],
+  Buyer: ["buyer-001", "buyer-002", "buyer-abc", "buyer-xyz"],
+  Carrier: ["carrier-001", "carrier-002", "carrier-xyz"],
+  Agent: ["agent-001", "agent-002", "agent-xyz"],
+};
 
 interface Offer {
   id: string;
@@ -44,6 +52,12 @@ export default function CentralizedSearchMock() {
   const [query, setQuery] = useState("");
   const [role, setRole] = useState("Agent");
   const [activeTab, setActiveTab] = useState("all");
+  const [accountInput, setAccountInput] = useState("");
+  const [selectedAccount, setSelectedAccount] = useState<string | null>(null);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [highlightedIndex, setHighlightedIndex] = useState(-1);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const filteredResults = {
     offers: mockResults.offers.filter((o: Offer) =>
@@ -73,6 +87,114 @@ export default function CentralizedSearchMock() {
 
   const showSection = (section: string) => activeTab === "all" || activeTab === section;
 
+  // Filter account ids based on input
+  const filteredAccounts = accountIdsByRole[role].filter((id) =>
+    id.toLowerCase().includes(accountInput.toLowerCase())
+  );
+
+  // Handle account selection
+  const handleAccountSelect = (id: string) => {
+    setSelectedAccount(id);
+    setAccountInput(id);
+    setShowDropdown(false);
+    setHighlightedIndex(-1);
+  };
+
+  // Clear selection
+  const handleClear = () => {
+    setAccountInput("");
+    setSelectedAccount(null);
+    setShowDropdown(false);
+    setHighlightedIndex(-1);
+    inputRef.current?.focus();
+  };
+
+  // Reset account input when role changes
+  useEffect(() => {
+    setAccountInput("");
+    setSelectedAccount(null);
+    setShowDropdown(false);
+    setHighlightedIndex(-1);
+  }, [role]);
+
+  // Handle keyboard navigation
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (!showDropdown || filteredAccounts.length === 0) {
+      if (e.key === "ArrowDown") {
+        setShowDropdown(true);
+        setHighlightedIndex(0);
+      }
+      return;
+    }
+
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        setHighlightedIndex((prev) =>
+          prev < filteredAccounts.length - 1 ? prev + 1 : prev
+        );
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        setHighlightedIndex((prev) => (prev > 0 ? prev - 1 : 0));
+        break;
+      case "Enter":
+        e.preventDefault();
+        if (highlightedIndex >= 0 && highlightedIndex < filteredAccounts.length) {
+          handleAccountSelect(filteredAccounts[highlightedIndex]);
+        }
+        break;
+      case "Escape":
+        e.preventDefault();
+        setShowDropdown(false);
+        setHighlightedIndex(-1);
+        break;
+    }
+  };
+
+  // Scroll highlighted item into view
+  useEffect(() => {
+    if (highlightedIndex >= 0 && dropdownRef.current) {
+      const items = dropdownRef.current.querySelectorAll("li");
+      items[highlightedIndex]?.scrollIntoView({ block: "nearest" });
+    }
+  }, [highlightedIndex]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        inputRef.current &&
+        !inputRef.current.contains(e.target as Node) &&
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
+      ) {
+        setShowDropdown(false);
+        setHighlightedIndex(-1);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // Highlight matching text
+  const highlightMatch = (text: string, query: string) => {
+    if (!query) return text;
+    const index = text.toLowerCase().indexOf(query.toLowerCase());
+    if (index === -1) return text;
+
+    return (
+      <>
+        {text.substring(0, index)}
+        <span className="bg-yellow-200 font-semibold">
+          {text.substring(index, index + query.length)}
+        </span>
+        {text.substring(index + query.length)}
+      </>
+    );
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Header */}
@@ -80,34 +202,118 @@ export default function CentralizedSearchMock() {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h1 className="text-3xl font-bold text-slate-900">Search Hub</h1>
-              <p className="text-slate-600 mt-1">Find offers, purchases, and transports</p>
-            </div>
-
-            <div className="flex items-center gap-3 bg-slate-100 px-4 py-2 rounded-full">
-              <User className="w-5 h-5 text-slate-600" />
-              <select
-                className="bg-transparent border-none outline-none font-medium text-slate-900 cursor-pointer"
-                value={role}
-                onChange={(e) => setRole(e.target.value)}
-              >
-                <option>Seller</option>
-                <option>Buyer</option>
-                <option>Carrier</option>
-                <option>Agent</option>
-              </select>
+              <h1 className="text-3xl font-bold text-slate-900">AI Challenge</h1>
             </div>
           </div>
 
-          {/* Search Bar */}
-          <div className="relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-            <input
-              className="w-full pl-12 pr-4 py-4 rounded-xl bg-slate-50 border-2 border-slate-200 focus:border-blue-500 focus:bg-white transition-all outline-none text-slate-900 placeholder-slate-400"
-              placeholder="Search by VIN, vehicle, buyer, or ID..."
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-            />
+          {/* Account Type, Account Id dropdowns and Search Bar */}
+          <div className="relative mb-6">
+            <div className="flex items-center gap-4">
+              {/* Account Type Dropdown with nested Account Id */}
+              <div className="flex items-center gap-3 bg-slate-100 px-4 py-2 rounded-lg">
+                <User className="w-5 h-5 text-slate-600" />
+                <select
+                  className="bg-transparent border-none outline-none font-medium text-slate-900 cursor-pointer"
+                  value={role}
+                  onChange={(e) => setRole(e.target.value)}
+                >
+                  <option>Seller</option>
+                  <option>Buyer</option>
+                  <option>Carrier</option>
+                  <option>Agent</option>
+                </select>
+
+                {/* Vertical divider */}
+                <div className="w-px h-6 bg-slate-300"></div>
+
+                {/* Account Id Typeahead */}
+                <div className="relative">
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    className="px-3 py-1.5 pr-16 rounded-md border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none w-48 transition-all bg-white"
+                    placeholder="Account ID"
+                    value={accountInput}
+                    onChange={(e) => {
+                      setAccountInput(e.target.value);
+                      setSelectedAccount(null);
+                      setShowDropdown(true);
+                      setHighlightedIndex(-1);
+                    }}
+                    onFocus={() => setShowDropdown(true)}
+                    onKeyDown={handleKeyDown}
+                    autoComplete="off"
+                  />
+                  <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
+                    {selectedAccount && (
+                      <button
+                        type="button"
+                        className="p-1 rounded hover:bg-slate-200 transition-colors"
+                        onClick={handleClear}
+                        tabIndex={-1}
+                        aria-label="Clear account id"
+                      >
+                        <X className="w-4 h-4 text-slate-500" />
+                      </button>
+                    )}
+                    <button
+                      type="button"
+                      className="p-1 rounded hover:bg-slate-200 transition-colors"
+                      onClick={() => setShowDropdown(!showDropdown)}
+                      tabIndex={-1}
+                      aria-label={showDropdown ? "Close account id dropdown" : "Open account id dropdown"}
+                    >
+                      {showDropdown ? (
+                        <ChevronUp className="w-4 h-4 text-slate-600" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4 text-slate-600" />
+                      )}
+                    </button>
+                  </div>
+                  
+                  {showDropdown && (
+                    <div
+                      ref={dropdownRef}
+                      className="absolute z-20 left-0 w-full mt-2 bg-white border border-slate-200 rounded-lg shadow-lg max-h-60 overflow-auto"
+                    >
+                      {filteredAccounts.length > 0 ? (
+                        <ul>
+                          {filteredAccounts.map((id, index) => (
+                            <li
+                              key={id}
+                              className={`px-4 py-2.5 cursor-pointer transition-colors ${
+                                index === highlightedIndex
+                                  ? "bg-blue-100 text-blue-900"
+                                  : "hover:bg-slate-50"
+                              } ${selectedAccount === id ? "font-semibold text-blue-600" : ""}`}
+                              onMouseDown={() => handleAccountSelect(id)}
+                              onMouseEnter={() => setHighlightedIndex(index)}
+                            >
+                              {highlightMatch(id, accountInput)}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <div className="px-4 py-3 text-sm text-slate-500 text-center">
+                          No accounts found
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Search Bar */}
+              <div className="relative flex-1">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                <input
+                  className="w-full pl-12 pr-4 py-2.5 rounded-lg bg-slate-50 border-2 border-slate-200 focus:border-blue-500 focus:bg-white transition-all outline-none text-slate-900 placeholder-slate-400"
+                  placeholder="Search by VIN, vehicle, buyer, or ID..."
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -123,10 +329,11 @@ export default function CentralizedSearchMock() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 px-6 py-4 font-medium transition-all border-b-2 whitespace-nowrap ${isActive
-                    ? "text-blue-600 border-blue-600"
-                    : "text-slate-600 border-transparent hover:text-slate-900 hover:bg-slate-50"
-                    }`}
+                  className={`flex items-center gap-2 px-6 py-4 font-medium transition-all border-b-2 whitespace-nowrap ${
+                    isActive
+                      ? "text-blue-600 border-blue-600"
+                      : "text-slate-600 border-transparent hover:text-slate-900 hover:bg-slate-50"
+                  }`}
                 >
                   <Icon className="w-4 h-4" />
                   {tab.label}
@@ -157,13 +364,11 @@ export default function CentralizedSearchMock() {
                       </span>
                     </div>
                     <div className="text-sm text-slate-600 space-y-1">
+                      <div>Offer ID: <span className="font-mono text-slate-900">{o.id}</span></div>
                       <div>VIN: <span className="font-mono text-slate-900">{o.vin}</span></div>
                       <div>Owner: <span className="font-medium text-slate-900">{o.owner}</span></div>
                     </div>
                   </div>
-                  <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm">
-                    View Details
-                  </button>
                 </div>
               )}
             />
@@ -178,11 +383,14 @@ export default function CentralizedSearchMock() {
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <span className="text-lg font-bold text-slate-900">Purchase {p.id}</span>
-                      <span className={`px-2 py-1 text-xs font-semibold rounded-full ${p.status === "Completed"
-                        ? "bg-emerald-100 text-emerald-700"
-                        : "bg-amber-100 text-amber-700"
-                        }`}>
+                      <span className="text-lg font-bold text-slate-900">{p.id}</span>
+                      <span
+                        className={`px-2 py-1 text-xs font-semibold rounded-full ${
+                          p.status === "Completed"
+                            ? "bg-emerald-100 text-emerald-700"
+                            : "bg-amber-100 text-amber-700"
+                        }`}
+                      >
                         {p.status}
                       </span>
                     </div>
@@ -191,9 +399,6 @@ export default function CentralizedSearchMock() {
                       <div>Buyer: <span className="font-medium text-slate-900">{p.buyer}</span></div>
                     </div>
                   </div>
-                  <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm">
-                    View Details
-                  </button>
                 </div>
               )}
             />
@@ -208,11 +413,14 @@ export default function CentralizedSearchMock() {
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <span className="text-lg font-bold text-slate-900">Transport {t.id}</span>
-                      <span className={`px-2 py-1 text-xs font-semibold rounded-full ${t.status === "Delivered"
-                        ? "bg-emerald-100 text-emerald-700"
-                        : "bg-blue-100 text-blue-700"
-                        }`}>
+                      <span className="text-lg font-bold text-slate-900">{t.id}</span>
+                      <span
+                        className={`px-2 py-1 text-xs font-semibold rounded-full ${
+                          t.status === "Delivered"
+                            ? "bg-emerald-100 text-emerald-700"
+                            : "bg-blue-100 text-blue-700"
+                        }`}
+                      >
                         {t.status}
                       </span>
                     </div>
@@ -221,9 +429,6 @@ export default function CentralizedSearchMock() {
                       <div>Carrier: <span className="font-medium text-slate-900">{t.carrier}</span></div>
                     </div>
                   </div>
-                  <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm">
-                    Track
-                  </button>
                 </div>
               )}
             />
@@ -246,7 +451,12 @@ export default function CentralizedSearchMock() {
   );
 }
 
-function Section<T>({ title, icon: Icon, items, render }: {
+function Section<T>({
+  title,
+  icon: Icon,
+  items,
+  render,
+}: {
   title: string;
   icon: React.ComponentType<{ className?: string }>;
   items: T[];
