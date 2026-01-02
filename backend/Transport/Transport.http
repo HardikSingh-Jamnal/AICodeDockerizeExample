@@ -1,0 +1,61 @@
+@TransportApi_HostAddress = http://localhost:5004
+
+### Get all transports
+GET {{TransportApi_HostAddress}}/transports
+
+### Get transport by ID
+GET {{TransportApi_HostAddress}}/transports/1
+
+### Create new transport
+POST {{TransportApi_HostAddress}}/transports
+Content-Type: application/json
+
+{
+  "carrierId": 201,
+  "purchaseId": 2001,
+  "pickupStreet": "999 Logistics Ave, Central Warehouse",
+  "pickupCity": "Miami",
+  "pickupStateCode": "FL",
+  "pickupCountry": "USA",
+  "pickupZipCode": "33101",
+  "deliveryStreet": "777 Commerce Dr, Distribution Center East",
+  "deliveryCity": "Atlanta",
+  "deliveryStateCode": "GA",
+  "deliveryCountry": "USA",
+  "deliveryZipCode": "30301",
+  "scheduleDate": "2026-01-05T10:00:00Z",
+  "status": "Pending",
+  "notes": "Priority delivery - customer requested expedited shipping",
+  "estimatedCost": 275.50
+}
+
+### Update transport
+PUT {{TransportApi_HostAddress}}/transports/1
+Content-Type: application/json
+
+{
+  "transportId": 1,
+  "carrierId": 101,
+  "purchaseId": 1001,
+  "pickupStreet": "123 Main St, Updated Warehouse A",
+  "pickupCity": "New York",
+  "pickupStateCode": "NY",
+  "pickupCountry": "USA",
+  "pickupZipCode": "10001",
+  "deliveryStreet": "456 Oak Ave, Updated Customer Location",
+  "deliveryCity": "Los Angeles",
+  "deliveryStateCode": "CA",
+  "deliveryCountry": "USA",
+  "deliveryZipCode": "90001",
+  "scheduleDate": "2026-01-03T14:00:00Z",
+  "status": "InTransit",
+  "notes": "Updated: Package is now in transit",
+  "estimatedCost": 160.00,
+  "actualCost": 155.75
+}
+
+### Delete transport
+DELETE {{TransportApi_HostAddress}}/transports/3
+
+### Health Check
+GET {{TransportApi_HostAddress}}/health
