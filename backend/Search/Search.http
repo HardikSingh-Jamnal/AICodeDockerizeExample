@@ -1,0 +1,97 @@
+@SearchApi_HostAddress = http://localhost:5007
+
+### Health Check
+GET {{SearchApi_HostAddress}}/health
+Accept: application/json
+
+###
+
+### Unified Search - All entities
+GET {{SearchApi_HostAddress}}/api/search?q=toyota
+Accept: application/json
+
+###
+
+### Unified Search - With pagination
+GET {{SearchApi_HostAddress}}/api/search?q=&page=1&pageSize=10
+Accept: application/json
+
+###
+
+### Unified Search - Filter by entity type (Offer)
+GET {{SearchApi_HostAddress}}/api/search?q=toyota&entityType=Offer
+Accept: application/json
+
+###
+
+### Unified Search - With role-based access (Seller)
+GET {{SearchApi_HostAddress}}/api/search?q=&userId=123e4567-e89b-12d3-a456-426614174000&userRole=seller
+Accept: application/json
+
+###
+
+### Unified Search - With role-based access (Buyer)
+GET {{SearchApi_HostAddress}}/api/search?q=toyota&userId=123&userRole=buyer
+Accept: application/json
+
+###
+
+### Unified Search - With role-based access (Agent - sees all)
+GET {{SearchApi_HostAddress}}/api/search?q=&userRole=agent
+Accept: application/json
+
+###
+
+### Autocomplete - Partial VIN
+GET {{SearchApi_HostAddress}}/api/search/autocomplete?q=1HG
+Accept: application/json
+
+###
+
+### Autocomplete - Vehicle make
+GET {{SearchApi_HostAddress}}/api/search/autocomplete?q=toy
+Accept: application/json
+
+###
+
+### Search Offers only
+GET {{SearchApi_HostAddress}}/api/search/offers?q=camry
+Accept: application/json
+
+###
+
+### Search Purchases only
+GET {{SearchApi_HostAddress}}/api/search/purchases?q=&userId=1&userRole=buyer
+Accept: application/json
+
+###
+
+### Search Transports only
+GET {{SearchApi_HostAddress}}/api/search/transports?q=los angeles
+Accept: application/json
+
+###
+
+### Trigger Reindex (Admin)
+POST {{SearchApi_HostAddress}}/api/search/reindex
+Accept: application/json
+
+###
+
+### Fuzzy Search - Test typo tolerance
+GET {{SearchApi_HostAddress}}/api/search?q=toyoat
+Accept: application/json
+
+###
+
+### Search by VIN
+GET {{SearchApi_HostAddress}}/api/search?q=1HGBH41JXMN109186
+Accept: application/json
+
+###
+
+### Search by City
+GET {{SearchApi_HostAddress}}/api/search?q=los angeles
+Accept: application/json
+
+###

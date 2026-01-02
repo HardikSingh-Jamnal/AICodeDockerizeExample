@@ -33,11 +33,13 @@ public class PurchasesDbContext : DbContext
             entity.Property(e => e.Payload).IsRequired();
             entity.Property(e => e.CreatedAt).HasDefaultValueSql("now() at time zone 'utc'");
             entity.Property(e => e.RetryCount).HasDefaultValue(0);
+            entity.Property(e => e.ProcessedAt)
+                .HasColumnName("processed_at");
 
             // Index for efficient polling of unprocessed messages
             entity.HasIndex(e => e.CreatedAt)
                 .HasDatabaseName("idx_outbox_unprocessed")
-                .HasFilter("processed_at IS NULL");
+                .HasFilter("\"processed_at\" IS NULL");
         });
 
         // Seed data

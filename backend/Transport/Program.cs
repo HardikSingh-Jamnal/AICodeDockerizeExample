@@ -42,7 +42,7 @@ builder.Services.AddCors(options =>
 // Add Entity Framework
 builder.Services.AddDbContext<TransportDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection") ??
-                     "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=Mtech1"));
+                     "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=guest"));
 
 // Add MediatR  
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));

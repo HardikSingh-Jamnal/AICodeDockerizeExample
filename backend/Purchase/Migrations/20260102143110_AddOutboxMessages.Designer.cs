@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Purchase.Data;
@@ -11,9 +12,11 @@ using Purchase.Data;
 namespace Purchase.Migrations
 {
     [DbContext(typeof(PurchasesDbContext))]
-    partial class PurchasesDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260102143110_AddOutboxMessages")]
+    partial class AddOutboxMessages
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

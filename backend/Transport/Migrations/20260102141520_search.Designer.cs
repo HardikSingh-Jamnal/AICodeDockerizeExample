@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Transport.Data;
@@ -11,9 +12,11 @@ using Transport.Data;
 namespace Transport.Migrations
 {
     [DbContext(typeof(TransportDbContext))]
-    partial class TransportDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260102141520_search")]
+    partial class search
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,8 +50,7 @@ namespace Transport.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime?>("ProcessedAt")
-                        .HasColumnType("timestamp with time zone")
-                        .HasColumnName("processed_at");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("RetryCount")
                         .ValueGeneratedOnAdd()
@@ -59,7 +61,7 @@ namespace Transport.Migrations
 
                     b.HasIndex("CreatedAt")
                         .HasDatabaseName("idx_outbox_unprocessed")
-                        .HasFilter("\"processed_at\" IS NULL");
+                        .HasFilter("processed_at IS NULL");
 
                     b.ToTable("outbox_messages", (string)null);
                 });
@@ -178,7 +180,7 @@ namespace Transport.Migrations
                         {
                             TransportId = 1,
                             CarrierId = 101,
-                            CreatedAt = new DateTime(2026, 1, 2, 14, 22, 23, 731, DateTimeKind.Utc).AddTicks(9033),
+                            CreatedAt = new DateTime(2026, 1, 2, 14, 15, 20, 169, DateTimeKind.Utc).AddTicks(6659),
                             DeliveryCity = "Los Angeles",
                             DeliveryCountry = "USA",
                             DeliveryStateCode = "CA",
@@ -192,7 +194,7 @@ namespace Transport.Migrations
                             PickupStreet = "123 Main St, Warehouse A",
                             PickupZipCode = "10001",
                             PurchaseId = 1001,
-                            ScheduleDate = new DateTime(2026, 1, 3, 14, 22, 23, 731, DateTimeKind.Utc).AddTicks(9037),
+                            ScheduleDate = new DateTime(2026, 1, 3, 14, 15, 20, 169, DateTimeKind.Utc).AddTicks(6663),
                             Status = "Pending"
                         },
                         new
@@ -200,7 +202,7 @@ namespace Transport.Migrations
                             TransportId = 2,
                             ActualCost = 215.75m,
                             CarrierId = 102,
-                            CreatedAt = new DateTime(2026, 1, 2, 14, 22, 23, 731, DateTimeKind.Utc).AddTicks(9046),
+                            CreatedAt = new DateTime(2026, 1, 2, 14, 15, 20, 169, DateTimeKind.Utc).AddTicks(6671),
                             DeliveryCity = "Houston",
                             DeliveryCountry = "USA",
                             DeliveryStateCode = "TX",
@@ -214,7 +216,7 @@ namespace Transport.Migrations
                             PickupStreet = "789 Industrial Blvd, Distribution Center B",
                             PickupZipCode = "60601",
                             PurchaseId = 1002,
-                            ScheduleDate = new DateTime(2026, 1, 4, 14, 22, 23, 731, DateTimeKind.Utc).AddTicks(9048),
+                            ScheduleDate = new DateTime(2026, 1, 4, 14, 15, 20, 169, DateTimeKind.Utc).AddTicks(6673),
                             Status = "InTransit"
                         },
                         new
@@ -222,7 +224,7 @@ namespace Transport.Migrations
                             TransportId = 3,
                             ActualCost = 175.25m,
                             CarrierId = 103,
-                            CreatedAt = new DateTime(2026, 1, 2, 14, 22, 23, 731, DateTimeKind.Utc).AddTicks(9051),
+                            CreatedAt = new DateTime(2026, 1, 2, 14, 15, 20, 169, DateTimeKind.Utc).AddTicks(6675),
                             DeliveryCity = "Seattle",
                             DeliveryCountry = "USA",
                             DeliveryStateCode = "WA",
@@ -236,7 +238,7 @@ namespace Transport.Migrations
                             PickupStreet = "555 Factory Rd, Manufacturing Plant",
                             PickupZipCode = "48201",
                             PurchaseId = 1003,
-                            ScheduleDate = new DateTime(2026, 1, 1, 14, 22, 23, 731, DateTimeKind.Utc).AddTicks(9053),
+                            ScheduleDate = new DateTime(2026, 1, 1, 14, 15, 20, 169, DateTimeKind.Utc).AddTicks(6677),
                             Status = "Delivered"
                         });
                 });

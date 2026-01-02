@@ -22,8 +22,8 @@ public class RabbitMqPublisher : IMessagePublisher, IDisposable
         var factory = new ConnectionFactory
         {
             HostName = configuration["MessageBroker:Host"] ?? "localhost",
-            UserName = configuration["MessageBroker:Username"] ?? "admin",
-            Password = configuration["MessageBroker:Password"] ?? "password",
+            UserName = configuration["MessageBroker:Username"] ?? "guest",
+            Password = configuration["MessageBroker:Password"] ?? "guest",
             Port = int.Parse(configuration["MessageBroker:Port"] ?? "5672"),
             AutomaticRecoveryEnabled = true,
             NetworkRecoveryInterval = TimeSpan.FromSeconds(10)
