@@ -283,38 +283,38 @@ export default function CentralizedSearchMock() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Header */}
       <div className="bg-white border-b border-slate-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-6">
-          <div className="flex items-center justify-between mb-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
+          <div className="flex items-center justify-between mb-4 sm:mb-6">
             <div>
-              <h1 className="text-3xl font-bold text-slate-900">AI Challenge</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">AI Challenge</h1>
             </div>
           </div>
 
-          {/* Account Type, Account Id dropdowns and Search Bar */}
-          <div className="relative mb-6">
-            <div className="flex items-center gap-4">
-              {/* Account Type Dropdown with nested Account Id */}
-              <div className="flex items-center gap-3 bg-slate-100 px-4 py-2 rounded-lg">
-                <User className="w-5 h-5 text-slate-600" />
-                <select
-                  className="bg-transparent border-none outline-none font-medium text-slate-900 cursor-pointer"
-                  value={role}
-                  onChange={(e) => setRole(e.target.value)}
-                >
-                  <option>Seller</option>
-                  <option>Buyer</option>
-                  <option>Carrier</option>
-                  <option>Agent</option>
-                </select>
-
-                {/* Vertical divider */}
-                <div className="w-px h-6 bg-slate-300"></div>
+          {/* Account Type, Account Id and Search Bar - Responsive Layout */}
+          <div className="relative mb-4 sm:mb-6">
+            <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-4">
+              {/* Account Type and Account Id - Row on mobile, inline on desktop */}
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-0 sm:items-stretch">
+                {/* Account Type Dropdown */}
+                <div className="flex items-center gap-2 sm:gap-3 bg-slate-100 px-3 sm:px-4 h-11 rounded-lg sm:rounded-r-none border-2 border-transparent">
+                  <User className="w-5 h-5 text-slate-600 flex-shrink-0" />
+                  <select
+                    className="bg-transparent border-none outline-none font-medium text-slate-900 cursor-pointer text-sm sm:text-base flex-1 min-w-0"
+                    value={role}
+                    onChange={(e) => setRole(e.target.value)}
+                  >
+                    <option>Seller</option>
+                    <option>Buyer</option>
+                    <option>Carrier</option>
+                    <option>Agent</option>
+                  </select>
+                </div>
 
                 {/* Account Id Text Input */}
-                <div className="relative">
+                <div className="relative flex-1 sm:flex-initial">
                   <input
                     type="text"
-                    className="px-3 py-1.5 pr-8 rounded-md border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none w-48 transition-all bg-white"
+                    className="w-full sm:w-48 px-3 pr-8 h-11 rounded-lg sm:rounded-l-none sm:rounded-r-lg border-2 border-slate-200 sm:border-l-0 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-white text-sm sm:text-base"
                     placeholder="Account ID"
                     value={accountId}
                     onChange={(e) => setAccountId(e.target.value)}
@@ -336,11 +336,11 @@ export default function CentralizedSearchMock() {
 
               {/* Search Bar */}
               <div className="relative flex-1">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 z-10" />
+                <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 z-10" />
                 <input
                   ref={searchInputRef}
-                  className="w-full pl-12 pr-4 py-2.5 rounded-lg bg-slate-50 border-2 border-slate-200 focus:border-blue-500 focus:bg-white transition-all outline-none text-slate-900 placeholder-slate-400"
-                  placeholder="Search by VIN, vehicle, buyer, or ID... (typo tolerant)"
+                  className="w-full pl-10 sm:pl-12 pr-4 h-11 rounded-lg bg-slate-50 border-2 border-slate-200 focus:border-blue-500 focus:bg-white transition-all outline-none text-slate-900 placeholder-slate-400 text-sm sm:text-base"
+                  placeholder="Search by VIN, vehicle, buyer, or ID..."
                   value={query}
                   onChange={(e) => {
                     setQuery(e.target.value);
@@ -366,7 +366,7 @@ export default function CentralizedSearchMock() {
                       {searchSuggestions.map((suggestion, index) => (
                         <li
                           key={suggestion}
-                          className={`px-4 py-2.5 cursor-pointer transition-colors ${
+                          className={`px-4 py-2.5 cursor-pointer transition-colors text-sm sm:text-base ${
                             index === searchHighlightedIndex
                               ? "bg-blue-100 text-blue-900"
                               : "hover:bg-slate-50"
@@ -388,8 +388,8 @@ export default function CentralizedSearchMock() {
 
       {/* Tabs */}
       <div className="bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex gap-1 overflow-x-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex gap-1 overflow-x-auto scrollbar-hide -mx-4 sm:mx-0 px-4 sm:px-0">
             {tabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = activeTab === tab.id;
@@ -397,14 +397,15 @@ export default function CentralizedSearchMock() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 px-6 py-4 font-medium transition-all border-b-2 whitespace-nowrap ${
+                  className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium transition-all border-b-2 whitespace-nowrap ${
                     isActive
                       ? "text-blue-600 border-blue-600"
                       : "text-slate-600 border-transparent hover:text-slate-900 hover:bg-slate-50"
                   }`}
                 >
-                  <Icon className="w-4 h-4" />
-                  {tab.label}
+                  <Icon className="w-4 h-4 flex-shrink-0" />
+                  <span className="hidden sm:inline">{tab.label}</span>
+                  <span className="sm:hidden">{tab.id === "all" ? "All" : tab.label.split(" ")[0]}</span>
                 </button>
               );
             })}
@@ -413,7 +414,7 @@ export default function CentralizedSearchMock() {
       </div>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-6 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
         <div className="space-y-8">
           {showSection("offers") && (
             <Section
@@ -421,19 +422,19 @@ export default function CentralizedSearchMock() {
               icon={Package}
               items={filteredResults.offers}
               render={(o: Offer) => (
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-lg font-bold text-slate-900">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
+                      <span className="text-base sm:text-lg font-bold text-slate-900">
                         {o.year} {o.make} {o.model}
                       </span>
                       <span className="px-2 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">
                         {o.price}
                       </span>
                     </div>
-                    <div className="text-sm text-slate-600 space-y-1">
+                    <div className="text-xs sm:text-sm text-slate-600 space-y-1">
                       <div>Offer ID: <span className="font-mono text-slate-900">{o.id}</span></div>
-                      <div>VIN: <span className="font-mono text-slate-900">{o.vin}</span></div>
+                      <div className="break-all">VIN: <span className="font-mono text-slate-900">{o.vin}</span></div>
                       <div>Owner: <span className="font-medium text-slate-900">{o.owner}</span></div>
                     </div>
                   </div>
@@ -448,10 +449,10 @@ export default function CentralizedSearchMock() {
               icon={ShoppingCart}
               items={filteredResults.purchases}
               render={(p: Purchase) => (
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-lg font-bold text-slate-900">{p.id}</span>
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
+                      <span className="text-base sm:text-lg font-bold text-slate-900">{p.id}</span>
                       <span
                         className={`px-2 py-1 text-xs font-semibold rounded-full ${
                           p.status === "Completed"
@@ -462,7 +463,7 @@ export default function CentralizedSearchMock() {
                         {p.status}
                       </span>
                     </div>
-                    <div className="text-sm text-slate-600 space-y-1">
+                    <div className="text-xs sm:text-sm text-slate-600 space-y-1">
                       <div>Offer ID: <span className="font-mono text-slate-900">{p.offerId}</span></div>
                       <div>Buyer: <span className="font-medium text-slate-900">{p.buyer}</span></div>
                     </div>
@@ -478,10 +479,10 @@ export default function CentralizedSearchMock() {
               icon={Truck}
               items={filteredResults.transports}
               render={(t: Transport) => (
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-lg font-bold text-slate-900">{t.id}</span>
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
+                      <span className="text-base sm:text-lg font-bold text-slate-900">{t.id}</span>
                       <span
                         className={`px-2 py-1 text-xs font-semibold rounded-full ${
                           t.status === "Delivered"
@@ -492,7 +493,7 @@ export default function CentralizedSearchMock() {
                         {t.status}
                       </span>
                     </div>
-                    <div className="text-sm text-slate-600 space-y-1">
+                    <div className="text-xs sm:text-sm text-slate-600 space-y-1">
                       <div>Vehicle: <span className="font-medium text-slate-900">{t.vehicle}</span></div>
                       <div>Carrier: <span className="font-medium text-slate-900">{t.carrier}</span></div>
                     </div>
@@ -505,12 +506,12 @@ export default function CentralizedSearchMock() {
           {filteredResults.offers.length === 0 &&
             filteredResults.purchases.length === 0 &&
             filteredResults.transports.length === 0 && (
-              <div className="text-center py-16">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-4">
-                  <Search className="w-8 h-8 text-slate-400" />
+              <div className="text-center py-12 sm:py-16 px-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-slate-100 rounded-full mb-4">
+                  <Search className="w-6 h-6 sm:w-8 sm:h-8 text-slate-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-2">No results found</h3>
-                <p className="text-slate-600">Try adjusting your search terms</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">No results found</h3>
+                <p className="text-sm sm:text-base text-slate-600">Try adjusting your search terms</p>
               </div>
             )}
         </div>
@@ -534,18 +535,18 @@ function Section<T>({
 
   return (
     <div>
-      <div className="flex items-center gap-2 mb-4">
-        <Icon className="w-5 h-5 text-slate-600" />
-        <h2 className="text-xl font-bold text-slate-900">{title}</h2>
+      <div className="flex items-center gap-2 mb-3 sm:mb-4">
+        <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-600" />
+        <h2 className="text-lg sm:text-xl font-bold text-slate-900">{title}</h2>
         <span className="px-2 py-0.5 bg-slate-200 text-slate-700 text-xs font-semibold rounded-full">
           {items.length}
         </span>
       </div>
-      <div className="grid gap-4">
+      <div className="grid gap-3 sm:gap-4">
         {items.map((item, idx) => (
           <div
             key={idx}
-            className="p-6 rounded-xl bg-white border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all"
+            className="p-4 sm:p-6 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all"
           >
             {render(item)}
           </div>
