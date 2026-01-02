@@ -10,6 +10,7 @@ public class PurchasesDbContext : DbContext
     }
 
     public DbSet<Entities.Purchase> Purchases { get; set; }
+    public DbSet<OutboxMessage> OutboxMessages { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -20,6 +21,23 @@ public class PurchasesDbContext : DbContext
             entity.HasKey(e => e.Id);
             entity.Property(e => e.Amount).HasPrecision(18, 2);
             entity.Property(e => e.CreatedAt).HasDefaultValueSql("now() at time zone 'utc'");
+        });
+
+        // Configure OutboxMessage entity
+        modelBuilder.Entity<OutboxMessage>(entity =>
+        {
+            entity.ToTable("outbox_messages");
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Id).HasDefaultValueSql("gen_random_uuid()");
+            entity.Property(e => e.EventType).HasMaxLength(100).IsRequired();
+            entity.Property(e => e.Payload).IsRequired();
+            entity.Property(e => e.CreatedAt).HasDefaultValueSql("now() at time zone 'utc'");
+            entity.Property(e => e.RetryCount).HasDefaultValue(0);
+
+            // Index for efficient polling of unprocessed messages
+            entity.HasIndex(e => e.CreatedAt)
+                .HasDatabaseName("idx_outbox_unprocessed")
+                .HasFilter("processed_at IS NULL");
         });
 
         // Seed data

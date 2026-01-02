@@ -1,4 +1,7 @@
+using System.Text.Json;
 using MediatR;
+using Offers.Domain.Entities;
+using Offers.Domain.Events;
 using Offers.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +20,7 @@ public record CancelOfferResult(bool Success, string? ErrorMessage = null);
 /// <summary>
 /// Handler for cancelling an offer.
 /// Enforces business rule that only Active or Pending offers can be cancelled.
+/// Publishes OfferCancelled event via transactional outbox.
 /// </summary>
 public class CancelOfferHandler : IRequestHandler<CancelOfferCommand, CancelOfferResult>
 {
@@ -37,6 +41,8 @@ public class CancelOfferHandler : IRequestHandler<CancelOfferCommand, CancelOffe
             return new CancelOfferResult(false, "Offer not found");
         }
 
+        var previousStatus = offer.Status.ToString();
+
         if (!offer.CanBeCancelled())
         {
             return new CancelOfferResult(false, 
@@ -51,6 +57,28 @@ public class CancelOfferHandler : IRequestHandler<CancelOfferCommand, CancelOffe
             return new CancelOfferResult(false, "Failed to cancel offer");
         }
 
+        // Create domain event
+        var offerCancelledEvent = new OfferCancelledEvent
+        {
+            OfferId = offer.OfferId,
+            SellerId = offer.SellerId,
+            Vin = offer.Vin,
+            PreviousStatus = previousStatus,
+            NewStatus = offer.Status.ToString(),
+            CancelledAt = offer.UpdatedAt ?? DateTime.UtcNow,
+            EventTimestamp = DateTime.UtcNow
+        };
+
+        // Create outbox message for reliable event publishing
+        var outboxMessage = new OutboxMessage
+        {
+            Id = Guid.NewGuid(),
+            EventType = offerCancelledEvent.EventType,
+            Payload = JsonSerializer.Serialize(offerCancelledEvent),
+            CreatedAt = DateTime.UtcNow
+        };
+
+        _context.OutboxMessages.Add(outboxMessage);
         await _context.SaveChangesAsync(cancellationToken);
 
         return new CancelOfferResult(true);
