@@ -1,6 +1,7 @@
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using Transport.Data;
 using Transport.Features.GetTransports;
 using Transport.Features.GetTransportById;
@@ -11,7 +12,20 @@ using Transport.Features.DeleteTransport;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Transport API",
+        Version = "v1",
+        Description = "Production-grade Transport Service for transport management",
+        Contact = new OpenApiContact
+        {
+            Name = "Transport Service Team"
+        }
+    });
+});
 
 // Add CORS
 builder.Services.AddCors(options =>
@@ -47,11 +61,13 @@ if (app.Environment.IsDevelopment())
     }
 }
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// Configure the HTTP request pipeline
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.MapOpenApi();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Transport API V1");
+    c.RoutePrefix = string.Empty;
+});
 
 app.UseCors("AllowFrontend");
 
@@ -75,10 +91,10 @@ app.MapPost("/transports", async (CreateTransportCommand command, IMediator medi
 {
     var validator = new CreateTransportValidator();
     var validationResult = await validator.ValidateAsync(command);
-    
+
     if (!validationResult.IsValid)
         return Results.BadRequest(validationResult.Errors);
-    
+
     var id = await mediator.Send(command);
     return Results.Created($"/transports/{id}", new { TransportId = id });
 })
@@ -89,13 +105,13 @@ app.MapPut("/transports/{id:int}", async (int id, UpdateTransportCommand command
 {
     if (id != command.TransportId)
         return Results.BadRequest("ID mismatch");
-        
+
     var validator = new UpdateTransportValidator();
     var validationResult = await validator.ValidateAsync(command);
-    
+
     if (!validationResult.IsValid)
         return Results.BadRequest(validationResult.Errors);
-    
+
     var result = await mediator.Send(command);
     return result ? Results.NoContent() : Results.NotFound();
 })

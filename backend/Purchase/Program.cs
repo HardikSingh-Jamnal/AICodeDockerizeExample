@@ -1,6 +1,7 @@
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using Purchase.Data;
 using Purchase.Features.GetPurchases;
 using Purchase.Features.GetPurchaseById;
@@ -12,6 +13,19 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Purchase API",
+        Version = "v1",
+        Description = "Production-grade Purchase Service for purchase management",
+        Contact = new OpenApiContact
+        {
+            Name = "Purchase Service Team"
+        }
+    });
+});
 
 // Add CORS
 builder.Services.AddCors(options =>
@@ -47,6 +61,14 @@ if (app.Environment.IsDevelopment())
     }
 }
 
+// Configure the HTTP request pipeline
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Purchase API V1");
+    c.RoutePrefix = string.Empty;
+});
+
 app.UseCors("AllowFrontend");
 
 // Purchases endpoints
@@ -54,14 +76,16 @@ app.MapGet("/purchases", async (IMediator mediator) =>
 {
     return await mediator.Send(new GetPurchasesQuery());
 })
-.WithName("GetPurchases");
+.WithName("GetPurchases")
+.WithOpenApi();
 
 app.MapGet("/purchases/{id:int}", async (int id, IMediator mediator) =>
 {
     var result = await mediator.Send(new GetPurchaseByIdQuery(id));
     return result != null ? Results.Ok(result) : Results.NotFound();
 })
-.WithName("GetPurchaseById");
+.WithName("GetPurchaseById")
+.WithOpenApi();
 
 app.MapPost("/purchases", async (CreatePurchaseCommand command, IMediator mediator) =>
 {
@@ -74,7 +98,8 @@ app.MapPost("/purchases", async (CreatePurchaseCommand command, IMediator mediat
     var id = await mediator.Send(command);
     return Results.Created($"/purchases/{id}", new { Id = id });
 })
-.WithName("CreatePurchase");
+.WithName("CreatePurchase")
+.WithOpenApi();
 
 app.MapPut("/purchases/{id:int}", async (int id, UpdatePurchaseCommand command, IMediator mediator) =>
 {
@@ -90,13 +115,15 @@ app.MapPut("/purchases/{id:int}", async (int id, UpdatePurchaseCommand command, 
     var result = await mediator.Send(commandWithId);
     return result ? Results.NoContent() : Results.NotFound();
 })
-.WithName("UpdatePurchase");
+.WithName("UpdatePurchase")
+.WithOpenApi();
 
 app.MapDelete("/purchases/{id:int}", async (int id, IMediator mediator) =>
 {
     var result = await mediator.Send(new DeletePurchaseCommand(id));
     return result ? Results.NoContent() : Results.NotFound();
 })
-.WithName("DeletePurchase");
+.WithName("DeletePurchase")
+.WithOpenApi();
 
 app.Run();
