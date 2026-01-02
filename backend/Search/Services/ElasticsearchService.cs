@@ -197,52 +197,81 @@ public class ElasticsearchService : IElasticsearchService
     {
         var from = (request.Page - 1) * request.PageSize;
 
-        var searchDescriptor = new SearchDescriptor<object>()
-            .Index(_indexName)
-            .From(from)
-            .Size(request.PageSize)
-            .Query(q => BuildQuery(q, request))
-            .Highlight(h => h
-                .Fields(
-                    f => f.Field("searchableText"),
-                    f => f.Field("vin"),
-                    f => f.Field("make"),
-                    f => f.Field("model"),
-                    f => f.Field("city"),
-                    f => f.Field("pickupCity"),
-                    f => f.Field("deliveryCity")
-                )
-                .PreTags("<em>")
-                .PostTags("</em>")
-            )
-            .Sort(s => s
-                .Descending(SortSpecialField.Score)
-                .Descending("createdAt")
-            );
-
-        var response = await _client.SearchAsync<object>(searchDescriptor);
-
-        if (!response.IsValid)
+        // Use low-level client to avoid NEST's type serialization issues
+        var searchRequest = new
         {
-            _logger.LogError("Search failed: {Error}", response.DebugInformation);
+            from,
+            size = request.PageSize,
+            query = BuildQueryObject(request),
+            highlight = new
+            {
+                pre_tags = new[] { "<em>" },
+                post_tags = new[] { "</em>" },
+                fields = new
+                {
+                    searchableText = new { },
+                    vin = new { },
+                    make = new { },
+                    model = new { },
+                    city = new { },
+                    pickupCity = new { },
+                    deliveryCity = new { }
+                }
+            },
+            sort = new object[]
+            {
+                new { _score = new { order = "desc" } },
+                new { createdAt = new { order = "desc" } }
+            }
+        };
+
+        var json = Newtonsoft.Json.JsonConvert.SerializeObject(searchRequest);
+        var response = await _client.LowLevel.SearchAsync<Elasticsearch.Net.StringResponse>(
+            _indexName,
+            json
+        );
+
+        if (!response.Success)
+        {
+            _logger.LogError("Search failed: {Error}", response.OriginalException?.Message ?? "Unknown error");
             return new SearchResponse { Results = new List<SearchResult>(), TotalCount = 0, Page = request.Page, PageSize = request.PageSize };
         }
 
+        var responseObject = Newtonsoft.Json.JsonConvert.DeserializeObject<Newtonsoft.Json.Linq.JObject>(response.Body);
+        var hits = responseObject?["hits"]?["hits"] as Newtonsoft.Json.Linq.JArray ?? new Newtonsoft.Json.Linq.JArray();
+        var total = responseObject?["hits"]?["total"]?["value"]?.Value<long>() ?? 0;
+
         var results = new List<SearchResult>();
-        foreach (var hit in response.Hits)
+        foreach (var hit in hits)
         {
-            if (hit.Source is Newtonsoft.Json.Linq.JObject jObject)
+            var source = hit["_source"] as Newtonsoft.Json.Linq.JObject;
+            if (source != null)
             {
-                var entityType = jObject["entityType"]?.ToString() ?? "Unknown";
-                var id = jObject["id"]?.ToString() ?? "";
-                
+                var entityType = source["entityType"]?.ToString() ?? "Unknown";
+                var id = source["id"]?.ToString() ?? "";
+                var score = hit["_score"]?.Value<double>() ?? 0;
+
+                var highlights = new Dictionary<string, List<string>>();
+                var highlightObj = hit["highlight"] as Newtonsoft.Json.Linq.JObject;
+                if (highlightObj != null)
+                {
+                    foreach (var prop in highlightObj.Properties())
+                    {
+                        var values = prop.Value as Newtonsoft.Json.Linq.JArray;
+                        if (values != null)
+                        {
+                            highlights[prop.Name] = values.Select(v => v.ToString()).ToList();
+                        }
+                    }
+                }
+
                 results.Add(new SearchResult
                 {
                     EntityType = entityType,
                     EntityId = id,
-                    Score = hit.Score ?? 0,
-                    Data = ConvertJObjectToBaseDocument(jObject),
-                    Highlights = hit.Highlight?.ToDictionary(h => h.Key, h => h.Value.ToList()) ?? new Dictionary<string, List<string>>()
+                    Score = score,
+                    Data = ConvertJObjectToBaseDocument(source),
+                    Highlights = highlights
                 });
             }
         }
@@ -250,7 +279,7 @@ public class ElasticsearchService : IElasticsearchService
         return new SearchResponse
         {
             Results = results,
-            TotalCount = response.Total,
+            TotalCount = total,
             Page = request.Page,
             PageSize = request.PageSize
         };
@@ -293,96 +322,56 @@ public class ElasticsearchService : IElasticsearchService
         }
     }
 
-    public async Task<List<string>> AutocompleteAsync(string query, string? userType, int? accountId)
+    private object BuildQueryObject(SearchRequest request)
     {
-        var response = await _client.SearchAsync<object>(s => s
-            .Index(_indexName)
-            .Size(10)
-            .Query(q => q
-                .MultiMatch(mm => mm
-                    .Query(query)
-                    .Fields(f => f
-                        .Field("searchableText")
-                        .Field("vin")
-                        .Field("make")
-                        .Field("model")
-                        .Field("city")
-                        .Field("pickupCity")
-                        .Field("deliveryCity")
-                    )
-                    .Type(TextQueryType.BoolPrefix)
-                    .Fuzziness(Fuzziness.Auto)
-                )
-            )
-            .Source(src => src.Includes(i => i.Field("searchableText")))
-        );
-
-        if (!response.IsValid)
-        {
-            _logger.LogError("Autocomplete failed: {Error}", response.DebugInformation);
-            return new List<string>();
-        }
-
-        var results = new List<string>();
-        foreach (var hit in response.Hits)
-        {
-            if (hit.Source is Newtonsoft.Json.Linq.JObject jObject)
-            {
-                var searchableText = jObject["searchableText"]?.ToString();
-                if (!string.IsNullOrEmpty(searchableText))
-                {
-                    results.Add(searchableText);
-                }
-            }
-        }
-
-        return results.Distinct().Take(10).ToList();
-    }
-
-    private QueryContainer BuildQuery(QueryContainerDescriptor<object> q, SearchRequest request)
-    {
-        var mustQueries = new List<Func<QueryContainerDescriptor<object>, QueryContainer>>();
+        var mustClauses = new List<object>();
+        var filterClauses = new List<object>();
 
         // Text search with fuzziness for typo tolerance
         if (!string.IsNullOrWhiteSpace(request.Query))
         {
-            mustQueries.Add(mq => mq
-                .MultiMatch(mm => mm
-                    .Query(request.Query)
-                    .Fields(f => f
-                        .Field("searchableText", 1.0)
-                        .Field("vin", 3.0)
-                        .Field("make", 2.0)
-                        .Field("model", 2.0)
-                        .Field("city", 1.5)
-                        .Field("pickupCity", 1.5)
-                        .Field("deliveryCity", 1.5)
-                    )
-                    .Type(TextQueryType.BestFields)
-                    .Fuzziness(Fuzziness.Auto)
-                    .Operator(Operator.Or)
-                )
-            );
+            mustClauses.Add(new
+            {
+                multi_match = new
+                {
+                    query = request.Query,
+                    fields = new[] { "searchableText", "vin^3", "make^2", "model^2", "city^1.5", "pickupCity^1.5", "deliveryCity^1.5" },
+                    type = "best_fields",
+                    fuzziness = "AUTO",
+                    @operator = "or"
+                }
+            });
         }
 
         // Entity type filter
         if (!string.IsNullOrWhiteSpace(request.EntityType))
         {
-            mustQueries.Add(mq => mq.Term(t => t.Field("entityType").Value(request.EntityType)));
+            mustClauses.Add(new
+            {
+                term = new Dictionary<string, object>
+                {
+                    ["entityType"] = request.EntityType
+                }
+            });
         }
 
         // Role-based access control filters
-        var filterQueries = BuildRoleBasedFilters(request);
+        var roleFilters = BuildRoleBasedFilterObjects(request);
+        filterClauses.AddRange(roleFilters);
 
-        return q.Bool(b => b
-            .Must(mustQueries.ToArray())
-            .Filter(filterQueries.ToArray())
-        );
+        return new
+        {
+            @bool = new
+            {
+                must = mustClauses.Count > 0 ? mustClauses : null,
+                filter = filterClauses.Count > 0 ? filterClauses : null
+            }
+        };
     }
 
-    private List<Func<QueryContainerDescriptor<object>, QueryContainer>> BuildRoleBasedFilters(SearchRequest request)
+    private List<object> BuildRoleBasedFilterObjects(SearchRequest request)
     {
-        var filters = new List<Func<QueryContainerDescriptor<object>, QueryContainer>>();
+        var filters = new List<object>();
 
         switch (request.UserType?.ToLower())
         {
@@ -390,12 +379,17 @@ public class ElasticsearchService : IElasticsearchService
                 // Sellers can only see their own offers
                 if (request.AccountGuid.HasValue)
                 {
-                    filters.Add(f => f.Bool(b => b
-                        .Must(
-                            m => m.Term(t => t.Field("entityType").Value("Offer")),
-                            m => m.Term(t => t.Field("sellerId").Value(request.AccountGuid.Value.ToString()))
-                        )
-                    ));
+                    filters.Add(new
+                    {
+                        @bool = new
+                        {
+                            must = new object[]
+                            {
+                                new { term = new Dictionary<string, object> { ["entityType"] = "Offer" } },
+                                new { term = new Dictionary<string, object> { ["sellerId"] = request.AccountGuid.Value.ToString() } }
+                            }
+                        }
+                    });
                 }
                 break;
 
@@ -403,19 +397,38 @@ public class ElasticsearchService : IElasticsearchService
                 // Buyers can see active offers OR their own purchases
                 if (request.AccountId.HasValue)
                 {
-                    filters.Add(f => f.Bool(b => b
-                        .Should(
-                            s => s.Bool(bb => bb.Must(
-                                m => m.Term(t => t.Field("entityType").Value("Offer")),
-                                m => m.Term(t => t.Field("status").Value("Active"))
-                            )),
-                            s => s.Bool(bb => bb.Must(
-                                m => m.Term(t => t.Field("entityType").Value("Purchase")),
-                                m => m.Term(t => t.Field("buyerId").Value(request.AccountId.Value))
-                            ))
-                        )
-                        .MinimumShouldMatch(1)
-                    ));
+                    filters.Add(new
+                    {
+                        @bool = new
+                        {
+                            should = new object[]
+                            {
+                                new
+                                {
+                                    @bool = new
+                                    {
+                                        must = new object[]
+                                        {
+                                            new { term = new Dictionary<string, object> { ["entityType"] = "Offer" } },
+                                            new { term = new Dictionary<string, object> { ["status"] = "Active" } }
+                                        }
+                                    }
+                                },
+                                new
+                                {
+                                    @bool = new
+                                    {
+                                        must = new object[]
+                                        {
+                                            new { term = new Dictionary<string, object> { ["entityType"] = "Purchase" } },
+                                            new { term = new Dictionary<string, object> { ["buyerId"] = request.AccountId.Value } }
+                                        }
+                                    }
+                                }
+                            },
+                            minimum_should_match = 1
+                        }
+                    });
                 }
                 break;
 
@@ -423,12 +436,17 @@ public class ElasticsearchService : IElasticsearchService
                 // Carriers can see their transport assignments
                 if (request.AccountId.HasValue)
                 {
-                    filters.Add(f => f.Bool(b => b
-                        .Must(
-                            m => m.Term(t => t.Field("entityType").Value("Transport")),
-                            m => m.Term(t => t.Field("carrierId").Value(request.AccountId.Value))
-                        )
-                    ));
+                    filters.Add(new
+                    {
+                        @bool = new
+                        {
+                            must = new object[]
+                            {
+                                new { term = new Dictionary<string, object> { ["entityType"] = "Transport" } },
+                                new { term = new Dictionary<string, object> { ["carrierId"] = request.AccountId.Value } }
+                            }
+                        }
+                    });
                 }
                 break;
 
@@ -438,10 +456,61 @@ public class ElasticsearchService : IElasticsearchService
 
             default:
                 // Unknown user type - return nothing
-                filters.Add(f => f.Term(t => t.Field("entityType").Value("__none__")));
+                filters.Add(new { term = new Dictionary<string, object> { ["entityType"] = "__none__" } });
                 break;
         }
 
         return filters;
+    }
+
+    public async Task<List<string>> AutocompleteAsync(string query, string? userType, int? accountId)
+    {
+        // Use low-level client to avoid NEST's type serialization issues
+        var searchRequest = new
+        {
+            size = 10,
+            query = new
+            {
+                multi_match = new
+                {
+                    query,
+                    fields = new[] { "searchableText", "vin", "make", "model", "city", "pickupCity", "deliveryCity" },
+                    type = "bool_prefix",
+                    fuzziness = "AUTO"
+                }
+            },
+            _source = new[] { "searchableText" }
+        };
+
+        var json = Newtonsoft.Json.JsonConvert.SerializeObject(searchRequest);
+        var response = await _client.LowLevel.SearchAsync<Elasticsearch.Net.StringResponse>(
+            _indexName,
+            json
+        );
+
+        if (!response.Success)
+        {
+            _logger.LogError("Autocomplete failed: {Error}", response.OriginalException?.Message ?? "Unknown error");
+            return new List<string>();
+        }
+
+        var responseObject = Newtonsoft.Json.JsonConvert.DeserializeObject<Newtonsoft.Json.Linq.JObject>(response.Body);
+        var hits = responseObject?["hits"]?["hits"] as Newtonsoft.Json.Linq.JArray ?? new Newtonsoft.Json.Linq.JArray();
+
+        var results = new List<string>();
+        foreach (var hit in hits)
+        {
+            var source = hit["_source"] as Newtonsoft.Json.Linq.JObject;
+            if (source != null)
+            {
+                var searchableText = source["searchableText"]?.ToString();
+                if (!string.IsNullOrEmpty(searchableText))
+                {
+                    results.Add(searchableText);
+                }
+            }
+        }
+
+        return results.Distinct().Take(10).ToList();
     }
 }

@@ -1,4 +1,7 @@
 using Nest;
+using Nest.JsonNetSerializer;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Search.Infrastructure;
 using Search.Services;
 using Microsoft.OpenApi.Models;
@@ -33,10 +36,13 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Configure Elasticsearch
+// Configure Elasticsearch with JsonNetSerializer for proper polymorphic deserialization
 var elasticsearchUri = builder.Configuration["Elasticsearch:Uri"] ?? "http://localhost:9200";
-var settings = new ConnectionSettings(new Uri(elasticsearchUri))
-    .DefaultIndex(builder.Configuration["Elasticsearch:IndexName"] ?? "search_entities")
+var indexName = builder.Configuration["Elasticsearch:IndexName"] ?? "search_entities";
+
+var pool = new Elasticsearch.Net.SingleNodeConnectionPool(new Uri(elasticsearchUri));
+var settings = new ConnectionSettings(pool, JsonNetSerializer.Default)
+    .DefaultIndex(indexName)
     .EnableDebugMode()
     .PrettyJson()
     .RequestTimeout(TimeSpan.FromMinutes(2));
