@@ -71,6 +71,10 @@ services:
       timeout: 10s
       retries: 3
 
+  purchase-api:
+    build:
+      context: ./backend
+      dockerfile: ./Purchase/Dockerfile
   transport-api:
     build:
       context: ./backend/Transport
@@ -79,6 +83,38 @@ services:
       - "5004:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=purchase-db;Database=purchase_db;Username=user;Password=password
+      - ConnectionStrings__Redis=purchase-cache
+      - MessageBroker__Host=rabbitmq
+    depends_on:
+      - purchase-db
+      - purchase-cache
+      - rabbitmq
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  offers-api:
+    build:
+      context: ./backend
+      dockerfile: ./Offers/Dockerfile
+    ports:
+      - "5005:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=offers-db;Database=offers_db;Username=user;Password=password
+      - ConnectionStrings__Redis=offers-cache
+      - MessageBroker__Host=rabbitmq
+      - MessageBroker__Port=5672
+      - MessageBroker__Username=admin
+      - MessageBroker__Password=password
+    depends_on:
+      - offers-db
+      - offers-cache
       - ConnectionStrings__DefaultConnection=Host=transport-db;Database=transport_db;Username=user;Password=password
       - ConnectionStrings__Redis=transport-cache
       - MessageBroker__Host=rabbitmq
@@ -152,6 +188,40 @@ services:
       timeout: 10s
       retries: 3
 
+  purchase-db:
+    image: postgres:13
+    container_name: purchase-db
+    ports:
+      - "5435:5432"
+    environment:
+      - POSTGRES_DB=purchase_db
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - purchase-db-data:/var/lib/postgresql/data
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d purchase_db"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  offers-db:
+    image: postgres:13
+    container_name: offers-db
+    ports:
+      - "5436:5432"
+    environment:
+      - POSTGRES_DB=offers_db
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - offers-db-data:/var/lib/postgresql/data
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d offers_db"]
   transport-db:
     image: postgres:13
     container_name: transport-db
@@ -208,10 +278,23 @@ services:
       timeout: 10s
       retries: 3
 
+  purchase-cache:
   transport-cache:
     image: redis:6.2
     ports:
       - "6382:6379"
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  offers-cache:
+    image: redis:6.2
+    ports:
+      - "6383:6379"
     networks:
       - backend-network
     healthcheck:
@@ -273,6 +356,8 @@ volumes:
   products-db-data:
   order-db-data:
   billing-db-data:
+  purchase-db-data:
+  offers-db-data:
   transport-db-data:
 
 networks:
