@@ -2,85 +2,12 @@ version: "3.8"
 
 services:
   # Backend Services
-  products-api:
-    build:
-      context: ./backend/Products
-      dockerfile: Dockerfile
-    ports:
-      - "5001:8080"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Host=products-db;Database=products_db;Username=user;Password=password
-      - ConnectionStrings__Redis=products-cache
-      - MessageBroker__Host=rabbitmq
-    depends_on:
-      - products-db
-      - products-cache
-      - rabbitmq
-    networks:
-      - backend-network
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
-  order-api:
-    build:
-      context: ./backend
-      dockerfile: ./Order/Dockerfile
-    ports:
-      - "5002:8080"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Host=order-db;Database=order_db;Username=user;Password=password
-      - ConnectionStrings__Redis=order-cache
-      - MessageBroker__Host=rabbitmq
-    depends_on:
-      - order-db
-      - order-cache
-      - rabbitmq
-    networks:
-      - backend-network
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
-  billing-api:
-    build:
-      context: ./backend
-      dockerfile: ./Billing/Dockerfile
-    ports:
-      - "5003:8080"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Host=billing-db;Database=billing_db;Username=user;Password=password
-      - ConnectionStrings__Redis=billing-cache
-      - MessageBroker__Host=rabbitmq
-    depends_on:
-      - billing-db
-      - billing-cache
-      - rabbitmq
-    networks:
-      - backend-network
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
   purchase-api:
     build:
       context: ./backend
       dockerfile: ./Purchase/Dockerfile
-  transport-api:
-    build:
-      context: ./backend/Transport
-      dockerfile: Dockerfile
     ports:
-      - "5004:8080"
+      - "5006:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=Host=purchase-db;Database=purchase_db;Username=user;Password=password
@@ -89,6 +16,29 @@ services:
     depends_on:
       - purchase-db
       - purchase-cache
+      - rabbitmq
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  transport-api:
+    build:
+      context: ./backend/Transport
+      dockerfile: Dockerfile
+    ports:
+      - "5004:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=transport-db;Database=transport_db;Username=user;Password=password
+      - ConnectionStrings__Redis=transport-cache
+      - MessageBroker__Host=rabbitmq
+    depends_on:
+      - transport-db
+      - transport-cache
       - rabbitmq
     networks:
       - backend-network
@@ -115,12 +65,6 @@ services:
     depends_on:
       - offers-db
       - offers-cache
-      - ConnectionStrings__DefaultConnection=Host=transport-db;Database=transport_db;Username=user;Password=password
-      - ConnectionStrings__Redis=transport-cache
-      - MessageBroker__Host=rabbitmq
-    depends_on:
-      - transport-db
-      - transport-cache
       - rabbitmq
     networks:
       - backend-network
@@ -131,63 +75,6 @@ services:
       retries: 3
 
   # Databases
-  products-db:
-    image: postgres:13
-    container_name: products-db
-    ports:
-      - "5432:5432"
-    environment:
-      - POSTGRES_DB=products_db
-      - POSTGRES_USER=user
-      - POSTGRES_PASSWORD=password
-    volumes:
-      - products-db-data:/var/lib/postgresql/data
-    networks:
-      - backend-network
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U user -d products_db"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
-  order-db:
-    image: postgres:13
-    container_name: order-db
-    ports:
-      - "5433:5432"
-    environment:
-      - POSTGRES_DB=order_db
-      - POSTGRES_USER=user
-      - POSTGRES_PASSWORD=password
-    volumes:
-      - order-db-data:/var/lib/postgresql/data
-    networks:
-      - backend-network
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U user -d order_db"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
-  billing-db:
-    image: postgres:13
-    container_name: billing-db
-    ports:
-      - "5434:5432"
-    environment:
-      - POSTGRES_DB=billing_db
-      - POSTGRES_USER=user
-      - POSTGRES_PASSWORD=password
-    volumes:
-      - billing-db-data:/var/lib/postgresql/data
-    networks:
-      - backend-network
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U user -d billing_db"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
   purchase-db:
     image: postgres:13
     container_name: purchase-db
@@ -222,11 +109,15 @@ services:
       - backend-network
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U user -d offers_db"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
   transport-db:
     image: postgres:13
     container_name: transport-db
     ports:
-      - "5435:5432"
+      - "5437:5432"
     environment:
       - POSTGRES_DB=transport_db
       - POSTGRES_USER=user
@@ -242,43 +133,18 @@ services:
       retries: 3
 
   # Caches
-  products-cache:
-    image: redis:6.2
-    ports:
-      - "6379:6379"
-    networks:
-      - backend-network
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
-  order-cache:
-    image: redis:6.2
-    ports:
-      - "6380:6379"
-    networks:
-      - backend-network
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
-  billing-cache:
-    image: redis:6.2
-    ports:
-      - "6381:6379"
-    networks:
-      - backend-network
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
   purchase-cache:
+    image: redis:6.2
+    ports:
+      - "6384:6379"
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
   transport-cache:
     image: redis:6.2
     ports:
@@ -320,48 +186,11 @@ services:
       timeout: 10s
       retries: 3
 
-  # Frontend Service
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-    environment:
-      - NEXT_PUBLIC_PRODUCTS_API=http://localhost:5001
-      - NEXT_PUBLIC_ORDERS_API=http://localhost:5002
-      - NEXT_PUBLIC_BILLING_API=http://localhost:5003
-      - NEXT_PUBLIC_TRANSPORT_API=http://localhost:5004
-    depends_on:
-      - products-api
-      - order-api
-      - billing-api
-      - transport-api
-    networks:
-      - frontend-network
-      - backend-network
-    healthcheck:
-      test:
-        [
-          "CMD",
-          "node",
-          "-e",
-          "require('http').get('http://localhost:3000', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) }).on('error', () => { process.exit(1) })",
-        ]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
 volumes:
-  products-db-data:
-  order-db-data:
-  billing-db-data:
   purchase-db-data:
   offers-db-data:
   transport-db-data:
 
 networks:
-  frontend-network:
-    driver: bridge
   backend-network:
     driver: bridge
