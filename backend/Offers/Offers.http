@@ -1,0 +1,158 @@
+@OffersApi_HostAddress = http://localhost:5005
+
+### Health Check
+GET {{OffersApi_HostAddress}}/health
+
+### Create Offer
+POST {{OffersApi_HostAddress}}/api/offers
+Content-Type: application/json
+
+{
+  "sellerId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "vin": "1HGBH41JXMN109186",
+  "make": "Honda",
+  "model": "Accord",
+  "year": 2022,
+  "offerAmount": 28500.00,
+  "location": {
+    "city": "San Francisco",
+    "state": "CA",
+    "zipCode": "94102",
+    "country": "USA"
+  },
+  "condition": {
+    "mileage": 15000,
+    "exterior": "Excellent",
+    "interior": "Good",
+    "mechanical": "Excellent"
+  }
+}
+
+### Create Another Offer
+POST {{OffersApi_HostAddress}}/api/offers
+Content-Type: application/json
+
+{
+  "sellerId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "vin": "2HGBH41JXMN109187",
+  "make": "Toyota",
+  "model": "Camry",
+  "year": 2021,
+  "offerAmount": 24000.00,
+  "location": {
+    "city": "Los Angeles",
+    "state": "CA",
+    "zipCode": "90001",
+    "country": "USA"
+  },
+  "condition": {
+    "mileage": 25000,
+    "exterior": "Good",
+    "interior": "Good",
+    "mechanical": "Excellent"
+  }
+}
+
+### Get All Offers
+GET {{OffersApi_HostAddress}}/api/offers?page=1&pageSize=10
+
+### Get Offers by Seller
+GET {{OffersApi_HostAddress}}/api/offers?sellerId=a1b2c3d4-e5f6-7890-abcd-ef1234567890&page=1&pageSize=10
+
+### Get Offers by Status
+GET {{OffersApi_HostAddress}}/api/offers?status=Active&page=1&pageSize=10
+
+### Get Offer by ID (replace with actual ID)
+GET {{OffersApi_HostAddress}}/api/offers/{{offerId}}
+
+### Update Offer (replace with actual ID)
+PUT {{OffersApi_HostAddress}}/api/offers/{{offerId}}
+Content-Type: application/json
+
+{
+  "offerAmount": 27000.00,
+  "location": {
+    "city": "San Jose",
+    "state": "CA",
+    "zipCode": "95101",
+    "country": "USA"
+  }
+}
+
+### Cancel Offer (replace with actual ID)
+POST {{OffersApi_HostAddress}}/api/offers/{{offerId}}/cancel
+
+### Test Duplicate VIN (should fail with 409 Conflict)
+POST {{OffersApi_HostAddress}}/api/offers
+Content-Type: application/json
+
+{
+  "sellerId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "vin": "1HGBH41JXMN109186",
+  "make": "Honda",
+  "model": "Civic",
+  "year": 2023,
+  "offerAmount": 22000.00,
+  "location": {
+    "city": "Oakland",
+    "state": "CA",
+    "zipCode": "94601",
+    "country": "USA"
+  },
+  "condition": {
+    "mileage": 5000,
+    "exterior": "Excellent",
+    "interior": "Excellent",
+    "mechanical": "Excellent"
+  }
+}
+
+### Test Invalid Year (should fail with 400 Bad Request)
+POST {{OffersApi_HostAddress}}/api/offers
+Content-Type: application/json
+
+{
+  "sellerId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "vin": "3HGBH41JXMN109188",
+  "make": "Ford",
+  "model": "Mustang",
+  "year": 1800,
+  "offerAmount": 35000.00,
+  "location": {
+    "city": "Seattle",
+    "state": "WA",
+    "zipCode": "98101",
+    "country": "USA"
+  },
+  "condition": {
+    "mileage": 10000,
+    "exterior": "Good",
+    "interior": "Good",
+    "mechanical": "Good"
+  }
+}
+
+### Test Negative Price (should fail with 400 Bad Request)
+POST {{OffersApi_HostAddress}}/api/offers
+Content-Type: application/json
+
+{
+  "sellerId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "vin": "4HGBH41JXMN109189",
+  "make": "Chevrolet",
+  "model": "Corvette",
+  "year": 2024,
+  "offerAmount": -5000.00,
+  "location": {
+    "city": "Portland",
+    "state": "OR",
+    "zipCode": "97201",
+    "country": "USA"
+  },
+  "condition": {
+    "mileage": 0,
+    "exterior": "Excellent",
+    "interior": "Excellent",
+    "mechanical": "Excellent"
+  }
+}

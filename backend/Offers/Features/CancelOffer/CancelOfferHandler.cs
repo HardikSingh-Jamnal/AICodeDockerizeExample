@@ -1,0 +1,58 @@
+using MediatR;
+using Offers.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+
+namespace Offers.Features.CancelOffer;
+
+/// <summary>
+/// Command to cancel an existing offer.
+/// </summary>
+public record CancelOfferCommand(Guid OfferId) : IRequest<CancelOfferResult>;
+
+/// <summary>
+/// Result of cancelling an offer.
+/// </summary>
+public record CancelOfferResult(bool Success, string? ErrorMessage = null);
+
+/// <summary>
+/// Handler for cancelling an offer.
+/// Enforces business rule that only Active or Pending offers can be cancelled.
+/// </summary>
+public class CancelOfferHandler : IRequestHandler<CancelOfferCommand, CancelOfferResult>
+{
+    private readonly OffersDbContext _context;
+
+    public CancelOfferHandler(OffersDbContext context)
+    {
+        _context = context;
+    }
+
+    public async Task<CancelOfferResult> Handle(CancelOfferCommand request, CancellationToken cancellationToken)
+    {
+        var offer = await _context.Offers
+            .FirstOrDefaultAsync(o => o.OfferId == request.OfferId, cancellationToken);
+
+        if (offer == null)
+        {
+            return new CancelOfferResult(false, "Offer not found");
+        }
+
+        if (!offer.CanBeCancelled())
+        {
+            return new CancelOfferResult(false, 
+                $"Offer cannot be cancelled because its status is {offer.Status}. Only Active or Pending offers can be cancelled.");
+        }
+
+        // Cancel via domain method
+        var cancelled = offer.Cancel();
+
+        if (!cancelled)
+        {
+            return new CancelOfferResult(false, "Failed to cancel offer");
+        }
+
+        await _context.SaveChangesAsync(cancellationToken);
+
+        return new CancelOfferResult(true);
+    }
+}

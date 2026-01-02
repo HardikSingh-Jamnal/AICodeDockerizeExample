@@ -1,0 +1,177 @@
+using System.Text.Json;
+using FluentValidation;
+using MediatR;
+using Offers.Domain.Entities;
+using Offers.Domain.Enums;
+using Offers.Domain.Events;
+using Offers.Domain.ValueObjects;
+using Offers.Infrastructure.Data;
+using Offers.Infrastructure.Repositories;
+
+namespace Offers.Features.CreateOffer;
+
+/// <summary>
+/// Command to create a new vehicle offer.
+/// </summary>
+public record CreateOfferCommand(
+    Guid SellerId,
+    string Vin,
+    string Make,
+    string Model,
+    int Year,
+    decimal OfferAmount,
+    Location Location,
+    Condition Condition
+) : IRequest<CreateOfferResult>;
+
+/// <summary>
+/// Result of creating an offer.
+/// </summary>
+public record CreateOfferResult(Guid OfferId, bool Success, string? ErrorMessage = null);
+
+/// <summary>
+/// Validator for CreateOfferCommand.
+/// </summary>
+public class CreateOfferValidator : AbstractValidator<CreateOfferCommand>
+{
+    public CreateOfferValidator()
+    {
+        RuleFor(x => x.SellerId)
+            .NotEmpty()
+            .WithMessage("Seller ID is required");
+
+        RuleFor(x => x.Vin)
+            .NotEmpty()
+            .WithMessage("VIN is required")
+            .Length(17)
+            .WithMessage("VIN must be exactly 17 characters")
+            .Matches("^[A-HJ-NPR-Z0-9]+$")
+            .WithMessage("VIN must contain only alphanumeric characters (excluding I, O, Q)");
+
+        RuleFor(x => x.Make)
+            .NotEmpty()
+            .WithMessage("Make is required")
+            .MaximumLength(100)
+            .WithMessage("Make cannot exceed 100 characters");
+
+        RuleFor(x => x.Model)
+            .NotEmpty()
+            .WithMessage("Model is required")
+            .MaximumLength(100)
+            .WithMessage("Model cannot exceed 100 characters");
+
+        RuleFor(x => x.Year)
+            .InclusiveBetween(1900, DateTime.UtcNow.Year + 1)
+            .WithMessage($"Year must be between 1900 and {DateTime.UtcNow.Year + 1}");
+
+        RuleFor(x => x.OfferAmount)
+            .GreaterThan(0)
+            .WithMessage("Offer amount must be positive");
+
+        RuleFor(x => x.Location)
+            .NotNull()
+            .WithMessage("Location is required");
+
+        RuleFor(x => x.Location.City)
+            .NotEmpty()
+            .When(x => x.Location != null)
+            .WithMessage("City is required");
+
+        RuleFor(x => x.Location.State)
+            .NotEmpty()
+            .When(x => x.Location != null)
+            .WithMessage("State is required");
+
+        RuleFor(x => x.Location.ZipCode)
+            .NotEmpty()
+            .When(x => x.Location != null)
+            .WithMessage("Zip code is required")
+            .Matches(@"^\d{5}(-\d{4})?$")
+            .When(x => x.Location != null && !string.IsNullOrEmpty(x.Location.ZipCode))
+            .WithMessage("Zip code must be in format 12345 or 12345-6789");
+
+        RuleFor(x => x.Condition)
+            .NotNull()
+            .WithMessage("Condition is required");
+
+        RuleFor(x => x.Condition.Mileage)
+            .GreaterThanOrEqualTo(0)
+            .When(x => x.Condition != null)
+            .WithMessage("Mileage cannot be negative");
+    }
+}
+
+/// <summary>
+/// Handler for creating a new offer with transactional outbox pattern.
+/// </summary>
+public class CreateOfferHandler : IRequestHandler<CreateOfferCommand, CreateOfferResult>
+{
+    private readonly OffersDbContext _context;
+    private readonly IOfferRepository _offerRepository;
+
+    public CreateOfferHandler(OffersDbContext context, IOfferRepository offerRepository)
+    {
+        _context = context;
+        _offerRepository = offerRepository;
+    }
+
+    public async Task<CreateOfferResult> Handle(CreateOfferCommand request, CancellationToken cancellationToken)
+    {
+        // Check VIN uniqueness per seller
+        var exists = await _offerRepository.ExistsAsync(request.SellerId, request.Vin, cancellationToken);
+        if (exists)
+        {
+            return new CreateOfferResult(Guid.Empty, false, 
+                $"An offer with VIN {request.Vin} already exists for this seller");
+        }
+
+        // Create the offer entity
+        var offer = new Offer
+        {
+            OfferId = Guid.NewGuid(),
+            SellerId = request.SellerId,
+            Vin = request.Vin.ToUpperInvariant(),
+            Make = request.Make,
+            Model = request.Model,
+            Year = request.Year,
+            OfferAmount = request.OfferAmount,
+            Location = request.Location,
+            Condition = request.Condition,
+            Status = OfferStatus.Active,
+            CreatedAt = DateTime.UtcNow
+        };
+
+        // Create the domain event
+        var offerCreatedEvent = new OfferCreatedEvent
+        {
+            OfferId = offer.OfferId,
+            SellerId = offer.SellerId,
+            Vin = offer.Vin,
+            Make = offer.Make,
+            Model = offer.Model,
+            Year = offer.Year,
+            OfferAmount = offer.OfferAmount,
+            Location = offer.Location,
+            Condition = offer.Condition,
+            Status = offer.Status.ToString(),
+            CreatedAt = offer.CreatedAt,
+            EventTimestamp = DateTime.UtcNow
+        };
+
+        // Create outbox message for reliable event publishing
+        var outboxMessage = new OutboxMessage
+        {
+            Id = Guid.NewGuid(),
+            EventType = offerCreatedEvent.EventType,
+            Payload = JsonSerializer.Serialize(offerCreatedEvent),
+            CreatedAt = DateTime.UtcNow
+        };
+
+        // Add both offer and outbox message in the same transaction
+        _context.Offers.Add(offer);
+        _context.OutboxMessages.Add(outboxMessage);
+        await _context.SaveChangesAsync(cancellationToken);
+
+        return new CreateOfferResult(offer.OfferId, true);
+    }
+}

@@ -94,6 +94,32 @@ services:
       timeout: 10s
       retries: 3
 
+  offers-api:
+    build:
+      context: ./backend
+      dockerfile: ./Offers/Dockerfile
+    ports:
+      - "5005:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=offers-db;Database=offers_db;Username=user;Password=password
+      - ConnectionStrings__Redis=offers-cache
+      - MessageBroker__Host=rabbitmq
+      - MessageBroker__Port=5672
+      - MessageBroker__Username=admin
+      - MessageBroker__Password=password
+    depends_on:
+      - offers-db
+      - offers-cache
+      - rabbitmq
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
   # Databases
   products-db:
     image: postgres:13
@@ -171,6 +197,25 @@ services:
       timeout: 10s
       retries: 3
 
+  offers-db:
+    image: postgres:13
+    container_name: offers-db
+    ports:
+      - "5436:5432"
+    environment:
+      - POSTGRES_DB=offers_db
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - offers-db-data:/var/lib/postgresql/data
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d offers_db"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
   # Caches
   products-cache:
     image: redis:6.2
@@ -212,6 +257,18 @@ services:
     image: redis:6.2
     ports:
       - "6382:6379"
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  offers-cache:
+    image: redis:6.2
+    ports:
+      - "6383:6379"
     networks:
       - backend-network
     healthcheck:
@@ -272,6 +329,7 @@ volumes:
   order-db-data:
   billing-db-data:
   purchase-db-data:
+  offers-db-data:
 
 networks:
   frontend-network:
