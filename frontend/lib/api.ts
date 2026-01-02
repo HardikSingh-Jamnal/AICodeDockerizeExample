@@ -1,5 +1,5 @@
 // API Base Configuration
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5000'
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5007'
 
 // Types for Search
 export interface Offer {
@@ -9,6 +9,9 @@ export interface Offer {
   model: string
   year: number
   price: string
+  city: string
+  state: string
+  status: string
   owner: string
 }
 
@@ -33,8 +36,10 @@ export interface SearchResults {
 }
 
 export interface SearchParams {
-  accountId: string
-  query?: string
+  sellerId?: string;
+  buyerId?: string;
+  carrierId?: string;
+  query?: string;
 }
 
 // API Functions
@@ -62,34 +67,15 @@ export const searchApi = {
    * @returns Search results containing matching offers, purchases, and transports
    */
   search: async (params: SearchParams): Promise<SearchResults> => {
-    const queryParams = new URLSearchParams()
-    
-    queryParams.append('accountId', params.accountId)
-    
-    if (params.query) {
-      queryParams.append('q', params.query)
-    }
-
-    const url = `${API_BASE_URL}/search?${queryParams.toString()}`
-    
-    return apiRequest<SearchResults>(url)
+    const queryParams = new URLSearchParams();
+    if (params.sellerId) queryParams.append('sellerId', params.sellerId);
+    if (params.buyerId) queryParams.append('buyerId', params.buyerId);
+    if (params.carrierId) queryParams.append('carrierId', params.carrierId);
+    if (params.query) queryParams.append('q', params.query);
+    const url = `${API_BASE_URL}/api/search?${queryParams.toString()}`;
+    console.log('Search API URL:', url);
+    return apiRequest<SearchResults>(url);
   },
-}
-
-// Mock data for development
-const mockData: SearchResults = {
-  offers: [
-    { id: 'O-123', vin: '1HGCM82633A004352', make: 'Toyota', model: 'Camry', year: 2022, price: '$22,000', owner: 'Seller A' },
-    { id: 'O-124', vin: '2HGCM82633A004353', make: 'Honda', model: 'Accord', year: 2023, price: '$25,500', owner: 'Seller B' },
-  ],
-  purchases: [
-    { id: 'P-456', offerId: 'O-123', buyer: 'Buyer X', status: 'Completed' },
-    { id: 'P-457', offerId: 'O-124', buyer: 'Buyer Y', status: 'Pending' },
-  ],
-  transports: [
-    { id: 'T-789', vehicle: 'Camry 2022', carrier: 'Carrier Y', status: 'In Transit' },
-    { id: 'T-790', vehicle: 'Accord 2023', carrier: 'Carrier Z', status: 'Delivered' },
-  ],
 }
 
 // Service layer - currently uses mock data, will switch to API when ready
@@ -98,14 +84,41 @@ const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK_API !== 'false'
 export const searchService = {
   /**
    * Search with accountId and optional query
-   * Currently returns mock data, will call API when ready
+   * Maps backend 'documents' array to frontend SearchResults format
    */
   search: async (params: SearchParams): Promise<SearchResults> => {
-    if (USE_MOCK) {
-      // Simulate API delay
-      await new Promise(resolve => setTimeout(resolve, 150))
-      return mockData
+    const backendResult = await searchApi.search(params) as SearchResults & { documents?: any[] };
+    // If backend returns 'documents', map to offers, purchases, transports
+    if (backendResult && Array.isArray((backendResult as any).documents)) {
+      const docs = (backendResult as any).documents;
+      // entityType: 0 = Offer, 1 = Purchase, 2 = Transport
+      const offers = docs.filter((doc: any) => doc.entityType === 0).map((doc: any) => ({
+        id: doc.id,
+        vin: doc.vin,
+        make: doc.make,
+        model: doc.model,
+        year: doc.year,
+        price: doc.amount ? `$${doc.amount.toLocaleString()}` : '',
+        city: doc.city || '',
+        state: doc.state || '',
+        status: doc.status || '',
+        owner: doc.sellerId || '',
+      }));
+      const purchases = docs.filter((doc: any) => doc.entityType === 1).map((doc: any) => ({
+        id: doc.id,
+        offerId: doc.offerId || '',
+        buyer: doc.buyerId || '',
+        status: doc.status || '',
+      }));
+      const transports = docs.filter((doc: any) => doc.entityType === 2).map((doc: any) => ({
+        id: doc.id,
+        vehicle: doc.vehicle || '',
+        carrier: doc.carrierId || '',
+        status: doc.status || '',
+      }));
+      return { offers, purchases, transports };
     }
-    return searchApi.search(params)
+    // Fallback to original format if already correct
+    return backendResult;
   },
-}
+};

@@ -1,9 +1,7 @@
 "use client";
 
-
-import CentralizedSearchMockUI from "./CentralizedSearchMockUI";
-
+import CentralizedSearch from "./CentralizedSearch";
 
 export default function Home() {
-  return <CentralizedSearchMockUI />;
+  return <CentralizedSearch />;
 }

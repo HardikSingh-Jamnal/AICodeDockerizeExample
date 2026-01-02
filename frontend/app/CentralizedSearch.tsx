@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
+import { searchService, SearchResults, Offer } from "../lib/api";
 import { Search, Package, ShoppingCart, Truck, User, X } from "lucide-react";
 
 // Levenshtein distance for typo tolerance
@@ -71,16 +72,6 @@ function fuzzyMatch(
   return false;
 }
 
-interface Offer {
-  id: string;
-  vin: string;
-  make: string;
-  model: string;
-  year: number;
-  price: string;
-  owner: string;
-}
-
 interface Purchase {
   id: string;
   offerId: string;
@@ -95,45 +86,11 @@ interface Transport {
   status: string;
 }
 
-const mockResults = {
-  offers: [
-    {
-      id: "O-123",
-      vin: "1HGCM82633A004352",
-      make: "Toyota",
-      model: "Camry",
-      year: 2022,
-      price: "$22,000",
-      owner: "Seller A",
-    },
-    {
-      id: "O-124",
-      vin: "2HGCM82633A004353",
-      make: "Honda",
-      model: "Accord",
-      year: 2023,
-      price: "$25,500",
-      owner: "Seller B",
-    },
-  ],
-  purchases: [
-    { id: "P-456", offerId: "O-123", buyer: "Buyer X", status: "Completed" },
-    { id: "P-457", offerId: "O-124", buyer: "Buyer Y", status: "Pending" },
-  ],
-  transports: [
-    {
-      id: "T-789",
-      vehicle: "Camry 2022",
-      carrier: "Carrier Y",
-      status: "In Transit",
-    },
-    {
-      id: "T-790",
-      vehicle: "Accord 2023",
-      carrier: "Carrier Z",
-      status: "Delivered",
-    },
-  ],
+// Initial empty results
+const emptyResults: SearchResults = {
+  offers: [],
+  purchases: [],
+  transports: [],
 };
 
 export default function CentralizedSearchMock() {
@@ -141,133 +98,107 @@ export default function CentralizedSearchMock() {
   const [role, setRole] = useState("Agent");
   const [activeTab, setActiveTab] = useState("all");
   const [accountId, setAccountId] = useState("");
+  const [results, setResults] = useState<SearchResults>(emptyResults);
+  console.log("Search Results:", results);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  // Search autocomplete state
   const [showSearchDropdown, setShowSearchDropdown] = useState(false);
   const [searchHighlightedIndex, setSearchHighlightedIndex] = useState(-1);
+
   const searchInputRef = useRef<HTMLInputElement>(null);
   const searchDropdownRef = useRef<HTMLDivElement>(null);
 
-  const filteredResults = useMemo(
-    () => ({
-      offers: mockResults.offers.filter(
-        (o: Offer) =>
-          query === "" ||
-          fuzzyMatch(query, o.make) ||
-          fuzzyMatch(query, o.model) ||
-          fuzzyMatch(query, o.vin) ||
-          fuzzyMatch(query, `${o.year}`) ||
-          fuzzyMatch(query, o.owner)
-      ),
-      purchases: mockResults.purchases.filter(
-        (p: Purchase) =>
-          query === "" ||
-          fuzzyMatch(query, p.id) ||
-          fuzzyMatch(query, p.buyer) ||
-          fuzzyMatch(query, p.status)
-      ),
-      transports: mockResults.transports.filter(
-        (t: Transport) =>
-          query === "" ||
-          fuzzyMatch(query, t.id) ||
-          fuzzyMatch(query, t.vehicle) ||
-          fuzzyMatch(query, t.carrier) ||
-          fuzzyMatch(query, t.status)
-      ),
-    }),
-    [query]
-  );
+  /* ---------------- Fetch Results ---------------- */
+
+  useEffect(() => {
+    setLoading(true);
+    setError(null);
+
+    const params: any = { query };
+    if (role === "Seller") params.sellerId = accountId;
+    if (role === "Buyer") params.buyerId = accountId;
+    if (role === "Carrier") params.carrierId = accountId;
+
+    searchService
+      .search(params)
+      .then(setResults)
+      .catch((e) => {
+        setResults(emptyResults);
+        setError(e.message || "Search failed");
+      })
+      .finally(() => setLoading(false));
+  }, [query, role, accountId]);
+
+  /* ---------------- Tabs ---------------- */
 
   const tabs = useMemo(() => {
-    switch (role) {
-      case "Seller":
-        return [{ id: "all", label: "All Results", icon: Search }];
-      case "Buyer":
-        return [
-          { id: "all", label: "All Results", icon: Search },
-          { id: "offers", label: "Offers", icon: Package },
-          { id: "purchases", label: "Purchases", icon: ShoppingCart },
-        ];
-      case "Carrier":
-        return [{ id: "all", label: "All Results", icon: Search }];
-      case "Agent":
-      default:
-        return [
-          { id: "all", label: "All Results", icon: Search },
-          { id: "offers", label: "Offers", icon: Package },
-          { id: "purchases", label: "Purchases", icon: ShoppingCart },
-          { id: "transports", label: "Transports", icon: Truck },
-        ];
-    }
+    const base = [{ id: "all", label: "All Results", icon: Search }];
+
+    if (role === "Agent")
+      return [
+        ...base,
+        { id: "offers", label: "Offers", icon: Package },
+        { id: "purchases", label: "Purchases", icon: ShoppingCart },
+        { id: "transports", label: "Transports", icon: Truck },
+      ];
+
+    if (role === "Buyer")
+      return [
+        ...base,
+        { id: "offers", label: "Offers", icon: Package },
+        { id: "purchases", label: "Purchases", icon: ShoppingCart },
+      ];
+
+    return base;
   }, [role]);
 
-  // Only allow valid tabs for each role
   useEffect(() => {
-    const validTabIds = tabs.map((t) => t.id);
-    if (!validTabIds.includes(activeTab)) {
+    if (!tabs.find((t) => t.id === activeTab)) {
       setActiveTab(tabs[0].id);
     }
-  }, [role, activeTab, tabs]);
+  }, [tabs, activeTab]);
 
-  // Section visibility logic by role and tab
+  /* ---------------- Helpers ---------------- */
+
   const showSection = (section: string) => {
     if (activeTab === "all") {
-      // For 'all', show all sections allowed for the role
       if (role === "Seller") return section === "offers";
-      if (role === "Buyer")
-        return section === "offers" || section === "purchases";
+      if (role === "Buyer") return ["offers", "purchases"].includes(section);
       if (role === "Carrier") return section === "transports";
-      return true; // Agent: all
+      return true;
     }
-    // For specific tabs
-    if (role === "Seller") return section === "offers";
-    if (role === "Buyer") {
-      if (activeTab === "offers") return section === "offers";
-      if (activeTab === "purchases") return section === "purchases";
-    }
-    if (role === "Carrier") {
-      if (activeTab === "transports") return section === "transports";
-    }
-    // Agent or default
     return activeTab === section;
   };
-  // Generate search suggestions
-  const getSearchSuggestions = (): string[] => {
-    if (!query || query.trim().length === 0) return [];
 
-    const queryLower = query.toLowerCase().trim();
-    const suggestions = new Set<string>();
+  const searchSuggestions = useMemo(() => {
+    if (!query) return [];
 
-    // Add offers suggestions (VIN, make, model)
-    mockResults.offers.forEach((o: Offer) => {
-      if (o.vin.toLowerCase().includes(queryLower)) suggestions.add(o.vin);
-      if (o.make.toLowerCase().includes(queryLower)) suggestions.add(o.make);
-      if (o.model.toLowerCase().includes(queryLower)) suggestions.add(o.model);
-      if (o.id.toLowerCase().includes(queryLower)) suggestions.add(o.id);
-      if (o.owner.toLowerCase().includes(queryLower)) suggestions.add(o.owner);
+    const q = query.toLowerCase();
+    const s = new Set<string>();
+
+    results.offers.forEach((o) => {
+      [o.id, o.vin, o.make, o.model, o.owner].forEach(
+        (v) => v?.toLowerCase().includes(q) && s.add(v)
+      );
     });
 
-    // Add purchases suggestions (ID, buyer, offerId)
-    mockResults.purchases.forEach((p: Purchase) => {
-      if (p.id.toLowerCase().includes(queryLower)) suggestions.add(p.id);
-      if (p.buyer.toLowerCase().includes(queryLower)) suggestions.add(p.buyer);
-      if (p.offerId.toLowerCase().includes(queryLower))
-        suggestions.add(p.offerId);
+    results.purchases.forEach((p) => {
+      [p.id, p.offerId, p.buyer].forEach(
+        (v) => v?.toLowerCase().includes(q) && s.add(v)
+      );
     });
 
-    // Add transports suggestions (ID, vehicle, carrier)
-    mockResults.transports.forEach((t: Transport) => {
-      if (t.id.toLowerCase().includes(queryLower)) suggestions.add(t.id);
-      if (t.vehicle.toLowerCase().includes(queryLower))
-        suggestions.add(t.vehicle);
-      if (t.carrier.toLowerCase().includes(queryLower))
-        suggestions.add(t.carrier);
+    results.transports.forEach((t) => {
+      [t.id, t.vehicle, t.carrier].forEach(
+        (v) => v?.toLowerCase().includes(q) && s.add(v)
+      );
     });
 
-    return Array.from(suggestions).slice(0, 10); // Limit to 10 suggestions
-  };
+    return Array.from(s).slice(0, 10);
+  }, [query, results]);
 
-  const searchSuggestions = getSearchSuggestions();
+  /* ---------------- Keyboard ---------------- */
 
   // Clear account ID
   const handleClearAccountId = () => {
@@ -281,81 +212,26 @@ export default function CentralizedSearchMock() {
     setSearchHighlightedIndex(-1);
     searchInputRef.current?.focus();
   };
+  const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (!showSearchDropdown) return;
 
-  // Handle keyboard navigation for search input
-  const handleSearchKeyDown = (e: React.KeyboardEvent) => {
-    if (!showSearchDropdown || searchSuggestions.length === 0) {
-      if (e.key === "ArrowDown") {
-        setShowSearchDropdown(true);
-        setSearchHighlightedIndex(0);
-      }
-      return;
+    if (e.key === "ArrowDown")
+      setSearchHighlightedIndex((i) =>
+        Math.min(i + 1, searchSuggestions.length - 1)
+      );
+
+    if (e.key === "ArrowUp")
+      setSearchHighlightedIndex((i) => Math.max(i - 1, 0));
+
+    if (e.key === "Enter" && searchHighlightedIndex >= 0) {
+      setQuery(searchSuggestions[searchHighlightedIndex]);
+      setShowSearchDropdown(false);
     }
 
-    switch (e.key) {
-      case "ArrowDown":
-        e.preventDefault();
-        setSearchHighlightedIndex((prev) =>
-          prev < searchSuggestions.length - 1 ? prev + 1 : prev
-        );
-        break;
-      case "ArrowUp":
-        e.preventDefault();
-        setSearchHighlightedIndex((prev) => (prev > 0 ? prev - 1 : 0));
-        break;
-      case "Enter":
-        e.preventDefault();
-        if (
-          searchHighlightedIndex >= 0 &&
-          searchHighlightedIndex < searchSuggestions.length
-        ) {
-          setQuery(searchSuggestions[searchHighlightedIndex]);
-          setShowSearchDropdown(false);
-          setSearchHighlightedIndex(-1);
-        }
-        break;
-      case "Escape":
-        e.preventDefault();
-        setShowSearchDropdown(false);
-        setSearchHighlightedIndex(-1);
-        break;
-    }
+    if (e.key === "Escape") setShowSearchDropdown(false);
   };
 
-  // Handle search suggestion selection
-  const handleSearchSuggestionSelect = (suggestion: string) => {
-    setQuery(suggestion);
-    setShowSearchDropdown(false);
-    setSearchHighlightedIndex(-1);
-    searchInputRef.current?.focus();
-  };
-
-  // Scroll highlighted search suggestion into view
-  useEffect(() => {
-    if (searchHighlightedIndex >= 0 && searchDropdownRef.current) {
-      const items = searchDropdownRef.current.querySelectorAll("li");
-      items[searchHighlightedIndex]?.scrollIntoView({ block: "nearest" });
-    }
-  }, [searchHighlightedIndex]);
-
-  // Close search dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (
-        searchInputRef.current &&
-        !searchInputRef.current.contains(e.target as Node) &&
-        searchDropdownRef.current &&
-        !searchDropdownRef.current.contains(e.target as Node)
-      ) {
-        setShowSearchDropdown(false);
-        setSearchHighlightedIndex(-1);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
+  /* ---------------- Render ---------------- */
   // Highlight matching text
   const highlightMatch = (text: string, query: string) => {
     if (!query) return text;
@@ -490,9 +366,9 @@ export default function CentralizedSearchMock() {
                               ? "bg-blue-100 text-blue-900"
                               : "hover:bg-slate-50"
                           }`}
-                          onMouseDown={() =>
-                            handleSearchSuggestionSelect(suggestion)
-                          }
+                          // onMouseDown={() =>
+                          //   handleSearchSuggestionSelect(suggestion)
+                          // }
                           onMouseEnter={() => setSearchHighlightedIndex(index)}
                         >
                           {highlightMatch(suggestion, query)}
@@ -543,7 +419,7 @@ export default function CentralizedSearchMock() {
             <Section
               title="Offers"
               icon={Package}
-              items={filteredResults.offers}
+              items={results.offers}
               render={(o: Offer) => (
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                   <div className="flex-1 min-w-0">
@@ -552,7 +428,7 @@ export default function CentralizedSearchMock() {
                         {o.year} {o.make} {o.model}
                       </span>
                       <span className="px-2 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">
-                        {o.price}
+                        {o.status}
                       </span>
                     </div>
                     <div className="text-xs sm:text-sm text-slate-600 space-y-1">
@@ -564,6 +440,18 @@ export default function CentralizedSearchMock() {
                         VIN:{" "}
                         <span className="font-mono text-slate-900">
                           {o.vin}
+                        </span>
+                      </div>
+                      <div>
+                        Location:{" "}
+                        <span className="font-medium text-slate-900">
+                          {o.city}, {o.state}
+                        </span>
+                      </div>
+                      <div>
+                        Amount:{" "}
+                        <span className="font-medium text-slate-900">
+                          {o.price}
                         </span>
                       </div>
                       <div>
@@ -583,7 +471,7 @@ export default function CentralizedSearchMock() {
             <Section
               title="Purchases"
               icon={ShoppingCart}
-              items={filteredResults.purchases}
+              items={results.purchases}
               render={(p: Purchase) => (
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                   <div className="flex-1 min-w-0">
@@ -625,7 +513,7 @@ export default function CentralizedSearchMock() {
             <Section
               title="Transports"
               icon={Truck}
-              items={filteredResults.transports}
+              items={results.transports}
               render={(t: Transport) => (
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                   <div className="flex-1 min-w-0">
@@ -663,9 +551,9 @@ export default function CentralizedSearchMock() {
             />
           )}
 
-          {filteredResults.offers.length === 0 &&
-            filteredResults.purchases.length === 0 &&
-            filteredResults.transports.length === 0 && (
+          {results.offers.length === 0 &&
+            results.purchases.length === 0 &&
+            results.transports.length === 0 && (
               <div className="text-center py-12 sm:py-16 px-4">
                 <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-slate-100 rounded-full mb-4">
                   <Search className="w-6 h-6 sm:w-8 sm:h-8 text-slate-400" />
