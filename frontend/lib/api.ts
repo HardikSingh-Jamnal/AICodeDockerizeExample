@@ -1,3 +1,10 @@
+// Autocomplete Suggestion Type
+export interface AutocompleteSuggestion {
+  text: string;
+  entityType: string;
+  entityId: string;
+  score: number;
+}
 // API Base Configuration
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5007'
 
@@ -61,6 +68,15 @@ async function apiRequest<T>(url: string, options: RequestInit = {}): Promise<T>
 
 // Search API
 export const searchApi = {
+    /**
+     * Autocomplete API
+     * @param query - The search query string
+     * @returns Array of autocomplete suggestions
+     */
+    autocomplete: async (query: string): Promise<AutocompleteSuggestion[]> => {
+      const url = `${API_BASE_URL}/api/search/autocomplete?q=${encodeURIComponent(query)}`;
+      return apiRequest<AutocompleteSuggestion[]>(url);
+    },
   /**
    * Search across all entities (offers, purchases, transports)
    * @param params - Search parameters including accountId and query
@@ -73,7 +89,6 @@ export const searchApi = {
     if (params.carrierId) queryParams.append('carrierId', params.carrierId);
     if (params.query) queryParams.append('q', params.query);
     const url = `${API_BASE_URL}/api/search?${queryParams.toString()}`;
-    console.log('Search API URL:', url);
     return apiRequest<SearchResults>(url);
   },
 }
@@ -82,6 +97,12 @@ export const searchApi = {
 const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK_API !== 'false'
 
 export const searchService = {
+    /**
+     * Get autocomplete suggestions for a query
+     */
+    autocomplete: async (query: string): Promise<AutocompleteSuggestion[]> => {
+      return searchApi.autocomplete(query);
+    },
   /**
    * Search with accountId and optional query
    * Maps backend 'documents' array to frontend SearchResults format

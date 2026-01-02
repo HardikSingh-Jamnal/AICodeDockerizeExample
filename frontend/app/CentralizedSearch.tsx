@@ -1,5 +1,10 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
-import { searchService, SearchResults, Offer } from "../lib/api";
+import {
+  searchService,
+  SearchResults,
+  Offer,
+  AutocompleteSuggestion,
+} from "../lib/api";
 import { Search, Package, ShoppingCart, Truck, User, X } from "lucide-react";
 
 // Levenshtein distance for typo tolerance
@@ -99,12 +104,15 @@ export default function CentralizedSearchMock() {
   const [activeTab, setActiveTab] = useState("all");
   const [accountId, setAccountId] = useState("");
   const [results, setResults] = useState<SearchResults>(emptyResults);
-  console.log("Search Results:", results);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const [showSearchDropdown, setShowSearchDropdown] = useState(false);
   const [searchHighlightedIndex, setSearchHighlightedIndex] = useState(-1);
+  const [autocompleteSuggestions, setAutocompleteSuggestions] = useState<
+    AutocompleteSuggestion[]
+  >([]);
+  const [autocompleteLoading, setAutocompleteLoading] = useState(false);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
   const searchDropdownRef = useRef<HTMLDivElement>(null);
@@ -171,32 +179,21 @@ export default function CentralizedSearchMock() {
     return activeTab === section;
   };
 
-  const searchSuggestions = useMemo(() => {
-    if (!query) return [];
+  // Fetch autocomplete suggestions as user types
+  useEffect(() => {
+    if (!query) {
+      setAutocompleteSuggestions([]);
+      return;
+    }
+    setAutocompleteLoading(true);
+    searchService
+      .autocomplete(query)
+      .then((suggestions) => setAutocompleteSuggestions(suggestions))
+      .catch(() => setAutocompleteSuggestions([]))
+      .finally(() => setAutocompleteLoading(false));
+  }, [query]);
 
-    const q = query.toLowerCase();
-    const s = new Set<string>();
-
-    results.offers.forEach((o) => {
-      [o.id, o.vin, o.make, o.model, o.owner].forEach(
-        (v) => v?.toLowerCase().includes(q) && s.add(v)
-      );
-    });
-
-    results.purchases.forEach((p) => {
-      [p.id, p.offerId, p.buyer].forEach(
-        (v) => v?.toLowerCase().includes(q) && s.add(v)
-      );
-    });
-
-    results.transports.forEach((t) => {
-      [t.id, t.vehicle, t.carrier].forEach(
-        (v) => v?.toLowerCase().includes(q) && s.add(v)
-      );
-    });
-
-    return Array.from(s).slice(0, 10);
-  }, [query, results]);
+  const searchSuggestions = autocompleteSuggestions.map((s) => s.text);
 
   /* ---------------- Keyboard ---------------- */
 
@@ -352,31 +349,40 @@ export default function CentralizedSearchMock() {
                 )}
 
                 {/* Search Autocomplete Dropdown */}
-                {showSearchDropdown && searchSuggestions.length > 0 && (
-                  <div
-                    ref={searchDropdownRef}
-                    className="absolute z-30 left-0 right-0 mt-2 bg-white border border-slate-200 rounded-lg shadow-lg max-h-60 overflow-auto"
-                  >
-                    <ul>
-                      {searchSuggestions.map((suggestion, index) => (
-                        <li
-                          key={suggestion}
-                          className={`px-4 py-2.5 cursor-pointer transition-colors text-sm sm:text-base ${
-                            index === searchHighlightedIndex
-                              ? "bg-blue-100 text-blue-900"
-                              : "hover:bg-slate-50"
-                          }`}
-                          // onMouseDown={() =>
-                          //   handleSearchSuggestionSelect(suggestion)
-                          // }
-                          onMouseEnter={() => setSearchHighlightedIndex(index)}
-                        >
-                          {highlightMatch(suggestion, query)}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+                {showSearchDropdown &&
+                  (autocompleteLoading || searchSuggestions.length > 0) && (
+                    <div
+                      ref={searchDropdownRef}
+                      className="absolute z-30 left-0 right-0 mt-2 bg-white border border-slate-200 rounded-lg shadow-lg max-h-60 overflow-auto"
+                    >
+                      {autocompleteLoading ? (
+                        <div className="px-4 py-2.5 text-slate-500 text-sm">
+                          Loading…
+                        </div>
+                      ) : (
+                        <ul>
+                          {searchSuggestions.map((suggestion, index) => (
+                            <li
+                              key={suggestion}
+                              className={`px-4 py-2.5 cursor-pointer transition-colors text-sm sm:text-base ${
+                                index === searchHighlightedIndex
+                                  ? "bg-blue-100 text-blue-900"
+                                  : "hover:bg-slate-50"
+                              }`}
+                              // onMouseDown={() =>
+                              //   handleSearchSuggestionSelect(suggestion)
+                              // }
+                              onMouseEnter={() =>
+                                setSearchHighlightedIndex(index)
+                              }
+                            >
+                              {highlightMatch(suggestion, query)}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  )}
               </div>
             </div>
           </div>

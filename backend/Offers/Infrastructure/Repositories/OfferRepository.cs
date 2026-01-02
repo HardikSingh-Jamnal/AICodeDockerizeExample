@@ -25,7 +25,7 @@ public class OfferRepository : IOfferRepository
     }
 
     public async Task<IEnumerable<Offer>> GetAllAsync(
-        int? sellerId = null,
+        Guid? sellerId = null,
         OfferStatus? status = null,
         int page = 1,
         int pageSize = 20,
@@ -34,7 +34,7 @@ public class OfferRepository : IOfferRepository
         var query = _context.Offers.AsNoTracking();
 
         if (sellerId.HasValue)
-            query = query.Where(o => o.SellerId == sellerId.Value);
+            query = query.Where(o => Equals(o.SellerId, sellerId.Value));
 
         if (status.HasValue)
             query = query.Where(o => o.Status == status.Value);
@@ -47,14 +47,14 @@ public class OfferRepository : IOfferRepository
     }
 
     public async Task<int> GetTotalCountAsync(
-        int? sellerId = null,
+        Guid? sellerId = null,
         OfferStatus? status = null,
         CancellationToken cancellationToken = default)
     {
         var query = _context.Offers.AsQueryable();
 
         if (sellerId.HasValue)
-            query = query.Where(o => o.SellerId == sellerId.Value);
+            query = query.Where(o => Equals(o.SellerId, sellerId.Value));
 
         if (status.HasValue)
             query = query.Where(o => o.Status == status.Value);
@@ -62,10 +62,10 @@ public class OfferRepository : IOfferRepository
         return await query.CountAsync(cancellationToken);
     }
 
-    public async Task<bool> ExistsAsync(int sellerId, string vin, CancellationToken cancellationToken = default)
+    public async Task<bool> ExistsAsync(Guid sellerId, string vin, CancellationToken cancellationToken = default)
     {
         return await _context.Offers
-            .AnyAsync(o => o.SellerId == sellerId && o.Vin == vin, cancellationToken);
+            .AnyAsync(o => Equals(o.SellerId, sellerId) && o.Vin == vin, cancellationToken);
     }
 
     public async Task<Offer> AddAsync(Offer offer, CancellationToken cancellationToken = default)
