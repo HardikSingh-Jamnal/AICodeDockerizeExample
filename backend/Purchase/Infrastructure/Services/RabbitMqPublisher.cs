@@ -13,7 +13,7 @@ public class RabbitMqPublisher : IMessagePublisher, IDisposable
     private readonly ILogger<RabbitMqPublisher> _logger;
     private readonly IConnection _connection;
     private readonly IModel _channel;
-    private const string ExchangeName = "purchases.events";
+    private const string ExchangeName = "domain_events";
 
     public RabbitMqPublisher(IConfiguration configuration, ILogger<RabbitMqPublisher> logger)
     {
@@ -52,13 +52,21 @@ public class RabbitMqPublisher : IMessagePublisher, IDisposable
             properties.Type = eventType;
             properties.Timestamp = new AmqpTimestamp(DateTimeOffset.UtcNow.ToUnixTimeSeconds());
 
+            // Use routing key format: entity.action (e.g., "purchase.created", "purchase.updated")
+            var routingKey = eventType.ToLower() switch
+            {
+                "purchasecreated" => "purchase.created",
+                "purchaseupdated" => "purchase.updated",
+                _ => $"purchase.{eventType.ToLower()}"
+            };
+
             _channel.BasicPublish(
                 exchange: ExchangeName,
-                routingKey: eventType,
+                routingKey: routingKey,
                 basicProperties: properties,
                 body: body);
 
-            _logger.LogInformation("Published {EventType} event to RabbitMQ", eventType);
+            _logger.LogInformation("Published {EventType} event to RabbitMQ with routing key {RoutingKey}", eventType, routingKey);
             return Task.CompletedTask;
         }
         catch (Exception ex)

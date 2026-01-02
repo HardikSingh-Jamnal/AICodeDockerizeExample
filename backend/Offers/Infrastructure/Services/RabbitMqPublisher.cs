@@ -7,14 +7,14 @@ namespace Offers.Infrastructure.Services;
 
 /// <summary>
 /// RabbitMQ implementation of the message publisher.
-/// Publishes messages to the offers.events exchange.
+/// Publishes messages to the domain_events exchange.
 /// </summary>
 public class RabbitMqPublisher : IMessagePublisher, IDisposable
 {
     private readonly ILogger<RabbitMqPublisher> _logger;
     private readonly IConnection _connection;
     private readonly IModel _channel;
-    private const string ExchangeName = "offers.events";
+    private const string ExchangeName = "domain_events";
 
     public RabbitMqPublisher(IConfiguration configuration, ILogger<RabbitMqPublisher> logger)
     {
@@ -54,14 +54,22 @@ public class RabbitMqPublisher : IMessagePublisher, IDisposable
             properties.Type = eventType;
             properties.Timestamp = new AmqpTimestamp(DateTimeOffset.UtcNow.ToUnixTimeSeconds());
 
-            // Use event type as routing key (e.g., "OfferCreated")
+            // Use routing key format: entity.action (e.g., "offer.created", "offer.updated")
+            var routingKey = eventType.ToLower() switch
+            {
+                "offercreated" => "offer.created",
+                "offerupdated" => "offer.updated",
+                "offercancelled" => "offer.cancelled",
+                _ => $"offer.{eventType.ToLower()}"
+            };
+
             _channel.BasicPublish(
                 exchange: ExchangeName,
-                routingKey: eventType,
+                routingKey: routingKey,
                 basicProperties: properties,
                 body: body);
 
-            _logger.LogInformation("Published {EventType} event to RabbitMQ", eventType);
+            _logger.LogInformation("Published {EventType} event to RabbitMQ with routing key {RoutingKey}", eventType, routingKey);
             return Task.CompletedTask;
         }
         catch (Exception ex)
