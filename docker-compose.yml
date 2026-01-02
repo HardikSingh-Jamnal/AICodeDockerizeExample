@@ -71,6 +71,29 @@ services:
       timeout: 10s
       retries: 3
 
+  purchase-api:
+    build:
+      context: ./backend
+      dockerfile: ./Purchase/Dockerfile
+    ports:
+      - "5004:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=purchase-db;Database=purchase_db;Username=user;Password=password
+      - ConnectionStrings__Redis=purchase-cache
+      - MessageBroker__Host=rabbitmq
+    depends_on:
+      - purchase-db
+      - purchase-cache
+      - rabbitmq
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
   # Databases
   products-db:
     image: postgres:13
@@ -129,6 +152,25 @@ services:
       timeout: 10s
       retries: 3
 
+  purchase-db:
+    image: postgres:13
+    container_name: purchase-db
+    ports:
+      - "5435:5432"
+    environment:
+      - POSTGRES_DB=purchase_db
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - purchase-db-data:/var/lib/postgresql/data
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d purchase_db"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
   # Caches
   products-cache:
     image: redis:6.2
@@ -158,6 +200,18 @@ services:
     image: redis:6.2
     ports:
       - "6381:6379"
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  purchase-cache:
+    image: redis:6.2
+    ports:
+      - "6382:6379"
     networks:
       - backend-network
     healthcheck:
@@ -217,6 +271,7 @@ volumes:
   products-db-data:
   order-db-data:
   billing-db-data:
+  purchase-db-data:
 
 networks:
   frontend-network:

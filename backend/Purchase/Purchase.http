@@ -1,0 +1,37 @@
+@Purchase_HostAddress = http://localhost:5004
+
+GET {{Purchase_HostAddress}}/purchases
+Accept: application/json
+
+###
+
+GET {{Purchase_HostAddress}}/purchases/1
+Accept: application/json
+
+###
+
+POST {{Purchase_HostAddress}}/purchases
+Content-Type: application/json
+
+{
+  "buyerId": 1003,
+  "offerId": 4,
+  "amount": 15000.00,
+  "status": "Pending"
+}
+
+###
+
+PUT {{Purchase_HostAddress}}/purchases/1
+Content-Type: application/json
+
+{
+  "buyerId": 1001,
+  "offerId": 1,
+  "amount": 25000.00,
+  "status": "Completed"
+}
+
+###
+
+DELETE {{Purchase_HostAddress}}/purchases/3
