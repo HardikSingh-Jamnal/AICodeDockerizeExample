@@ -8,15 +8,15 @@ namespace Offers.Features.GetOfferById;
 /// <summary>
 /// Query to get an offer by its ID.
 /// </summary>
-public record GetOfferByIdQuery(Guid OfferId) : IRequest<OfferDto?>;
+public record GetOfferByIdQuery(int OfferId) : IRequest<OfferDto?>;
 
 /// <summary>
 /// Data transfer object for an offer.
 /// </summary>
 public record OfferDto
 {
-    public Guid OfferId { get; init; }
-    public Guid SellerId { get; init; }
+    public int OfferId { get; init; }
+    public int SellerId { get; init; }
     public string Vin { get; init; } = string.Empty;
     public string Make { get; init; } = string.Empty;
     public string Model { get; init; } = string.Empty;

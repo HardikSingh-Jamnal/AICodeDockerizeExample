@@ -11,12 +11,12 @@ public record OfferCreatedEvent
     /// <summary>
     /// Unique identifier of the offer.
     /// </summary>
-    public Guid OfferId { get; init; }
+    public int OfferId { get; init; }
 
     /// <summary>
     /// Identifier of the seller who created the offer.
     /// </summary>
-    public Guid SellerId { get; init; }
+    public int SellerId { get; init; }
 
     /// <summary>
     /// Vehicle Identification Number.

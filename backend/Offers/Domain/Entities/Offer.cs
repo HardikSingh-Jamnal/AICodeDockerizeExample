@@ -11,10 +11,10 @@ namespace Offers.Domain.Entities;
 public class Offer
 {
     [Key]
-    public Guid OfferId { get; set; }
+    public int OfferId { get; set; }
 
     [Required]
-    public Guid SellerId { get; set; }
+    public int SellerId { get; set; }
 
     /// <summary>
     /// Vehicle Identification Number - must be exactly 17 characters.

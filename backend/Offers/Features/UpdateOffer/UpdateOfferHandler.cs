@@ -12,7 +12,7 @@ namespace Offers.Features.UpdateOffer;
 /// </summary>
 public record UpdateOfferCommand : IRequest<UpdateOfferResult>
 {
-    public Guid OfferId { get; init; }
+    public int OfferId { get; init; }
     public decimal? OfferAmount { get; init; }
     public Location? Location { get; init; }
     public Condition? Condition { get; init; }

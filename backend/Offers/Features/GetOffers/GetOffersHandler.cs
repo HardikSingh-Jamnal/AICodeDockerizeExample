@@ -9,7 +9,7 @@ namespace Offers.Features.GetOffers;
 /// Query to get a paginated list of offers with optional filters.
 /// </summary>
 public record GetOffersQuery(
-    Guid? SellerId = null,
+    int? SellerId = null,
     OfferStatus? Status = null,
     int Page = 1,
     int PageSize = 20

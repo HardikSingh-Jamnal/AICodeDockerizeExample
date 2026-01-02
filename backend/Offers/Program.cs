@@ -141,7 +141,7 @@ offersApi.MapPost("/", async (CreateOfferRequest request, IMediator mediator, IV
 
 // GET /api/offers - List offers with optional filters
 offersApi.MapGet("/", async (
-    Guid? sellerId,
+    int? sellerId,
     OfferStatus? status,
     int page,
     int pageSize,
@@ -156,7 +156,7 @@ offersApi.MapGet("/", async (
 .Produces<GetOffersResult>(StatusCodes.Status200OK);
 
 // GET /api/offers/{id} - Get offer by ID
-offersApi.MapGet("/{id:guid}", async (Guid id, IMediator mediator) =>
+offersApi.MapGet("/{id:int}", async (int id, IMediator mediator) =>
 {
     var result = await mediator.Send(new GetOfferByIdQuery(id));
     return result != null ? Results.Ok(result) : Results.NotFound(new { Error = "Offer not found" });
@@ -167,7 +167,7 @@ offersApi.MapGet("/{id:guid}", async (Guid id, IMediator mediator) =>
 .Produces<object>(StatusCodes.Status404NotFound);
 
 // PUT /api/offers/{id} - Update an offer
-offersApi.MapPut("/{id:guid}", async (Guid id, UpdateOfferRequest request, IMediator mediator, IValidator<UpdateOfferCommand> validator) =>
+offersApi.MapPut("/{id:int}", async (int id, UpdateOfferRequest request, IMediator mediator, IValidator<UpdateOfferCommand> validator) =>
 {
     var command = new UpdateOfferCommand
     {
@@ -201,7 +201,7 @@ offersApi.MapPut("/{id:guid}", async (Guid id, UpdateOfferRequest request, IMedi
 .Produces<object>(StatusCodes.Status404NotFound);
 
 // POST /api/offers/{id}/cancel - Cancel an offer
-offersApi.MapPost("/{id:guid}/cancel", async (Guid id, IMediator mediator) =>
+offersApi.MapPost("/{id:int}/cancel", async (int id, IMediator mediator) =>
 {
     var result = await mediator.Send(new CancelOfferCommand(id));
 
@@ -224,7 +224,7 @@ app.Run();
 
 // Request DTOs for cleaner API contracts
 public record CreateOfferRequest(
-    Guid SellerId,
+    int SellerId,
     string Vin,
     string Make,
     string Model,
