@@ -27,7 +27,7 @@ public record CreateOfferCommand(
 /// <summary>
 /// Result of creating an offer.
 /// </summary>
-public record CreateOfferResult(int OfferId, bool Success, string? ErrorMessage = null);
+public record CreateOfferResult(Guid OfferId, bool Success, string? ErrorMessage = null);
 
 /// <summary>
 /// Validator for CreateOfferCommand.

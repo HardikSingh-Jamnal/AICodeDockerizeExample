@@ -10,7 +10,7 @@ namespace Offers.Features.CancelOffer;
 /// <summary>
 /// Command to cancel an existing offer.
 /// </summary>
-public record CancelOfferCommand(int OfferId) : IRequest<CancelOfferResult>;
+public record CancelOfferCommand(Guid OfferId) : IRequest<CancelOfferResult>;
 
 /// <summary>
 /// Result of cancelling an offer.

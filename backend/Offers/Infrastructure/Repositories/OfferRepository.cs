@@ -17,7 +17,7 @@ public class OfferRepository : IOfferRepository
         _context = context;
     }
 
-    public async Task<Offer?> GetByIdAsync(int offerId, CancellationToken cancellationToken = default)
+    public async Task<Offer?> GetByIdAsync(Guid offerId, CancellationToken cancellationToken = default)
     {
         return await _context.Offers
             .AsNoTracking()
