@@ -1,10 +1,7 @@
-using System.Text.Json;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Purchase.Data;
-using Purchase.Entities;
-using Purchase.Events;
 
 namespace Purchase.Features.UpdatePurchase;
 
@@ -46,30 +43,6 @@ public class UpdatePurchaseHandler : IRequestHandler<UpdatePurchaseCommand, bool
         purchase.Status = request.Status;
         purchase.UpdatedAt = DateTime.UtcNow;
 
-        // Create domain event
-        var purchaseUpdatedEvent = new PurchaseUpdatedEvent
-        {
-            PurchaseId = purchase.Id,
-            BuyerId = purchase.BuyerId,
-            OfferId = purchase.OfferId,
-            Amount = purchase.Amount,
-            Status = purchase.Status,
-            PurchaseDate = purchase.PurchaseDate,
-            CreatedAt = purchase.CreatedAt,
-            UpdatedAt = purchase.UpdatedAt,
-            EventTimestamp = DateTime.UtcNow
-        };
-
-        // Create outbox message for reliable event publishing
-        var outboxMessage = new OutboxMessage
-        {
-            Id = Guid.NewGuid(),
-            EventType = purchaseUpdatedEvent.EventType,
-            Payload = JsonSerializer.Serialize(purchaseUpdatedEvent),
-            CreatedAt = DateTime.UtcNow
-        };
-
-        _context.OutboxMessages.Add(outboxMessage);
         await _context.SaveChangesAsync(cancellationToken);
         return true;
     }

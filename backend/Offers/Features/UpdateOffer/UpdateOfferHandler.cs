@@ -1,8 +1,5 @@
-using System.Text.Json;
 using FluentValidation;
 using MediatR;
-using Offers.Domain.Entities;
-using Offers.Domain.Events;
 using Offers.Domain.ValueObjects;
 using Offers.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -79,7 +76,6 @@ public class UpdateOfferValidator : AbstractValidator<UpdateOfferCommand>
 /// <summary>
 /// Handler for updating an offer.
 /// Enforces business rule that only Active or Pending offers can be updated.
-/// Publishes OfferUpdated event via transactional outbox.
 /// </summary>
 public class UpdateOfferHandler : IRequestHandler<UpdateOfferCommand, UpdateOfferResult>
 {
@@ -114,34 +110,6 @@ public class UpdateOfferHandler : IRequestHandler<UpdateOfferCommand, UpdateOffe
             return new UpdateOfferResult(false, "Failed to update offer");
         }
 
-        // Create domain event
-        var offerUpdatedEvent = new OfferUpdatedEvent
-        {
-            OfferId = offer.OfferId,
-            SellerId = offer.SellerId,
-            Vin = offer.Vin,
-            Make = offer.Make,
-            Model = offer.Model,
-            Year = offer.Year,
-            OfferAmount = offer.OfferAmount,
-            Location = offer.Location,
-            Condition = offer.Condition,
-            Status = offer.Status.ToString(),
-            CreatedAt = offer.CreatedAt,
-            UpdatedAt = offer.UpdatedAt,
-            EventTimestamp = DateTime.UtcNow
-        };
-
-        // Create outbox message for reliable event publishing
-        var outboxMessage = new OutboxMessage
-        {
-            Id = Guid.NewGuid(),
-            EventType = offerUpdatedEvent.EventType,
-            Payload = JsonSerializer.Serialize(offerUpdatedEvent),
-            CreatedAt = DateTime.UtcNow
-        };
-
-        _context.OutboxMessages.Add(outboxMessage);
         await _context.SaveChangesAsync(cancellationToken);
 
         return new UpdateOfferResult(true);

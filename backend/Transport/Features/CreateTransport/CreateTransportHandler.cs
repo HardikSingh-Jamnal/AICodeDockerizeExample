@@ -1,9 +1,7 @@
-using System.Text.Json;
 using FluentValidation;
 using MediatR;
 using Transport.Data;
 using Transport.Entities;
-using Transport.Events;
 
 namespace Transport.Features.CreateTransport;
 
@@ -77,40 +75,10 @@ public class CreateTransportHandler : IRequestHandler<CreateTransportCommand, in
             ScheduleDate = request.ScheduleDate,
             Status = request.Status,
             Notes = request.Notes ?? string.Empty,
-            EstimatedCost = request.EstimatedCost,
-            CreatedAt = DateTime.UtcNow
+            EstimatedCost = request.EstimatedCost
         };
 
         _context.Transports.Add(transport);
-        await _context.SaveChangesAsync(cancellationToken);
-
-        // Create domain event
-        var transportCreatedEvent = new TransportCreatedEvent
-        {
-            TransportId = transport.TransportId,
-            CarrierId = transport.CarrierId,
-            PurchaseId = transport.PurchaseId,
-            PickupCity = transport.PickupCity,
-            PickupStateCode = transport.PickupStateCode,
-            DeliveryCity = transport.DeliveryCity,
-            DeliveryStateCode = transport.DeliveryStateCode,
-            ScheduleDate = transport.ScheduleDate,
-            Status = transport.Status,
-            EstimatedCost = transport.EstimatedCost,
-            CreatedAt = transport.CreatedAt,
-            EventTimestamp = DateTime.UtcNow
-        };
-
-        // Create outbox message for reliable event publishing
-        var outboxMessage = new OutboxMessage
-        {
-            Id = Guid.NewGuid(),
-            EventType = transportCreatedEvent.EventType,
-            Payload = JsonSerializer.Serialize(transportCreatedEvent),
-            CreatedAt = DateTime.UtcNow
-        };
-
-        _context.OutboxMessages.Add(outboxMessage);
         await _context.SaveChangesAsync(cancellationToken);
 
         return transport.TransportId;
