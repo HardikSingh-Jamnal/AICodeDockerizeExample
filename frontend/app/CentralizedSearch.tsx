@@ -104,7 +104,6 @@ export default function CentralizedSearchMock() {
   const [activeTab, setActiveTab] = useState("all");
   const [accountId, setAccountId] = useState("");
   const [results, setResults] = useState<SearchResults>(emptyResults);
-  console.log("Search Results:", results);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
