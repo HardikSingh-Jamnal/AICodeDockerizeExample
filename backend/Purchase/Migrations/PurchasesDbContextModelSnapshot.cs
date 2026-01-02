@@ -22,6 +22,48 @@ namespace Purchase.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("Purchase.Entities.OutboxMessage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasDefaultValueSql("gen_random_uuid()");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("now() at time zone 'utc'");
+
+                    b.Property<string>("EventType")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("LastError")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Payload")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("ProcessedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("processed_at");
+
+                    b.Property<int>("RetryCount")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreatedAt")
+                        .HasDatabaseName("idx_outbox_unprocessed")
+                        .HasFilter("\"processed_at\" IS NULL");
+
+                    b.ToTable("outbox_messages", (string)null);
+                });
+
             modelBuilder.Entity("Purchase.Entities.Purchase", b =>
                 {
                     b.Property<int>("Id")
@@ -69,10 +111,10 @@ namespace Purchase.Migrations
                             Id = 1,
                             Amount = 25000.00m,
                             BuyerId = 1001,
-                            CreatedAt = new DateTime(2026, 1, 2, 10, 24, 36, 932, DateTimeKind.Utc).AddTicks(9650),
+                            CreatedAt = new DateTime(2026, 1, 2, 14, 31, 10, 422, DateTimeKind.Utc).AddTicks(5388),
                             IsActive = true,
                             OfferId = 1,
-                            PurchaseDate = new DateTime(2026, 1, 2, 10, 24, 36, 932, DateTimeKind.Utc).AddTicks(9651),
+                            PurchaseDate = new DateTime(2026, 1, 2, 14, 31, 10, 422, DateTimeKind.Utc).AddTicks(5390),
                             Status = "Completed"
                         },
                         new
@@ -80,10 +122,10 @@ namespace Purchase.Migrations
                             Id = 2,
                             Amount = 32000.00m,
                             BuyerId = 1002,
-                            CreatedAt = new DateTime(2026, 1, 2, 10, 24, 36, 932, DateTimeKind.Utc).AddTicks(9656),
+                            CreatedAt = new DateTime(2026, 1, 2, 14, 31, 10, 422, DateTimeKind.Utc).AddTicks(5393),
                             IsActive = true,
                             OfferId = 2,
-                            PurchaseDate = new DateTime(2026, 1, 2, 10, 24, 36, 932, DateTimeKind.Utc).AddTicks(9656),
+                            PurchaseDate = new DateTime(2026, 1, 2, 14, 31, 10, 422, DateTimeKind.Utc).AddTicks(5394),
                             Status = "Pending"
                         },
                         new
@@ -91,10 +133,10 @@ namespace Purchase.Migrations
                             Id = 3,
                             Amount = 18500.00m,
                             BuyerId = 1001,
-                            CreatedAt = new DateTime(2026, 1, 2, 10, 24, 36, 932, DateTimeKind.Utc).AddTicks(9658),
+                            CreatedAt = new DateTime(2026, 1, 2, 14, 31, 10, 422, DateTimeKind.Utc).AddTicks(5395),
                             IsActive = true,
                             OfferId = 3,
-                            PurchaseDate = new DateTime(2026, 1, 2, 10, 24, 36, 932, DateTimeKind.Utc).AddTicks(9659),
+                            PurchaseDate = new DateTime(2026, 1, 2, 14, 31, 10, 422, DateTimeKind.Utc).AddTicks(5396),
                             Status = "Processing"
                         });
                 });

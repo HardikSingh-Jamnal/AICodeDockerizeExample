@@ -17,10 +17,52 @@ namespace Transport.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.0")
+                .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
+
+            modelBuilder.Entity("Transport.Entities.OutboxMessage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasDefaultValueSql("gen_random_uuid()");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("now() at time zone 'utc'");
+
+                    b.Property<string>("EventType")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("LastError")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Payload")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("ProcessedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("processed_at");
+
+                    b.Property<int>("RetryCount")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreatedAt")
+                        .HasDatabaseName("idx_outbox_unprocessed")
+                        .HasFilter("\"processed_at\" IS NULL");
+
+                    b.ToTable("outbox_messages", (string)null);
+                });
 
             modelBuilder.Entity("Transport.Entities.TransportEntity", b =>
                 {
@@ -136,7 +178,7 @@ namespace Transport.Migrations
                         {
                             TransportId = 1,
                             CarrierId = 101,
-                            CreatedAt = new DateTime(2026, 1, 2, 10, 55, 23, 643, DateTimeKind.Utc).AddTicks(4548),
+                            CreatedAt = new DateTime(2026, 1, 2, 14, 22, 23, 731, DateTimeKind.Utc).AddTicks(9033),
                             DeliveryCity = "Los Angeles",
                             DeliveryCountry = "USA",
                             DeliveryStateCode = "CA",
@@ -150,7 +192,7 @@ namespace Transport.Migrations
                             PickupStreet = "123 Main St, Warehouse A",
                             PickupZipCode = "10001",
                             PurchaseId = 1001,
-                            ScheduleDate = new DateTime(2026, 1, 3, 10, 55, 23, 643, DateTimeKind.Utc).AddTicks(5706),
+                            ScheduleDate = new DateTime(2026, 1, 3, 14, 22, 23, 731, DateTimeKind.Utc).AddTicks(9037),
                             Status = "Pending"
                         },
                         new
@@ -158,7 +200,7 @@ namespace Transport.Migrations
                             TransportId = 2,
                             ActualCost = 215.75m,
                             CarrierId = 102,
-                            CreatedAt = new DateTime(2026, 1, 2, 10, 55, 23, 643, DateTimeKind.Utc).AddTicks(6340),
+                            CreatedAt = new DateTime(2026, 1, 2, 14, 22, 23, 731, DateTimeKind.Utc).AddTicks(9046),
                             DeliveryCity = "Houston",
                             DeliveryCountry = "USA",
                             DeliveryStateCode = "TX",
@@ -172,7 +214,7 @@ namespace Transport.Migrations
                             PickupStreet = "789 Industrial Blvd, Distribution Center B",
                             PickupZipCode = "60601",
                             PurchaseId = 1002,
-                            ScheduleDate = new DateTime(2026, 1, 4, 10, 55, 23, 643, DateTimeKind.Utc).AddTicks(6343),
+                            ScheduleDate = new DateTime(2026, 1, 4, 14, 22, 23, 731, DateTimeKind.Utc).AddTicks(9048),
                             Status = "InTransit"
                         },
                         new
@@ -180,7 +222,7 @@ namespace Transport.Migrations
                             TransportId = 3,
                             ActualCost = 175.25m,
                             CarrierId = 103,
-                            CreatedAt = new DateTime(2026, 1, 2, 10, 55, 23, 643, DateTimeKind.Utc).AddTicks(6430),
+                            CreatedAt = new DateTime(2026, 1, 2, 14, 22, 23, 731, DateTimeKind.Utc).AddTicks(9051),
                             DeliveryCity = "Seattle",
                             DeliveryCountry = "USA",
                             DeliveryStateCode = "WA",
@@ -194,7 +236,7 @@ namespace Transport.Migrations
                             PickupStreet = "555 Factory Rd, Manufacturing Plant",
                             PickupZipCode = "48201",
                             PurchaseId = 1003,
-                            ScheduleDate = new DateTime(2026, 1, 1, 10, 55, 23, 643, DateTimeKind.Utc).AddTicks(6432),
+                            ScheduleDate = new DateTime(2026, 1, 1, 14, 22, 23, 731, DateTimeKind.Utc).AddTicks(9053),
                             Status = "Delivered"
                         });
                 });

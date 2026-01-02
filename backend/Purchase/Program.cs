@@ -8,6 +8,7 @@ using Purchase.Features.GetPurchaseById;
 using Purchase.Features.CreatePurchase;
 using Purchase.Features.UpdatePurchase;
 using Purchase.Features.DeletePurchase;
+using Purchase.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,6 +50,15 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Progr
 // Add FluentValidation
 builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
 
+// Add RabbitMQ Publisher
+builder.Services.AddSingleton<IMessagePublisher, RabbitMqPublisher>();
+
+// Add Outbox Processor Background Service
+builder.Services.AddHostedService<OutboxProcessor>();
+
+// Add Health Checks
+builder.Services.AddHealthChecks();
+
 var app = builder.Build();
 
 // Apply migrations and seed database
@@ -70,6 +80,9 @@ app.UseSwaggerUI(c =>
 });
 
 app.UseCors("AllowFrontend");
+
+// Health check endpoint
+app.MapHealthChecks("/health");
 
 // Purchases endpoints
 app.MapGet("/purchases", async (IMediator mediator) =>

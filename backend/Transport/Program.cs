@@ -8,6 +8,7 @@ using Transport.Features.GetTransportById;
 using Transport.Features.CreateTransport;
 using Transport.Features.UpdateTransport;
 using Transport.Features.DeleteTransport;
+using Transport.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,13 +42,22 @@ builder.Services.AddCors(options =>
 // Add Entity Framework
 builder.Services.AddDbContext<TransportDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection") ??
-                     "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=Mtech1"));
+                     "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=guest"));
 
 // Add MediatR  
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
 
 // Add FluentValidation
 builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
+
+// Add RabbitMQ Publisher
+builder.Services.AddSingleton<IMessagePublisher, RabbitMqPublisher>();
+
+// Add Outbox Processor Background Service
+builder.Services.AddHostedService<OutboxProcessor>();
+
+// Add Health Checks
+builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 
@@ -70,6 +80,9 @@ app.UseSwaggerUI(c =>
 });
 
 app.UseCors("AllowFrontend");
+
+// Health check endpoint
+app.MapHealthChecks("/health");
 
 // Transport endpoints
 app.MapGet("/transports", async (IMediator mediator) =>
@@ -124,11 +137,6 @@ app.MapDelete("/transports/{id:int}", async (int id, IMediator mediator) =>
     return result ? Results.NoContent() : Results.NotFound();
 })
 .WithName("DeleteTransport")
-.WithOpenApi();
-
-// Health check endpoint
-app.MapGet("/health", () => Results.Ok(new { Status = "Healthy", Timestamp = DateTime.UtcNow }))
-.WithName("HealthCheck")
 .WithOpenApi();
 
 app.Run();
