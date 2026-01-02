@@ -58,6 +58,12 @@ export default function CentralizedSearchMock() {
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  
+  // Search autocomplete state
+  const [showSearchDropdown, setShowSearchDropdown] = useState(false);
+  const [searchHighlightedIndex, setSearchHighlightedIndex] = useState(-1);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const searchDropdownRef = useRef<HTMLDivElement>(null);
 
   const filteredResults = {
     offers: mockResults.offers.filter((o: Offer) =>
@@ -86,6 +92,41 @@ export default function CentralizedSearchMock() {
   ];
 
   const showSection = (section: string) => activeTab === "all" || activeTab === section;
+
+  // Generate search suggestions
+  const getSearchSuggestions = (): string[] => {
+    if (!query || query.trim().length === 0) return [];
+    
+    const queryLower = query.toLowerCase().trim();
+    const suggestions = new Set<string>();
+    
+    // Add offers suggestions (VIN, make, model)
+    mockResults.offers.forEach((o: Offer) => {
+      if (o.vin.toLowerCase().includes(queryLower)) suggestions.add(o.vin);
+      if (o.make.toLowerCase().includes(queryLower)) suggestions.add(o.make);
+      if (o.model.toLowerCase().includes(queryLower)) suggestions.add(o.model);
+      if (o.id.toLowerCase().includes(queryLower)) suggestions.add(o.id);
+      if (o.owner.toLowerCase().includes(queryLower)) suggestions.add(o.owner);
+    });
+    
+    // Add purchases suggestions (ID, buyer, offerId)
+    mockResults.purchases.forEach((p: Purchase) => {
+      if (p.id.toLowerCase().includes(queryLower)) suggestions.add(p.id);
+      if (p.buyer.toLowerCase().includes(queryLower)) suggestions.add(p.buyer);
+      if (p.offerId.toLowerCase().includes(queryLower)) suggestions.add(p.offerId);
+    });
+    
+    // Add transports suggestions (ID, vehicle, carrier)
+    mockResults.transports.forEach((t: Transport) => {
+      if (t.id.toLowerCase().includes(queryLower)) suggestions.add(t.id);
+      if (t.vehicle.toLowerCase().includes(queryLower)) suggestions.add(t.vehicle);
+      if (t.carrier.toLowerCase().includes(queryLower)) suggestions.add(t.carrier);
+    });
+    
+    return Array.from(suggestions).slice(0, 10); // Limit to 10 suggestions
+  };
+
+  const searchSuggestions = getSearchSuggestions();
 
   // Filter account ids based on input
   const filteredAccounts = accountIdsByRole[role].filter((id) =>
@@ -117,7 +158,7 @@ export default function CentralizedSearchMock() {
     setHighlightedIndex(-1);
   }, [role]);
 
-  // Handle keyboard navigation
+  // Handle keyboard navigation for account input
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (!showDropdown || filteredAccounts.length === 0) {
       if (e.key === "ArrowDown") {
@@ -152,6 +193,51 @@ export default function CentralizedSearchMock() {
     }
   };
 
+  // Handle keyboard navigation for search input
+  const handleSearchKeyDown = (e: React.KeyboardEvent) => {
+    if (!showSearchDropdown || searchSuggestions.length === 0) {
+      if (e.key === "ArrowDown") {
+        setShowSearchDropdown(true);
+        setSearchHighlightedIndex(0);
+      }
+      return;
+    }
+
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        setSearchHighlightedIndex((prev) =>
+          prev < searchSuggestions.length - 1 ? prev + 1 : prev
+        );
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        setSearchHighlightedIndex((prev) => (prev > 0 ? prev - 1 : 0));
+        break;
+      case "Enter":
+        e.preventDefault();
+        if (searchHighlightedIndex >= 0 && searchHighlightedIndex < searchSuggestions.length) {
+          setQuery(searchSuggestions[searchHighlightedIndex]);
+          setShowSearchDropdown(false);
+          setSearchHighlightedIndex(-1);
+        }
+        break;
+      case "Escape":
+        e.preventDefault();
+        setShowSearchDropdown(false);
+        setSearchHighlightedIndex(-1);
+        break;
+    }
+  };
+
+  // Handle search suggestion selection
+  const handleSearchSuggestionSelect = (suggestion: string) => {
+    setQuery(suggestion);
+    setShowSearchDropdown(false);
+    setSearchHighlightedIndex(-1);
+    searchInputRef.current?.focus();
+  };
+
   // Scroll highlighted item into view
   useEffect(() => {
     if (highlightedIndex >= 0 && dropdownRef.current) {
@@ -160,9 +246,18 @@ export default function CentralizedSearchMock() {
     }
   }, [highlightedIndex]);
 
+  // Scroll highlighted search suggestion into view
+  useEffect(() => {
+    if (searchHighlightedIndex >= 0 && searchDropdownRef.current) {
+      const items = searchDropdownRef.current.querySelectorAll("li");
+      items[searchHighlightedIndex]?.scrollIntoView({ block: "nearest" });
+    }
+  }, [searchHighlightedIndex]);
+
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
+      // Handle account dropdown
       if (
         inputRef.current &&
         !inputRef.current.contains(e.target as Node) &&
@@ -171,6 +266,17 @@ export default function CentralizedSearchMock() {
       ) {
         setShowDropdown(false);
         setHighlightedIndex(-1);
+      }
+      
+      // Handle search dropdown
+      if (
+        searchInputRef.current &&
+        !searchInputRef.current.contains(e.target as Node) &&
+        searchDropdownRef.current &&
+        !searchDropdownRef.current.contains(e.target as Node)
+      ) {
+        setShowSearchDropdown(false);
+        setSearchHighlightedIndex(-1);
       }
     };
 
@@ -305,13 +411,50 @@ export default function CentralizedSearchMock() {
 
               {/* Search Bar */}
               <div className="relative flex-1">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 z-10" />
                 <input
+                  ref={searchInputRef}
                   className="w-full pl-12 pr-4 py-2.5 rounded-lg bg-slate-50 border-2 border-slate-200 focus:border-blue-500 focus:bg-white transition-all outline-none text-slate-900 placeholder-slate-400"
                   placeholder="Search by VIN, vehicle, buyer, or ID..."
                   value={query}
-                  onChange={(e) => setQuery(e.target.value)}
+                  onChange={(e) => {
+                    setQuery(e.target.value);
+                    setShowSearchDropdown(true);
+                    setSearchHighlightedIndex(-1);
+                  }}
+                  onFocus={() => {
+                    if (query && searchSuggestions.length > 0) {
+                      setShowSearchDropdown(true);
+                    }
+                  }}
+                  onKeyDown={handleSearchKeyDown}
+                  autoComplete="off"
                 />
+                
+                {/* Search Autocomplete Dropdown */}
+                {showSearchDropdown && searchSuggestions.length > 0 && (
+                  <div
+                    ref={searchDropdownRef}
+                    className="absolute z-30 left-0 right-0 mt-2 bg-white border border-slate-200 rounded-lg shadow-lg max-h-60 overflow-auto"
+                  >
+                    <ul>
+                      {searchSuggestions.map((suggestion, index) => (
+                        <li
+                          key={suggestion}
+                          className={`px-4 py-2.5 cursor-pointer transition-colors ${
+                            index === searchHighlightedIndex
+                              ? "bg-blue-100 text-blue-900"
+                              : "hover:bg-slate-50"
+                          }`}
+                          onMouseDown={() => handleSearchSuggestionSelect(suggestion)}
+                          onMouseEnter={() => setSearchHighlightedIndex(index)}
+                        >
+                          {highlightMatch(suggestion, query)}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           </div>
