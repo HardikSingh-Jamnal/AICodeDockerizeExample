@@ -31,7 +31,8 @@ export interface Purchase {
 
 export interface Transport {
   id: string
-  vehicle: string
+  city: string
+  state: string
   carrier: string
   status: string
 }
