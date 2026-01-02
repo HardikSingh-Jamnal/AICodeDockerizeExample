@@ -86,7 +86,8 @@ interface Purchase {
 
 interface Transport {
   id: string;
-  vehicle: string;
+  city: string;
+  state: string;
   carrier: string;
   status: string;
 }
@@ -120,6 +121,16 @@ export default function CentralizedSearchMock() {
   /* ---------------- Fetch Results ---------------- */
 
   useEffect(() => {
+    // For Seller, Buyer, Carrier: require accountId to fetch records
+    if (
+      (role === "Seller" || role === "Buyer" || role === "Carrier") &&
+      !accountId
+    ) {
+      setResults(emptyResults);
+      setLoading(false);
+      setError(null);
+      return;
+    }
     setLoading(true);
     setError(null);
 
@@ -309,7 +320,7 @@ export default function CentralizedSearchMock() {
                 <input
                   ref={searchInputRef}
                   className="w-full pl-10 sm:pl-12 pr-8 h-11 rounded-lg bg-slate-50 border-2 border-slate-200 focus:border-blue-500 focus:bg-white transition-all outline-none text-slate-900 placeholder-slate-400 text-sm sm:text-base"
-                  placeholder="Search by VIN, vehicle, buyer, or ID..."
+                  placeholder="Search by VIN, vehicle, buyer, or transport..."
                   value={query}
                   onChange={(e) => {
                     setQuery(e.target.value);
@@ -425,7 +436,7 @@ export default function CentralizedSearchMock() {
             <Section
               title="Offers"
               icon={Package}
-              items={results.offers}
+              items={results?.offers}
               render={(o: Offer) => (
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                   <div className="flex-1 min-w-0">
@@ -477,7 +488,7 @@ export default function CentralizedSearchMock() {
             <Section
               title="Purchases"
               icon={ShoppingCart}
-              items={results.purchases}
+              items={results?.purchases}
               render={(p: Purchase) => (
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                   <div className="flex-1 min-w-0">
@@ -519,7 +530,7 @@ export default function CentralizedSearchMock() {
             <Section
               title="Transports"
               icon={Truck}
-              items={results.transports}
+              items={results?.transports}
               render={(t: Transport) => (
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                   <div className="flex-1 min-w-0">
@@ -539,9 +550,9 @@ export default function CentralizedSearchMock() {
                     </div>
                     <div className="text-xs sm:text-sm text-slate-600 space-y-1">
                       <div>
-                        Vehicle:{" "}
+                        Location:{" "}
                         <span className="font-medium text-slate-900">
-                          {t.vehicle}
+                          {t.city}, {t.state}
                         </span>
                       </div>
                       <div>
@@ -557,9 +568,9 @@ export default function CentralizedSearchMock() {
             />
           )}
 
-          {results.offers.length === 0 &&
-            results.purchases.length === 0 &&
-            results.transports.length === 0 && (
+          {results?.offers?.length === 0 &&
+            results?.purchases?.length === 0 &&
+            results?.transports?.length === 0 && (
               <div className="text-center py-12 sm:py-16 px-4">
                 <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-slate-100 rounded-full mb-4">
                   <Search className="w-6 h-6 sm:w-8 sm:h-8 text-slate-400" />
