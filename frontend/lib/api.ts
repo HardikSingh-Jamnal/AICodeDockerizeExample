@@ -89,7 +89,6 @@ export const searchApi = {
     if (params.carrierId) queryParams.append('carrierId', params.carrierId);
     if (params.query) queryParams.append('q', params.query);
     const url = `${API_BASE_URL}/api/search?${queryParams.toString()}`;
-    console.log('Search API URL:', url);
     return apiRequest<SearchResults>(url);
   },
 }
