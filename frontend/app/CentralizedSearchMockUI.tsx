@@ -1,5 +1,70 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useMemo } from "react";
 import { Search, Package, ShoppingCart, Truck, User, ChevronDown, ChevronUp, X } from "lucide-react";
+
+// Levenshtein distance for typo tolerance
+function levenshteinDistance(a: string, b: string): number {
+  const matrix: number[][] = [];
+  
+  if (a.length === 0) return b.length;
+  if (b.length === 0) return a.length;
+
+  for (let i = 0; i <= b.length; i++) {
+    matrix[i] = [i];
+  }
+  for (let j = 0; j <= a.length; j++) {
+    matrix[0][j] = j;
+  }
+
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      if (b.charAt(i - 1) === a.charAt(j - 1)) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j - 1] + 1, // substitution
+          matrix[i][j - 1] + 1,     // insertion
+          matrix[i - 1][j] + 1      // deletion
+        );
+      }
+    }
+  }
+
+  return matrix[b.length][a.length];
+}
+
+// Fuzzy match with typo tolerance
+function fuzzyMatch(query: string, target: string, threshold: number = 0.3): boolean {
+  const q = query.toLowerCase().trim();
+  const t = target.toLowerCase();
+  
+  if (q === "") return true;
+  if (t.includes(q)) return true; // exact substring match
+  
+  // Split target into words and check each
+  const words = t.split(/\s+/);
+  for (const word of words) {
+    // Allow more tolerance for longer words
+    const maxDistance = Math.max(1, Math.floor(word.length * threshold));
+    const distance = levenshteinDistance(q, word);
+    if (distance <= maxDistance) return true;
+    
+    // Also check if query is a fuzzy prefix of the word
+    if (q.length <= word.length) {
+      const prefix = word.substring(0, q.length);
+      const prefixDistance = levenshteinDistance(q, prefix);
+      if (prefixDistance <= Math.max(1, Math.floor(q.length * threshold))) return true;
+    }
+  }
+  
+  // Check against the full target string for longer queries
+  if (q.length >= 3) {
+    const maxDistance = Math.max(1, Math.floor(q.length * threshold));
+    const distance = levenshteinDistance(q, t);
+    if (distance <= maxDistance) return true;
+  }
+  
+  return false;
+}
 
 // Mock account ids for each role
 const accountIdsByRole: Record<string, string[]> = {
@@ -65,24 +130,29 @@ export default function CentralizedSearchMock() {
   const searchInputRef = useRef<HTMLInputElement>(null);
   const searchDropdownRef = useRef<HTMLDivElement>(null);
 
-  const filteredResults = {
+  const filteredResults = useMemo(() => ({
     offers: mockResults.offers.filter((o: Offer) =>
       query === "" ||
-      o.make.toLowerCase().includes(query.toLowerCase()) ||
-      o.model.toLowerCase().includes(query.toLowerCase()) ||
-      o.vin.toLowerCase().includes(query.toLowerCase())
+      fuzzyMatch(query, o.make) ||
+      fuzzyMatch(query, o.model) ||
+      fuzzyMatch(query, o.vin) ||
+      fuzzyMatch(query, `${o.year}`) ||
+      fuzzyMatch(query, o.owner)
     ),
     purchases: mockResults.purchases.filter((p: Purchase) =>
       query === "" ||
-      p.id.toLowerCase().includes(query.toLowerCase()) ||
-      p.buyer.toLowerCase().includes(query.toLowerCase())
+      fuzzyMatch(query, p.id) ||
+      fuzzyMatch(query, p.buyer) ||
+      fuzzyMatch(query, p.status)
     ),
     transports: mockResults.transports.filter((t: Transport) =>
       query === "" ||
-      t.id.toLowerCase().includes(query.toLowerCase()) ||
-      t.vehicle.toLowerCase().includes(query.toLowerCase())
+      fuzzyMatch(query, t.id) ||
+      fuzzyMatch(query, t.vehicle) ||
+      fuzzyMatch(query, t.carrier) ||
+      fuzzyMatch(query, t.status)
     ),
-  };
+  }), [query]);
 
   const tabs = [
     { id: "all", label: "All Results", icon: Search },
@@ -415,7 +485,7 @@ export default function CentralizedSearchMock() {
                 <input
                   ref={searchInputRef}
                   className="w-full pl-12 pr-4 py-2.5 rounded-lg bg-slate-50 border-2 border-slate-200 focus:border-blue-500 focus:bg-white transition-all outline-none text-slate-900 placeholder-slate-400"
-                  placeholder="Search by VIN, vehicle, buyer, or ID..."
+                  placeholder="Search by VIN, vehicle, buyer, or ID... (typo tolerant)"
                   value={query}
                   onChange={(e) => {
                     setQuery(e.target.value);
