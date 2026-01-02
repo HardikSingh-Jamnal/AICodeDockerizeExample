@@ -13,6 +13,9 @@ services:
       - ConnectionStrings__DefaultConnection=Host=purchase-db;Database=purchase_db;Username=user;Password=password
       - ConnectionStrings__Redis=purchase-cache
       - MessageBroker__Host=rabbitmq
+      - MessageBroker__Port=5672
+      - MessageBroker__Username=admin
+      - MessageBroker__Password=password
     depends_on:
       - purchase-db
       - purchase-cache
@@ -27,8 +30,8 @@ services:
 
   transport-api:
     build:
-      context: ./backend/Transport
-      dockerfile: Dockerfile
+      context: ./backend
+      dockerfile: ./Transport/Dockerfile
     ports:
       - "5004:8080"
     environment:
@@ -36,6 +39,9 @@ services:
       - ConnectionStrings__DefaultConnection=Host=transport-db;Database=transport_db;Username=user;Password=password
       - ConnectionStrings__Redis=transport-cache
       - MessageBroker__Host=rabbitmq
+      - MessageBroker__Port=5672
+      - MessageBroker__Username=admin
+      - MessageBroker__Password=password
     depends_on:
       - transport-db
       - transport-cache
