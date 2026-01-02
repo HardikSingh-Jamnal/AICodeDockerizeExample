@@ -1,5 +1,6 @@
 using Nest;
 using Search.Documents;
+using Newtonsoft.Json.Linq;
 
 namespace Search.Services;
 
@@ -106,12 +107,10 @@ public class ElasticsearchService : IElasticsearchService
                 )
             )
             .Map<BaseDocument>(m => m
-                .AutoMap<OfferDocument>()
-                .AutoMap<PurchaseDocument>()
-                .AutoMap<TransportDocument>()
+                .AutoMap()
                 .Properties(p => p
                     .Keyword(k => k.Name(n => n.Id))
-                    .Keyword(k => k.Name("entityType"))
+                    .Keyword(k => k.Name(n => n.EntityType))
                     .Text(t => t
                         .Name(n => n.SearchableText)
                         .Analyzer("autocomplete_analyzer")
@@ -120,31 +119,6 @@ public class ElasticsearchService : IElasticsearchService
                     .Keyword(k => k.Name(n => n.Status))
                     .Date(d => d.Name(n => n.CreatedAt))
                     .Date(d => d.Name(n => n.UpdatedAt))
-                    // Offer specific
-                    .Keyword(k => k.Name("offerId"))
-                    .Keyword(k => k.Name("sellerId"))
-                    .Text(t => t.Name("vin").Analyzer("standard"))
-                    .Text(t => t.Name("make").Analyzer("standard"))
-                    .Text(t => t.Name("model").Analyzer("standard"))
-                    .Number(n => n.Name("year").Type(NumberType.Integer))
-                    .Number(n => n.Name("offerAmount").Type(NumberType.Double))
-                    .Text(t => t.Name("city").Analyzer("standard"))
-                    .Text(t => t.Name("state").Analyzer("standard"))
-                    .Keyword(k => k.Name("zipCode"))
-                    .Number(n => n.Name("mileage").Type(NumberType.Integer))
-                    // Purchase specific
-                    .Number(n => n.Name("purchaseId").Type(NumberType.Integer))
-                    .Number(n => n.Name("buyerId").Type(NumberType.Integer))
-                    .Number(n => n.Name("amount").Type(NumberType.Double))
-                    .Date(d => d.Name("purchaseDate"))
-                    // Transport specific
-                    .Number(n => n.Name("transportId").Type(NumberType.Integer))
-                    .Number(n => n.Name("carrierId").Type(NumberType.Integer))
-                    .Text(t => t.Name("pickupCity").Analyzer("standard"))
-                    .Text(t => t.Name("pickupState").Analyzer("standard"))
-                    .Text(t => t.Name("deliveryCity").Analyzer("standard"))
-                    .Text(t => t.Name("deliveryState").Analyzer("standard"))
-                    .Date(d => d.Name("scheduleDate"))
                 )
             )
         );
@@ -208,7 +182,7 @@ public class ElasticsearchService : IElasticsearchService
 
     public async Task DeleteDocumentAsync(string id)
     {
-        var response = await _client.DeleteAsync<BaseDocument>(id, d => d.Index(_indexName));
+        var response = await _client.DeleteAsync<object>(id, d => d.Index(_indexName));
         if (!response.IsValid)
         {
             _logger.LogError("Failed to delete document {Id}: {Error}", id, response.DebugInformation);
@@ -223,7 +197,7 @@ public class ElasticsearchService : IElasticsearchService
     {
         var from = (request.Page - 1) * request.PageSize;
 
-        var searchDescriptor = new SearchDescriptor<BaseDocument>()
+        var searchDescriptor = new SearchDescriptor<object>()
             .Index(_indexName)
             .From(from)
             .Size(request.PageSize)
@@ -243,10 +217,10 @@ public class ElasticsearchService : IElasticsearchService
             )
             .Sort(s => s
                 .Descending(SortSpecialField.Score)
-                .Descending(d => d.CreatedAt)
+                .Descending("createdAt")
             );
 
-        var response = await _client.SearchAsync<BaseDocument>(searchDescriptor);
+        var response = await _client.SearchAsync<object>(searchDescriptor);
 
         if (!response.IsValid)
         {
@@ -254,14 +228,24 @@ public class ElasticsearchService : IElasticsearchService
             return new SearchResponse { Results = new List<SearchResult>(), TotalCount = 0, Page = request.Page, PageSize = request.PageSize };
         }
 
-        var results = response.Hits.Select(hit => new SearchResult
+        var results = new List<SearchResult>();
+        foreach (var hit in response.Hits)
         {
-            EntityType = hit.Source.EntityType,
-            EntityId = hit.Source.Id,
-            Score = hit.Score ?? 0,
-            Data = hit.Source,
-            Highlights = hit.Highlight?.ToDictionary(h => h.Key, h => h.Value.ToList()) ?? new Dictionary<string, List<string>>()
-        }).ToList();
+            if (hit.Source is Newtonsoft.Json.Linq.JObject jObject)
+            {
+                var entityType = jObject["entityType"]?.ToString() ?? "Unknown";
+                var id = jObject["id"]?.ToString() ?? "";
+                
+                results.Add(new SearchResult
+                {
+                    EntityType = entityType,
+                    EntityId = id,
+                    Score = hit.Score ?? 0,
+                    Data = ConvertJObjectToBaseDocument(jObject),
+                    Highlights = hit.Highlight?.ToDictionary(h => h.Key, h => h.Value.ToList()) ?? new Dictionary<string, List<string>>()
+                });
+            }
+        }
 
         return new SearchResponse
         {
@@ -272,9 +256,46 @@ public class ElasticsearchService : IElasticsearchService
         };
     }
 
+    private BaseDocument ConvertJObjectToBaseDocument(Newtonsoft.Json.Linq.JObject jObject)
+    {
+        var entityType = jObject["entityType"]?.ToString();
+        
+        try
+        {
+            return entityType switch
+            {
+                "Offer" => jObject.ToObject<OfferDocument>() ?? new BaseDocument(),
+                "Purchase" => jObject.ToObject<PurchaseDocument>() ?? new BaseDocument(),
+                "Transport" => jObject.ToObject<TransportDocument>() ?? new BaseDocument(),
+                _ => new BaseDocument
+                {
+                    Id = jObject["id"]?.ToString() ?? "",
+                    EntityType = entityType ?? "Unknown",
+                    SearchableText = jObject["searchableText"]?.ToString() ?? "",
+                    Status = jObject["status"]?.ToString() ?? "",
+                    CreatedAt = jObject["createdAt"]?.ToObject<DateTime>() ?? DateTime.MinValue,
+                    UpdatedAt = jObject["updatedAt"]?.ToObject<DateTime?>()
+                }
+            };
+        }
+        catch (Exception ex)
+        {
+            _logger.LogWarning("Failed to convert JObject to specific document type: {Error}", ex.Message);
+            return new BaseDocument
+            {
+                Id = jObject["id"]?.ToString() ?? "",
+                EntityType = entityType ?? "Unknown",
+                SearchableText = jObject["searchableText"]?.ToString() ?? "",
+                Status = jObject["status"]?.ToString() ?? "",
+                CreatedAt = jObject["createdAt"]?.ToObject<DateTime>() ?? DateTime.MinValue,
+                UpdatedAt = jObject["updatedAt"]?.ToObject<DateTime?>()
+            };
+        }
+    }
+
     public async Task<List<string>> AutocompleteAsync(string query, string? userType, int? accountId)
     {
-        var response = await _client.SearchAsync<BaseDocument>(s => s
+        var response = await _client.SearchAsync<object>(s => s
             .Index(_indexName)
             .Size(10)
             .Query(q => q
@@ -302,17 +323,25 @@ public class ElasticsearchService : IElasticsearchService
             return new List<string>();
         }
 
-        return response.Documents
-            .Select(d => d.SearchableText)
-            .Where(s => !string.IsNullOrEmpty(s))
-            .Distinct()
-            .Take(10)
-            .ToList();
+        var results = new List<string>();
+        foreach (var hit in response.Hits)
+        {
+            if (hit.Source is Newtonsoft.Json.Linq.JObject jObject)
+            {
+                var searchableText = jObject["searchableText"]?.ToString();
+                if (!string.IsNullOrEmpty(searchableText))
+                {
+                    results.Add(searchableText);
+                }
+            }
+        }
+
+        return results.Distinct().Take(10).ToList();
     }
 
-    private QueryContainer BuildQuery(QueryContainerDescriptor<BaseDocument> q, SearchRequest request)
+    private QueryContainer BuildQuery(QueryContainerDescriptor<object> q, SearchRequest request)
     {
-        var mustQueries = new List<Func<QueryContainerDescriptor<BaseDocument>, QueryContainer>>();
+        var mustQueries = new List<Func<QueryContainerDescriptor<object>, QueryContainer>>();
 
         // Text search with fuzziness for typo tolerance
         if (!string.IsNullOrWhiteSpace(request.Query))
@@ -351,9 +380,9 @@ public class ElasticsearchService : IElasticsearchService
         );
     }
 
-    private List<Func<QueryContainerDescriptor<BaseDocument>, QueryContainer>> BuildRoleBasedFilters(SearchRequest request)
+    private List<Func<QueryContainerDescriptor<object>, QueryContainer>> BuildRoleBasedFilters(SearchRequest request)
     {
-        var filters = new List<Func<QueryContainerDescriptor<BaseDocument>, QueryContainer>>();
+        var filters = new List<Func<QueryContainerDescriptor<object>, QueryContainer>>();
 
         switch (request.UserType?.ToLower())
         {

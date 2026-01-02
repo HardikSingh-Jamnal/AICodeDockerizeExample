@@ -5,7 +5,7 @@ namespace Search.Documents;
 /// </summary>
 public class OfferDocument : BaseDocument
 {
-    public override string EntityType => "Offer";
+    public override string EntityType { get; set; } = "Offer";
 
     public Guid OfferId { get; set; }
     public Guid SellerId { get; set; }

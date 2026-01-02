@@ -1,9 +1,11 @@
+using Nest;
+
 namespace Search.Documents;
 
 /// <summary>
 /// Base document with common properties for all searchable entities.
 /// </summary>
-public abstract class BaseDocument
+public class BaseDocument
 {
     /// <summary>
     /// Unique document ID in format "{entityType}_{entityId}"
@@ -13,7 +15,7 @@ public abstract class BaseDocument
     /// <summary>
     /// Type of entity (Offer, Purchase, Transport)
     /// </summary>
-    public abstract string EntityType { get; }
+    public virtual string EntityType { get; set; } = "Base";
 
     /// <summary>
     /// Combined searchable text for full-text search

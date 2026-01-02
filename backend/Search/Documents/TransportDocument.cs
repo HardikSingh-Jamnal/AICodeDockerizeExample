@@ -5,7 +5,7 @@ namespace Search.Documents;
 /// </summary>
 public class TransportDocument : BaseDocument
 {
-    public override string EntityType => "Transport";
+    public override string EntityType { get; set; } = "Transport";
 
     public int TransportId { get; set; }
     public int CarrierId { get; set; }

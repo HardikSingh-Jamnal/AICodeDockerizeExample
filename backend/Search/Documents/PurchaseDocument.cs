@@ -5,7 +5,7 @@ namespace Search.Documents;
 /// </summary>
 public class PurchaseDocument : BaseDocument
 {
-    public override string EntityType => "Purchase";
+    public override string EntityType { get; set; } = "Purchase";
 
     public int PurchaseId { get; set; }
     public int BuyerId { get; set; }
