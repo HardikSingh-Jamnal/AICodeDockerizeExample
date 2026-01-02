@@ -1,70 +1,5 @@
-import React, { useState, useRef, useEffect, useMemo } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Search, Package, ShoppingCart, Truck, User, ChevronDown, ChevronUp, X } from "lucide-react";
-
-// Levenshtein distance for typo tolerance
-function levenshteinDistance(a: string, b: string): number {
-  const matrix: number[][] = [];
-  
-  if (a.length === 0) return b.length;
-  if (b.length === 0) return a.length;
-
-  for (let i = 0; i <= b.length; i++) {
-    matrix[i] = [i];
-  }
-  for (let j = 0; j <= a.length; j++) {
-    matrix[0][j] = j;
-  }
-
-  for (let i = 1; i <= b.length; i++) {
-    for (let j = 1; j <= a.length; j++) {
-      if (b.charAt(i - 1) === a.charAt(j - 1)) {
-        matrix[i][j] = matrix[i - 1][j - 1];
-      } else {
-        matrix[i][j] = Math.min(
-          matrix[i - 1][j - 1] + 1, // substitution
-          matrix[i][j - 1] + 1,     // insertion
-          matrix[i - 1][j] + 1      // deletion
-        );
-      }
-    }
-  }
-
-  return matrix[b.length][a.length];
-}
-
-// Fuzzy match with typo tolerance
-function fuzzyMatch(query: string, target: string, threshold: number = 0.3): boolean {
-  const q = query.toLowerCase().trim();
-  const t = target.toLowerCase();
-  
-  if (q === "") return true;
-  if (t.includes(q)) return true; // exact substring match
-  
-  // Split target into words and check each
-  const words = t.split(/\s+/);
-  for (const word of words) {
-    // Allow more tolerance for longer words
-    const maxDistance = Math.max(1, Math.floor(word.length * threshold));
-    const distance = levenshteinDistance(q, word);
-    if (distance <= maxDistance) return true;
-    
-    // Also check if query is a fuzzy prefix of the word
-    if (q.length <= word.length) {
-      const prefix = word.substring(0, q.length);
-      const prefixDistance = levenshteinDistance(q, prefix);
-      if (prefixDistance <= Math.max(1, Math.floor(q.length * threshold))) return true;
-    }
-  }
-  
-  // Check against the full target string for longer queries
-  if (q.length >= 3) {
-    const maxDistance = Math.max(1, Math.floor(q.length * threshold));
-    const distance = levenshteinDistance(q, t);
-    if (distance <= maxDistance) return true;
-  }
-  
-  return false;
-}
 
 // Mock account ids for each role
 const accountIdsByRole: Record<string, string[]> = {
@@ -130,29 +65,24 @@ export default function CentralizedSearchMock() {
   const searchInputRef = useRef<HTMLInputElement>(null);
   const searchDropdownRef = useRef<HTMLDivElement>(null);
 
-  const filteredResults = useMemo(() => ({
+  const filteredResults = {
     offers: mockResults.offers.filter((o: Offer) =>
       query === "" ||
-      fuzzyMatch(query, o.make) ||
-      fuzzyMatch(query, o.model) ||
-      fuzzyMatch(query, o.vin) ||
-      fuzzyMatch(query, `${o.year}`) ||
-      fuzzyMatch(query, o.owner)
+      o.make.toLowerCase().includes(query.toLowerCase()) ||
+      o.model.toLowerCase().includes(query.toLowerCase()) ||
+      o.vin.toLowerCase().includes(query.toLowerCase())
     ),
     purchases: mockResults.purchases.filter((p: Purchase) =>
       query === "" ||
-      fuzzyMatch(query, p.id) ||
-      fuzzyMatch(query, p.buyer) ||
-      fuzzyMatch(query, p.status)
+      p.id.toLowerCase().includes(query.toLowerCase()) ||
+      p.buyer.toLowerCase().includes(query.toLowerCase())
     ),
     transports: mockResults.transports.filter((t: Transport) =>
       query === "" ||
-      fuzzyMatch(query, t.id) ||
-      fuzzyMatch(query, t.vehicle) ||
-      fuzzyMatch(query, t.carrier) ||
-      fuzzyMatch(query, t.status)
+      t.id.toLowerCase().includes(query.toLowerCase()) ||
+      t.vehicle.toLowerCase().includes(query.toLowerCase())
     ),
-  }), [query]);
+  };
 
   const tabs = [
     { id: "all", label: "All Results", icon: Search },
@@ -228,7 +158,7 @@ export default function CentralizedSearchMock() {
     setHighlightedIndex(-1);
   }, [role]);
 
-  // Handle keyboard navigation for account input
+  // Handle keyboard navigation
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (!showDropdown || filteredAccounts.length === 0) {
       if (e.key === "ArrowDown") {
@@ -263,51 +193,6 @@ export default function CentralizedSearchMock() {
     }
   };
 
-  // Handle keyboard navigation for search input
-  const handleSearchKeyDown = (e: React.KeyboardEvent) => {
-    if (!showSearchDropdown || searchSuggestions.length === 0) {
-      if (e.key === "ArrowDown") {
-        setShowSearchDropdown(true);
-        setSearchHighlightedIndex(0);
-      }
-      return;
-    }
-
-    switch (e.key) {
-      case "ArrowDown":
-        e.preventDefault();
-        setSearchHighlightedIndex((prev) =>
-          prev < searchSuggestions.length - 1 ? prev + 1 : prev
-        );
-        break;
-      case "ArrowUp":
-        e.preventDefault();
-        setSearchHighlightedIndex((prev) => (prev > 0 ? prev - 1 : 0));
-        break;
-      case "Enter":
-        e.preventDefault();
-        if (searchHighlightedIndex >= 0 && searchHighlightedIndex < searchSuggestions.length) {
-          setQuery(searchSuggestions[searchHighlightedIndex]);
-          setShowSearchDropdown(false);
-          setSearchHighlightedIndex(-1);
-        }
-        break;
-      case "Escape":
-        e.preventDefault();
-        setShowSearchDropdown(false);
-        setSearchHighlightedIndex(-1);
-        break;
-    }
-  };
-
-  // Handle search suggestion selection
-  const handleSearchSuggestionSelect = (suggestion: string) => {
-    setQuery(suggestion);
-    setShowSearchDropdown(false);
-    setSearchHighlightedIndex(-1);
-    searchInputRef.current?.focus();
-  };
-
   // Scroll highlighted item into view
   useEffect(() => {
     if (highlightedIndex >= 0 && dropdownRef.current) {
@@ -316,18 +201,9 @@ export default function CentralizedSearchMock() {
     }
   }, [highlightedIndex]);
 
-  // Scroll highlighted search suggestion into view
-  useEffect(() => {
-    if (searchHighlightedIndex >= 0 && searchDropdownRef.current) {
-      const items = searchDropdownRef.current.querySelectorAll("li");
-      items[searchHighlightedIndex]?.scrollIntoView({ block: "nearest" });
-    }
-  }, [searchHighlightedIndex]);
-
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      // Handle account dropdown
       if (
         inputRef.current &&
         !inputRef.current.contains(e.target as Node) &&
@@ -336,17 +212,6 @@ export default function CentralizedSearchMock() {
       ) {
         setShowDropdown(false);
         setHighlightedIndex(-1);
-      }
-      
-      // Handle search dropdown
-      if (
-        searchInputRef.current &&
-        !searchInputRef.current.contains(e.target as Node) &&
-        searchDropdownRef.current &&
-        !searchDropdownRef.current.contains(e.target as Node)
-      ) {
-        setShowSearchDropdown(false);
-        setSearchHighlightedIndex(-1);
       }
     };
 
@@ -481,50 +346,13 @@ export default function CentralizedSearchMock() {
 
               {/* Search Bar */}
               <div className="relative flex-1">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 z-10" />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                 <input
-                  ref={searchInputRef}
                   className="w-full pl-12 pr-4 py-2.5 rounded-lg bg-slate-50 border-2 border-slate-200 focus:border-blue-500 focus:bg-white transition-all outline-none text-slate-900 placeholder-slate-400"
-                  placeholder="Search by VIN, vehicle, buyer, or ID... (typo tolerant)"
+                  placeholder="Search by VIN, vehicle, buyer, or ID..."
                   value={query}
-                  onChange={(e) => {
-                    setQuery(e.target.value);
-                    setShowSearchDropdown(true);
-                    setSearchHighlightedIndex(-1);
-                  }}
-                  onFocus={() => {
-                    if (query && searchSuggestions.length > 0) {
-                      setShowSearchDropdown(true);
-                    }
-                  }}
-                  onKeyDown={handleSearchKeyDown}
-                  autoComplete="off"
+                  onChange={(e) => setQuery(e.target.value)}
                 />
-                
-                {/* Search Autocomplete Dropdown */}
-                {showSearchDropdown && searchSuggestions.length > 0 && (
-                  <div
-                    ref={searchDropdownRef}
-                    className="absolute z-30 left-0 right-0 mt-2 bg-white border border-slate-200 rounded-lg shadow-lg max-h-60 overflow-auto"
-                  >
-                    <ul>
-                      {searchSuggestions.map((suggestion, index) => (
-                        <li
-                          key={suggestion}
-                          className={`px-4 py-2.5 cursor-pointer transition-colors ${
-                            index === searchHighlightedIndex
-                              ? "bg-blue-100 text-blue-900"
-                              : "hover:bg-slate-50"
-                          }`}
-                          onMouseDown={() => handleSearchSuggestionSelect(suggestion)}
-                          onMouseEnter={() => setSearchHighlightedIndex(index)}
-                        >
-                          {highlightMatch(suggestion, query)}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
               </div>
             </div>
           </div>
