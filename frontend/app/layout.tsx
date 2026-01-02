@@ -5,8 +5,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Microservices App",
-  description: "A microservices application with Next.js frontend",
+  title: "Centralized Search Platform",
+  description: "Unified premium search experience for all enterprise domains.",
 };
 
 export default function RootLayout({
@@ -17,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="container mx-auto px-4 py-8">{children}</div>
+        <main className="app-container">
+          {children}
+        </main>
       </body>
     </html>
   );
