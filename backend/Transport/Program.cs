@@ -8,6 +8,7 @@ using Transport.Features.GetTransportById;
 using Transport.Features.CreateTransport;
 using Transport.Features.UpdateTransport;
 using Transport.Features.DeleteTransport;
+using Transport.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,6 +50,15 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Progr
 // Add FluentValidation
 builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
 
+// Add RabbitMQ Publisher
+builder.Services.AddSingleton<IMessagePublisher, RabbitMqPublisher>();
+
+// Add Outbox Processor Background Service
+builder.Services.AddHostedService<OutboxProcessor>();
+
+// Add Health Checks
+builder.Services.AddHealthChecks();
+
 var app = builder.Build();
 
 // Apply migrations and seed database
@@ -70,6 +80,9 @@ app.UseSwaggerUI(c =>
 });
 
 app.UseCors("AllowFrontend");
+
+// Health check endpoint
+app.MapHealthChecks("/health");
 
 // Transport endpoints
 app.MapGet("/transports", async (IMediator mediator) =>
@@ -124,11 +137,6 @@ app.MapDelete("/transports/{id:int}", async (int id, IMediator mediator) =>
     return result ? Results.NoContent() : Results.NotFound();
 })
 .WithName("DeleteTransport")
-.WithOpenApi();
-
-// Health check endpoint
-app.MapGet("/health", () => Results.Ok(new { Status = "Healthy", Timestamp = DateTime.UtcNow }))
-.WithName("HealthCheck")
 .WithOpenApi();
 
 app.Run();
