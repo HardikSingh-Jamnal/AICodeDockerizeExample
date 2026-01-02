@@ -88,9 +88,8 @@ export const searchApi = {
    */
   search: async (params: SearchParams): Promise<SearchResults> => {
     const queryParams = new URLSearchParams();
-    if (params.sellerId) queryParams.append('sellerId', params.sellerId);
-    if (params.buyerId) queryParams.append('buyerId', params.buyerId);
-    if (params.carrierId) queryParams.append('carrierId', params.carrierId);
+    const userId = params.sellerId || params.buyerId || params.carrierId;
+    if (userId) queryParams.append('userId', userId);
     if (params.query) queryParams.append('q', params.query);
     if (params.userRole) queryParams.append('userRole', params.userRole);
     const url = `${API_BASE_URL}/api/search?${queryParams.toString()}`;
