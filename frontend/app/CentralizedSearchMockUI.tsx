@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
-import { Search, Package, ShoppingCart, Truck, User, ChevronDown, ChevronUp, X } from "lucide-react";
+import { Search, Package, ShoppingCart, Truck, User, X } from "lucide-react";
 
 // Levenshtein distance for typo tolerance
 function levenshteinDistance(a: string, b: string): number {
@@ -66,13 +66,6 @@ function fuzzyMatch(query: string, target: string, threshold: number = 0.3): boo
   return false;
 }
 
-// Mock account ids for each role
-const accountIdsByRole: Record<string, string[]> = {
-  Seller: ["seller-001", "seller-002", "seller-003", "seller-xyz"],
-  Buyer: ["buyer-001", "buyer-002", "buyer-abc", "buyer-xyz"],
-  Carrier: ["carrier-001", "carrier-002", "carrier-xyz"],
-  Agent: ["agent-001", "agent-002", "agent-xyz"],
-};
 
 interface Offer {
   id: string;
@@ -117,12 +110,7 @@ export default function CentralizedSearchMock() {
   const [query, setQuery] = useState("");
   const [role, setRole] = useState("Agent");
   const [activeTab, setActiveTab] = useState("all");
-  const [accountInput, setAccountInput] = useState("");
-  const [selectedAccount, setSelectedAccount] = useState<string | null>(null);
-  const [showDropdown, setShowDropdown] = useState(false);
-  const [highlightedIndex, setHighlightedIndex] = useState(-1);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [accountId, setAccountId] = useState("");
   
   // Search autocomplete state
   const [showSearchDropdown, setShowSearchDropdown] = useState(false);
@@ -198,69 +186,9 @@ export default function CentralizedSearchMock() {
 
   const searchSuggestions = getSearchSuggestions();
 
-  // Filter account ids based on input
-  const filteredAccounts = accountIdsByRole[role].filter((id) =>
-    id.toLowerCase().includes(accountInput.toLowerCase())
-  );
-
-  // Handle account selection
-  const handleAccountSelect = (id: string) => {
-    setSelectedAccount(id);
-    setAccountInput(id);
-    setShowDropdown(false);
-    setHighlightedIndex(-1);
-  };
-
-  // Clear selection
-  const handleClear = () => {
-    setAccountInput("");
-    setSelectedAccount(null);
-    setShowDropdown(false);
-    setHighlightedIndex(-1);
-    inputRef.current?.focus();
-  };
-
-  // Reset account input when role changes
-  useEffect(() => {
-    setAccountInput("");
-    setSelectedAccount(null);
-    setShowDropdown(false);
-    setHighlightedIndex(-1);
-  }, [role]);
-
-  // Handle keyboard navigation for account input
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (!showDropdown || filteredAccounts.length === 0) {
-      if (e.key === "ArrowDown") {
-        setShowDropdown(true);
-        setHighlightedIndex(0);
-      }
-      return;
-    }
-
-    switch (e.key) {
-      case "ArrowDown":
-        e.preventDefault();
-        setHighlightedIndex((prev) =>
-          prev < filteredAccounts.length - 1 ? prev + 1 : prev
-        );
-        break;
-      case "ArrowUp":
-        e.preventDefault();
-        setHighlightedIndex((prev) => (prev > 0 ? prev - 1 : 0));
-        break;
-      case "Enter":
-        e.preventDefault();
-        if (highlightedIndex >= 0 && highlightedIndex < filteredAccounts.length) {
-          handleAccountSelect(filteredAccounts[highlightedIndex]);
-        }
-        break;
-      case "Escape":
-        e.preventDefault();
-        setShowDropdown(false);
-        setHighlightedIndex(-1);
-        break;
-    }
+  // Clear account ID
+  const handleClearAccountId = () => {
+    setAccountId("");
   };
 
   // Handle keyboard navigation for search input
@@ -308,14 +236,6 @@ export default function CentralizedSearchMock() {
     searchInputRef.current?.focus();
   };
 
-  // Scroll highlighted item into view
-  useEffect(() => {
-    if (highlightedIndex >= 0 && dropdownRef.current) {
-      const items = dropdownRef.current.querySelectorAll("li");
-      items[highlightedIndex]?.scrollIntoView({ block: "nearest" });
-    }
-  }, [highlightedIndex]);
-
   // Scroll highlighted search suggestion into view
   useEffect(() => {
     if (searchHighlightedIndex >= 0 && searchDropdownRef.current) {
@@ -324,21 +244,9 @@ export default function CentralizedSearchMock() {
     }
   }, [searchHighlightedIndex]);
 
-  // Close dropdown when clicking outside
+  // Close search dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      // Handle account dropdown
-      if (
-        inputRef.current &&
-        !inputRef.current.contains(e.target as Node) &&
-        dropdownRef.current &&
-        !dropdownRef.current.contains(e.target as Node)
-      ) {
-        setShowDropdown(false);
-        setHighlightedIndex(-1);
-      }
-      
-      // Handle search dropdown
       if (
         searchInputRef.current &&
         !searchInputRef.current.contains(e.target as Node) &&
@@ -402,79 +310,26 @@ export default function CentralizedSearchMock() {
                 {/* Vertical divider */}
                 <div className="w-px h-6 bg-slate-300"></div>
 
-                {/* Account Id Typeahead */}
+                {/* Account Id Text Input */}
                 <div className="relative">
                   <input
-                    ref={inputRef}
                     type="text"
-                    className="px-3 py-1.5 pr-16 rounded-md border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none w-48 transition-all bg-white"
+                    className="px-3 py-1.5 pr-8 rounded-md border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none w-48 transition-all bg-white"
                     placeholder="Account ID"
-                    value={accountInput}
-                    onChange={(e) => {
-                      setAccountInput(e.target.value);
-                      setSelectedAccount(null);
-                      setShowDropdown(true);
-                      setHighlightedIndex(-1);
-                    }}
-                    onFocus={() => setShowDropdown(true)}
-                    onKeyDown={handleKeyDown}
+                    value={accountId}
+                    onChange={(e) => setAccountId(e.target.value)}
                     autoComplete="off"
                   />
-                  <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
-                    {selectedAccount && (
-                      <button
-                        type="button"
-                        className="p-1 rounded hover:bg-slate-200 transition-colors"
-                        onClick={handleClear}
-                        tabIndex={-1}
-                        aria-label="Clear account id"
-                      >
-                        <X className="w-4 h-4 text-slate-500" />
-                      </button>
-                    )}
+                  {accountId && (
                     <button
                       type="button"
-                      className="p-1 rounded hover:bg-slate-200 transition-colors"
-                      onClick={() => setShowDropdown(!showDropdown)}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded hover:bg-slate-200 transition-colors"
+                      onClick={handleClearAccountId}
                       tabIndex={-1}
-                      aria-label={showDropdown ? "Close account id dropdown" : "Open account id dropdown"}
+                      aria-label="Clear account id"
                     >
-                      {showDropdown ? (
-                        <ChevronUp className="w-4 h-4 text-slate-600" />
-                      ) : (
-                        <ChevronDown className="w-4 h-4 text-slate-600" />
-                      )}
+                      <X className="w-4 h-4 text-slate-500" />
                     </button>
-                  </div>
-                  
-                  {showDropdown && (
-                    <div
-                      ref={dropdownRef}
-                      className="absolute z-20 left-0 w-full mt-2 bg-white border border-slate-200 rounded-lg shadow-lg max-h-60 overflow-auto"
-                    >
-                      {filteredAccounts.length > 0 ? (
-                        <ul>
-                          {filteredAccounts.map((id, index) => (
-                            <li
-                              key={id}
-                              className={`px-4 py-2.5 cursor-pointer transition-colors ${
-                                index === highlightedIndex
-                                  ? "bg-blue-100 text-blue-900"
-                                  : "hover:bg-slate-50"
-                              } ${selectedAccount === id ? "font-semibold text-blue-600" : ""}`}
-                              onMouseDown={() => handleAccountSelect(id)}
-                              onMouseEnter={() => setHighlightedIndex(index)}
-                            >
-                              {highlightMatch(id, accountInput)}
-                            </li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <div className="px-4 py-3 text-sm text-slate-500 text-center">
-                          No accounts found
-                        </div>
-                      )}
-                    </div>
                   )}
                 </div>
               </div>

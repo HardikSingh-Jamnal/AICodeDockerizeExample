@@ -1,92 +1,44 @@
 // API Base Configuration
-const API_BASE_URLS = {
-  products: process.env.NEXT_PUBLIC_PRODUCTS_API || 'http://localhost:5001',
-  orders: process.env.NEXT_PUBLIC_ORDERS_API || 'http://localhost:5002',
-  billing: process.env.NEXT_PUBLIC_BILLING_API || 'http://localhost:5003',
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5000'
+
+// Types for Search
+export interface Offer {
+  id: string
+  vin: string
+  make: string
+  model: string
+  year: number
+  price: string
+  owner: string
 }
 
-// Types
-export interface Product {
-  id: number
-  name: string
-  description: string
-  price: number
-  stockQuantity: number
-  category: string
-  isActive: boolean
+export interface Purchase {
+  id: string
+  offerId: string
+  buyer: string
+  status: string
 }
 
-export interface CreateProductRequest {
-  name: string
-  description: string
-  price: number
-  stockQuantity: number
-  category: string
+export interface Transport {
+  id: string
+  vehicle: string
+  carrier: string
+  status: string
 }
 
-export interface UpdateProductRequest extends CreateProductRequest {
-  id: number
+export interface SearchResults {
+  offers: Offer[]
+  purchases: Purchase[]
+  transports: Transport[]
 }
 
-export interface OrderItem {
-  productId: number
-  productName: string
-  unitPrice: number
-  quantity: number
-}
-
-export interface Order {
-  id: number
-  customerId: number
-  customerName: string
-  customerEmail: string
-  totalAmount: number
-  status: number
-  shippingAddress: string
-  orderDate: string
-  shippedDate?: string
-  deliveredDate?: string
-}
-
-export interface CreateOrderRequest {
-  customerId: number
-  customerName: string
-  customerEmail: string
-  shippingAddress: string
-  orderItems: OrderItem[]
-}
-
-export interface BillingRecord {
-  id: number
-  orderId: number
-  customerId: number
-  customerName: string
-  customerEmail: string
-  amount: number
-  taxAmount: number
-  totalAmount: number
-  status: number
-  billingAddress: string
-  paymentMethod: string
-  transactionId: string
-  billingDate: string
-  paidDate?: string
-  dueDate?: string
-}
-
-export interface CreateBillingRequest {
-  orderId: number
-  customerId: number
-  customerName: string
-  customerEmail: string
-  amount: number
-  taxAmount: number
-  billingAddress: string
-  paymentMethod: string
+export interface SearchParams {
+  accountId: string
+  query?: string
 }
 
 // API Functions
-async function apiRequest(url: string, options: RequestInit = {}) {
+async function apiRequest<T>(url: string, options: RequestInit = {}): Promise<T> {
   const response = await fetch(url, {
     headers: {
       'Content-Type': 'application/json',
@@ -102,79 +54,58 @@ async function apiRequest(url: string, options: RequestInit = {}) {
   return response.json()
 }
 
-// Products API
-export const productsApi = {
-  getAll: async (): Promise<Product[]> => {
-    return apiRequest(`${API_BASE_URLS.products}/products`)
-  },
+// Search API
+export const searchApi = {
+  /**
+   * Search across all entities (offers, purchases, transports)
+   * @param params - Search parameters including accountId and query
+   * @returns Search results containing matching offers, purchases, and transports
+   */
+  search: async (params: SearchParams): Promise<SearchResults> => {
+    const queryParams = new URLSearchParams()
+    
+    queryParams.append('accountId', params.accountId)
+    
+    if (params.query) {
+      queryParams.append('q', params.query)
+    }
 
-  getById: async (id: number): Promise<Product> => {
-    return apiRequest(`${API_BASE_URLS.products}/products/${id}`)
-  },
-
-  create: async (product: CreateProductRequest): Promise<{ id: number }> => {
-    return apiRequest(`${API_BASE_URLS.products}/products`, {
-      method: 'POST',
-      body: JSON.stringify(product),
-    })
-  },
-
-  update: async (id: number, product: CreateProductRequest): Promise<void> => {
-    await apiRequest(`${API_BASE_URLS.products}/products/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify({ ...product, id }),
-    })
-  },
-
-  delete: async (id: number): Promise<void> => {
-    await apiRequest(`${API_BASE_URLS.products}/products/${id}`, {
-      method: 'DELETE',
-    })
+    const url = `${API_BASE_URL}/search?${queryParams.toString()}`
+    
+    return apiRequest<SearchResults>(url)
   },
 }
 
-// Orders API
-export const ordersApi = {
-  getAll: async (): Promise<Order[]> => {
-    return apiRequest(`${API_BASE_URLS.orders}/orders`)
-  },
-
-  create: async (order: CreateOrderRequest): Promise<{ id: number }> => {
-    return apiRequest(`${API_BASE_URLS.orders}/orders`, {
-      method: 'POST',
-      body: JSON.stringify(order),
-    })
-  },
+// Mock data for development
+const mockData: SearchResults = {
+  offers: [
+    { id: 'O-123', vin: '1HGCM82633A004352', make: 'Toyota', model: 'Camry', year: 2022, price: '$22,000', owner: 'Seller A' },
+    { id: 'O-124', vin: '2HGCM82633A004353', make: 'Honda', model: 'Accord', year: 2023, price: '$25,500', owner: 'Seller B' },
+  ],
+  purchases: [
+    { id: 'P-456', offerId: 'O-123', buyer: 'Buyer X', status: 'Completed' },
+    { id: 'P-457', offerId: 'O-124', buyer: 'Buyer Y', status: 'Pending' },
+  ],
+  transports: [
+    { id: 'T-789', vehicle: 'Camry 2022', carrier: 'Carrier Y', status: 'In Transit' },
+    { id: 'T-790', vehicle: 'Accord 2023', carrier: 'Carrier Z', status: 'Delivered' },
+  ],
 }
 
-// Billing API
-export const billingApi = {
-  getAll: async (): Promise<BillingRecord[]> => {
-    return apiRequest(`${API_BASE_URLS.billing}/billing`)
+// Service layer - currently uses mock data, will switch to API when ready
+const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK_API !== 'false'
+
+export const searchService = {
+  /**
+   * Search with accountId and optional query
+   * Currently returns mock data, will call API when ready
+   */
+  search: async (params: SearchParams): Promise<SearchResults> => {
+    if (USE_MOCK) {
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 150))
+      return mockData
+    }
+    return searchApi.search(params)
   },
-
-  create: async (billing: CreateBillingRequest): Promise<{ id: number }> => {
-    return apiRequest(`${API_BASE_URLS.billing}/billing`, {
-      method: 'POST',
-      body: JSON.stringify(billing),
-    })
-  },
-
-  updateStatus: async (id: number, status: number, transactionId?: string): Promise<void> => {
-    await apiRequest(`${API_BASE_URLS.billing}/billing/${id}/status`, {
-      method: 'PUT',
-      body: JSON.stringify({ id, status, transactionId }),
-    })
-  },
-}
-
-// Helper functions
-export const getOrderStatusText = (status: number): string => {
-  const statuses = ['Pending', 'Confirmed', 'Shipped', 'Delivered', 'Cancelled']
-  return statuses[status] || 'Unknown'
-}
-
-export const getBillingStatusText = (status: number): string => {
-  const statuses = ['Pending', 'Paid', 'Failed', 'Refunded', 'Cancelled']
-  return statuses[status] || 'Unknown'
 }
