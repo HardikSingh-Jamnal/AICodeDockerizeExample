@@ -4,7 +4,7 @@ import { Search, Package, ShoppingCart, Truck, User, X } from "lucide-react";
 // Levenshtein distance for typo tolerance
 function levenshteinDistance(a: string, b: string): number {
   const matrix: number[][] = [];
-  
+
   if (a.length === 0) return b.length;
   if (b.length === 0) return a.length;
 
@@ -22,8 +22,8 @@ function levenshteinDistance(a: string, b: string): number {
       } else {
         matrix[i][j] = Math.min(
           matrix[i - 1][j - 1] + 1, // substitution
-          matrix[i][j - 1] + 1,     // insertion
-          matrix[i - 1][j] + 1      // deletion
+          matrix[i][j - 1] + 1, // insertion
+          matrix[i - 1][j] + 1 // deletion
         );
       }
     }
@@ -33,13 +33,17 @@ function levenshteinDistance(a: string, b: string): number {
 }
 
 // Fuzzy match with typo tolerance
-function fuzzyMatch(query: string, target: string, threshold: number = 0.3): boolean {
+function fuzzyMatch(
+  query: string,
+  target: string,
+  threshold: number = 0.3
+): boolean {
   const q = query.toLowerCase().trim();
   const t = target.toLowerCase();
-  
+
   if (q === "") return true;
   if (t.includes(q)) return true; // exact substring match
-  
+
   // Split target into words and check each
   const words = t.split(/\s+/);
   for (const word of words) {
@@ -47,25 +51,25 @@ function fuzzyMatch(query: string, target: string, threshold: number = 0.3): boo
     const maxDistance = Math.max(1, Math.floor(word.length * threshold));
     const distance = levenshteinDistance(q, word);
     if (distance <= maxDistance) return true;
-    
+
     // Also check if query is a fuzzy prefix of the word
     if (q.length <= word.length) {
       const prefix = word.substring(0, q.length);
       const prefixDistance = levenshteinDistance(q, prefix);
-      if (prefixDistance <= Math.max(1, Math.floor(q.length * threshold))) return true;
+      if (prefixDistance <= Math.max(1, Math.floor(q.length * threshold)))
+        return true;
     }
   }
-  
+
   // Check against the full target string for longer queries
   if (q.length >= 3) {
     const maxDistance = Math.max(1, Math.floor(q.length * threshold));
     const distance = levenshteinDistance(q, t);
     if (distance <= maxDistance) return true;
   }
-  
+
   return false;
 }
-
 
 interface Offer {
   id: string;
@@ -93,16 +97,42 @@ interface Transport {
 
 const mockResults = {
   offers: [
-    { id: "O-123", vin: "1HGCM82633A004352", make: "Toyota", model: "Camry", year: 2022, price: "$22,000", owner: "Seller A" },
-    { id: "O-124", vin: "2HGCM82633A004353", make: "Honda", model: "Accord", year: 2023, price: "$25,500", owner: "Seller B" },
+    {
+      id: "O-123",
+      vin: "1HGCM82633A004352",
+      make: "Toyota",
+      model: "Camry",
+      year: 2022,
+      price: "$22,000",
+      owner: "Seller A",
+    },
+    {
+      id: "O-124",
+      vin: "2HGCM82633A004353",
+      make: "Honda",
+      model: "Accord",
+      year: 2023,
+      price: "$25,500",
+      owner: "Seller B",
+    },
   ],
   purchases: [
     { id: "P-456", offerId: "O-123", buyer: "Buyer X", status: "Completed" },
     { id: "P-457", offerId: "O-124", buyer: "Buyer Y", status: "Pending" },
   ],
   transports: [
-    { id: "T-789", vehicle: "Camry 2022", carrier: "Carrier Y", status: "In Transit" },
-    { id: "T-790", vehicle: "Accord 2023", carrier: "Carrier Z", status: "Delivered" },
+    {
+      id: "T-789",
+      vehicle: "Camry 2022",
+      carrier: "Carrier Y",
+      status: "In Transit",
+    },
+    {
+      id: "T-790",
+      vehicle: "Accord 2023",
+      carrier: "Carrier Z",
+      status: "Delivered",
+    },
   ],
 };
 
@@ -111,53 +141,103 @@ export default function CentralizedSearchMock() {
   const [role, setRole] = useState("Agent");
   const [activeTab, setActiveTab] = useState("all");
   const [accountId, setAccountId] = useState("");
-  
+
   // Search autocomplete state
   const [showSearchDropdown, setShowSearchDropdown] = useState(false);
   const [searchHighlightedIndex, setSearchHighlightedIndex] = useState(-1);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const searchDropdownRef = useRef<HTMLDivElement>(null);
 
-  const filteredResults = useMemo(() => ({
-    offers: mockResults.offers.filter((o: Offer) =>
-      query === "" ||
-      fuzzyMatch(query, o.make) ||
-      fuzzyMatch(query, o.model) ||
-      fuzzyMatch(query, o.vin) ||
-      fuzzyMatch(query, `${o.year}`) ||
-      fuzzyMatch(query, o.owner)
-    ),
-    purchases: mockResults.purchases.filter((p: Purchase) =>
-      query === "" ||
-      fuzzyMatch(query, p.id) ||
-      fuzzyMatch(query, p.buyer) ||
-      fuzzyMatch(query, p.status)
-    ),
-    transports: mockResults.transports.filter((t: Transport) =>
-      query === "" ||
-      fuzzyMatch(query, t.id) ||
-      fuzzyMatch(query, t.vehicle) ||
-      fuzzyMatch(query, t.carrier) ||
-      fuzzyMatch(query, t.status)
-    ),
-  }), [query]);
+  const filteredResults = useMemo(
+    () => ({
+      offers: mockResults.offers.filter(
+        (o: Offer) =>
+          query === "" ||
+          fuzzyMatch(query, o.make) ||
+          fuzzyMatch(query, o.model) ||
+          fuzzyMatch(query, o.vin) ||
+          fuzzyMatch(query, `${o.year}`) ||
+          fuzzyMatch(query, o.owner)
+      ),
+      purchases: mockResults.purchases.filter(
+        (p: Purchase) =>
+          query === "" ||
+          fuzzyMatch(query, p.id) ||
+          fuzzyMatch(query, p.buyer) ||
+          fuzzyMatch(query, p.status)
+      ),
+      transports: mockResults.transports.filter(
+        (t: Transport) =>
+          query === "" ||
+          fuzzyMatch(query, t.id) ||
+          fuzzyMatch(query, t.vehicle) ||
+          fuzzyMatch(query, t.carrier) ||
+          fuzzyMatch(query, t.status)
+      ),
+    }),
+    [query]
+  );
 
-  const tabs = [
-    { id: "all", label: "All Results", icon: Search },
-    { id: "offers", label: "Offers", icon: Package },
-    { id: "purchases", label: "Purchases", icon: ShoppingCart },
-    { id: "transports", label: "Transports", icon: Truck },
-  ];
+  const tabs = useMemo(() => {
+    switch (role) {
+      case "Seller":
+        return [{ id: "all", label: "All Results", icon: Search }];
+      case "Buyer":
+        return [
+          { id: "all", label: "All Results", icon: Search },
+          { id: "offers", label: "Offers", icon: Package },
+          { id: "purchases", label: "Purchases", icon: ShoppingCart },
+        ];
+      case "Carrier":
+        return [{ id: "all", label: "All Results", icon: Search }];
+      case "Agent":
+      default:
+        return [
+          { id: "all", label: "All Results", icon: Search },
+          { id: "offers", label: "Offers", icon: Package },
+          { id: "purchases", label: "Purchases", icon: ShoppingCart },
+          { id: "transports", label: "Transports", icon: Truck },
+        ];
+    }
+  }, [role]);
 
-  const showSection = (section: string) => activeTab === "all" || activeTab === section;
+  // Only allow valid tabs for each role
+  useEffect(() => {
+    const validTabIds = tabs.map((t) => t.id);
+    if (!validTabIds.includes(activeTab)) {
+      setActiveTab(tabs[0].id);
+    }
+  }, [role, activeTab, tabs]);
 
+  // Section visibility logic by role and tab
+  const showSection = (section: string) => {
+    if (activeTab === "all") {
+      // For 'all', show all sections allowed for the role
+      if (role === "Seller") return section === "offers";
+      if (role === "Buyer")
+        return section === "offers" || section === "purchases";
+      if (role === "Carrier") return section === "transports";
+      return true; // Agent: all
+    }
+    // For specific tabs
+    if (role === "Seller") return section === "offers";
+    if (role === "Buyer") {
+      if (activeTab === "offers") return section === "offers";
+      if (activeTab === "purchases") return section === "purchases";
+    }
+    if (role === "Carrier") {
+      if (activeTab === "transports") return section === "transports";
+    }
+    // Agent or default
+    return activeTab === section;
+  };
   // Generate search suggestions
   const getSearchSuggestions = (): string[] => {
     if (!query || query.trim().length === 0) return [];
-    
+
     const queryLower = query.toLowerCase().trim();
     const suggestions = new Set<string>();
-    
+
     // Add offers suggestions (VIN, make, model)
     mockResults.offers.forEach((o: Offer) => {
       if (o.vin.toLowerCase().includes(queryLower)) suggestions.add(o.vin);
@@ -166,21 +246,24 @@ export default function CentralizedSearchMock() {
       if (o.id.toLowerCase().includes(queryLower)) suggestions.add(o.id);
       if (o.owner.toLowerCase().includes(queryLower)) suggestions.add(o.owner);
     });
-    
+
     // Add purchases suggestions (ID, buyer, offerId)
     mockResults.purchases.forEach((p: Purchase) => {
       if (p.id.toLowerCase().includes(queryLower)) suggestions.add(p.id);
       if (p.buyer.toLowerCase().includes(queryLower)) suggestions.add(p.buyer);
-      if (p.offerId.toLowerCase().includes(queryLower)) suggestions.add(p.offerId);
+      if (p.offerId.toLowerCase().includes(queryLower))
+        suggestions.add(p.offerId);
     });
-    
+
     // Add transports suggestions (ID, vehicle, carrier)
     mockResults.transports.forEach((t: Transport) => {
       if (t.id.toLowerCase().includes(queryLower)) suggestions.add(t.id);
-      if (t.vehicle.toLowerCase().includes(queryLower)) suggestions.add(t.vehicle);
-      if (t.carrier.toLowerCase().includes(queryLower)) suggestions.add(t.carrier);
+      if (t.vehicle.toLowerCase().includes(queryLower))
+        suggestions.add(t.vehicle);
+      if (t.carrier.toLowerCase().includes(queryLower))
+        suggestions.add(t.carrier);
     });
-    
+
     return Array.from(suggestions).slice(0, 10); // Limit to 10 suggestions
   };
 
@@ -189,6 +272,14 @@ export default function CentralizedSearchMock() {
   // Clear account ID
   const handleClearAccountId = () => {
     setAccountId("");
+  };
+
+  // Clear search query
+  const handleClearQuery = () => {
+    setQuery("");
+    setShowSearchDropdown(false);
+    setSearchHighlightedIndex(-1);
+    searchInputRef.current?.focus();
   };
 
   // Handle keyboard navigation for search input
@@ -214,7 +305,10 @@ export default function CentralizedSearchMock() {
         break;
       case "Enter":
         e.preventDefault();
-        if (searchHighlightedIndex >= 0 && searchHighlightedIndex < searchSuggestions.length) {
+        if (
+          searchHighlightedIndex >= 0 &&
+          searchHighlightedIndex < searchSuggestions.length
+        ) {
           setQuery(searchSuggestions[searchHighlightedIndex]);
           setShowSearchDropdown(false);
           setSearchHighlightedIndex(-1);
@@ -286,7 +380,9 @@ export default function CentralizedSearchMock() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
           <div className="flex items-center justify-between mb-4 sm:mb-6">
             <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">AI Challenge</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
+                AI Challenge
+              </h1>
             </div>
           </div>
 
@@ -294,9 +390,9 @@ export default function CentralizedSearchMock() {
           <div className="relative mb-4 sm:mb-6">
             <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-4">
               {/* Account Type and Account Id - Row on mobile, inline on desktop */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-0 sm:items-stretch">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-2 sm:items-stretch">
                 {/* Account Type Dropdown */}
-                <div className="flex items-center gap-2 sm:gap-3 bg-slate-100 px-3 sm:px-4 h-11 rounded-lg sm:rounded-r-none border-2 border-transparent">
+                <div className="flex items-center gap-2 sm:gap-3 bg-slate-100 px-3 sm:px-4 h-11 rounded-lg border-2 border-transparent">
                   <User className="w-5 h-5 text-slate-600 flex-shrink-0" />
                   <select
                     className="bg-transparent border-none outline-none font-medium text-slate-900 cursor-pointer text-sm sm:text-base flex-1 min-w-0"
@@ -314,7 +410,7 @@ export default function CentralizedSearchMock() {
                 <div className="relative flex-1 sm:flex-initial">
                   <input
                     type="text"
-                    className="w-full sm:w-48 px-3 pr-8 h-11 rounded-lg sm:rounded-l-none sm:rounded-r-lg border-2 border-slate-200 sm:border-l-0 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-white text-sm sm:text-base"
+                    className="w-full sm:w-48 px-3 pr-8 h-11 rounded-lg border-2 border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-white text-sm sm:text-base"
                     placeholder="Account ID"
                     value={accountId}
                     onChange={(e) => setAccountId(e.target.value)}
@@ -323,7 +419,7 @@ export default function CentralizedSearchMock() {
                   {accountId && (
                     <button
                       type="button"
-                      className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded hover:bg-slate-200 transition-colors"
+                      className="absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center rounded hover:bg-slate-200 transition-colors"
                       onClick={handleClearAccountId}
                       tabIndex={-1}
                       aria-label="Clear account id"
@@ -339,7 +435,7 @@ export default function CentralizedSearchMock() {
                 <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 z-10" />
                 <input
                   ref={searchInputRef}
-                  className="w-full pl-10 sm:pl-12 pr-4 h-11 rounded-lg bg-slate-50 border-2 border-slate-200 focus:border-blue-500 focus:bg-white transition-all outline-none text-slate-900 placeholder-slate-400 text-sm sm:text-base"
+                  className="w-full pl-10 sm:pl-12 pr-8 h-11 rounded-lg bg-slate-50 border-2 border-slate-200 focus:border-blue-500 focus:bg-white transition-all outline-none text-slate-900 placeholder-slate-400 text-sm sm:text-base"
                   placeholder="Search by VIN, vehicle, buyer, or ID..."
                   value={query}
                   onChange={(e) => {
@@ -355,7 +451,30 @@ export default function CentralizedSearchMock() {
                   onKeyDown={handleSearchKeyDown}
                   autoComplete="off"
                 />
-                
+                {query && (
+                  <button
+                    type="button"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center z-10 focus:outline-none"
+                    style={{
+                      width: 24,
+                      height: 24,
+                      background: "none",
+                      padding: 0,
+                      margin: 0,
+                      border: "none",
+                      boxShadow: "none",
+                    }}
+                    onClick={handleClearQuery}
+                    tabIndex={-1}
+                    aria-label="Clear search"
+                  >
+                    <X
+                      className="w-4 h-4 text-slate-500 hover:text-slate-700"
+                      style={{ display: "block" }}
+                    />
+                  </button>
+                )}
+
                 {/* Search Autocomplete Dropdown */}
                 {showSearchDropdown && searchSuggestions.length > 0 && (
                   <div
@@ -371,7 +490,9 @@ export default function CentralizedSearchMock() {
                               ? "bg-blue-100 text-blue-900"
                               : "hover:bg-slate-50"
                           }`}
-                          onMouseDown={() => handleSearchSuggestionSelect(suggestion)}
+                          onMouseDown={() =>
+                            handleSearchSuggestionSelect(suggestion)
+                          }
                           onMouseEnter={() => setSearchHighlightedIndex(index)}
                         >
                           {highlightMatch(suggestion, query)}
@@ -405,7 +526,9 @@ export default function CentralizedSearchMock() {
                 >
                   <Icon className="w-4 h-4 flex-shrink-0" />
                   <span className="hidden sm:inline">{tab.label}</span>
-                  <span className="sm:hidden">{tab.id === "all" ? "All" : tab.label.split(" ")[0]}</span>
+                  <span className="sm:hidden">
+                    {tab.id === "all" ? "All" : tab.label.split(" ")[0]}
+                  </span>
                 </button>
               );
             })}
@@ -433,9 +556,22 @@ export default function CentralizedSearchMock() {
                       </span>
                     </div>
                     <div className="text-xs sm:text-sm text-slate-600 space-y-1">
-                      <div>Offer ID: <span className="font-mono text-slate-900">{o.id}</span></div>
-                      <div className="break-all">VIN: <span className="font-mono text-slate-900">{o.vin}</span></div>
-                      <div>Owner: <span className="font-medium text-slate-900">{o.owner}</span></div>
+                      <div>
+                        Offer ID:{" "}
+                        <span className="font-mono text-slate-900">{o.id}</span>
+                      </div>
+                      <div className="break-all">
+                        VIN:{" "}
+                        <span className="font-mono text-slate-900">
+                          {o.vin}
+                        </span>
+                      </div>
+                      <div>
+                        Owner:{" "}
+                        <span className="font-medium text-slate-900">
+                          {o.owner}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -452,7 +588,9 @@ export default function CentralizedSearchMock() {
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
-                      <span className="text-base sm:text-lg font-bold text-slate-900">{p.id}</span>
+                      <span className="text-base sm:text-lg font-bold text-slate-900">
+                        {p.id}
+                      </span>
                       <span
                         className={`px-2 py-1 text-xs font-semibold rounded-full ${
                           p.status === "Completed"
@@ -464,8 +602,18 @@ export default function CentralizedSearchMock() {
                       </span>
                     </div>
                     <div className="text-xs sm:text-sm text-slate-600 space-y-1">
-                      <div>Offer ID: <span className="font-mono text-slate-900">{p.offerId}</span></div>
-                      <div>Buyer: <span className="font-medium text-slate-900">{p.buyer}</span></div>
+                      <div>
+                        Offer ID:{" "}
+                        <span className="font-mono text-slate-900">
+                          {p.offerId}
+                        </span>
+                      </div>
+                      <div>
+                        Buyer:{" "}
+                        <span className="font-medium text-slate-900">
+                          {p.buyer}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -482,7 +630,9 @@ export default function CentralizedSearchMock() {
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
-                      <span className="text-base sm:text-lg font-bold text-slate-900">{t.id}</span>
+                      <span className="text-base sm:text-lg font-bold text-slate-900">
+                        {t.id}
+                      </span>
                       <span
                         className={`px-2 py-1 text-xs font-semibold rounded-full ${
                           t.status === "Delivered"
@@ -494,8 +644,18 @@ export default function CentralizedSearchMock() {
                       </span>
                     </div>
                     <div className="text-xs sm:text-sm text-slate-600 space-y-1">
-                      <div>Vehicle: <span className="font-medium text-slate-900">{t.vehicle}</span></div>
-                      <div>Carrier: <span className="font-medium text-slate-900">{t.carrier}</span></div>
+                      <div>
+                        Vehicle:{" "}
+                        <span className="font-medium text-slate-900">
+                          {t.vehicle}
+                        </span>
+                      </div>
+                      <div>
+                        Carrier:{" "}
+                        <span className="font-medium text-slate-900">
+                          {t.carrier}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -510,8 +670,12 @@ export default function CentralizedSearchMock() {
                 <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-slate-100 rounded-full mb-4">
                   <Search className="w-6 h-6 sm:w-8 sm:h-8 text-slate-400" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">No results found</h3>
-                <p className="text-sm sm:text-base text-slate-600">Try adjusting your search terms</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">
+                  No results found
+                </h3>
+                <p className="text-sm sm:text-base text-slate-600">
+                  Try adjusting your search terms
+                </p>
               </div>
             )}
         </div>
