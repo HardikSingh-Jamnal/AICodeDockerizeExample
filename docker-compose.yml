@@ -71,6 +71,29 @@ services:
       timeout: 10s
       retries: 3
 
+  transport-api:
+    build:
+      context: ./backend/Transport
+      dockerfile: Dockerfile
+    ports:
+      - "5004:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=transport-db;Database=transport_db;Username=user;Password=password
+      - ConnectionStrings__Redis=transport-cache
+      - MessageBroker__Host=rabbitmq
+    depends_on:
+      - transport-db
+      - transport-cache
+      - rabbitmq
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
   # Databases
   products-db:
     image: postgres:13
@@ -129,6 +152,25 @@ services:
       timeout: 10s
       retries: 3
 
+  transport-db:
+    image: postgres:13
+    container_name: transport-db
+    ports:
+      - "5435:5432"
+    environment:
+      - POSTGRES_DB=transport_db
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - transport-db-data:/var/lib/postgresql/data
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d transport_db"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
   # Caches
   products-cache:
     image: redis:6.2
@@ -166,6 +208,18 @@ services:
       timeout: 10s
       retries: 3
 
+  transport-cache:
+    image: redis:6.2
+    ports:
+      - "6382:6379"
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
   # Message Broker
   rabbitmq:
     image: rabbitmq:3-management
@@ -194,10 +248,12 @@ services:
       - NEXT_PUBLIC_PRODUCTS_API=http://localhost:5001
       - NEXT_PUBLIC_ORDERS_API=http://localhost:5002
       - NEXT_PUBLIC_BILLING_API=http://localhost:5003
+      - NEXT_PUBLIC_TRANSPORT_API=http://localhost:5004
     depends_on:
       - products-api
       - order-api
       - billing-api
+      - transport-api
     networks:
       - frontend-network
       - backend-network
@@ -217,6 +273,7 @@ volumes:
   products-db-data:
   order-db-data:
   billing-db-data:
+  transport-db-data:
 
 networks:
   frontend-network:
