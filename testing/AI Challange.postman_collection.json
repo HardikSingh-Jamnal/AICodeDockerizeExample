@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "45ac200f-7d22-4239-aef0-cee6ca01d2dc",
+		"name": "AI Challange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41296528"
+	},
+	"item": [
+		{
+			"name": "Create Offer",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"sellerId\": \"{{sellerId}}\",\r\n  \"vin\": \"{{vin}}\",\r\n  \"make\": \"{{make}}\",\r\n  \"model\": \"{{model}}\",\r\n  \"year\": {{year}},\r\n  \"offerAmount\": {{offerAmount}},\r\n  \"location\": {\r\n    \"city\": \"{{city}}\",\r\n    \"state\": \"{{state}}\",\r\n    \"zipCode\": \"{{zipCode}}\",\r\n    \"country\": \"{{country}}\"\r\n  },\r\n  \"condition\": {\r\n    \"mileage\": {{mileage}},\r\n    \"exterior\": \"{{exterior}}\",\r\n    \"interior\": \"{{interior}}\",\r\n    \"mechanical\": \"{{mechanical}}\"\r\n  }\r\n}\r\n\r\n// {\r\n//   \"sellerId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n//   \"vin\": \"000000004SLDZN9JG\",\r\n//   \"make\": \"BMW\",\r\n//   \"model\": \"X1\",\r\n//   \"year\": 2023,\r\n//   \"offerAmount\": 5000,\r\n//   \"location\": {\r\n//     \"city\": \"Garciaborough\",\r\n//     \"state\": \"Kansas\",\r\n//     \"zipCode\": \"96110\",\r\n//     \"country\": \"US\"\r\n//   },\r\n//   \"condition\": {\r\n//     \"mileage\": 1200,\r\n//     \"exterior\": \"Clean\",\r\n//     \"interior\": \"Clean\",\r\n//     \"mechanical\": \"Working\"\r\n//   }\r\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5005/api/offers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"api",
+						"offers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Transport",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carrierId\": {{carrierId}},\r\n  \"purchaseId\": {{purchaseId}},\r\n  \"pickupStreet\": \"{{pickupStreet}}\",\r\n  \"pickupCity\": \"{{pickupCity}}\",\r\n  \"pickupStateCode\": \"{{pickupStateCode}}\",\r\n  \"pickupCountry\": \"{{pickupCountry}}\",\r\n  \"pickupZipCode\": \"{{pickupZipCode}}\",\r\n  \"deliveryStreet\": \"{{deliveryStreet}}\",\r\n  \"deliveryCity\": \"{{deliveryCity}}\",\r\n  \"deliveryStateCode\": \"{{deliveryStateCode}}\",\r\n  \"deliveryCountry\": \"{{deliveryCountry}}\",\r\n  \"deliveryZipCode\": \"{{deliveryZipCode}}\",\r\n  \"scheduleDate\": \"{{scheduleDate}}\",\r\n  \"status\": \"{{status}}\",\r\n  \"notes\": \"{{notes}}\",\r\n  \"estimatedCost\": {{estimatedCost}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5004/transports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5004",
+					"path": [
+						"transports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Purchase",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"buyerId\": {{buyerId}},\r\n  \"offerId\": {{offerId}},\r\n  \"amount\": {{amount}},\r\n  \"status\": \"{{status}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5006/purchases",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"purchases"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

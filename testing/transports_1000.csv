@@ -1,0 +1,1001 @@
+carrierId,purchaseId,pickupStreet,pickupCity,pickupStateCode,pickupCountry,pickupZipCode,deliveryStreet,deliveryCity,deliveryStateCode,deliveryCountry,deliveryZipCode,scheduleDate,status,notes,estimatedCost
+133564,518471,Nathan Plains,Greerview,CA,US,04765,Oscar Dale,Lake Alejandrobury,FL,US,69625,2026-01-26T18:55:39Z,IN_TRANSIT,Pickup during business hours,2771
+959253,169287,Ryan Glens,North Eric,NJ,US,78556,Chan Glen,Port Erica,KS,US,72318,2026-02-19T22:20:51Z,IN_TRANSIT,Pickup during business hours,1514
+587337,415512,Johnson Station,South Desireeton,FL,US,64720,James Trace,Daltonmouth,GA,US,27194,2026-02-13T00:52:01Z,CANCELLED,Handle with care,2781
+757440,149895,Powell Keys,Port John,NJ,US,82090,Perez Harbor,West Kelly,GA,US,29378,2026-02-15T18:52:08Z,IN_TRANSIT,Contact carrier on arrival,1135
+787724,700778,Butler Landing,Sullivanbury,IL,US,07387,Lindsey Isle,North Kristy,FL,US,54626,2025-12-15T08:40:36Z,CANCELLED,Call before pickup,1076
+940195,150927,Wiggins Falls,Jasonchester,FL,US,62057,Kyle Ville,Allenport,GA,US,57933,2026-01-30T02:03:01Z,IN_TRANSIT,Pickup during business hours,2628
+317365,525766,Foster Avenue,Normanville,CA,US,50859,Derek Mission,Roberthaven,NJ,US,59988,2025-12-12T13:36:15Z,CANCELLED,Call before pickup,2132
+320226,339106,Pearson Street,South Heather,NY,US,20987,Stein Orchard,New Mary,GA,US,98859,2026-02-06T12:19:52Z,SCHEDULED,Contact carrier on arrival,2039
+754185,258078,Williams Extension,Lake Stephenville,CA,US,14652,Kaitlyn Creek,Ginashire,GA,US,80577,2025-12-20T03:35:38Z,CANCELLED,Handle with care,2417
+456784,360779,Meagan Keys,East Melissaland,FL,US,97324,Joseph Club,Garciaville,FL,US,38030,2025-12-14T01:44:44Z,SCHEDULED,Handle with care,2479
+554061,603742,Smith Route,East Tammyport,GA,US,61804,Clay Lights,Vaughnview,WA,US,60224,2026-01-12T01:22:23Z,IN_TRANSIT,Contact carrier on arrival,1237
+510620,696959,Chase Circle,Brownside,FL,US,99140,Kane Locks,Port Joshuamouth,AZ,US,16545,2026-02-09T08:07:08Z,IN_TRANSIT,Call before pickup,1321
+978203,241448,Renee Forge,Kylefort,AZ,US,80345,Steven Path,New Kelly,FL,US,36181,2025-12-23T08:15:46Z,DELIVERED,Pickup during business hours,1531
+715356,872170,Williams Prairie,Lake Courtneyhaven,GA,US,57515,Jill Motorway,Lake Paulhaven,WA,US,93920,2025-12-03T21:45:49Z,SCHEDULED,Contact carrier on arrival,422
+878311,320377,Scott Coves,West Jordanshire,NJ,US,41606,Stanley Throughway,West Melanieview,FL,US,32503,2026-02-03T02:48:16Z,SCHEDULED,Pickup during business hours,991
+362985,564536,Rosario Road,Jonestown,GA,US,23584,May Lake,New Loristad,AZ,US,79090,2025-12-16T22:11:34Z,CANCELLED,Handle with care,2059
+395152,939726,Evan Junctions,South Anthony,NJ,US,86357,Collins Parks,Matthewfort,TX,US,03223,2026-01-31T09:04:44Z,DELIVERED,Pickup during business hours,689
+396589,111257,Roman Brooks,Johnville,FL,US,45150,Miller Cape,New Zachary,TX,US,79469,2026-01-23T14:19:22Z,DELIVERED,Handle with care,2381
+774242,510792,Shannon Key,Jessicamouth,AZ,US,14772,Bond Hill,New Matthew,FL,US,92394,2026-01-07T16:09:32Z,CANCELLED,Pickup during business hours,2883
+809193,496823,Dennis Dam,North Jenniferfurt,WA,US,80754,Bradley Plain,Jenkinsville,WA,US,98670,2026-02-24T10:22:38Z,IN_TRANSIT,Pickup during business hours,1328
+837603,116514,Young Parks,South Melissa,CA,US,28551,Clark Meadows,Scottberg,AZ,US,18429,2026-03-02T18:58:19Z,IN_TRANSIT,Pickup during business hours,532
+128263,978653,Conway Island,Jenniferburgh,KS,US,55629,Karen Common,East Joanntown,NJ,US,78531,2026-01-20T23:55:11Z,CANCELLED,Call before pickup,2552
+274724,859352,Buck Glens,Hillmouth,CA,US,36481,Schneider Corner,West Craigborough,TX,US,30599,2026-01-29T02:27:56Z,CANCELLED,Contact carrier on arrival,502
+315352,166122,Rita Manors,Davisborough,TX,US,56162,Gary Orchard,Port Brandonton,WA,US,53209,2026-02-12T09:30:17Z,SCHEDULED,Contact carrier on arrival,806
+468123,847532,Herman Passage,Stewartton,NY,US,52556,Houston Plaza,Annaland,NJ,US,28311,2026-01-24T17:30:30Z,DELIVERED,Pickup during business hours,2570
+780853,201587,Waller Rest,Lake Taylormouth,KS,US,41760,Cooper Drive,West Josephchester,FL,US,61017,2026-02-15T23:27:13Z,CANCELLED,Call before pickup,2603
+405887,166099,Sara Knoll,Harrisburgh,AZ,US,66967,Brandi Radial,Hutchinsonberg,NJ,US,63600,2025-12-29T12:06:48Z,CANCELLED,Handle with care,1980
+613597,391393,Phelps Plains,Patelbury,WA,US,38977,Murray Flats,West Leah,NY,US,48878,2026-01-26T04:48:43Z,SCHEDULED,Call before pickup,1321
+836030,354680,Bruce Stravenue,Port Samuel,KS,US,91633,Howe Parkways,South Cynthia,IL,US,53169,2026-02-10T15:55:48Z,DELIVERED,Pickup during business hours,1278
+422090,741454,Kyle Underpass,Port Debbie,FL,US,70880,Amanda Ways,West Barbaraborough,CA,US,96223,2025-12-06T03:45:58Z,CANCELLED,Pickup during business hours,644
+225055,391619,Tony Stream,Parkmouth,CA,US,41159,Wilkinson Canyon,Russellton,AZ,US,36256,2025-12-27T15:03:12Z,SCHEDULED,Call before pickup,416
+104270,858606,Anderson Key,Bethland,TX,US,68365,Perez Garden,West Kevin,CA,US,63854,2025-12-26T22:38:33Z,IN_TRANSIT,Handle with care,2561
+427933,704888,Garcia Inlet,Howellton,TX,US,73024,Burke Villages,Ramirezborough,FL,US,43209,2026-01-22T17:01:20Z,SCHEDULED,Call before pickup,1803
+969046,103090,Amy Pines,North Amyhaven,FL,US,95814,Robert Courts,Lauraberg,AZ,US,54476,2026-02-04T00:37:54Z,IN_TRANSIT,Call before pickup,994
+671327,609141,William Wells,East Taylorstad,IL,US,05549,Clark Cape,Johnstonfurt,WA,US,57708,2026-02-23T08:56:41Z,IN_TRANSIT,Call before pickup,1471
+178989,964592,West Ports,North Dawnshire,AZ,US,45470,Ryan Heights,East Mariaport,KS,US,47898,2025-12-11T07:21:26Z,SCHEDULED,Handle with care,679
+801765,796349,Mary Flats,South Stevenmouth,FL,US,55764,Barrett Streets,Natalietown,NY,US,43053,2026-01-07T01:44:48Z,DELIVERED,Contact carrier on arrival,2975
+814929,822900,Ashlee Wells,Port Stevenberg,KS,US,38752,Smith Stream,Lake Cassandra,FL,US,46530,2026-02-13T13:16:55Z,SCHEDULED,Pickup during business hours,697
+431936,635165,Briana Fork,Fletcherton,IL,US,50077,Parker Springs,New Elizabethberg,TX,US,30459,2026-02-04T01:01:07Z,CANCELLED,Handle with care,948
+411132,142786,Patrick Park,Port Ashley,TX,US,89867,Robinson Knolls,West Joshuashire,WA,US,98776,2026-02-27T18:54:15Z,DELIVERED,Call before pickup,387
+950143,677108,Michael View,Torreshaven,TX,US,03956,Bailey Street,Port Elizabeth,NY,US,33227,2026-02-14T00:28:43Z,CANCELLED,Pickup during business hours,1101
+597091,390554,Wright Mills,Tinamouth,WA,US,05206,Maureen Canyon,Bryceshire,TX,US,34219,2025-12-11T20:48:28Z,CANCELLED,Call before pickup,2330
+797814,366623,Dunn Fields,Danieltown,IL,US,48020,Figueroa Lodge,South Rebecca,KS,US,46903,2026-02-27T01:07:00Z,IN_TRANSIT,Call before pickup,1217
+821770,476068,Christina Terrace,Howellchester,KS,US,93579,Monica Dale,East Cindyside,NY,US,70799,2025-12-04T00:14:28Z,SCHEDULED,Pickup during business hours,652
+974624,942665,Jessica Burg,Lake Ginafurt,FL,US,25688,Shields Plains,Lake Bradley,KS,US,66335,2026-01-27T19:16:43Z,CANCELLED,Pickup during business hours,2185
+940919,498139,Kayla Passage,West Gracefurt,NJ,US,87963,Jason Junctions,Port Steven,KS,US,43716,2026-02-20T10:00:57Z,CANCELLED,Call before pickup,1173
+818406,545677,Louis Path,East Anamouth,CA,US,07868,Ray Flat,Wadeborough,CA,US,15534,2026-01-07T02:34:27Z,IN_TRANSIT,Pickup during business hours,1654
+406392,801883,Patricia Via,Wardchester,AZ,US,96483,Gardner Estate,Michellebury,AZ,US,93307,2025-12-15T19:26:44Z,CANCELLED,Handle with care,2002
+587509,792615,Norton Burg,Lake Mary,CA,US,62169,Coffey Alley,Johnsonville,TX,US,68270,2025-12-09T18:00:10Z,CANCELLED,Contact carrier on arrival,1493
+620342,243421,Smith Neck,South Danielle,GA,US,76144,Miller Trail,Anthonyton,IL,US,32830,2026-01-02T20:57:27Z,IN_TRANSIT,Pickup during business hours,352
+916944,466942,Wilkerson Road,North Jenniferbury,GA,US,37709,Scott Track,Solisview,IL,US,39395,2026-01-27T12:59:04Z,IN_TRANSIT,Pickup during business hours,1809
+973155,457252,Steven Oval,Higginstown,CA,US,02899,Brooks Station,East Kyleborough,TX,US,01685,2025-12-19T10:06:38Z,SCHEDULED,Handle with care,1632
+981479,546505,Sarah Curve,Jillchester,AZ,US,23578,Nicholas Key,Lake Barbaraside,KS,US,35738,2025-12-25T17:33:10Z,CANCELLED,Contact carrier on arrival,2577
+962518,402021,Lisa Circle,Morrisonside,WA,US,42316,Carey Point,Gregoryborough,IL,US,64575,2025-12-24T11:47:57Z,DELIVERED,Pickup during business hours,887
+124627,394957,Caitlin Plaza,Michaelmouth,TX,US,51350,Donna Ville,East Paul,AZ,US,81755,2026-02-05T17:35:31Z,IN_TRANSIT,Contact carrier on arrival,2679
+596876,954397,Julie Extensions,New Donnastad,AZ,US,18045,Castro Path,Port Carol,NJ,US,94635,2025-12-05T03:45:18Z,SCHEDULED,Handle with care,1120
+243109,354845,Ramirez Forest,North Andrewborough,WA,US,26744,Medina Loaf,Gutierrezhaven,NJ,US,86605,2025-12-16T16:08:13Z,IN_TRANSIT,Pickup during business hours,1543
+703697,168192,Pena Parkways,Ramirezmouth,TX,US,10396,Graves Lane,Jonestown,GA,US,77011,2026-01-15T14:56:40Z,DELIVERED,Pickup during business hours,760
+129537,393163,Evans Summit,Chapmanview,IL,US,46469,Glover Lake,Justinton,FL,US,35191,2026-02-26T07:35:48Z,CANCELLED,Handle with care,1230
+477887,365813,Pedro Islands,North Luis,FL,US,62684,Massey Mountain,Lake Garrett,NY,US,70083,2026-01-03T20:41:34Z,SCHEDULED,Handle with care,1737
+161194,433625,Thomas Glen,Jameshaven,IL,US,05258,Nicholas Forest,Lake Troyshire,NY,US,15164,2026-01-12T09:01:41Z,DELIVERED,Contact carrier on arrival,2918
+194215,639340,Sarah Circles,Johnnyport,NJ,US,10240,Gary Lodge,North Amberville,GA,US,89298,2025-12-23T15:17:52Z,CANCELLED,Handle with care,2196
+841490,558804,King Green,Howardshire,KS,US,10976,Lori Forge,Andreaville,IL,US,20488,2026-02-06T19:12:55Z,CANCELLED,Pickup during business hours,2223
+725968,105209,Kevin Glen,Lake Anthonyborough,IL,US,14383,Diamond Loaf,Johnsonshire,TX,US,22128,2026-02-09T22:10:54Z,SCHEDULED,Call before pickup,2833
+813122,321586,Wesley Road,Markfurt,KS,US,12940,Tran Centers,Davenportberg,FL,US,51940,2026-02-25T00:31:00Z,CANCELLED,Handle with care,515
+131548,289916,Larson Lake,South Scott,IL,US,25559,Eric Field,Rossmouth,FL,US,86477,2025-12-03T18:52:37Z,DELIVERED,Contact carrier on arrival,1995
+394416,887400,Blake Causeway,Angelatown,TX,US,83338,Prince Drives,Simonville,FL,US,05954,2026-02-04T11:11:13Z,SCHEDULED,Contact carrier on arrival,1945
+641367,351503,Thomas Meadows,New James,WA,US,47900,Patrick Manor,Hallside,FL,US,34149,2026-01-13T22:38:59Z,CANCELLED,Contact carrier on arrival,1088
+592895,165611,Ian Greens,Lake Rebecca,FL,US,74854,Jade Via,Williamtown,FL,US,16021,2026-02-17T09:53:24Z,IN_TRANSIT,Contact carrier on arrival,913
+392424,457965,Shane Pike,Mariahview,WA,US,65609,Lee Square,New Jamieport,WA,US,25839,2025-12-26T14:44:14Z,DELIVERED,Contact carrier on arrival,1205
+132530,214325,Jose Lodge,South Mary,KS,US,66534,Scott Island,Hayesshire,FL,US,16502,2026-01-29T23:02:09Z,CANCELLED,Handle with care,552
+483314,729707,Thomas Spurs,Watkinston,KS,US,20884,Noah Square,West Dennis,AZ,US,87187,2026-02-04T14:08:35Z,CANCELLED,Handle with care,756
+296507,319631,Myers Common,Samanthashire,WA,US,59634,Larry Centers,North Susanview,NY,US,12196,2026-02-06T05:26:37Z,IN_TRANSIT,Contact carrier on arrival,1280
+987640,644983,Wilson Shores,Williebury,NY,US,00869,Phillips Union,Annaview,AZ,US,38808,2026-02-13T16:41:20Z,SCHEDULED,Contact carrier on arrival,1862
+402853,438669,Arellano Neck,Rossshire,CA,US,73266,Miller Field,Elizabethfort,KS,US,08298,2026-02-12T19:25:13Z,DELIVERED,Contact carrier on arrival,475
+915110,999394,Case Motorway,North Ryanmouth,GA,US,39600,Ford Vista,Donaldbury,KS,US,23247,2026-01-21T15:18:28Z,SCHEDULED,Call before pickup,954
+363094,471311,Woodard Mount,East Roy,GA,US,61890,Jay Tunnel,Lake Kristin,TX,US,08676,2026-01-16T14:23:54Z,SCHEDULED,Contact carrier on arrival,2052
+500201,765208,Eric Row,Joshuaborough,NJ,US,41145,Michael Islands,Millerview,KS,US,76074,2026-02-28T16:42:40Z,DELIVERED,Contact carrier on arrival,1145
+666572,214983,Joseph Lights,Robertsstad,NJ,US,49992,Joseph Mission,Johnsonton,IL,US,51938,2026-02-10T01:05:31Z,DELIVERED,Handle with care,936
+319350,386463,Reeves Falls,South Ritaton,NY,US,92056,George Stravenue,North Randallfurt,IL,US,36755,2025-12-06T15:34:21Z,IN_TRANSIT,Handle with care,1377
+299752,493717,Steven Brooks,Williamsview,NJ,US,05922,Paul Isle,Maciasfort,TX,US,54661,2025-12-12T08:33:38Z,DELIVERED,Handle with care,2657
+657029,308733,Brian Estate,Munozberg,AZ,US,26278,Carrillo Glen,Dawnside,NJ,US,49513,2026-02-11T07:16:20Z,CANCELLED,Handle with care,1121
+338245,190834,Velez Fort,Lake Gregorystad,KS,US,18685,Kristen Trail,Gregoryland,IL,US,95391,2025-12-25T22:03:21Z,SCHEDULED,Call before pickup,2163
+559729,416424,Cox Mill,Sandraberg,GA,US,25696,Hamilton Ranch,Tonyhaven,CA,US,21179,2026-01-05T22:51:32Z,CANCELLED,Handle with care,2210
+348108,814304,Sanchez Parks,South Christopherview,WA,US,76079,Jones Well,East Robert,TX,US,26058,2026-01-01T00:25:38Z,DELIVERED,Contact carrier on arrival,1871
+421395,614047,Brianna Isle,South Donald,WA,US,21759,Bolton Streets,West Stephanie,NJ,US,49382,2025-12-22T01:27:30Z,IN_TRANSIT,Call before pickup,2503
+546743,195559,Davis Dam,Port Nicole,NY,US,51904,Raymond Field,Pattersonville,TX,US,48849,2026-01-04T10:47:53Z,SCHEDULED,Contact carrier on arrival,1521
+638198,614127,Nielsen Valleys,Ibarraville,KS,US,13744,Barbara Land,Port Melanie,WA,US,49191,2025-12-17T07:27:08Z,IN_TRANSIT,Call before pickup,2066
+433670,631498,Ryan Ridge,North Jessica,AZ,US,40418,Peterson Lakes,Lloydton,CA,US,34669,2026-01-12T06:50:36Z,CANCELLED,Pickup during business hours,823
+295355,249740,Hill Walks,West James,NJ,US,52970,Hernandez Junction,East Kyle,IL,US,72300,2025-12-04T00:11:39Z,SCHEDULED,Handle with care,2977
+520110,669672,Wilson Meadow,West Timothyton,TX,US,95148,Ochoa Manors,Chambersburgh,TX,US,13791,2026-02-20T03:49:49Z,CANCELLED,Call before pickup,562
+464731,567743,Robinson Well,Salasshire,NJ,US,54535,Tammy Drive,North Kyletown,NY,US,56220,2026-01-27T05:47:43Z,IN_TRANSIT,Handle with care,1099
+250467,967982,Joseph Road,East Nicholasberg,TX,US,73560,Heather Radial,North Julietown,KS,US,32640,2026-01-12T18:37:16Z,SCHEDULED,Call before pickup,1400
+395049,986065,Janet Forge,North Tammystad,TX,US,32195,Lauren Spurs,North Peterport,WA,US,49821,2026-01-15T22:58:35Z,IN_TRANSIT,Call before pickup,1854
+886949,491415,Moody Orchard,Delgadostad,IL,US,40644,Larry Mount,Karenshire,NJ,US,32184,2025-12-26T05:43:31Z,SCHEDULED,Contact carrier on arrival,2032
+514833,526247,Heather Tunnel,Patricktown,TX,US,06788,Wallace Mill,Bradleyport,WA,US,05556,2026-01-28T16:39:53Z,DELIVERED,Contact carrier on arrival,2111
+816265,701966,Jeremy Creek,West James,WA,US,38545,Chambers Union,Michaelhaven,CA,US,81699,2026-01-27T07:48:37Z,DELIVERED,Pickup during business hours,2628
+236518,211051,Alyssa Stravenue,Brianshire,KS,US,35251,Kevin Forks,East Isaiahburgh,CA,US,02220,2025-12-06T18:01:14Z,SCHEDULED,Pickup during business hours,2707
+990093,385266,George Mews,North Paulland,NY,US,53632,Morales Junctions,Blankenshipside,IL,US,92842,2026-01-24T11:50:01Z,CANCELLED,Pickup during business hours,1765
+526483,198172,Justin Station,North Shaunhaven,NJ,US,67604,Holmes Road,Davidfurt,NJ,US,13715,2025-12-30T02:18:19Z,CANCELLED,Contact carrier on arrival,2280
+835060,999501,Barnes Stravenue,East Shaunburgh,FL,US,65297,Madden Tunnel,New Larryberg,NJ,US,59531,2026-02-24T23:17:51Z,CANCELLED,Handle with care,2396
+439469,217677,Charles Highway,Gregfort,WA,US,77452,Annette Well,Charleshaven,FL,US,17758,2026-01-21T19:02:31Z,DELIVERED,Call before pickup,1285
+444106,286918,Harrison Drives,Robinsonfort,IL,US,54467,Williams Grove,East Kelly,WA,US,89274,2026-02-21T04:04:00Z,CANCELLED,Pickup during business hours,586
+752633,690568,Maria Inlet,Mariachester,KS,US,30712,Kristy Roads,Richardstad,FL,US,94198,2025-12-23T13:59:05Z,SCHEDULED,Handle with care,1613
+205644,327336,Valerie Square,Gonzalesfort,GA,US,64056,Victoria Vista,Port Matthew,WA,US,98425,2026-02-03T02:25:34Z,SCHEDULED,Pickup during business hours,2203
+271469,507225,Lisa Falls,Wilsonbury,KS,US,12123,Page Green,West Mirandafort,NJ,US,89942,2026-02-13T09:19:41Z,DELIVERED,Pickup during business hours,2904
+236182,681879,Avila Heights,Ramirezton,TX,US,60174,Jacqueline Trafficway,Lake Heidiville,FL,US,77978,2025-12-28T06:32:12Z,DELIVERED,Contact carrier on arrival,2884
+482262,965857,Howard Locks,Terrifort,TX,US,14043,Ian Loop,Carlaborough,IL,US,87878,2026-02-11T04:58:24Z,DELIVERED,Handle with care,1308
+306453,916945,Karen Extensions,Tonyafurt,TX,US,09756,Vasquez Brook,East Samantha,KS,US,85002,2026-01-08T01:58:24Z,SCHEDULED,Pickup during business hours,2000
+171173,562765,Robert Parkway,Matthewborough,AZ,US,60297,Clark Light,Curtischester,IL,US,49946,2025-12-08T15:35:31Z,IN_TRANSIT,Pickup during business hours,1102
+972586,402975,Buchanan Keys,Nguyenborough,NJ,US,68742,Downs Mountains,West Jennifer,GA,US,58426,2025-12-23T23:00:29Z,CANCELLED,Handle with care,2813
+592406,936011,Wilson Forks,Stephenstad,NY,US,86626,Sandoval Creek,Johnsonville,KS,US,48169,2026-01-22T21:23:50Z,CANCELLED,Call before pickup,360
+443779,391678,Sweeney Curve,Seanton,WA,US,45878,Anderson Bypass,Smithburgh,NY,US,01289,2026-01-24T14:18:07Z,SCHEDULED,Contact carrier on arrival,687
+893052,485538,Jason Walks,East Brandon,IL,US,54780,Miles Center,East Patriciaton,TX,US,62584,2026-02-04T00:46:00Z,DELIVERED,Pickup during business hours,1816
+217410,213898,Murray Brooks,Edwardsville,CA,US,88954,Jacobs Springs,Johnsonburgh,AZ,US,38721,2026-02-04T07:06:35Z,SCHEDULED,Handle with care,2964
+390529,151072,Lowe Loop,Port Megan,GA,US,04272,John Crossroad,Lake Mary,GA,US,17454,2025-12-16T10:54:46Z,DELIVERED,Pickup during business hours,737
+400268,467066,Wilson Plains,Petermouth,NY,US,81969,Griffin Lake,Teresashire,WA,US,56660,2026-01-05T21:25:05Z,DELIVERED,Call before pickup,2838
+199342,949245,Allen Landing,South Jesse,GA,US,67720,Derek Shores,Christopherport,WA,US,02181,2026-01-14T15:56:17Z,SCHEDULED,Pickup during business hours,2943
+246481,976473,Allen Harbors,Tylerbury,TX,US,01306,Jose Place,Port Gregory,TX,US,78568,2026-01-12T18:39:22Z,IN_TRANSIT,Contact carrier on arrival,730
+211727,850583,Velez Crossing,Garciachester,WA,US,87264,Joe Ways,South Blakefort,FL,US,47478,2026-02-21T00:33:00Z,SCHEDULED,Contact carrier on arrival,677
+526053,331300,Martin Mountains,North Jason,KS,US,85120,Sheila Views,Rogerschester,KS,US,56821,2026-01-03T23:57:06Z,IN_TRANSIT,Call before pickup,2331
+344199,268323,Carla Cliffs,North Jamesmouth,NY,US,54288,Boyd Park,North Rebecca,IL,US,09185,2026-02-20T22:57:25Z,IN_TRANSIT,Contact carrier on arrival,464
+235278,540267,Kim Corners,Castromouth,WA,US,85164,Dorsey Mall,Mejiastad,WA,US,96564,2025-12-30T11:58:47Z,SCHEDULED,Handle with care,400
+911073,379538,Hector Common,Cunninghamhaven,GA,US,80000,Hicks Lights,Oliverbury,NJ,US,38427,2026-01-12T06:54:07Z,SCHEDULED,Contact carrier on arrival,1215
+895248,235807,Mills Camp,South Michael,NY,US,35984,Warner Lock,Lake Thomasmouth,CA,US,69044,2026-01-28T09:20:12Z,SCHEDULED,Handle with care,1858
+350038,947418,Schmitt Canyon,Tinaberg,WA,US,25495,Adam Spring,Johnfort,TX,US,86406,2026-02-21T02:48:07Z,CANCELLED,Handle with care,1053
+871742,575667,Alvarado Forest,Wendyside,CA,US,12079,Martinez Mountains,Rebeccabury,GA,US,95184,2026-01-17T17:15:02Z,CANCELLED,Pickup during business hours,1355
+118367,435642,Pamela Crossroad,Lake Susanhaven,IL,US,43383,Garcia Square,Lake Sherry,NJ,US,92520,2025-12-22T01:57:14Z,IN_TRANSIT,Call before pickup,2617
+603006,398393,Collins Tunnel,Lake Greggberg,IL,US,83395,Barton Freeway,Port Matthew,GA,US,74169,2026-01-27T17:36:47Z,SCHEDULED,Contact carrier on arrival,2752
+316270,304265,Donald Circle,Port Timothyside,FL,US,10400,Allison River,Boonestad,KS,US,37384,2025-12-17T22:26:09Z,CANCELLED,Call before pickup,2554
+894251,115351,James Lights,New Stephaniemouth,WA,US,01319,Michele Shore,East Keithville,TX,US,26739,2025-12-21T18:12:10Z,DELIVERED,Pickup during business hours,2021
+337576,911709,Horton Plains,New Ericfurt,FL,US,30747,Tara Cliff,New Davidmouth,TX,US,94240,2025-12-03T18:11:17Z,SCHEDULED,Contact carrier on arrival,2880
+128722,337659,Vasquez Manors,Curtisview,NJ,US,87960,Paula Grove,Taylorbury,NJ,US,48383,2026-02-04T14:44:19Z,CANCELLED,Pickup during business hours,2613
+698522,560610,Rhonda Bridge,West Claire,FL,US,08188,Kelly Club,New Jenniferburgh,NY,US,69485,2026-02-13T04:39:02Z,CANCELLED,Pickup during business hours,716
+564005,177828,Christopher Course,Rodgershaven,WA,US,88308,Mcdonald Corner,New Shannon,AZ,US,26514,2026-02-26T14:09:20Z,SCHEDULED,Call before pickup,514
+274108,203159,Riley Manor,New Frank,NY,US,32036,Hubbard Harbors,Fisherville,NY,US,37819,2026-01-16T21:21:35Z,CANCELLED,Contact carrier on arrival,638
+401912,950923,Marshall Freeway,New Kimberly,FL,US,40950,Dennis Flat,Michaelmouth,GA,US,42039,2026-01-11T06:20:01Z,SCHEDULED,Call before pickup,512
+108312,404363,Carol Square,East Tommouth,FL,US,26936,Lisa Heights,Gilbertberg,GA,US,09640,2026-01-31T20:55:55Z,DELIVERED,Handle with care,1802
+403030,170633,Tapia Valleys,North Randall,TX,US,67960,Jared Green,Brendaton,IL,US,39754,2025-12-29T14:54:04Z,SCHEDULED,Call before pickup,640
+782850,730221,Phyllis Dale,South Rachaelland,WA,US,04654,Martin Union,Port Daniel,FL,US,08937,2025-12-20T00:54:16Z,CANCELLED,Pickup during business hours,315
+519828,295475,Ernest Vista,East Philipmouth,IL,US,95349,Cook Spurs,South Jesusstad,WA,US,16883,2026-01-07T05:22:29Z,SCHEDULED,Contact carrier on arrival,996
+210824,312294,Ian Run,Martinezchester,GA,US,48559,Andrew Points,West Anthonyshire,NJ,US,09931,2026-02-28T22:49:21Z,IN_TRANSIT,Call before pickup,1808
+176371,582358,Fowler Village,East Alexisberg,KS,US,05744,Cisneros Circle,Matthewsmouth,AZ,US,75321,2026-02-07T15:27:03Z,IN_TRANSIT,Call before pickup,1029
+309697,709222,Wright Station,Rodriguezfort,AZ,US,71424,Stephen Pike,Ortizberg,AZ,US,52998,2026-02-18T06:41:09Z,DELIVERED,Handle with care,2187
+819593,843364,Michael Overpass,Brianland,NJ,US,82653,John Viaduct,West Robert,NY,US,17021,2026-02-28T01:56:21Z,IN_TRANSIT,Contact carrier on arrival,1172
+325958,993230,Chelsea Knoll,South Peterville,CA,US,44532,Amanda Via,Port Matthew,WA,US,59485,2026-01-09T17:37:33Z,CANCELLED,Pickup during business hours,423
+902138,319987,Alejandro Locks,Munozchester,CA,US,61581,Bowman Mews,New Jamesside,WA,US,62428,2025-12-31T13:37:41Z,DELIVERED,Call before pickup,2548
+921592,375943,Robin Club,West Richardmouth,AZ,US,95623,Andres Expressway,Lake Brandon,WA,US,69014,2025-12-07T02:58:22Z,CANCELLED,Handle with care,2654
+610236,661059,Daniel Trafficway,South Feliciabury,TX,US,68503,David Neck,Jensenport,FL,US,75680,2026-02-20T15:42:47Z,IN_TRANSIT,Contact carrier on arrival,1981
+770376,738711,Theresa Streets,South Ann,NJ,US,47866,Brittany Prairie,East Claudiachester,KS,US,36359,2026-02-25T09:10:58Z,CANCELLED,Pickup during business hours,2824
+197580,625105,Emily Path,North Jenniferberg,AZ,US,47965,Stark Ville,Gallagherside,NY,US,84843,2025-12-24T20:23:38Z,IN_TRANSIT,Contact carrier on arrival,2236
+317998,476514,Joshua Forges,Mooreton,FL,US,81732,Kane Lights,South James,AZ,US,55696,2026-01-11T10:20:05Z,SCHEDULED,Handle with care,2333
+574298,361549,Lambert Mall,Williamsland,WA,US,08301,Newman Inlet,Jasonhaven,WA,US,23474,2025-12-06T09:10:58Z,DELIVERED,Call before pickup,2867
+550633,151850,Joshua Via,Deborahmouth,AZ,US,89991,Stevens Fields,Diazbury,KS,US,28794,2026-02-08T05:16:40Z,SCHEDULED,Pickup during business hours,424
+730807,690100,Antonio Fork,Abigailmouth,TX,US,81668,Thomas Radial,East Amandaland,CA,US,36303,2025-12-11T02:45:11Z,SCHEDULED,Call before pickup,2934
+118951,100708,Mccoy Isle,Paulview,TX,US,52485,Thomas Vista,New Victor,NY,US,73422,2026-03-01T11:06:18Z,CANCELLED,Pickup during business hours,1761
+678173,476329,Dougherty Islands,Moralesview,TX,US,75029,Allen Keys,Cherylmouth,KS,US,39980,2026-01-08T04:16:02Z,CANCELLED,Pickup during business hours,2723
+100753,495161,Sherry Prairie,Lake Sarah,NJ,US,45290,Steven Junction,Smithberg,GA,US,63944,2025-12-25T18:47:41Z,IN_TRANSIT,Contact carrier on arrival,550
+297139,552795,Amy Harbors,Lake Scott,CA,US,50072,Kevin Burg,Jacobchester,NY,US,34245,2026-02-28T17:24:51Z,CANCELLED,Handle with care,1050
+789232,246427,Orr Centers,West Theresa,AZ,US,42894,Valdez Branch,New Kylechester,TX,US,13682,2026-03-03T12:25:38Z,IN_TRANSIT,Call before pickup,342
+968393,245366,Mark Throughway,Fryechester,IL,US,25037,Amy Junction,Drewland,CA,US,51716,2025-12-08T01:57:28Z,SCHEDULED,Contact carrier on arrival,2090
+945975,125693,Diaz Well,Port Michael,NY,US,15446,Carr Rapid,Tinaborough,NY,US,62775,2025-12-18T20:29:49Z,IN_TRANSIT,Call before pickup,1306
+553483,872679,Christine Drives,Lewisville,FL,US,71808,Tasha Road,Gregland,FL,US,57826,2026-01-31T11:34:44Z,DELIVERED,Pickup during business hours,2931
+132618,353126,Smith Rapid,Reynoldsfort,GA,US,17689,Mcdowell Gardens,Lanemouth,NY,US,25051,2026-02-07T19:10:03Z,SCHEDULED,Call before pickup,933
+208587,647899,Klein Mountains,East Margaret,CA,US,56627,Harrison Squares,Melissaland,FL,US,26520,2025-12-04T07:38:47Z,IN_TRANSIT,Pickup during business hours,2244
+363846,366734,Jermaine Dam,East Janet,WA,US,28463,Lauren Field,West Steven,TX,US,05323,2026-01-07T13:27:03Z,DELIVERED,Call before pickup,810
+732904,176626,Christine Port,Port Hannah,AZ,US,07276,Farmer Lock,Lake Erinberg,NJ,US,33793,2026-02-25T06:47:44Z,DELIVERED,Pickup during business hours,580
+391455,852829,Mosley Rapids,East Arthur,KS,US,28317,Molina Roads,Port Catherineville,NJ,US,45031,2025-12-17T22:47:28Z,IN_TRANSIT,Contact carrier on arrival,1759
+727260,174424,Cross Wells,Susanton,NY,US,91553,Gordon Meadows,Lake Maryport,CA,US,59572,2025-12-11T01:28:36Z,CANCELLED,Contact carrier on arrival,2097
+250391,257241,Mora Spring,Lyonsville,IL,US,81721,Kelsey Brook,Lake Calebton,GA,US,95525,2025-12-06T08:09:09Z,DELIVERED,Contact carrier on arrival,1364
+748126,947261,Owens Extension,Velazquezmouth,FL,US,15735,Brett Forest,Hannahstad,KS,US,98868,2026-03-03T00:36:24Z,DELIVERED,Handle with care,1468
+141072,384028,Joshua Corner,New Joanna,FL,US,12749,Barber Drive,North Sandraview,IL,US,24018,2026-01-17T11:46:18Z,IN_TRANSIT,Contact carrier on arrival,1543
+750942,967631,Jenkins Canyon,West Jacob,GA,US,07694,Michael Cliffs,Port Teresatown,IL,US,04130,2026-02-26T12:11:13Z,DELIVERED,Contact carrier on arrival,648
+309189,190673,Fernandez Corners,Lake Dustin,NY,US,10776,Carrillo Mills,West Jeffreyside,NJ,US,08966,2025-12-31T20:37:54Z,SCHEDULED,Handle with care,1792
+659133,754170,Cody Ferry,New Monica,GA,US,27846,Barrett Way,Lawrenceberg,FL,US,49389,2026-03-02T02:55:59Z,IN_TRANSIT,Handle with care,1950
+123154,109241,Mike Lake,Jameschester,WA,US,57429,Marc Parks,Lanemouth,GA,US,74114,2025-12-06T09:36:23Z,IN_TRANSIT,Pickup during business hours,1827
+133078,849680,Jennifer Ports,West Veronicastad,NJ,US,52232,Mccoy Orchard,West Kristin,FL,US,16185,2026-03-02T11:28:23Z,IN_TRANSIT,Handle with care,1440
+402919,360691,Braun Circles,East Dannyland,IL,US,89305,Alicia Flat,Christophermouth,FL,US,25444,2026-02-07T15:34:53Z,IN_TRANSIT,Handle with care,1754
+501410,958911,Holder Brooks,South Christine,AZ,US,36283,Carter Square,Andersonhaven,GA,US,34996,2025-12-26T19:32:51Z,SCHEDULED,Call before pickup,1219
+698995,885889,Escobar Bypass,Port Teresa,NJ,US,36849,Catherine Spring,Geoffreyhaven,TX,US,68027,2026-02-06T16:06:53Z,DELIVERED,Handle with care,1154
+129623,840632,Leonard Ramp,Baldwinport,FL,US,09759,Rodriguez Junction,East Maria,TX,US,45066,2026-02-22T02:28:50Z,CANCELLED,Handle with care,873
+342366,820230,Elizabeth Junctions,Allisonside,FL,US,09347,Nguyen Views,Biancaville,IL,US,90227,2026-01-28T15:37:48Z,SCHEDULED,Contact carrier on arrival,1674
+750918,570071,Arellano Vista,Lake Travisside,CA,US,59393,Jones Pass,Kaiserberg,AZ,US,14217,2026-02-25T11:08:31Z,CANCELLED,Call before pickup,394
+894197,866048,Melissa Wells,Lake Christopherhaven,FL,US,25000,Phillip Valleys,East Kimberly,WA,US,42988,2026-01-07T11:08:02Z,DELIVERED,Pickup during business hours,2408
+318646,104119,Brennan Unions,West Makaylamouth,CA,US,19864,Victoria Crescent,Monicafort,FL,US,85160,2026-02-05T22:38:53Z,CANCELLED,Pickup during business hours,1411
+129152,261153,Cook Manor,Meltonberg,KS,US,49856,Brent Wells,West Crystal,CA,US,78134,2026-01-25T01:47:10Z,SCHEDULED,Contact carrier on arrival,462
+922129,914170,Lauren Causeway,East Michael,NY,US,91044,Sellers Spurs,Summersstad,CA,US,62572,2025-12-15T03:29:28Z,DELIVERED,Pickup during business hours,2300
+438082,223782,Kimberly Plain,New Alexandra,NY,US,49332,Pierce Shores,West Huntershire,AZ,US,31401,2026-03-02T10:43:16Z,IN_TRANSIT,Contact carrier on arrival,2517
+178244,939412,Hernandez Islands,Nashhaven,CA,US,64199,Vicki Spur,Morganshire,WA,US,70891,2026-01-26T03:43:08Z,CANCELLED,Pickup during business hours,2311
+262945,768593,Brian Lock,Danielleville,NJ,US,45264,Wright Tunnel,Briannaland,NJ,US,44588,2025-12-26T13:53:31Z,SCHEDULED,Call before pickup,1288
+543635,614306,William Station,North Terrimouth,KS,US,34449,Cheryl Trace,Tammychester,IL,US,22418,2026-02-26T02:20:00Z,SCHEDULED,Handle with care,1830
+882056,944412,Flores Harbors,Branchhaven,CA,US,26486,Rebecca Plains,North Amberchester,FL,US,30588,2026-01-29T00:43:53Z,SCHEDULED,Call before pickup,2727
+195104,942784,Bright Tunnel,Kristenhaven,NJ,US,10613,Charles Lodge,Mossberg,FL,US,09644,2026-01-07T03:38:36Z,CANCELLED,Call before pickup,1322
+296093,448724,Brittney Grove,Jamesmouth,FL,US,87857,Jones Camp,Chelseaton,CA,US,81041,2025-12-27T12:03:56Z,SCHEDULED,Pickup during business hours,2398
+378629,956404,Shawn Greens,Turnerbury,TX,US,70530,Stephenson Summit,Port Katherine,CA,US,35736,2026-02-24T14:25:01Z,IN_TRANSIT,Pickup during business hours,1685
+576624,687716,Nichols Village,Sherryhaven,TX,US,63036,Alisha Walks,South Christineton,FL,US,33956,2025-12-03T16:44:12Z,DELIVERED,Handle with care,2138
+122704,922932,Benjamin Canyon,Samanthaton,NJ,US,26725,Doris Freeway,West Tiffany,AZ,US,21201,2026-02-23T20:36:38Z,DELIVERED,Pickup during business hours,784
+258083,834532,Barbara Estate,Port Sean,WA,US,88021,Hannah Mission,West Cherylmouth,WA,US,84949,2025-12-24T00:52:24Z,CANCELLED,Call before pickup,1717
+346353,485784,John Viaduct,Kevinville,GA,US,24493,Donna Meadow,Cartershire,IL,US,52208,2025-12-24T21:22:45Z,DELIVERED,Pickup during business hours,1996
+922592,308306,Sheila Extensions,South Jessica,NJ,US,18718,Cooper View,Port Jerryside,KS,US,33788,2026-01-09T12:54:56Z,DELIVERED,Handle with care,1909
+696908,326515,Samantha Hill,New Juan,IL,US,78111,Goodwin Place,Port Ashley,CA,US,98311,2026-02-05T16:41:39Z,IN_TRANSIT,Contact carrier on arrival,1919
+512011,968213,Dustin Inlet,Lake Jonathan,WA,US,36850,Donald Ways,East Hollyshire,IL,US,39645,2026-01-11T11:28:29Z,IN_TRANSIT,Contact carrier on arrival,1199
+893251,426508,Catherine Lake,South Gregoryhaven,CA,US,20958,Lindsey Stream,Stewartton,NY,US,46537,2026-01-02T09:07:46Z,SCHEDULED,Handle with care,849
+521854,174069,Daniel Summit,North Justin,AZ,US,34839,Jones Plains,West Diane,CA,US,32740,2026-02-16T05:53:14Z,CANCELLED,Pickup during business hours,1656
+912670,184715,Howard Prairie,Andersonburgh,KS,US,67608,Mullins Bridge,Seanbury,CA,US,24229,2026-02-21T15:02:30Z,DELIVERED,Handle with care,1612
+837725,237749,Brown Wall,Tinatown,TX,US,71903,Jill Terrace,Ponceborough,GA,US,50570,2026-02-27T13:11:25Z,DELIVERED,Handle with care,423
+364604,325339,Jones Bypass,South Bryanville,GA,US,50944,Gomez Loop,Jerryfort,AZ,US,41595,2025-12-07T05:49:13Z,IN_TRANSIT,Call before pickup,455
+457812,352968,Edwards Route,Marytown,AZ,US,36947,Stephenson Path,Fergusonport,WA,US,10497,2025-12-21T15:55:08Z,SCHEDULED,Contact carrier on arrival,2281
+649266,350058,Miller Field,North Anita,NY,US,34675,Massey Fort,Jasonton,CA,US,07905,2026-02-14T11:49:23Z,DELIVERED,Pickup during business hours,1964
+640468,554512,Holly Trace,Jeremyfort,KS,US,63791,Kelly Trail,Kingborough,FL,US,53490,2025-12-29T11:09:21Z,SCHEDULED,Contact carrier on arrival,1462
+805494,548203,Joshua Route,East James,AZ,US,92160,Janice Gardens,North Linda,IL,US,15465,2025-12-26T10:46:10Z,DELIVERED,Call before pickup,2861
+115030,470915,Lang Roads,East Mitchell,NJ,US,83401,Lane Village,Port Isaacbury,GA,US,19714,2025-12-17T08:02:02Z,CANCELLED,Call before pickup,487
+267728,460151,Gina Walks,Gravesstad,WA,US,94228,Strickland Street,New Kyle,NJ,US,65400,2026-02-19T04:24:58Z,CANCELLED,Pickup during business hours,446
+710008,986232,Christina Canyon,Terrymouth,NY,US,43135,Karen Run,Gordontown,TX,US,90271,2025-12-05T15:38:22Z,SCHEDULED,Pickup during business hours,1363
+214928,618281,Erik Hill,Christinaville,NJ,US,02276,Laura Summit,Lake Michael,CA,US,44451,2025-12-20T01:30:15Z,IN_TRANSIT,Contact carrier on arrival,1408
+445393,204487,Davis Vista,Hillshire,NJ,US,64115,Velasquez Roads,Ruthville,GA,US,70845,2026-01-26T22:24:34Z,CANCELLED,Handle with care,1372
+653854,890648,Kelli Point,Melvinberg,FL,US,11298,Shannon Locks,Matthewshire,IL,US,67248,2026-01-08T22:31:18Z,IN_TRANSIT,Handle with care,1586
+238087,154037,Gina Trafficway,Tranhaven,TX,US,10970,Jacqueline Terrace,Jenniferville,TX,US,48894,2026-01-26T16:10:10Z,DELIVERED,Call before pickup,2861
+496602,513541,Paul Crossing,East Ashleyville,AZ,US,58580,Andrew Plains,Cliffordfurt,GA,US,08636,2026-02-20T08:13:29Z,CANCELLED,Pickup during business hours,494
+265168,215151,Daniel Pine,Richardsonmouth,CA,US,18911,Ellis Inlet,North Davidport,KS,US,62007,2025-12-10T11:14:40Z,SCHEDULED,Pickup during business hours,831
+101271,402617,Gabriel Park,North Daniel,AZ,US,89203,Phillip Lakes,New Erik,WA,US,58139,2025-12-07T10:58:37Z,SCHEDULED,Handle with care,2660
+567295,420654,Young Walks,Hallview,IL,US,97421,Carter Viaduct,New Derrick,GA,US,63211,2025-12-31T07:48:00Z,CANCELLED,Pickup during business hours,2670
+516550,637373,Davis Islands,East Valerie,AZ,US,71348,Christian Field,Brianhaven,FL,US,27125,2026-01-17T12:08:50Z,DELIVERED,Handle with care,452
+589900,756581,Russell Rest,Sullivanton,CA,US,89195,Mary Brook,South Michaelview,AZ,US,35551,2026-01-20T13:52:46Z,SCHEDULED,Handle with care,2091
+761284,586700,Robert Street,Port Brad,NJ,US,87739,Lisa Squares,North Caleb,TX,US,42279,2025-12-29T09:52:42Z,DELIVERED,Contact carrier on arrival,2901
+624237,432956,Christopher Road,Huntland,FL,US,06105,Vasquez Flats,Robertbury,NY,US,07105,2026-01-27T19:03:41Z,IN_TRANSIT,Contact carrier on arrival,1828
+921641,700752,Lewis View,New Susanbury,KS,US,05563,Thomas Turnpike,West Kevin,WA,US,97621,2026-02-15T02:42:05Z,SCHEDULED,Call before pickup,1453
+757254,700590,Brown Forest,Port Mackenzie,WA,US,74421,Cross Fork,East Eric,TX,US,85180,2025-12-19T21:26:55Z,IN_TRANSIT,Handle with care,2972
+436616,197096,Diaz Center,West Lanceton,IL,US,19062,Suarez Road,New Christopherton,NY,US,24946,2026-02-03T13:36:10Z,IN_TRANSIT,Contact carrier on arrival,2751
+238072,595261,Bentley Village,Ebonybury,NY,US,35819,Jones Neck,Davidbury,NJ,US,23990,2026-01-06T16:33:07Z,IN_TRANSIT,Call before pickup,2259
+329130,519269,Smith Views,North Trevor,KS,US,02754,Mercado Ranch,Port Nathantown,AZ,US,15379,2026-01-10T17:53:28Z,CANCELLED,Handle with care,2290
+518783,525003,Stone Brook,Lake Lisamouth,CA,US,48314,Parks Bypass,New Jacobchester,KS,US,41735,2026-01-09T02:04:08Z,SCHEDULED,Pickup during business hours,2358
+974336,995030,Jessica Glens,Ryanfort,IL,US,01149,Jenna Glen,South Roberto,CA,US,72061,2026-01-11T15:51:52Z,SCHEDULED,Contact carrier on arrival,2993
+235829,988767,Davis Locks,Leeport,TX,US,98734,Caldwell Fords,South Tracy,AZ,US,65145,2025-12-04T19:19:22Z,CANCELLED,Handle with care,870
+634066,504563,John Ford,Melissaborough,TX,US,05929,Paul Fall,Smithside,NY,US,60159,2026-02-27T09:38:40Z,IN_TRANSIT,Contact carrier on arrival,1490
+875456,935696,Moore Burgs,New Nathan,AZ,US,83024,Elizabeth Grove,Masonport,WA,US,62291,2026-02-26T03:44:54Z,SCHEDULED,Pickup during business hours,2426
+826491,141821,Gonzalez Cliff,Lake Christina,KS,US,29095,Jerry Locks,North Alexanderville,IL,US,40801,2026-02-01T20:33:46Z,CANCELLED,Handle with care,2325
+815839,860099,Ryan Landing,East Michaelshire,IL,US,99145,Brandon Village,Port Lisa,FL,US,60667,2026-02-05T06:30:20Z,CANCELLED,Handle with care,2226
+311868,298003,Antonio Crescent,Ellenchester,NJ,US,31690,Megan Square,Jamesfort,NY,US,86557,2026-02-06T21:23:37Z,SCHEDULED,Pickup during business hours,1978
+818397,763120,Paul Cliffs,East Dawnview,WA,US,25267,Matthew Mills,Lake Tonyborough,NJ,US,40485,2026-01-16T11:08:32Z,CANCELLED,Pickup during business hours,548
+213365,943975,Reeves Cape,New Marc,WA,US,57697,Carter Isle,Perezberg,WA,US,85322,2025-12-29T04:21:25Z,DELIVERED,Handle with care,1228
+675439,555353,Nicole Springs,South Michael,IL,US,67608,Smith Ramp,Louisview,FL,US,59195,2026-02-09T17:45:07Z,CANCELLED,Contact carrier on arrival,1827
+697388,471923,Wilkins Gardens,East Daniel,FL,US,71334,Richardson Mountain,North Johnside,NJ,US,76437,2026-01-01T00:27:37Z,DELIVERED,Contact carrier on arrival,2323
+605542,977880,Graham Flats,Parkton,WA,US,10925,Melissa Overpass,Mejiabury,KS,US,10844,2025-12-25T20:06:34Z,IN_TRANSIT,Handle with care,2856
+310528,202409,Smith Lake,Lake Michelle,IL,US,94964,Thomas Stream,Frederickside,KS,US,82484,2026-02-10T23:23:22Z,IN_TRANSIT,Call before pickup,2729
+391725,976437,Guzman Rapid,Port Brandonfort,WA,US,54161,Martinez Walks,South Patrickchester,NY,US,75170,2025-12-23T20:35:20Z,CANCELLED,Call before pickup,2782
+719389,331727,Ashley Mills,Lake Christinaburgh,KS,US,83579,Abigail Heights,South Dawnside,NY,US,23758,2026-01-01T15:44:18Z,CANCELLED,Handle with care,2240
+391493,821176,Johnson Drives,Port Leslieland,GA,US,06797,Kimberly Stravenue,Levybury,NJ,US,64121,2025-12-17T16:00:19Z,CANCELLED,Contact carrier on arrival,1330
+192348,640089,Kelly Loaf,Delgadotown,TX,US,83856,Lisa Brooks,Port Carlyfort,WA,US,27602,2026-02-05T07:22:22Z,CANCELLED,Call before pickup,2713
+515539,330747,Schroeder Roads,East Deborah,CA,US,31549,Carson Track,East Brandon,TX,US,25993,2026-02-26T14:17:21Z,DELIVERED,Pickup during business hours,2579
+733180,272254,Owens Causeway,East Kaitlynbury,CA,US,88594,Rodriguez Mountains,Port Melissahaven,TX,US,14163,2026-01-09T07:17:33Z,DELIVERED,Contact carrier on arrival,2123
+640040,675291,Combs Oval,Villegasfurt,TX,US,52510,Kevin Stravenue,East Lance,NY,US,44100,2025-12-19T13:06:15Z,SCHEDULED,Contact carrier on arrival,1403
+279478,202334,Michelle Fords,West Alan,NY,US,51116,Jessica Street,Kathrynfurt,GA,US,79550,2026-02-22T02:34:59Z,DELIVERED,Handle with care,1567
+449779,535217,Sharon Road,Powersmouth,FL,US,97383,Pamela Passage,Palmershire,CA,US,21835,2026-01-24T01:52:21Z,IN_TRANSIT,Pickup during business hours,1240
+357199,598618,Bell Flat,Longbury,NJ,US,83373,Anthony Course,Waltonbury,WA,US,82039,2026-02-21T08:56:40Z,DELIVERED,Handle with care,2221
+442349,978863,Harris Ridges,Kingside,WA,US,51974,Ashley Ridge,South Jenniferberg,KS,US,08587,2026-02-24T04:48:02Z,CANCELLED,Call before pickup,989
+742817,992691,Adam Ports,Dawnhaven,AZ,US,13213,Reyes Drive,Zunigafort,KS,US,39150,2025-12-13T15:20:36Z,CANCELLED,Pickup during business hours,821
+267420,791125,Bradley Plaza,Lake Nicolebury,NY,US,41319,Alexander Trace,Doylechester,CA,US,55344,2025-12-06T04:03:48Z,DELIVERED,Call before pickup,2397
+418010,626264,James Forge,New Russell,KS,US,79691,Warren Dale,Javierton,CA,US,31890,2026-02-19T22:49:04Z,DELIVERED,Contact carrier on arrival,2711
+825657,918217,Smith Centers,North Charlesburgh,NY,US,29734,Tucker Squares,West Jennifer,AZ,US,28280,2025-12-07T16:41:50Z,SCHEDULED,Pickup during business hours,1142
+461331,809281,Gloria Bridge,Murraytown,CA,US,39136,Linda Lane,Port Jesus,FL,US,71285,2026-01-05T01:35:36Z,CANCELLED,Call before pickup,1625
+741983,966305,Frances Walk,Walkertown,WA,US,11098,Baldwin Summit,Johnsonbury,FL,US,18906,2025-12-11T17:56:38Z,DELIVERED,Pickup during business hours,1963
+885464,379912,Miller Dale,West Ashleyberg,AZ,US,39793,Yang Trace,West Seanmouth,CA,US,88205,2025-12-30T16:07:54Z,CANCELLED,Contact carrier on arrival,2571
+211261,324520,Stacy Freeway,Dennistown,GA,US,22446,Davidson Spurs,Joelmouth,GA,US,69383,2026-02-23T14:59:00Z,CANCELLED,Handle with care,475
+539318,964476,Bradley Views,Vargasland,NJ,US,19587,Mark Loaf,Brandonmouth,CA,US,01982,2026-02-27T04:06:06Z,IN_TRANSIT,Contact carrier on arrival,1471
+126529,494668,Sheila Ways,Michaelstad,WA,US,79231,Rodriguez Spring,West Keith,NY,US,61516,2026-01-30T22:23:02Z,DELIVERED,Call before pickup,1818
+368892,863547,Chapman Extension,Tiffanystad,WA,US,24752,Christopher Port,West Denise,GA,US,50135,2026-02-20T03:58:48Z,DELIVERED,Pickup during business hours,861
+953840,859792,Gonzalez Shores,Loristad,WA,US,80024,Gonzalez Stream,Chambersmouth,AZ,US,89983,2026-01-10T14:02:18Z,SCHEDULED,Handle with care,621
+250042,681504,Green Rest,South Matthew,IL,US,62998,Juarez Glen,Jorgeside,KS,US,48779,2026-02-20T16:45:38Z,CANCELLED,Handle with care,2002
+839830,317685,Fleming Locks,East Kenneth,NY,US,08940,John Gateway,Lake Austin,NY,US,15656,2026-02-09T02:32:20Z,SCHEDULED,Call before pickup,1502
+595172,158585,Cook Green,Nelsonberg,AZ,US,58270,Jessica Trafficway,Harryland,AZ,US,93836,2025-12-28T08:57:07Z,IN_TRANSIT,Call before pickup,1806
+197462,683172,Bartlett Inlet,Lake Raven,NY,US,52232,James Overpass,Ramostown,IL,US,22564,2025-12-31T22:44:17Z,SCHEDULED,Pickup during business hours,2321
+705816,680499,Mark Greens,West Johnshire,WA,US,81298,Gonzalez Crest,Port Karatown,NJ,US,16183,2026-02-28T02:00:10Z,DELIVERED,Handle with care,2204
+146775,448231,Deborah Prairie,Samanthashire,FL,US,71611,Brittney Row,South Angieside,CA,US,11716,2026-01-26T14:54:12Z,DELIVERED,Pickup during business hours,2093
+993249,562329,Boyd Ridges,Jeanetteland,NJ,US,26214,Jones Port,Alanshire,TX,US,58101,2026-01-04T21:39:59Z,CANCELLED,Pickup during business hours,1688
+161613,561042,Cory Squares,North Amandaland,NY,US,48302,Anderson Center,Lauraland,KS,US,12091,2026-01-20T06:12:28Z,SCHEDULED,Contact carrier on arrival,2731
+847787,425582,Mckee Place,West Denniston,NJ,US,87050,Brooks Springs,Angelaville,TX,US,64594,2025-12-29T19:55:25Z,SCHEDULED,Handle with care,374
+163340,740952,Stephen Loop,North Roberttown,GA,US,49199,Green Rue,Lucasbury,CA,US,07280,2026-01-07T11:18:22Z,DELIVERED,Pickup during business hours,2165
+591023,223029,Robert Pines,Smithtown,GA,US,76202,Vance Glens,Port Sandraside,KS,US,03201,2026-01-10T20:01:05Z,CANCELLED,Handle with care,1417
+120266,249605,Sanders Port,Chelseaport,NY,US,81032,Lopez Knoll,Lake Tina,FL,US,54059,2025-12-10T21:38:06Z,CANCELLED,Contact carrier on arrival,2014
+251328,830955,Frank Loop,Karlaport,CA,US,16488,Kelly Manors,New Carol,NJ,US,83824,2025-12-29T11:32:30Z,IN_TRANSIT,Handle with care,2995
+205030,408729,Patterson Extensions,Port Deborah,IL,US,21385,Cruz Circles,East Annstad,IL,US,59340,2026-01-07T02:56:03Z,CANCELLED,Contact carrier on arrival,2024
+708699,398194,House Street,East Richard,CA,US,61129,Jessica Hollow,West Karen,FL,US,21056,2025-12-10T04:14:44Z,SCHEDULED,Contact carrier on arrival,759
+710261,597010,Robin Gateway,South Matthewview,IL,US,86658,Miller Island,Ravenburgh,IL,US,53644,2026-01-31T12:40:25Z,CANCELLED,Pickup during business hours,1532
+732026,661810,Daniel Meadows,Morganchester,TX,US,57616,Billy Walk,Smithside,NJ,US,64526,2026-01-05T15:58:40Z,DELIVERED,Call before pickup,329
+290188,690275,Holland Knoll,Lake Keithside,IL,US,39854,Bennett Parkways,Aaronbury,AZ,US,37836,2025-12-24T12:55:01Z,DELIVERED,Call before pickup,560
+245911,146920,Mcdonald Port,Bethanyhaven,TX,US,41275,Kevin Orchard,Lake Andrewmouth,KS,US,49282,2026-01-10T16:03:08Z,CANCELLED,Handle with care,588
+254817,866149,Brooke Tunnel,South Jessica,CA,US,51866,Patrick Loaf,Lake Ryanmouth,FL,US,09410,2026-02-04T00:55:00Z,CANCELLED,Handle with care,2304
+777319,555355,Adam Common,East Brianmouth,WA,US,67142,Thomas Lodge,Trantown,TX,US,72764,2026-01-07T15:55:46Z,CANCELLED,Pickup during business hours,2179
+881465,761350,Anthony Fords,Lauratown,IL,US,37226,Penny Port,South Kristinaland,KS,US,66907,2026-01-27T21:48:38Z,DELIVERED,Contact carrier on arrival,1726
+219426,670547,Burton Port,Lake Jeffrey,TX,US,44836,Karen Plains,Traceyhaven,NJ,US,06095,2025-12-08T05:21:44Z,CANCELLED,Handle with care,2734
+998002,618930,Lee Causeway,Anthonybury,CA,US,56803,David Locks,South Mariamouth,NJ,US,82443,2026-02-12T10:00:13Z,SCHEDULED,Pickup during business hours,2225
+204040,344519,James Ways,Millerborough,KS,US,24154,Berry Rapid,East Kaitlynberg,TX,US,60881,2026-01-29T12:01:30Z,SCHEDULED,Contact carrier on arrival,2974
+345198,355819,Russell Alley,Josephside,FL,US,99519,Gray Crossing,Jonesfurt,KS,US,95169,2026-01-14T02:42:32Z,IN_TRANSIT,Handle with care,1777
+720822,417814,Morrison Vista,New Sharon,AZ,US,32253,Heather Harbors,Savannahmouth,FL,US,86317,2025-12-06T10:18:48Z,CANCELLED,Handle with care,700
+324633,500173,Montgomery Neck,Lake Donnaborough,TX,US,95240,Tara Cliff,Lake Nicholastown,WA,US,69550,2026-01-28T23:04:18Z,CANCELLED,Call before pickup,2297
+373339,268926,Matthews Crest,Grantton,WA,US,38571,Christopher Haven,Lunaside,IL,US,65731,2026-02-16T01:39:35Z,DELIVERED,Pickup during business hours,2562
+945790,415457,Troy Knolls,Port Angelaton,AZ,US,77799,Alexander Wells,Rodriguezton,IL,US,49362,2026-02-27T10:11:53Z,IN_TRANSIT,Handle with care,2922
+470014,905028,Johnson Crescent,Michellehaven,NY,US,29580,Hansen Squares,Aprilville,IL,US,84680,2026-02-07T03:14:23Z,CANCELLED,Call before pickup,2073
+950619,268430,Butler Gardens,East Josephshire,WA,US,32947,Mary Roads,Port Michael,IL,US,31888,2025-12-24T04:39:05Z,DELIVERED,Call before pickup,1663
+168038,820064,Cook Locks,New Derek,KS,US,13944,Curry Loop,East Brian,AZ,US,36612,2026-01-20T20:39:28Z,IN_TRANSIT,Pickup during business hours,2493
+416450,306755,Kelly Place,Davidburgh,NJ,US,79318,Benjamin Trail,New Abigailland,NJ,US,28293,2026-02-25T20:16:56Z,DELIVERED,Call before pickup,1470
+491024,171223,Brian Garden,Port Sandra,NJ,US,95260,Miranda Hills,Delacruzland,WA,US,97656,2026-01-31T01:54:34Z,CANCELLED,Contact carrier on arrival,1828
+761241,542836,Collins Square,East Briantown,IL,US,40491,Wilson Passage,Riveraville,WA,US,94032,2026-01-15T03:20:03Z,IN_TRANSIT,Contact carrier on arrival,332
+315973,810772,Andrew Square,East Nicoleland,CA,US,11319,Schneider Avenue,Julietown,GA,US,30348,2026-02-12T05:29:00Z,SCHEDULED,Contact carrier on arrival,705
+817876,957737,Craig Mall,Jeffreytown,TX,US,74811,Gary Mall,East Caitlin,NY,US,86836,2026-01-09T19:18:24Z,SCHEDULED,Contact carrier on arrival,2659
+474773,996358,Estrada Village,North Joshuaside,FL,US,51039,Bradley View,Wattsborough,KS,US,24164,2026-01-03T15:12:32Z,CANCELLED,Call before pickup,539
+823507,515242,Williams Plains,East Joy,IL,US,10914,Bird Walks,Thompsonville,KS,US,61167,2026-02-17T00:24:29Z,DELIVERED,Contact carrier on arrival,1896
+933909,904123,Fischer Loaf,Jocelynview,NY,US,16202,Moore Pike,Lake Ericamouth,CA,US,22343,2026-01-11T19:07:16Z,IN_TRANSIT,Call before pickup,1004
+855282,831152,Zuniga Ports,North William,TX,US,13044,Shaw Path,South Travis,KS,US,39965,2026-01-21T19:45:12Z,SCHEDULED,Pickup during business hours,1372
+436038,952450,Arthur Walk,Johnmouth,AZ,US,61008,Blake Manors,New Davidport,CA,US,88683,2026-01-30T12:45:30Z,SCHEDULED,Handle with care,2454
+430491,120322,Conner Vista,New Sara,FL,US,68267,Garcia Oval,Elizabethfort,TX,US,35466,2026-02-17T21:47:20Z,DELIVERED,Contact carrier on arrival,2366
+280623,493784,Michael Vista,Millerton,NJ,US,03757,Michelle Lake,West Andrew,NJ,US,73093,2025-12-26T17:24:51Z,IN_TRANSIT,Handle with care,1343
+394389,117848,Nelson Roads,Gabrielhaven,NJ,US,40046,Connie Camp,New Timothyshire,IL,US,12584,2026-01-19T17:08:28Z,DELIVERED,Handle with care,2297
+467629,335209,Leah Corner,Stephaniefurt,CA,US,79734,Emily Orchard,Ramirezchester,FL,US,46473,2026-01-22T04:47:50Z,IN_TRANSIT,Handle with care,1112
+382085,877872,Amy Track,New Nathanhaven,TX,US,87874,Hill Track,Port Danielmouth,NY,US,29684,2026-02-03T23:48:44Z,SCHEDULED,Handle with care,715
+653848,633792,Sanchez Park,West Dustinville,FL,US,13852,Stewart Plaza,New Shannon,AZ,US,94915,2026-01-11T01:58:25Z,IN_TRANSIT,Contact carrier on arrival,2562
+270051,180657,Andrew Green,Troyfort,CA,US,42598,Rogers Pines,Deborahmouth,KS,US,25712,2026-01-28T04:11:31Z,IN_TRANSIT,Pickup during business hours,2353
+174602,392800,Matthew Roads,Aaronstad,FL,US,22012,Abigail Falls,New Karina,TX,US,99591,2026-01-17T06:56:36Z,IN_TRANSIT,Contact carrier on arrival,1278
+298989,705491,Tyler Landing,New James,NY,US,33742,Steven Forks,Martinezstad,KS,US,97526,2026-02-16T19:54:40Z,DELIVERED,Contact carrier on arrival,1570
+329386,178428,Tracy Tunnel,Whitneyport,TX,US,03520,Jesse Roads,Dawnfort,TX,US,67281,2025-12-07T12:14:17Z,DELIVERED,Handle with care,2318
+805176,414778,Ryan Drive,New Michael,WA,US,12282,Robert Squares,Jamesmouth,IL,US,69959,2025-12-15T01:16:38Z,IN_TRANSIT,Pickup during business hours,1584
+281560,904667,Lawrence Locks,New Evantown,KS,US,03516,Joshua Station,Margaretstad,AZ,US,83858,2026-01-08T19:59:03Z,IN_TRANSIT,Contact carrier on arrival,1326
+576259,194220,Deborah Ferry,New Donna,AZ,US,91133,Maria Trace,Bennetttown,AZ,US,67896,2025-12-10T23:53:14Z,IN_TRANSIT,Call before pickup,2427
+840586,100090,Douglas Course,Port Michaelfort,CA,US,83922,Blanchard Forges,Port Victoria,GA,US,32182,2026-02-26T09:04:17Z,SCHEDULED,Pickup during business hours,2685
+347413,384629,Henry Cape,New Patriciaview,GA,US,75431,Rowe Ramp,North David,NY,US,31328,2026-03-03T09:41:28Z,CANCELLED,Call before pickup,2455
+214450,311023,Robbins Port,North Tamaraton,FL,US,07370,Wolfe Meadow,Jamiestad,CA,US,17708,2026-01-01T08:19:30Z,DELIVERED,Call before pickup,2421
+689215,954511,Hudson Expressway,Grayview,WA,US,88345,Karla Views,Frankchester,WA,US,72880,2026-01-08T10:43:08Z,IN_TRANSIT,Contact carrier on arrival,1539
+220065,627895,Joanna Junctions,Keithland,FL,US,25965,Solis Ford,West Cherylstad,GA,US,61822,2026-01-14T02:59:22Z,SCHEDULED,Pickup during business hours,1500
+565792,939540,Hernandez Mountains,Jonathanview,FL,US,10580,Laura Prairie,Lake Jennifer,FL,US,09673,2025-12-19T07:29:48Z,IN_TRANSIT,Pickup during business hours,2649
+672265,986382,Lewis Corners,Jasonbury,NJ,US,44272,Amanda Freeway,Webstershire,GA,US,38318,2026-02-09T18:15:29Z,IN_TRANSIT,Handle with care,2600
+489690,359525,Richard Lodge,North Jane,NY,US,67471,Robin Via,East Tonyview,TX,US,10411,2026-02-19T08:31:13Z,CANCELLED,Pickup during business hours,597
+538157,714915,Robert Prairie,West Crystal,FL,US,24740,King Underpass,South Michaelbury,KS,US,91778,2026-01-02T08:55:44Z,IN_TRANSIT,Handle with care,2237
+208378,946391,Maria Lights,Johnsontown,KS,US,72311,Bowen Haven,East Dean,KS,US,16500,2025-12-12T20:22:16Z,CANCELLED,Contact carrier on arrival,2145
+529752,519284,Michelle Key,East Charlesberg,KS,US,92729,Cassandra Grove,Duartechester,NY,US,57333,2026-01-21T03:56:00Z,DELIVERED,Handle with care,1722
+907172,561729,Robert Locks,Williamburgh,NJ,US,35013,Manuel Corner,Stevenmouth,IL,US,89894,2026-01-05T03:02:11Z,IN_TRANSIT,Call before pickup,772
+101195,817668,Barry Pass,Bernardburgh,CA,US,28478,Paul Burg,Sherrimouth,FL,US,91965,2026-02-14T22:30:10Z,DELIVERED,Pickup during business hours,2520
+838388,305848,Parker Islands,Gilbertstad,TX,US,77718,Nelson Wells,South Thomas,TX,US,92257,2026-01-10T18:38:17Z,DELIVERED,Contact carrier on arrival,1767
+654714,279604,Bishop Locks,Adamsmouth,NJ,US,90813,Melissa Pass,South Christina,TX,US,11922,2025-12-06T03:14:27Z,DELIVERED,Contact carrier on arrival,2189
+745863,746163,Kelley Forges,Ryanchester,FL,US,40754,Jesse Mall,Shawburgh,KS,US,38651,2026-02-02T14:30:18Z,CANCELLED,Contact carrier on arrival,2721
+849161,329522,Anthony Hill,Justinmouth,FL,US,11563,Kelly Vista,North Brian,KS,US,43003,2026-01-07T02:18:23Z,CANCELLED,Handle with care,867
+566069,273069,Williams Springs,Alisonborough,KS,US,27502,Klein Village,Simmonsmouth,TX,US,27290,2026-01-22T12:42:01Z,IN_TRANSIT,Call before pickup,1585
+444069,865222,Daniel Keys,Port Michellemouth,TX,US,63921,Santos Expressway,Brooksborough,WA,US,23765,2025-12-20T21:08:58Z,IN_TRANSIT,Handle with care,2026
+671420,213033,Richardson Light,Josephbury,CA,US,93301,James Locks,New Megan,CA,US,57298,2026-01-22T14:15:02Z,DELIVERED,Call before pickup,503
+464779,315232,Timothy Skyway,Danielborough,AZ,US,57383,David Summit,Lake Kimberlymouth,AZ,US,77665,2026-02-03T11:06:38Z,CANCELLED,Pickup during business hours,995
+603241,857984,Allen Rapid,North Michael,AZ,US,72160,Clarke Mission,North Matthewport,WA,US,80930,2025-12-07T21:18:03Z,CANCELLED,Contact carrier on arrival,2214
+660501,416380,Edward Drive,East Corybury,WA,US,54015,Smith Viaduct,Zacharyburgh,AZ,US,34234,2026-01-26T13:36:34Z,CANCELLED,Contact carrier on arrival,1192
+810784,767946,Avila Course,North Michaelfort,TX,US,60167,Shane Harbor,Rodneyshire,KS,US,19864,2026-02-17T14:54:33Z,DELIVERED,Contact carrier on arrival,2464
+753851,267156,Mcbride Common,Davisstad,NJ,US,54823,Padilla Burgs,Lake Ronald,CA,US,24152,2025-12-27T09:55:33Z,DELIVERED,Pickup during business hours,1146
+386140,567874,Andre Pike,Brendaside,AZ,US,98634,Ponce Tunnel,New Louis,NJ,US,76511,2025-12-28T11:48:13Z,DELIVERED,Call before pickup,526
+906072,462437,James Creek,Port Robert,CA,US,82712,Curtis Squares,Josephville,CA,US,12830,2026-01-10T11:21:27Z,SCHEDULED,Call before pickup,2562
+227565,387190,Arias Harbors,Wilcoxville,TX,US,33788,Jennifer Flats,West Steve,KS,US,53382,2025-12-04T09:48:50Z,IN_TRANSIT,Handle with care,1892
+213536,551795,Charles Dale,New Michaelberg,WA,US,05278,Stephen Court,New Jose,IL,US,28146,2025-12-22T20:31:59Z,IN_TRANSIT,Call before pickup,1327
+669204,185895,Perry Spring,Robinview,TX,US,35850,Andersen Union,Juliaview,NY,US,29949,2025-12-15T09:33:33Z,SCHEDULED,Handle with care,2126
+136538,487885,Adrian Gardens,Zacharyfort,TX,US,87202,Duane Village,Port Mary,GA,US,73805,2025-12-09T00:37:43Z,IN_TRANSIT,Contact carrier on arrival,1393
+846529,794919,Vasquez Pass,East Candicemouth,FL,US,36271,John Field,East Christinebury,TX,US,28605,2026-01-14T11:36:03Z,CANCELLED,Handle with care,1555
+776465,385254,Blake Walk,Thomasfurt,IL,US,87788,Jacqueline View,West Natalie,IL,US,58768,2025-12-30T02:25:16Z,SCHEDULED,Pickup during business hours,2469
+990772,235649,Sanchez Corner,Fritzland,TX,US,55433,Michelle Drive,West Paula,NJ,US,89735,2026-02-12T14:33:07Z,IN_TRANSIT,Handle with care,2694
+331237,509593,Mcdonald Spurs,Alexanderview,KS,US,48563,Robert Plaza,West Jacqueline,NY,US,53240,2026-01-06T02:09:53Z,SCHEDULED,Pickup during business hours,1308
+134926,542309,Thomas Inlet,Osborneland,NY,US,88541,Pierce Bypass,East Dean,NY,US,52841,2026-02-16T09:06:30Z,IN_TRANSIT,Pickup during business hours,1684
+142016,378915,Courtney Dam,Charlesfurt,IL,US,54968,Reeves Locks,Deniseside,NJ,US,41056,2026-01-26T02:01:51Z,IN_TRANSIT,Call before pickup,922
+582382,837124,Flynn Trail,Aaronbury,GA,US,97547,Mary Ridges,North Troyton,FL,US,46896,2026-02-23T09:41:31Z,CANCELLED,Contact carrier on arrival,597
+563957,317581,Jones Islands,Lake Jessica,KS,US,36628,Joseph Crossing,Johnfort,TX,US,04865,2025-12-31T14:18:39Z,DELIVERED,Call before pickup,2141
+172677,697494,Denise Fall,South Frederick,GA,US,56793,Christina Ports,North Christina,NJ,US,92158,2026-01-20T20:35:48Z,IN_TRANSIT,Handle with care,2883
+148063,444192,Wilson Streets,Jenniferstad,FL,US,95029,Jessica Grove,Port Henryborough,GA,US,74048,2025-12-15T20:15:19Z,IN_TRANSIT,Call before pickup,602
+120633,614315,Ross Lights,Port Shirley,CA,US,07972,Julia Lake,East Andreamouth,KS,US,66873,2026-01-31T04:46:16Z,CANCELLED,Contact carrier on arrival,612
+918139,872759,Raymond Ridges,South Jennifershire,AZ,US,75429,Johnson Junctions,West Donnaland,NJ,US,30630,2026-03-02T12:05:51Z,SCHEDULED,Pickup during business hours,821
+360918,244603,Nicholas Bridge,Ryanport,NY,US,52024,Phillips Gateway,South Juliafurt,NY,US,99129,2026-02-04T01:28:39Z,DELIVERED,Call before pickup,702
+778570,116385,Carlos Dam,South Jennifer,FL,US,84205,Brandon Wells,South Alexanderstad,IL,US,59732,2026-01-17T19:21:28Z,DELIVERED,Pickup during business hours,2078
+319166,440388,Riley Heights,Johnfurt,IL,US,04555,Kimberly Point,East Tina,TX,US,45552,2026-01-15T05:07:02Z,IN_TRANSIT,Pickup during business hours,2106
+647829,335357,Vazquez Park,South Paulashire,AZ,US,36231,Ross Course,Romeroland,GA,US,41102,2026-02-15T16:53:01Z,SCHEDULED,Contact carrier on arrival,1940
+600289,899351,Rivera Court,Hayesland,AZ,US,86352,Middleton Lights,Port Ryanchester,WA,US,29664,2026-02-25T02:04:35Z,SCHEDULED,Contact carrier on arrival,2946
+776141,846199,Tyler Crossroad,Port Mark,GA,US,46738,Walsh Islands,South Jesusmouth,AZ,US,07062,2026-01-17T06:29:09Z,SCHEDULED,Handle with care,2812
+259911,479444,Daniel Branch,Perezbury,GA,US,69151,Dana Bridge,Smithtown,KS,US,69027,2026-01-09T11:13:49Z,SCHEDULED,Pickup during business hours,1106
+568191,203585,Elizabeth Isle,Josetown,TX,US,94368,Amanda Burg,West Alyssashire,IL,US,60584,2025-12-25T14:37:43Z,IN_TRANSIT,Contact carrier on arrival,1173
+347643,230840,Ryan Crescent,Coreybury,FL,US,57348,Klein Valleys,Martinville,TX,US,55457,2025-12-12T05:05:43Z,DELIVERED,Handle with care,415
+305127,753053,Bishop Meadows,New James,KS,US,28795,Christina Plains,Carrfurt,KS,US,86226,2025-12-12T01:30:28Z,IN_TRANSIT,Call before pickup,1862
+595183,653542,Omar Crescent,South Laura,AZ,US,82958,Michael Circles,Wilcoxfurt,NY,US,64524,2025-12-30T02:18:42Z,IN_TRANSIT,Pickup during business hours,1903
+664390,286994,Heather Rapid,Port Christophershire,AZ,US,33966,Martinez Dale,New Shaun,AZ,US,36716,2025-12-26T16:45:18Z,SCHEDULED,Contact carrier on arrival,840
+481175,252912,Hernandez Tunnel,Walkerborough,NY,US,42069,Kenneth Station,Daniellemouth,NY,US,99684,2025-12-11T09:49:19Z,CANCELLED,Pickup during business hours,1855
+172110,209610,Owens Hill,West Raymondfurt,FL,US,61249,Wilson Wells,West Andre,TX,US,46449,2026-01-15T02:03:48Z,CANCELLED,Handle with care,2624
+871104,393032,Scott Prairie,Jeffreymouth,KS,US,60158,Benitez Ways,Patrickland,FL,US,53643,2026-01-21T17:27:43Z,CANCELLED,Call before pickup,415
+685738,682681,Lin Hill,Port Rachelmouth,NY,US,37780,Smith Branch,Justinmouth,FL,US,94470,2026-03-02T19:16:02Z,IN_TRANSIT,Handle with care,466
+662644,951842,Sparks Road,West Taraville,NJ,US,33741,Alexis Stream,Tracyview,FL,US,83272,2026-02-08T21:57:55Z,CANCELLED,Contact carrier on arrival,1956
+350440,581812,Chapman Locks,Jennifertown,CA,US,06079,Gregory Crossing,Scottstad,AZ,US,24389,2026-02-01T03:28:04Z,DELIVERED,Contact carrier on arrival,440
+278717,514961,Brittany Terrace,Jacksonmouth,FL,US,76231,Wade Ridge,Bradyborough,GA,US,79711,2025-12-17T17:52:21Z,IN_TRANSIT,Contact carrier on arrival,2420
+560419,431285,Steve Summit,East Kevinside,KS,US,70454,Brooks Dam,West Michaelmouth,KS,US,81981,2026-01-10T18:36:46Z,DELIVERED,Pickup during business hours,1794
+214807,101109,Jillian Well,Lucaston,NY,US,22683,Amanda Roads,New Ashley,FL,US,52920,2026-01-23T17:48:36Z,IN_TRANSIT,Call before pickup,2969
+102180,978415,Simmons Plains,West Stevenberg,NJ,US,91601,Barbara Alley,West Gordon,KS,US,89555,2025-12-04T09:08:17Z,DELIVERED,Pickup during business hours,2180
+605623,862832,Williams Walk,West Ruthburgh,NY,US,97559,Quinn Rue,Daniellemouth,TX,US,17473,2026-01-14T19:35:58Z,IN_TRANSIT,Call before pickup,1414
+763079,145389,Cox Ville,Port Donna,FL,US,88731,Roy Turnpike,Jamesshire,IL,US,27580,2026-01-09T19:06:13Z,DELIVERED,Contact carrier on arrival,623
+338694,646510,Obrien Viaduct,New Sara,WA,US,19604,Jeffrey Mill,South Angelahaven,TX,US,64652,2026-01-01T16:25:19Z,CANCELLED,Contact carrier on arrival,401
+756011,764751,Wilson Gardens,Warnerside,IL,US,54685,George Track,Elizabethmouth,CA,US,28567,2026-02-28T18:49:00Z,DELIVERED,Pickup during business hours,2875
+731853,992205,Jennifer Junctions,Josephfort,NJ,US,35942,Laura Fork,Palmerfurt,KS,US,18240,2026-02-27T21:42:59Z,SCHEDULED,Pickup during business hours,2540
+649010,214867,Williams Shoal,Smithport,KS,US,65580,Andre Island,Bowenton,GA,US,86155,2025-12-14T18:03:16Z,DELIVERED,Contact carrier on arrival,856
+478113,918427,Barnes Inlet,East Brianside,AZ,US,16979,Mendez Parkway,Port Justin,NY,US,50018,2026-01-24T00:47:17Z,SCHEDULED,Pickup during business hours,2664
+466958,208023,Daniel Shoals,Lake Ellen,WA,US,31522,Cooper Prairie,South Sara,KS,US,39934,2025-12-05T20:52:15Z,IN_TRANSIT,Pickup during business hours,2569
+893367,779733,Aaron Alley,North Keithmouth,TX,US,43596,Grant Trail,Port Luisborough,KS,US,94226,2026-02-23T02:54:27Z,SCHEDULED,Call before pickup,2036
+169828,325857,Meyer Fall,South Christian,AZ,US,04323,Samantha Crossing,Davisfort,WA,US,73515,2025-12-31T09:50:05Z,IN_TRANSIT,Call before pickup,1048
+722289,647939,Samantha Lodge,Lake Teresaside,NJ,US,81803,Barrera Street,Amyshire,CA,US,61586,2026-02-04T22:34:09Z,SCHEDULED,Call before pickup,1368
+957413,804141,Ortiz Shores,East Kelly,IL,US,97503,Kelly Road,Stephaniechester,GA,US,22006,2025-12-29T07:31:29Z,IN_TRANSIT,Call before pickup,2572
+247671,310002,Michelle Tunnel,Rodneyfort,CA,US,83138,Adams Fords,West Jerry,GA,US,68613,2026-02-02T15:59:23Z,IN_TRANSIT,Call before pickup,368
+392211,676346,Amy Grove,North Sarah,FL,US,73304,Martin Bypass,Jacobsonbury,NJ,US,65889,2025-12-16T04:27:10Z,SCHEDULED,Pickup during business hours,1726
+179676,636739,Wyatt Haven,Johnsonside,CA,US,81747,James Stravenue,North Cody,GA,US,35765,2026-03-01T21:25:23Z,SCHEDULED,Pickup during business hours,2762
+461224,825176,Fischer Terrace,West Ryanton,WA,US,58196,Odonnell Square,Rodriguezborough,WA,US,08382,2026-02-16T20:40:07Z,IN_TRANSIT,Pickup during business hours,410
+369555,988613,Hill Pine,Leeburgh,NY,US,31641,Smith Park,Kevinberg,KS,US,46563,2026-02-19T11:50:11Z,IN_TRANSIT,Contact carrier on arrival,1953
+471713,784124,Sandoval Plains,Ramosmouth,IL,US,27734,Kari Summit,Benderside,IL,US,73078,2026-01-24T04:28:20Z,IN_TRANSIT,Handle with care,1683
+229890,337399,Bryan Prairie,East Sandra,CA,US,82485,Martin Village,Katherinebury,TX,US,22095,2025-12-18T09:38:10Z,SCHEDULED,Handle with care,853
+549700,516879,Eugene Gardens,Smithshire,WA,US,30977,Glass Brook,West Mary,WA,US,05562,2026-02-16T16:40:14Z,IN_TRANSIT,Call before pickup,1492
+898213,958589,Jessica Pine,East Adam,IL,US,51413,Jones Radial,Lake Raymond,NY,US,58663,2026-01-08T01:01:00Z,SCHEDULED,Contact carrier on arrival,2677
+437340,563322,Matthews Tunnel,Lake Jeremy,NJ,US,70026,Cynthia Curve,East Elizabeth,GA,US,39203,2026-01-10T12:11:36Z,SCHEDULED,Pickup during business hours,2531
+319727,411497,Jordan Villages,West Christopher,AZ,US,42204,Pittman Centers,Andrewstad,IL,US,28490,2025-12-13T01:25:32Z,IN_TRANSIT,Call before pickup,658
+806050,385000,Rachael Oval,Brucechester,NY,US,03877,Yvonne Meadow,North Samuel,GA,US,82497,2025-12-31T11:24:52Z,CANCELLED,Handle with care,602
+837219,671210,Martin Light,Julianside,FL,US,80704,Justin Village,West Adamfurt,NY,US,17187,2026-02-16T14:35:43Z,IN_TRANSIT,Pickup during business hours,2229
+846976,643139,Carlson Pines,South Raven,KS,US,89387,Anna Way,Melissahaven,IL,US,36304,2026-02-22T10:47:34Z,CANCELLED,Contact carrier on arrival,548
+318704,688616,Henderson Roads,Port Pamela,CA,US,79171,Stacey Summit,East Joshua,AZ,US,88487,2025-12-25T20:42:54Z,SCHEDULED,Contact carrier on arrival,2090
+312840,701457,Jonathan Orchard,Reedville,CA,US,80001,Chen Hollow,New Dustin,IL,US,10086,2025-12-25T14:06:54Z,DELIVERED,Contact carrier on arrival,1825
+181062,606859,Elizabeth Neck,Tracyland,NJ,US,21582,Anna Oval,Martinezshire,IL,US,97435,2026-02-21T17:27:16Z,DELIVERED,Handle with care,967
+601640,154233,Cohen Mall,Samanthafurt,GA,US,83479,Johnson Valleys,North Garrett,TX,US,30024,2026-01-16T10:26:07Z,IN_TRANSIT,Handle with care,846
+515932,943179,Julia Trafficway,North Scottbury,NJ,US,14486,Christopher Hills,Mcculloughfurt,KS,US,68238,2026-03-03T09:23:08Z,SCHEDULED,Pickup during business hours,1280
+329255,447493,Hubbard Burg,Melindaton,FL,US,65181,Gibson Cape,Gilesberg,CA,US,52272,2026-01-11T18:10:49Z,CANCELLED,Pickup during business hours,1786
+910174,298253,Howard Corners,Mariaport,CA,US,04489,Black Parks,Port Susanmouth,NJ,US,60404,2025-12-13T16:36:34Z,DELIVERED,Call before pickup,2070
+206917,636140,Thomas Expressway,North Thomas,FL,US,68121,Calvin Stravenue,Trujillofurt,KS,US,09439,2026-02-15T19:00:56Z,DELIVERED,Pickup during business hours,1913
+508235,384522,Caroline Creek,Goodwinshire,WA,US,77440,Max Pines,Jacobsburgh,IL,US,97728,2026-01-23T03:23:30Z,SCHEDULED,Pickup during business hours,1442
+451160,444344,Roberta Pine,Holdenchester,KS,US,24088,Melody Walks,Port Diane,KS,US,02485,2026-02-13T18:28:53Z,CANCELLED,Contact carrier on arrival,2672
+810327,598672,Hebert Ports,South Jonathan,AZ,US,54914,Garrett Mission,Youngmouth,FL,US,88835,2025-12-29T11:58:30Z,IN_TRANSIT,Pickup during business hours,1383
+911928,215959,Tiffany Stream,North Jillton,GA,US,16885,Kari Plaza,Parksland,CA,US,50417,2026-02-08T12:13:55Z,CANCELLED,Pickup during business hours,360
+205243,303806,Jones Ramp,West James,IL,US,45798,Deborah Lodge,Tonyafort,FL,US,31887,2026-01-28T13:06:07Z,DELIVERED,Pickup during business hours,1252
+549389,385364,Dominguez Ramp,Wolfeside,GA,US,49072,Rodriguez Shoal,Schneiderton,IL,US,83662,2026-03-02T11:42:08Z,SCHEDULED,Contact carrier on arrival,689
+409287,683596,Guzman Forest,Perryborough,AZ,US,79992,Levine Unions,Shawmouth,IL,US,92610,2026-01-16T16:35:44Z,CANCELLED,Pickup during business hours,1021
+390892,762617,Williams Keys,Bryanhaven,NJ,US,91152,Fox Rapid,Huntbury,KS,US,48997,2026-02-06T12:53:46Z,CANCELLED,Contact carrier on arrival,1503
+788950,861766,James Trafficway,Harveyshire,TX,US,32371,Paige Keys,West Davidside,FL,US,11759,2026-01-28T08:46:43Z,CANCELLED,Handle with care,411
+956519,831717,Smith Ferry,Lake Maryfort,FL,US,28302,Nancy Greens,Dianeview,FL,US,18680,2026-01-22T21:09:37Z,IN_TRANSIT,Handle with care,1992
+992309,572206,Cameron Pines,Cherylstad,AZ,US,25446,Osborne Common,Kimshire,IL,US,07186,2026-02-02T05:31:11Z,CANCELLED,Pickup during business hours,1937
+277439,515026,Ashley Green,Stephaniefort,NJ,US,74959,Nelson Mission,East Colleen,CA,US,35383,2026-02-10T14:50:30Z,IN_TRANSIT,Call before pickup,2794
+700496,183200,Austin Keys,New Alexis,GA,US,97114,Lambert Green,Bobbury,CA,US,78183,2026-01-22T14:48:30Z,SCHEDULED,Pickup during business hours,2236
+963710,818909,Mary Islands,Port Zachary,CA,US,12807,Harris Walk,Schroedermouth,CA,US,73791,2025-12-07T17:52:31Z,IN_TRANSIT,Contact carrier on arrival,2552
+213584,679393,Myers Dale,Princeport,TX,US,37064,Mariah Spur,Curtisstad,CA,US,87244,2025-12-08T19:00:49Z,SCHEDULED,Call before pickup,2636
+274116,593811,Deanna Ferry,New Carol,FL,US,58294,Erica Land,Reneebury,FL,US,31647,2025-12-16T12:24:27Z,CANCELLED,Handle with care,2291
+471174,248306,Vanessa Cliff,Christineburgh,IL,US,21542,Joseph Hollow,East Rebeccafort,KS,US,67992,2025-12-18T23:35:41Z,DELIVERED,Call before pickup,497
+213063,948042,Vasquez Way,North Rebecca,WA,US,83177,Bradley Forges,Jonesland,CA,US,64517,2026-02-21T03:26:59Z,DELIVERED,Handle with care,343
+125078,784995,Robert Village,Lynnburgh,FL,US,46305,Angela Station,Lake Annaside,IL,US,10606,2026-02-26T04:42:39Z,CANCELLED,Call before pickup,2944
+520224,684374,Christopher View,Lake Lauren,NJ,US,19346,Sharon Station,Seanside,TX,US,65431,2025-12-12T08:13:33Z,SCHEDULED,Handle with care,1873
+596962,271424,Mark Land,New John,NY,US,67539,Austin Crescent,Khanchester,FL,US,86139,2025-12-10T02:08:42Z,CANCELLED,Handle with care,2503
+997481,148735,Brittany Hill,Christinaview,TX,US,36758,Autumn Pine,Lake Roberto,FL,US,50900,2026-02-15T20:17:35Z,IN_TRANSIT,Contact carrier on arrival,2359
+339459,278047,Shirley Summit,Lake Sara,IL,US,62507,Fuller Junction,Bowenbury,KS,US,86127,2026-01-13T12:08:00Z,CANCELLED,Contact carrier on arrival,2173
+538442,937161,Amanda Orchard,Port Brandiview,FL,US,17063,Fischer Prairie,Lutzberg,GA,US,17308,2026-02-15T15:38:37Z,DELIVERED,Pickup during business hours,524
+500092,515549,Boyle Mount,Makaylatown,CA,US,94445,Richard Field,Sullivanborough,AZ,US,57064,2026-02-09T13:46:29Z,DELIVERED,Call before pickup,766
+851056,491661,Baxter Harbor,Turnerland,KS,US,93255,Deborah Landing,Christopherland,AZ,US,92955,2026-01-01T11:04:29Z,DELIVERED,Call before pickup,1530
+888327,470404,Holmes Square,Johntown,FL,US,66530,John Path,Williamsborough,AZ,US,17861,2025-12-10T10:29:08Z,CANCELLED,Call before pickup,2181
+634863,900157,Heather Plains,North Wendy,NY,US,57670,Johnson Brooks,Harrisborough,GA,US,95833,2026-01-28T01:25:16Z,DELIVERED,Contact carrier on arrival,2789
+408432,889889,Eric Walks,Benjaminburgh,AZ,US,30314,Fox Locks,Lake Carla,NJ,US,97263,2026-02-09T03:45:00Z,DELIVERED,Call before pickup,1331
+207605,817323,Jacob Neck,Marymouth,NJ,US,51284,Jonathan Harbors,North Sheila,FL,US,81950,2026-02-23T02:40:31Z,DELIVERED,Pickup during business hours,2346
+590078,557131,Tony Squares,Bradfort,KS,US,26150,Austin Ridge,East Eddie,AZ,US,94109,2026-01-15T16:21:19Z,CANCELLED,Contact carrier on arrival,560
+185117,286947,Rowe Pine,Port Jamestown,CA,US,07926,Michelle Pine,South Natasha,GA,US,60459,2026-01-13T19:59:58Z,CANCELLED,Handle with care,2715
+775619,946474,Shaffer Springs,Willieville,CA,US,65032,Daniel Landing,Lake Sylviaport,WA,US,78562,2025-12-16T00:35:06Z,SCHEDULED,Call before pickup,746
+578966,309350,Lisa Flats,East Crystalbury,AZ,US,43522,Bianca Meadow,Theresaland,GA,US,74446,2026-01-07T15:46:27Z,SCHEDULED,Pickup during business hours,378
+506856,753187,Natalie Canyon,East Amber,AZ,US,45070,Rodriguez Meadow,Howellchester,WA,US,49160,2026-02-19T03:30:51Z,SCHEDULED,Pickup during business hours,2078
+382936,176484,Jonathan Greens,Charlesborough,NY,US,47550,Charles Springs,Crawfordshire,TX,US,84129,2025-12-05T23:03:14Z,DELIVERED,Contact carrier on arrival,2782
+678102,679376,Ford Mills,Brianborough,NY,US,91944,Heather Crest,Johnstad,AZ,US,46620,2026-01-27T08:29:17Z,CANCELLED,Handle with care,918
+486498,707393,Amanda Islands,New Maryberg,IL,US,77585,Lam Stravenue,Port Andrewton,IL,US,35588,2026-01-10T07:26:04Z,DELIVERED,Pickup during business hours,301
+325140,783227,Todd Grove,Port Michele,IL,US,26645,Anderson Manor,East Toddfurt,TX,US,62890,2025-12-19T16:10:54Z,DELIVERED,Contact carrier on arrival,1310
+802032,496083,Hooper Flats,East William,TX,US,93106,Johnson Plain,Julietown,NY,US,99227,2026-01-19T17:49:39Z,CANCELLED,Call before pickup,1514
+557247,760987,James Shores,Shannonberg,TX,US,06121,Owen Crossroad,West Caleb,WA,US,07884,2026-02-01T06:36:47Z,DELIVERED,Handle with care,1743
+875374,376217,Anthony Shoals,Beanborough,CA,US,85508,Riggs Springs,North Danielleborough,KS,US,59113,2026-02-13T18:00:31Z,DELIVERED,Pickup during business hours,1152
+413894,987188,Delacruz Bypass,Lindaland,WA,US,55739,Angelica Union,Port Heathertown,FL,US,43714,2025-12-12T18:11:21Z,IN_TRANSIT,Call before pickup,401
+489443,240980,Callahan Point,Anthonymouth,IL,US,53149,Eric Junction,East Bridgethaven,AZ,US,78936,2026-01-08T22:26:56Z,DELIVERED,Contact carrier on arrival,1417
+980613,721602,Eaton Groves,North Robyn,WA,US,36404,Johnson Coves,Jessicaview,TX,US,64907,2026-02-19T17:08:09Z,DELIVERED,Call before pickup,1726
+969979,498486,Medina Bypass,Port Gailland,FL,US,37602,Tara Land,West Albert,WA,US,42317,2026-02-27T13:23:32Z,CANCELLED,Call before pickup,1381
+445153,491289,Holloway Greens,Brownshire,TX,US,74268,Alex Mews,Riveraview,KS,US,45517,2025-12-22T08:08:20Z,DELIVERED,Call before pickup,1223
+784818,978978,Heather Branch,Coreyview,GA,US,62377,Jackson Islands,Christopherborough,IL,US,16472,2026-03-01T21:35:24Z,SCHEDULED,Call before pickup,2799
+276290,596903,Davis Spring,Port Andrew,NJ,US,21553,Tran Dale,Santosshire,KS,US,74911,2026-03-01T04:24:43Z,SCHEDULED,Call before pickup,1699
+124994,148822,Brad Knoll,Brianside,WA,US,45874,Moyer Oval,Lake Juliamouth,NY,US,72453,2025-12-13T20:18:04Z,IN_TRANSIT,Pickup during business hours,333
+504390,872553,Riley Path,North Catherine,WA,US,07780,West Squares,New Carolshire,NY,US,35056,2026-01-11T00:09:03Z,IN_TRANSIT,Contact carrier on arrival,394
+861567,722031,Amy Spring,Garytown,WA,US,89680,Cheryl Squares,Woodstad,CA,US,22016,2026-01-22T13:38:35Z,IN_TRANSIT,Pickup during business hours,2901
+785693,712601,Johnson Turnpike,East Mike,CA,US,96143,Everett Lodge,Sylviaport,GA,US,02028,2026-02-28T17:59:13Z,DELIVERED,Call before pickup,1367
+691225,692663,John Drives,West George,CA,US,20668,Mary Loaf,Marieview,GA,US,86098,2026-02-21T01:09:36Z,CANCELLED,Call before pickup,2159
+515744,487006,Schultz Station,Port Courtney,GA,US,94014,Paula Fork,East Lawrencemouth,AZ,US,58034,2025-12-23T13:03:34Z,DELIVERED,Pickup during business hours,944
+916119,470088,Jason Port,South Courtney,CA,US,78865,Ramos Garden,Jessicaborough,AZ,US,29658,2026-02-23T20:19:53Z,IN_TRANSIT,Handle with care,2769
+545664,435746,Kelly Mall,New Jeffreyton,KS,US,73101,Pierce Plains,Herringmouth,WA,US,38672,2025-12-06T09:10:03Z,SCHEDULED,Pickup during business hours,792
+259913,735402,Gonzalez Forest,Hughesville,CA,US,32250,Alisha Crescent,Brownmouth,AZ,US,81146,2025-12-29T19:09:25Z,DELIVERED,Contact carrier on arrival,2112
+823549,567191,Briggs Common,Gutierrezberg,TX,US,53463,Roberson Plaza,Torrestown,FL,US,95847,2026-01-26T16:45:49Z,CANCELLED,Contact carrier on arrival,909
+562861,491047,Bowman Pines,Rogerville,CA,US,61978,Shepard Trail,North Mary,CA,US,61964,2025-12-22T17:45:58Z,SCHEDULED,Contact carrier on arrival,1462
+914743,302102,Smith Lakes,Joshuamouth,IL,US,95936,Hanson Spring,Hooverville,AZ,US,60613,2026-01-03T12:43:59Z,SCHEDULED,Contact carrier on arrival,1048
+931529,872163,Lynn Meadows,West Jessicatown,IL,US,73414,Valencia Way,Juliaberg,WA,US,52370,2025-12-21T22:35:37Z,DELIVERED,Contact carrier on arrival,2151
+120378,159293,Strong Shore,Garrettton,CA,US,63769,Frederick Mountain,North Zacharyfurt,FL,US,51690,2025-12-30T00:17:22Z,CANCELLED,Pickup during business hours,882
+519594,852008,Richard Skyway,Andreaberg,GA,US,05987,Norton Motorway,East Morganmouth,NJ,US,43938,2025-12-24T16:13:59Z,SCHEDULED,Handle with care,2150
+644964,836656,Sean Stravenue,Ellisville,IL,US,07448,Brittany Mountain,Joyceburgh,WA,US,43069,2026-01-30T11:45:57Z,IN_TRANSIT,Handle with care,519
+416900,274838,Paul Roads,Cameronmouth,IL,US,91070,Allen Lakes,Jamesmouth,AZ,US,17470,2025-12-12T11:00:43Z,CANCELLED,Call before pickup,761
+243762,532644,Rachel Turnpike,Taylorland,TX,US,58919,Taylor Place,South Angelaside,AZ,US,99877,2025-12-05T17:54:43Z,SCHEDULED,Contact carrier on arrival,1384
+429311,128148,Jessica Squares,East Cynthia,KS,US,10572,Burton Prairie,Kaylatown,CA,US,40751,2026-01-09T05:12:05Z,CANCELLED,Handle with care,2720
+346396,958564,Sheila Walks,Port Latoyaport,NY,US,06787,Cobb Lock,New Hannah,FL,US,95017,2026-02-13T07:39:23Z,DELIVERED,Pickup during business hours,2100
+385409,705545,Miller Way,Hicksview,FL,US,33007,Palmer Road,Port Kathleenberg,CA,US,82477,2026-01-22T07:06:39Z,SCHEDULED,Contact carrier on arrival,926
+335797,802053,Cynthia Roads,East Christinafort,CA,US,50437,Todd Station,West Geneport,IL,US,83982,2026-01-21T08:36:46Z,CANCELLED,Handle with care,1879
+289566,764677,Garcia Orchard,Harrisborough,NY,US,15406,Jonathan Hills,West Crystaltown,FL,US,85191,2026-01-14T09:45:53Z,IN_TRANSIT,Contact carrier on arrival,1471
+830863,375937,Robyn Burgs,South Shawn,IL,US,24850,Cohen Vista,West Carolynchester,CA,US,84068,2026-02-27T23:50:10Z,IN_TRANSIT,Call before pickup,2927
+215984,619970,Luis Land,Williamsmouth,WA,US,64902,Brittany Court,Lake Steven,NY,US,39032,2026-01-06T12:39:20Z,SCHEDULED,Call before pickup,1880
+366412,241766,Rebecca Crossing,Brianstad,KS,US,88527,Gary Stravenue,Aaronfurt,CA,US,65687,2026-02-08T18:03:49Z,SCHEDULED,Pickup during business hours,555
+172684,243291,Lee Isle,Jessemouth,NJ,US,52204,Murphy Land,Lake Melinda,AZ,US,56054,2025-12-29T15:00:31Z,CANCELLED,Contact carrier on arrival,1304
+202152,557893,Davis Hill,Hillburgh,NY,US,32196,Romero Points,Carsonmouth,WA,US,28340,2026-01-07T19:50:55Z,CANCELLED,Pickup during business hours,1373
+390739,750678,Bradley Fords,South Katherinechester,IL,US,48782,Frank Mews,Port Amber,IL,US,05739,2026-02-25T11:01:35Z,SCHEDULED,Call before pickup,809
+314705,668246,Walton Alley,Adammouth,AZ,US,70706,Lewis Extension,Hopkinsland,NY,US,85060,2026-02-18T18:50:02Z,IN_TRANSIT,Call before pickup,2467
+638675,486875,Amber Tunnel,New Melissaport,FL,US,52428,Katherine Avenue,Martinezfort,CA,US,96134,2026-01-22T19:53:23Z,IN_TRANSIT,Handle with care,632
+874222,892848,Johnson Mills,New Michael,NY,US,79480,Timothy Parkway,West Tiffanyburgh,GA,US,67656,2026-01-30T11:58:48Z,DELIVERED,Contact carrier on arrival,399
+447211,449428,Davis Forest,East Lisa,CA,US,04009,Robert Vista,North Brian,IL,US,22024,2025-12-18T19:23:05Z,DELIVERED,Handle with care,1576
+829360,478564,Johnson Loaf,Alvinview,NJ,US,03255,Shannon Plain,Myerston,NY,US,74115,2025-12-05T16:36:10Z,DELIVERED,Pickup during business hours,1163
+920343,185553,Charles Oval,Lake Timothy,AZ,US,57454,Deanna Trace,North Kristopher,IL,US,76095,2025-12-09T02:14:11Z,SCHEDULED,Handle with care,1870
+523934,324853,James Via,Shelleyberg,KS,US,81260,Lauren Crescent,New Georgemouth,IL,US,11369,2026-01-08T18:38:58Z,DELIVERED,Call before pickup,1199
+337221,458242,Davis Plains,North Cynthia,AZ,US,61112,Leonard Mission,North Paul,FL,US,98525,2025-12-18T06:26:24Z,CANCELLED,Contact carrier on arrival,1087
+935407,666998,Charles Tunnel,New Michaelfort,CA,US,36759,Moore Fall,Craigtown,TX,US,48208,2026-02-06T14:29:50Z,DELIVERED,Call before pickup,1901
+322957,611687,Sanford Club,North Christinaland,CA,US,05666,Moreno Run,Sanchezburgh,FL,US,12228,2025-12-09T16:02:00Z,CANCELLED,Handle with care,1322
+519249,823123,Ashley Extensions,Hansonchester,GA,US,58211,Ashley Summit,Feliciahaven,AZ,US,86177,2025-12-15T23:55:46Z,SCHEDULED,Contact carrier on arrival,980
+874974,723492,Wolfe Mountains,Karenhaven,AZ,US,27827,Mitchell Canyon,Carolburgh,TX,US,55127,2025-12-08T01:29:24Z,DELIVERED,Pickup during business hours,357
+366793,751721,Harris Overpass,South Paultown,CA,US,59448,Larson Run,Bergmouth,WA,US,70602,2026-01-07T05:41:53Z,IN_TRANSIT,Pickup during business hours,2720
+765921,569640,Alyssa Via,Port Holly,IL,US,79475,Diaz Well,Matthewstown,KS,US,22473,2026-01-15T17:28:05Z,DELIVERED,Handle with care,1779
+670032,873604,Antonio Loaf,Port Tanner,AZ,US,86694,Lee Flat,West Karaville,AZ,US,45551,2026-01-27T06:15:15Z,SCHEDULED,Call before pickup,1678
+439404,458082,Beth Groves,Stephensonmouth,KS,US,38660,Erin Springs,Justintown,NJ,US,15387,2025-12-06T08:44:52Z,SCHEDULED,Pickup during business hours,1944
+879907,255170,Mason Brooks,East Julie,NJ,US,57684,White Bypass,Port Michelle,IL,US,35176,2025-12-17T07:48:55Z,DELIVERED,Handle with care,2446
+195690,579298,Butler Valley,Calebfort,NJ,US,28665,Hodges Drive,West Sheristad,NJ,US,82165,2026-01-06T09:55:37Z,IN_TRANSIT,Pickup during business hours,648
+113638,235280,Paige Springs,Theresaport,FL,US,69307,Maria Island,New Joannemouth,CA,US,64329,2026-01-25T22:18:33Z,IN_TRANSIT,Handle with care,1418
+786326,862358,Alex Mission,Durhamburgh,CA,US,80885,Laura Walk,Johnsonton,GA,US,62968,2025-12-15T16:57:57Z,SCHEDULED,Contact carrier on arrival,1152
+490130,505822,Troy Pike,Cherylmouth,WA,US,37922,Hall Cape,Lake Heidi,NJ,US,90198,2025-12-16T02:08:33Z,DELIVERED,Contact carrier on arrival,2714
+742248,875816,Gibson Land,Samuelshire,IL,US,18712,Chad Extension,Port Jamestown,WA,US,62969,2026-02-23T22:09:22Z,CANCELLED,Contact carrier on arrival,498
+970218,708681,Shea Points,Millsview,IL,US,97322,Ivan Harbors,Port Kimberly,GA,US,50065,2026-02-28T14:58:01Z,IN_TRANSIT,Contact carrier on arrival,1252
+243390,757799,Samantha Falls,West Stevenshire,IL,US,91716,Castillo Estate,Marktown,AZ,US,64090,2026-02-17T15:06:42Z,DELIVERED,Handle with care,2242
+320306,336313,Brett Causeway,West Nicholasstad,TX,US,91485,Hurst Lodge,Josephfurt,KS,US,53757,2025-12-08T05:29:18Z,SCHEDULED,Contact carrier on arrival,2482
+684502,216508,Connor Mission,Maciasport,KS,US,84364,Sandra Landing,West Scott,AZ,US,05895,2025-12-05T19:45:39Z,SCHEDULED,Call before pickup,2936
+393662,557936,Hughes Wall,New Alexanderberg,KS,US,85540,Laura Junction,South Marie,KS,US,96099,2026-02-05T08:45:45Z,IN_TRANSIT,Handle with care,544
+780715,455194,Kaylee Hollow,West Alicia,CA,US,04554,Todd Estates,Mcgrathview,AZ,US,10679,2026-01-09T14:27:39Z,SCHEDULED,Contact carrier on arrival,1960
+360547,233473,Natalie Springs,New Matthewburgh,NJ,US,86931,Ann Radial,New Joanne,FL,US,75603,2026-03-01T10:16:13Z,SCHEDULED,Contact carrier on arrival,2996
+772317,197704,Robinson Plains,East Johnstad,AZ,US,30172,Williamson Turnpike,New Ruth,IL,US,16375,2026-01-22T16:15:14Z,CANCELLED,Handle with care,1878
+987503,812313,Estrada Flats,Port Nicolehaven,AZ,US,99875,Joseph Course,Nicolefort,FL,US,57769,2025-12-26T17:25:37Z,SCHEDULED,Contact carrier on arrival,1207
+562073,362123,Nicholas Run,North James,AZ,US,69332,Brett Pass,Thomasville,AZ,US,38282,2026-02-08T17:37:18Z,IN_TRANSIT,Pickup during business hours,2274
+784378,103893,Brittany Squares,Dwayneburgh,AZ,US,00739,Donald Mountain,Anntown,FL,US,68766,2026-03-01T05:42:20Z,DELIVERED,Handle with care,369
+399214,427838,April Fall,Port Edwinshire,KS,US,08648,Cummings Greens,New Nicolefurt,KS,US,09950,2026-01-22T03:47:02Z,SCHEDULED,Call before pickup,386
+211850,213101,Dawn Station,Natalieside,KS,US,34357,Jennifer Highway,East Jessica,AZ,US,19682,2026-01-11T14:19:12Z,DELIVERED,Contact carrier on arrival,2303
+443985,926736,Ochoa Isle,Thomasmouth,FL,US,05397,Simpson Fords,Hoffmanberg,FL,US,15813,2025-12-24T15:52:24Z,DELIVERED,Handle with care,1093
+899206,495569,Jennifer Way,Garzaville,CA,US,90721,Caldwell Field,West Lori,TX,US,21120,2026-01-27T16:41:12Z,CANCELLED,Handle with care,2402
+195035,695910,Graves Vista,Lopezside,WA,US,92642,Savannah Grove,Domingueztown,NY,US,19305,2026-02-15T06:28:14Z,CANCELLED,Contact carrier on arrival,581
+634925,228869,Tara Crest,Watkinsburgh,WA,US,19329,Courtney Rapids,Port Bryanberg,IL,US,48853,2026-01-24T16:06:16Z,DELIVERED,Handle with care,1921
+451610,983205,Jennifer Views,Smithbury,KS,US,84778,Simmons Wells,Archerhaven,TX,US,49235,2026-01-26T22:08:25Z,DELIVERED,Handle with care,1803
+492131,300541,Carolyn Skyway,Craigburgh,NJ,US,07458,Karen Plaza,East Joelland,NY,US,38365,2026-03-02T13:28:24Z,DELIVERED,Contact carrier on arrival,320
+400592,905062,John Vista,Tannermouth,IL,US,67926,Kenneth Grove,South Nicolechester,AZ,US,81665,2025-12-19T03:28:53Z,SCHEDULED,Call before pickup,842
+624927,863582,Anderson Ridge,East Loriland,IL,US,40764,Erica Flats,Jonathonport,WA,US,01621,2026-01-31T11:49:29Z,SCHEDULED,Call before pickup,2987
+776224,770059,Bennett Freeway,Katherineside,KS,US,24782,Mcconnell Extensions,Port Carlos,NY,US,47442,2026-02-09T09:42:56Z,CANCELLED,Call before pickup,2638
+795187,261291,Trevor Brook,Christinehaven,KS,US,99480,Thompson Viaduct,South Maryberg,AZ,US,91086,2026-02-20T12:39:02Z,IN_TRANSIT,Pickup during business hours,416
+487724,841871,Jason Valley,Atkinsfurt,TX,US,51243,Selena Street,West Vincentbury,NY,US,35714,2025-12-29T12:35:17Z,IN_TRANSIT,Call before pickup,2453
+499748,296934,Tiffany Corner,New Deborahshire,KS,US,41469,Steven Estate,Jenniferbury,NJ,US,96155,2026-02-05T06:55:21Z,IN_TRANSIT,Pickup during business hours,494
+554884,723685,Charles Walk,Vargasfurt,NY,US,43108,Smith Station,Lake Stephen,NJ,US,39408,2026-01-11T19:18:23Z,SCHEDULED,Handle with care,863
+596689,925239,Charlotte Oval,Port Susantown,NY,US,06118,Brown Court,Millsstad,CA,US,33445,2025-12-11T04:27:16Z,SCHEDULED,Call before pickup,2258
+590454,548362,Lucas Burg,New Joshuafort,FL,US,98583,Matthew Cliff,Johnfurt,GA,US,76731,2026-01-01T00:36:12Z,CANCELLED,Pickup during business hours,2657
+919539,547143,Michael Bypass,Port Aaronview,WA,US,93842,Obrien Road,Melindabury,AZ,US,92117,2025-12-25T01:11:27Z,IN_TRANSIT,Call before pickup,986
+354918,625855,Tracy Wells,East Carlosstad,AZ,US,88257,Hernandez Path,Schroedermouth,FL,US,17954,2025-12-31T19:16:27Z,IN_TRANSIT,Pickup during business hours,1766
+563942,165865,Crawford Bridge,Alecville,KS,US,65705,Jeremy Brooks,Vazquezberg,TX,US,42420,2025-12-14T07:26:41Z,SCHEDULED,Contact carrier on arrival,557
+252210,290496,Zachary Club,New Kimberly,CA,US,95836,Olsen Prairie,Lake Jonathan,TX,US,26028,2026-02-13T01:35:54Z,SCHEDULED,Handle with care,2296
+542248,947456,Renee Knoll,Lake Zacharytown,NJ,US,52522,Richard Groves,Suzanneberg,NJ,US,27691,2026-02-17T05:31:42Z,DELIVERED,Call before pickup,2881
+833527,144356,Meghan Corners,West David,AZ,US,84653,Robert Springs,Chavezview,WA,US,43485,2026-02-10T21:04:36Z,CANCELLED,Call before pickup,2340
+653702,823955,Michelle Garden,Colemouth,KS,US,72268,Taylor Harbors,Tamaramouth,NY,US,54580,2026-01-11T16:21:32Z,SCHEDULED,Contact carrier on arrival,1331
+229347,226407,Owens Branch,Jonesburgh,WA,US,49002,Carroll Throughway,Douglasfurt,NY,US,20493,2026-01-15T00:49:36Z,SCHEDULED,Call before pickup,1749
+131276,435050,Rodriguez Expressway,New Jacob,IL,US,98500,Lauren Mountains,Lake Jennifer,IL,US,20696,2026-02-01T06:45:36Z,DELIVERED,Handle with care,941
+931745,262815,Huffman Rapid,South Brittanymouth,NY,US,68095,Savannah Trail,Lake Melissaport,AZ,US,18747,2026-01-08T07:54:10Z,DELIVERED,Handle with care,830
+104086,520444,Haas Burg,Garciaburgh,CA,US,85904,Pope Cliffs,Wardborough,KS,US,60894,2026-01-16T04:15:21Z,DELIVERED,Pickup during business hours,1135
+580842,946695,Thornton Avenue,Russellbury,FL,US,96931,Whitney Haven,West Megan,CA,US,77212,2025-12-09T04:36:31Z,DELIVERED,Handle with care,1151
+488734,687659,Martinez Ranch,Luisfort,WA,US,39845,Hayes Brooks,Schneiderhaven,TX,US,19010,2026-03-03T09:19:18Z,DELIVERED,Contact carrier on arrival,2419
+751034,599103,Weber Turnpike,Dickersonmouth,AZ,US,46084,Spencer Burg,Port Matthewton,FL,US,12016,2025-12-08T01:12:33Z,IN_TRANSIT,Call before pickup,2297
+563929,794578,Christine Avenue,Port Nicoleborough,FL,US,20923,Vincent Hills,North Walterton,KS,US,83621,2026-02-08T18:33:09Z,SCHEDULED,Contact carrier on arrival,2952
+866233,305763,Robles Walk,Port Anthony,NY,US,16695,Woods Mountain,East Bradleyburgh,TX,US,03809,2026-01-03T12:43:47Z,SCHEDULED,Contact carrier on arrival,821
+217221,725639,Lopez Streets,Gardnerland,FL,US,26913,Shannon Cove,Lake Jeremy,FL,US,99592,2026-02-04T10:54:02Z,IN_TRANSIT,Contact carrier on arrival,679
+479329,325788,Middleton Creek,West Scott,IL,US,27400,Collier Plaza,Bryceborough,IL,US,94795,2026-01-04T06:50:33Z,DELIVERED,Contact carrier on arrival,1922
+936769,347658,Phillip Corner,South Sarahhaven,CA,US,75829,Kramer Corners,Sheaberg,NY,US,04603,2025-12-11T16:13:16Z,SCHEDULED,Contact carrier on arrival,2481
+846229,795624,Casey Passage,Stephenshire,FL,US,59737,King Mission,Davischester,FL,US,79171,2026-01-14T13:24:52Z,CANCELLED,Call before pickup,612
+570875,210351,Anthony Knoll,Emilyburgh,KS,US,84711,Morrison Harbor,Kingland,TX,US,57272,2026-02-25T22:07:28Z,CANCELLED,Pickup during business hours,1721
+327820,548518,Banks Flats,West Jamieburgh,NJ,US,95283,Joe Grove,Johnsonport,CA,US,71856,2025-12-09T20:25:23Z,CANCELLED,Handle with care,1878
+940078,672713,Maxwell Stravenue,East Sara,NY,US,30271,Caldwell Cape,New Thomasbury,WA,US,91604,2026-01-09T05:51:59Z,CANCELLED,Contact carrier on arrival,1450
+680993,701187,Phillip Shoals,Nancyview,TX,US,16082,Todd Branch,Joshuaton,TX,US,32958,2025-12-08T15:13:53Z,DELIVERED,Call before pickup,922
+612175,446202,Macias Route,Royview,FL,US,68155,Hamilton Road,Lake Timothyfurt,AZ,US,12474,2026-01-17T07:57:31Z,IN_TRANSIT,Handle with care,1858
+611622,407101,Adrian Gateway,New Amy,WA,US,76693,Olivia Lodge,Cochranbury,WA,US,60718,2026-02-18T10:39:23Z,SCHEDULED,Contact carrier on arrival,1471
+825604,773955,Victoria Pine,Port Andreamouth,NJ,US,59454,Colleen Junctions,New Jon,NJ,US,58711,2026-02-28T22:18:51Z,IN_TRANSIT,Call before pickup,1955
+291562,593780,Yates Plains,Elliottport,IL,US,10835,Fernandez Expressway,Wattsfort,CA,US,86343,2026-01-28T11:11:50Z,CANCELLED,Handle with care,923
+279800,215579,Ian Circles,New Whitney,FL,US,51187,Mcdonald Falls,West Royfort,FL,US,98494,2026-02-26T10:15:09Z,DELIVERED,Contact carrier on arrival,360
+288852,902698,Vaughn Canyon,West Ricardo,NJ,US,33526,William Ridges,East Christopher,CA,US,52308,2026-02-05T03:21:12Z,DELIVERED,Call before pickup,1172
+247268,524551,Williams Crescent,North Matthewfurt,NY,US,72396,Anthony Corner,East Christopher,FL,US,38508,2026-01-26T01:55:33Z,DELIVERED,Handle with care,359
+928913,453508,Billy Ridge,Russellborough,NJ,US,54209,Jennifer Key,Shannonfort,TX,US,23793,2026-01-19T16:52:04Z,SCHEDULED,Handle with care,1970
+644587,676087,Rodriguez Ridge,South Cynthia,KS,US,00543,Jones Field,East Lisa,AZ,US,40196,2026-02-18T23:31:30Z,SCHEDULED,Contact carrier on arrival,1815
+481318,195854,Frank Highway,New Ericamouth,KS,US,20765,Eric Light,Michealfort,KS,US,63829,2026-01-02T21:41:05Z,IN_TRANSIT,Pickup during business hours,905
+431955,491791,Donna Mountains,Port Margaretfurt,KS,US,76928,Paul Union,Thomasfurt,GA,US,85925,2025-12-25T11:34:14Z,SCHEDULED,Handle with care,1121
+920735,482256,Barrett Islands,Henrytown,CA,US,60836,Ortega Squares,Bakerport,IL,US,64660,2026-02-25T23:49:45Z,SCHEDULED,Handle with care,907
+473528,975337,Margaret Burg,Kristinton,AZ,US,39348,Mitchell Bridge,North Alyssabury,AZ,US,44108,2026-02-26T17:21:25Z,CANCELLED,Handle with care,336
+855101,208554,Darrell Hollow,East Linda,WA,US,59674,Nathan Manor,Port Eric,IL,US,05397,2025-12-23T10:34:53Z,DELIVERED,Pickup during business hours,602
+406883,392442,Troy Stream,Lake Dianatown,WA,US,96143,Dunn Crescent,Guerrerofurt,IL,US,33640,2025-12-20T04:44:46Z,CANCELLED,Contact carrier on arrival,1273
+475267,519386,Young Inlet,North Michelle,TX,US,20523,Garcia Rue,New Maryview,FL,US,66591,2025-12-15T23:58:14Z,DELIVERED,Pickup during business hours,742
+776568,694713,Carla Ways,Laurenland,CA,US,98406,Porter Extension,Hunterborough,CA,US,04626,2026-02-08T13:46:41Z,CANCELLED,Handle with care,1997
+792333,462831,Virginia Fords,South Luisshire,FL,US,31493,Joy Burg,New Billymouth,IL,US,16980,2026-01-27T17:08:30Z,DELIVERED,Call before pickup,1242
+343596,155723,Donna Cove,South Andrew,NJ,US,20339,Christina Tunnel,New Cynthia,FL,US,46819,2025-12-05T11:21:01Z,DELIVERED,Pickup during business hours,633
+106205,976740,Laura Estates,Jonesburgh,NJ,US,87894,Miller Shore,Susanton,FL,US,45332,2026-01-10T06:07:38Z,CANCELLED,Call before pickup,689
+640065,708371,Cathy Drives,New Jamesstad,KS,US,34690,Richardson Gateway,East Amy,NY,US,37498,2026-01-06T19:28:28Z,SCHEDULED,Pickup during business hours,2334
+460073,507970,Joe Freeway,Jamesport,AZ,US,68980,Pena Stravenue,Thomasfort,NJ,US,14515,2026-02-11T12:16:55Z,CANCELLED,Pickup during business hours,2115
+403836,525255,Kelly Circle,Brownmouth,AZ,US,78975,Johnson Village,New Joshuahaven,IL,US,74372,2025-12-22T08:05:46Z,SCHEDULED,Pickup during business hours,1094
+395912,322589,Ross Forge,Robertsville,KS,US,81195,Lisa Forges,Cochranstad,IL,US,00538,2026-02-20T17:44:57Z,IN_TRANSIT,Handle with care,509
+559134,913527,Bradley Stream,Jerryborough,IL,US,67407,Byrd Village,Edwardstown,KS,US,47497,2026-02-09T12:56:56Z,CANCELLED,Handle with care,2129
+660340,619541,Russell Ridges,Ewingport,GA,US,36053,Thomas Ridges,New Kevinstad,NJ,US,20562,2025-12-25T02:52:11Z,SCHEDULED,Pickup during business hours,2759
+727847,998389,Gary Drive,Port Connorberg,IL,US,78917,Brandon Falls,East Michelle,KS,US,94211,2026-01-02T11:28:45Z,DELIVERED,Pickup during business hours,2683
+787522,347961,Mendez Ways,Carlview,NY,US,41311,Steven Crossroad,Alfredchester,FL,US,96729,2026-01-27T12:34:14Z,SCHEDULED,Handle with care,2073
+628314,956671,Wendy Stravenue,Port Tracey,TX,US,87163,Mcdonald Union,Philipfort,WA,US,80599,2026-01-30T19:52:16Z,IN_TRANSIT,Contact carrier on arrival,2755
+215544,120659,Wilson Parks,Lindseytown,KS,US,71319,Moore Mountain,Harrisonbury,WA,US,64958,2025-12-29T06:15:36Z,IN_TRANSIT,Pickup during business hours,2491
+178666,765898,Christopher Ports,Williamsmouth,NY,US,73209,Angela Harbor,North Paulaview,NJ,US,90626,2026-02-08T20:50:53Z,IN_TRANSIT,Contact carrier on arrival,796
+401827,555071,Jack Fields,Robertborough,KS,US,63789,Montoya Curve,Nolanton,NJ,US,29374,2025-12-11T08:18:18Z,SCHEDULED,Handle with care,2736
+145640,338371,Bryan Mission,East Christinehaven,NY,US,48454,Javier Road,South Cassandraport,WA,US,66039,2026-02-01T04:34:41Z,CANCELLED,Handle with care,974
+753207,456419,Mary Cliffs,Johnborough,KS,US,58170,Raven Forge,Port Donald,AZ,US,63652,2025-12-16T16:41:56Z,DELIVERED,Call before pickup,2414
+894011,994442,Darrell Underpass,East Randybury,NJ,US,46949,Rodriguez Cliff,East Davidshire,IL,US,55536,2026-01-18T05:26:41Z,IN_TRANSIT,Contact carrier on arrival,2277
+781199,271252,Ward Trail,East Sandraborough,WA,US,81862,Michael Summit,Port Josephmouth,WA,US,23733,2026-02-04T00:20:04Z,IN_TRANSIT,Handle with care,2199
+745175,599453,Carlos Canyon,Lake Michaelton,NY,US,21534,Owen Villages,New Sandra,WA,US,21004,2026-01-15T13:46:39Z,SCHEDULED,Contact carrier on arrival,2917
+855089,137183,Crystal Shoal,Lopezstad,TX,US,64833,John View,New Shawn,AZ,US,27752,2026-02-20T04:35:24Z,IN_TRANSIT,Handle with care,715
+895975,918403,Reilly Junctions,Carneyfort,FL,US,40569,Charles Green,Hollyview,CA,US,18959,2026-01-14T10:31:35Z,IN_TRANSIT,Pickup during business hours,2972
+547954,423886,Amanda Knolls,Port Amyborough,AZ,US,97443,White Road,West Emilyton,KS,US,88209,2026-01-26T10:34:47Z,SCHEDULED,Contact carrier on arrival,1106
+663722,335673,Kevin Knoll,Johnborough,AZ,US,49520,Taylor Squares,North Michelle,FL,US,79647,2025-12-30T23:54:15Z,DELIVERED,Call before pickup,1665
+771836,234869,Daniel Mill,South Sarah,AZ,US,48029,Andrew Plain,Bellland,GA,US,50005,2025-12-04T14:53:18Z,SCHEDULED,Pickup during business hours,2424
+602024,823944,Dawn Valleys,Lake Kimberly,NY,US,18983,Joseph Center,Jensenport,NJ,US,86781,2025-12-12T20:54:40Z,DELIVERED,Call before pickup,970
+342994,676084,Flores Walk,North Christian,GA,US,04008,Sweeney Ridges,East Clarencefort,TX,US,46278,2026-01-14T15:39:54Z,CANCELLED,Handle with care,2220
+386096,320799,Jamie Route,Owensmouth,IL,US,74736,Karen Garden,Adrianport,WA,US,07051,2025-12-05T13:03:12Z,CANCELLED,Pickup during business hours,2909
+170940,273910,Joseph Cape,Brianville,AZ,US,06546,Meza Landing,Michaelhaven,NY,US,45015,2025-12-31T21:45:32Z,DELIVERED,Handle with care,416
+552779,860699,Perry Courts,Chadmouth,NY,US,16300,Tim Points,Tammychester,TX,US,84958,2025-12-16T22:10:42Z,DELIVERED,Pickup during business hours,2612
+520394,144270,Frost Inlet,Leetown,AZ,US,40721,Ryan Track,Monroefurt,IL,US,29663,2026-02-19T15:21:50Z,DELIVERED,Pickup during business hours,1093
+897112,233984,Kenneth Row,Crosbyhaven,CA,US,20209,Douglas Square,South Courtney,KS,US,34721,2026-01-13T00:50:24Z,CANCELLED,Contact carrier on arrival,2148
+923367,398350,Harding Lights,Wrightland,AZ,US,44697,Richard Green,Jacquelineburgh,WA,US,93637,2026-01-10T20:34:52Z,CANCELLED,Handle with care,744
+993405,802495,Robinson Vista,Kevinfort,IL,US,31625,Hernandez Walk,Barryfurt,NY,US,67665,2025-12-16T10:09:47Z,SCHEDULED,Call before pickup,949
+145482,411877,Debra Path,Christophermouth,CA,US,42654,Adams Flat,East Cherylburgh,NY,US,64736,2026-01-27T20:20:08Z,IN_TRANSIT,Handle with care,2464
+782053,818200,Amber Garden,Lake Jerry,NJ,US,71305,Nicholas Squares,Davisville,NY,US,68931,2026-02-12T18:42:01Z,DELIVERED,Pickup during business hours,1072
+439460,380254,Williams Shore,West Catherine,CA,US,38263,David Plaza,West Michelle,WA,US,13463,2026-01-11T06:49:59Z,IN_TRANSIT,Call before pickup,2422
+494918,155181,Lee Prairie,Port Allisonport,CA,US,93318,Jonathan Lodge,Jordanshire,WA,US,48456,2025-12-13T06:54:23Z,IN_TRANSIT,Call before pickup,2844
+251141,346699,Elijah Square,Burgessmouth,NJ,US,26145,Jennifer Mountain,Jasmineburgh,CA,US,26343,2025-12-17T07:19:50Z,SCHEDULED,Handle with care,2438
+423495,430116,Lindsey Ford,Christyland,CA,US,53363,Olson Islands,West Michael,CA,US,93494,2026-01-27T03:26:07Z,IN_TRANSIT,Handle with care,1951
+755023,849441,Ashley Vista,Rodriguezhaven,AZ,US,85029,Berger Fall,East Joseph,NJ,US,07725,2026-01-02T20:57:11Z,SCHEDULED,Handle with care,448
+766168,861112,Arnold Freeway,South Mariaside,AZ,US,70106,Bradford Ports,Julieland,KS,US,16673,2026-02-09T14:55:21Z,DELIVERED,Contact carrier on arrival,1654
+558993,156329,Joseph Ridges,Port Rachael,WA,US,48818,Walker Valley,New Robertview,IL,US,02881,2025-12-05T08:27:59Z,CANCELLED,Pickup during business hours,2168
+312717,332521,Douglas Plains,Port Margaret,KS,US,84613,Laura Cliffs,Port Valerietown,FL,US,43546,2026-01-05T01:42:39Z,IN_TRANSIT,Pickup during business hours,1773
+424384,356042,Knight Locks,Smithland,CA,US,87285,Jacobson Summit,South Tiffanyville,NJ,US,23872,2026-01-11T14:03:39Z,IN_TRANSIT,Call before pickup,2913
+868397,522543,John Squares,Gonzalezview,AZ,US,12558,Brian Street,Drakemouth,NY,US,91330,2026-02-11T19:39:29Z,SCHEDULED,Pickup during business hours,2235
+215682,801297,Patton Plain,Port James,FL,US,70552,Nathan Lane,Roachside,KS,US,11086,2026-01-16T22:47:35Z,SCHEDULED,Call before pickup,1498
+170478,184195,Rivera Hollow,South Sierraside,GA,US,25633,Kelly Plaza,Ramosbury,KS,US,61406,2026-02-23T12:56:20Z,DELIVERED,Handle with care,649
+459176,566128,Ashley Locks,West Christopher,KS,US,03152,Freeman Cliff,South Kenneth,NJ,US,20237,2025-12-24T00:14:13Z,IN_TRANSIT,Handle with care,1798
+855581,852655,Douglas Landing,New Donaldfurt,NY,US,15707,Fleming Turnpike,Riverahaven,AZ,US,04505,2026-01-26T20:09:42Z,CANCELLED,Call before pickup,361
+381493,744183,Perez Well,Port Mariotown,WA,US,38945,Rodriguez Lights,Port Ashleymouth,WA,US,45984,2025-12-10T03:42:51Z,SCHEDULED,Pickup during business hours,1061
+645868,644802,April Wells,Baileyberg,IL,US,51711,Justin Pike,Port Elizabethmouth,NJ,US,90475,2026-01-03T12:42:09Z,IN_TRANSIT,Handle with care,1146
+382559,203145,Emily Ports,Pettyberg,WA,US,15146,Joshua Station,Gabrielleberg,NJ,US,98979,2026-02-11T08:49:08Z,CANCELLED,Call before pickup,991
+835079,990939,Prince Avenue,Lake Julie,IL,US,14537,Jennifer Road,Colleenfurt,IL,US,00992,2026-01-15T20:17:04Z,CANCELLED,Contact carrier on arrival,1485
+442970,400372,Ellis Turnpike,East Amber,NY,US,87121,Sean Springs,Port Heather,CA,US,03491,2026-02-11T23:56:47Z,CANCELLED,Handle with care,1383
+173339,257909,Schmidt Crescent,Port Loganland,WA,US,67359,Savage Crest,East Barbaraborough,NY,US,30602,2026-02-06T07:57:43Z,CANCELLED,Handle with care,302
+373241,989085,Justin Gardens,Lake Kenneth,WA,US,27180,Jamie Road,Stephanieberg,CA,US,50840,2025-12-05T12:01:37Z,SCHEDULED,Contact carrier on arrival,1480
+742513,914391,Savage Streets,Anthonystad,AZ,US,01059,Dillon Stravenue,Jeffreytown,WA,US,56014,2026-03-02T20:17:47Z,CANCELLED,Pickup during business hours,2766
+488468,327324,Baxter Hollow,East James,IL,US,98313,Cole Land,Robertstad,GA,US,81872,2026-01-16T21:08:33Z,DELIVERED,Pickup during business hours,2873
+904920,935745,Johnson Springs,Moralesview,WA,US,87851,Melissa Parkway,South Corey,CA,US,83980,2025-12-11T12:54:57Z,DELIVERED,Contact carrier on arrival,1399
+804385,238824,Robert Turnpike,Port Patrick,AZ,US,84200,Jeffrey Meadow,Port Daniel,IL,US,17702,2026-01-25T18:47:07Z,DELIVERED,Handle with care,1836
+477967,437141,Johnson Neck,South Edward,FL,US,32530,James Hill,Martinside,WA,US,09843,2025-12-13T12:55:26Z,SCHEDULED,Call before pickup,1448
+427427,325931,Kline Locks,Joshuafurt,KS,US,99534,Donna Corner,Poolechester,GA,US,24046,2026-01-08T02:48:42Z,DELIVERED,Call before pickup,1838
+417376,399380,Shelley Knolls,New David,GA,US,55816,Jones Spur,Lake Joycemouth,IL,US,81472,2026-02-11T18:14:33Z,IN_TRANSIT,Handle with care,826
+833098,696944,Price Spur,South Reginaside,NJ,US,73479,Green Estates,North Anna,KS,US,31660,2026-01-04T16:41:53Z,SCHEDULED,Handle with care,1930
+215684,742223,Greene Fields,Melissatown,TX,US,17234,Tucker Roads,West Amberbury,NY,US,20860,2026-02-26T07:28:50Z,IN_TRANSIT,Call before pickup,1570
+802000,302840,Taylor Street,Jacksonview,AZ,US,78501,Kelley Throughway,New Katherine,FL,US,20992,2026-01-26T20:22:56Z,DELIVERED,Handle with care,859
+528623,503901,Gilbert Knolls,Jeanetteburgh,CA,US,55015,Marshall Crossroad,Carrview,AZ,US,71725,2025-12-29T19:09:32Z,CANCELLED,Call before pickup,2997
+836213,161262,Brittany Via,Cohenside,NY,US,49263,Annette Locks,Allisonshire,NJ,US,06432,2025-12-09T19:32:09Z,IN_TRANSIT,Call before pickup,2043
+648084,915837,Simmons Pines,Kiaraburgh,NJ,US,35475,James Brook,Bridgetton,GA,US,47119,2026-01-24T21:25:08Z,SCHEDULED,Call before pickup,2273
+376793,716012,Barnes Well,Haynesstad,NY,US,76622,Strickland Views,Laurenbury,KS,US,12908,2026-01-30T21:12:47Z,DELIVERED,Call before pickup,1464
+799695,263555,Lopez Avenue,Annatown,GA,US,64519,William Harbors,New Stephen,NY,US,04009,2025-12-08T03:59:06Z,IN_TRANSIT,Pickup during business hours,940
+821015,447213,Rebecca Prairie,Stevenville,NY,US,26360,Steven Road,Lake Sarahfurt,IL,US,81641,2025-12-15T09:36:51Z,DELIVERED,Contact carrier on arrival,1293
+595250,174748,David Road,Anthonyport,CA,US,04943,Anthony Plains,Cochranside,CA,US,11691,2026-03-02T20:31:24Z,SCHEDULED,Pickup during business hours,2490
+287092,235283,Jade Turnpike,South Jerometown,CA,US,46740,Pierce Center,Cartertown,GA,US,49388,2026-02-10T08:45:05Z,IN_TRANSIT,Contact carrier on arrival,2026
+296805,932839,Mary Stravenue,Louisland,WA,US,52011,Cameron Inlet,Toddport,CA,US,57537,2025-12-23T09:29:01Z,DELIVERED,Call before pickup,548
+177132,585970,Jessica Walks,Port Autumnview,NJ,US,12801,Jeffrey Canyon,South Laura,KS,US,15769,2026-01-22T17:02:24Z,DELIVERED,Contact carrier on arrival,2075
+761797,517682,Stephanie Motorway,Port Angela,WA,US,10136,Chad Bridge,Melissaburgh,IL,US,44252,2025-12-23T22:32:14Z,IN_TRANSIT,Contact carrier on arrival,2879
+649496,429228,Carroll Causeway,South Kimberlyburgh,GA,US,39368,Shawn Avenue,Walkerland,IL,US,68136,2025-12-14T22:34:40Z,IN_TRANSIT,Contact carrier on arrival,2086
+403516,726986,Donald Cliffs,Ericland,AZ,US,20659,Welch Union,Newtonberg,AZ,US,34682,2025-12-13T02:21:13Z,IN_TRANSIT,Pickup during business hours,2477
+653297,736013,Damon Passage,Huntberg,WA,US,78903,Scott Ridge,Michaelchester,KS,US,22629,2026-01-29T18:21:44Z,IN_TRANSIT,Call before pickup,431
+683356,398879,Anderson Bridge,Edwardbury,KS,US,00817,Joshua Cliff,Erinchester,GA,US,48577,2026-01-25T11:09:34Z,CANCELLED,Call before pickup,1880
+104943,554318,Samuel Mill,Alexmouth,NJ,US,89451,Robert Shores,Dianabury,GA,US,76614,2026-02-06T20:20:44Z,CANCELLED,Handle with care,1043
+430553,705953,Taylor Rapid,West Connie,NJ,US,14751,David Views,East Charles,GA,US,99611,2025-12-18T12:35:47Z,IN_TRANSIT,Handle with care,464
+771915,834930,Kristin Roads,Edwardburgh,KS,US,13522,David Springs,West Shannonchester,CA,US,07263,2026-03-01T06:45:28Z,SCHEDULED,Pickup during business hours,1523
+521975,496085,Patricia Drive,Murphyton,NY,US,47682,Sexton Valleys,Williamston,TX,US,55448,2026-03-01T19:55:37Z,IN_TRANSIT,Call before pickup,1138
+514270,120199,Joseph Point,Rodriguezville,IL,US,42409,Tammy Valley,Ochoatown,AZ,US,98689,2025-12-07T18:26:50Z,CANCELLED,Pickup during business hours,1084
+948150,863860,James Haven,South Christine,TX,US,37100,Cline Fort,Jonathanfurt,FL,US,50858,2026-02-09T17:40:22Z,CANCELLED,Contact carrier on arrival,1998
+727779,726579,Pamela Mill,North Josephview,AZ,US,80814,Barber Run,New Lance,NJ,US,37865,2026-01-27T22:07:57Z,IN_TRANSIT,Handle with care,444
+515278,267334,Shirley Shores,South Cynthiahaven,NJ,US,89915,Jaime Roads,New Michaelborough,WA,US,85506,2026-01-26T01:45:28Z,SCHEDULED,Pickup during business hours,2219
+410670,975170,Richard Underpass,South Danafort,KS,US,54204,John Brook,East Kennethland,WA,US,57473,2026-02-08T21:59:53Z,DELIVERED,Contact carrier on arrival,1381
+746694,322165,Patterson Knolls,Port Ethanchester,CA,US,48051,Donna Square,Gonzalezview,FL,US,87376,2025-12-27T06:22:39Z,IN_TRANSIT,Contact carrier on arrival,1962
+688822,377655,Lewis Flat,Lake Amy,GA,US,01230,Brian Loop,New Samantha,FL,US,82601,2026-01-05T21:30:10Z,CANCELLED,Handle with care,1889
+298888,273039,Anthony Gateway,Brianborough,NY,US,88444,Erica Plaza,Omarchester,KS,US,40636,2026-02-01T08:10:41Z,CANCELLED,Contact carrier on arrival,921
+381010,465389,Kim Vista,Nunezborough,TX,US,16816,Wilson Alley,Lake Christinahaven,IL,US,32349,2026-01-11T12:17:37Z,SCHEDULED,Pickup during business hours,1533
+533987,430757,Christopher Lakes,Port Jonathanmouth,NJ,US,25695,Hughes Flats,Port Michaelchester,IL,US,17718,2026-03-03T13:29:41Z,DELIVERED,Handle with care,557
+682596,685529,Randall Union,Wendyborough,FL,US,21983,John Mountain,South Robert,NJ,US,01104,2026-02-12T08:51:32Z,IN_TRANSIT,Handle with care,541
+520270,981299,Roger Alley,Port Kimberly,GA,US,84967,Hernandez Groves,South Amy,NY,US,48729,2026-02-13T08:01:35Z,CANCELLED,Pickup during business hours,881
+612263,156045,Kenneth Groves,New Christopherborough,WA,US,22379,John Oval,North Mary,NJ,US,63962,2025-12-05T16:51:32Z,CANCELLED,Handle with care,2142
+620768,616283,Carter Road,Lake Sandra,NJ,US,07147,Matthew Island,New Danielhaven,NJ,US,52228,2026-02-02T00:44:01Z,DELIVERED,Handle with care,672
+376316,430264,Carly Freeway,West Guymouth,NJ,US,19223,Cohen Shore,Randyton,GA,US,69712,2026-02-25T21:27:09Z,SCHEDULED,Handle with care,1947
+633763,222549,Jacob Grove,Lake Catherineburgh,FL,US,81298,Rogers Trafficway,Fieldsside,WA,US,13665,2026-02-26T19:24:39Z,SCHEDULED,Handle with care,442
+871045,737998,Hill Mission,South Glen,TX,US,85956,Bruce Meadows,Carrborough,IL,US,66130,2026-01-02T17:27:10Z,DELIVERED,Contact carrier on arrival,2036
+689328,803878,David Hill,Scottchester,FL,US,74861,Love Hollow,Port Ianburgh,NY,US,16571,2026-02-09T03:20:06Z,SCHEDULED,Call before pickup,798
+798619,161351,Tasha Ports,Jaredstad,WA,US,17977,Alexandra Harbors,Vincentview,WA,US,12548,2026-01-09T16:24:15Z,CANCELLED,Handle with care,2304
+652673,124293,Cortez Walk,West Robert,GA,US,28365,Burns Stream,Ryanside,AZ,US,37297,2026-03-01T15:20:36Z,CANCELLED,Call before pickup,2187
+811387,535561,James Way,South Keith,IL,US,49746,Steven Drives,Port Maryburgh,KS,US,95961,2025-12-23T08:00:06Z,CANCELLED,Pickup during business hours,1121
+436589,734221,Cruz Cove,Michaelstad,GA,US,74090,Hays Forest,Port Richard,GA,US,79811,2026-01-02T17:35:09Z,CANCELLED,Handle with care,2435
+842214,881873,Tara Forge,Port Matthewberg,IL,US,06296,Franco Circle,Wilsonshire,AZ,US,45396,2026-02-09T09:06:18Z,IN_TRANSIT,Contact carrier on arrival,302
+359685,346661,Kimberly Mill,East Brittanyport,GA,US,58976,Marquez Fork,Emilytown,FL,US,72727,2025-12-17T16:48:39Z,DELIVERED,Pickup during business hours,2441
+499096,107633,Bradley Streets,Lake Samanthahaven,NJ,US,78622,Gardner Courts,South Henry,FL,US,53557,2025-12-04T14:21:29Z,SCHEDULED,Call before pickup,817
+209239,521652,Nicholas Track,Loganborough,WA,US,28190,Eaton Rue,North Tamara,TX,US,87440,2026-02-21T09:14:42Z,CANCELLED,Contact carrier on arrival,2835
+385596,967506,Carol Wall,West Aaronberg,TX,US,21736,Christina Burg,Perezstad,KS,US,49101,2025-12-30T10:11:55Z,CANCELLED,Pickup during business hours,1022
+196453,899189,John Run,West Hayleybury,IL,US,66729,Moreno Lodge,Rebekahland,KS,US,94997,2026-01-21T11:46:56Z,IN_TRANSIT,Handle with care,2769
+220281,232241,Marilyn Lakes,Joshuaburgh,GA,US,84191,Green Meadows,Kevinmouth,IL,US,49540,2025-12-13T00:27:46Z,IN_TRANSIT,Pickup during business hours,1388
+811471,637430,Christina Rapid,Carloston,WA,US,60770,Gina Pass,East Samuelville,NY,US,27533,2026-01-02T15:30:21Z,DELIVERED,Handle with care,997
+322185,343494,Parker Camp,Brittanyshire,FL,US,84242,Robinson Ferry,Port Jessica,AZ,US,10139,2026-02-17T21:41:47Z,DELIVERED,Contact carrier on arrival,2389
+675138,338660,Justin Meadow,Gallagherburgh,TX,US,52794,Roberto Bridge,East John,NY,US,19294,2026-02-27T16:57:12Z,SCHEDULED,Call before pickup,812
+994406,436249,Wesley Ports,Gregorychester,NJ,US,19133,Maria Unions,New Tracyview,WA,US,14064,2025-12-31T00:24:47Z,CANCELLED,Handle with care,1336
+384158,620385,Michael Roads,Lake Jeromeport,AZ,US,09599,Jessica Summit,Lake Debbiehaven,TX,US,86440,2026-02-27T11:59:08Z,DELIVERED,Pickup during business hours,437
+983997,371146,Esparza Landing,North Nicolemouth,GA,US,74634,Jonathan Trace,South Adamport,TX,US,73369,2026-02-01T20:49:21Z,DELIVERED,Call before pickup,1096
+474579,140744,Geoffrey Park,Jamesborough,TX,US,64997,Sally Glens,Jonathanside,AZ,US,57702,2026-02-22T15:12:56Z,DELIVERED,Contact carrier on arrival,1770
+417130,749943,Fisher Islands,West Michelle,GA,US,30469,Sanchez Prairie,North Allisonmouth,KS,US,06665,2025-12-08T00:08:10Z,IN_TRANSIT,Handle with care,890
+114222,861218,Davis Greens,Port Patricia,WA,US,22168,Knox Inlet,New Thomasmouth,NJ,US,75815,2026-02-12T02:10:07Z,DELIVERED,Pickup during business hours,1632
+824124,378672,Dominique Loop,Kathyburgh,TX,US,22075,Eric Radial,Kylehaven,IL,US,86057,2025-12-10T02:19:15Z,CANCELLED,Handle with care,1335
+876603,550807,Carter Hollow,Kurtshire,NY,US,88400,Elizabeth Stravenue,Shawberg,KS,US,71935,2026-01-03T05:38:39Z,IN_TRANSIT,Pickup during business hours,1881
+670056,273159,Brock Mall,Changfurt,FL,US,23067,Virginia Spur,South David,WA,US,32718,2026-01-11T21:36:07Z,SCHEDULED,Handle with care,1614
+922732,896183,Delgado Expressway,Caitlinburgh,CA,US,29538,Rubio Bypass,South Margaretview,WA,US,41018,2026-02-22T20:09:25Z,IN_TRANSIT,Contact carrier on arrival,2003
+979274,340961,Sandra Freeway,Joshuaton,IL,US,39918,Scott Expressway,Rodrigueztown,IL,US,24041,2026-01-16T15:55:25Z,CANCELLED,Pickup during business hours,1078
+583302,180844,Benjamin Glen,Fitzgeraldshire,KS,US,54182,Teresa Square,West Eric,NY,US,55413,2026-02-28T13:53:58Z,SCHEDULED,Handle with care,2488
+929408,895786,Kevin Rue,East Maria,CA,US,57434,Juan Vista,Danielton,CA,US,75606,2025-12-06T05:56:46Z,IN_TRANSIT,Contact carrier on arrival,801
+604688,300629,Zachary Burgs,Port Christopher,WA,US,76962,Crystal Vista,Danaview,IL,US,14491,2026-02-21T01:56:09Z,IN_TRANSIT,Pickup during business hours,2800
+996003,888749,Fernandez Groves,Kingburgh,GA,US,57121,Meza Gateway,South Randyland,NJ,US,76953,2025-12-28T03:28:17Z,SCHEDULED,Handle with care,2129
+445781,815688,Hale Corners,Dunnstad,KS,US,28935,Johnson Keys,Lake Denise,KS,US,71586,2025-12-24T05:11:10Z,CANCELLED,Call before pickup,2190
+523390,875600,Kristin Shore,Lynnview,AZ,US,94065,Katherine Fields,Lake Nathanielmouth,NY,US,13615,2026-01-07T12:52:16Z,IN_TRANSIT,Pickup during business hours,1165
+594681,193752,Benson Shore,West Michael,CA,US,82249,Mark Garden,Heathertown,IL,US,93177,2026-01-16T17:09:29Z,CANCELLED,Contact carrier on arrival,1633
+856037,349286,Donovan Fall,New Connietown,NJ,US,17057,Alexandra Canyon,Lisafort,TX,US,46326,2026-01-10T08:14:40Z,IN_TRANSIT,Pickup during business hours,1708
+151179,537817,Stanton Alley,Davidmouth,CA,US,01773,Kathryn Fields,Jeremybury,AZ,US,01845,2026-01-20T02:42:55Z,DELIVERED,Contact carrier on arrival,1631
+344032,912531,Brandon Court,South Williebury,AZ,US,07849,Parrish Radial,North Martinview,WA,US,52206,2026-01-07T03:48:00Z,CANCELLED,Pickup during business hours,2070
+345035,106762,Donald Forge,West Angela,AZ,US,91255,Joseph Lakes,Jessicaland,FL,US,24624,2026-01-08T17:45:31Z,CANCELLED,Call before pickup,2444
+520167,765778,Rachel Stream,Brandonborough,IL,US,96129,Jones Harbors,Port Mark,NJ,US,42474,2026-01-06T21:56:47Z,IN_TRANSIT,Handle with care,1205
+161428,726208,Thomas Squares,Denisefort,IL,US,65112,Lee Grove,Houseshire,NJ,US,71638,2025-12-05T07:13:26Z,IN_TRANSIT,Call before pickup,419
+356072,863028,Wall Hills,Marshallhaven,TX,US,73050,Suzanne Haven,Port Danachester,FL,US,83477,2026-02-07T19:26:14Z,DELIVERED,Handle with care,320
+992375,548721,Erin Mews,Hernandezberg,NJ,US,90348,Smith Ford,Lake Andrewview,GA,US,18718,2026-02-07T14:20:33Z,IN_TRANSIT,Contact carrier on arrival,329
+267386,954975,Stephen Lights,Joelport,WA,US,16185,Gilbert Fork,North Robertside,IL,US,63032,2025-12-20T18:19:55Z,SCHEDULED,Handle with care,2519
+233232,982641,Hogan Walks,Josephchester,WA,US,40083,Paul Crossing,Tylerton,KS,US,96944,2025-12-07T05:38:40Z,IN_TRANSIT,Pickup during business hours,2874
+877410,847036,Kathleen Parkway,Timothyland,WA,US,17473,Cain Expressway,East Robinfort,NJ,US,75605,2025-12-22T11:45:39Z,DELIVERED,Pickup during business hours,1323
+920972,128220,Teresa Ranch,Wallaceberg,GA,US,48612,Eric Vista,Shieldsberg,WA,US,41805,2026-01-04T15:51:06Z,SCHEDULED,Handle with care,551
+638258,941082,Stephanie Haven,Port Jeremyfort,FL,US,43596,Rachel Divide,Port Carol,NJ,US,49813,2026-01-08T08:35:50Z,SCHEDULED,Handle with care,379
+155078,415007,Silva Grove,Collinsshire,IL,US,56435,Nicole Estate,New Christopher,CA,US,74131,2026-02-20T02:02:11Z,DELIVERED,Handle with care,1994
+773086,642686,Patrick Drives,Gabriellefurt,TX,US,31287,Kim Center,South Wendy,TX,US,88190,2026-01-20T23:38:34Z,SCHEDULED,Contact carrier on arrival,358
+778193,610159,George Mount,Port Shelly,WA,US,11892,Wilson Forges,Darrylfort,NY,US,39486,2026-02-20T00:05:31Z,CANCELLED,Pickup during business hours,1476
+657150,264601,Jill Mission,Ericberg,KS,US,48834,Wilson Cliffs,New Aaron,WA,US,27304,2026-01-01T12:32:16Z,CANCELLED,Pickup during business hours,306
+662728,261423,Lisa Park,West Karen,IL,US,45281,David Landing,West Michael,NJ,US,33392,2026-02-07T07:27:15Z,CANCELLED,Handle with care,2633
+282510,949854,Brooks Forest,North Robert,IL,US,91162,Carter Canyon,Jennifermouth,KS,US,73201,2026-02-19T16:57:28Z,IN_TRANSIT,Call before pickup,957
+940461,974009,Moss Coves,Lake William,FL,US,87473,Albert Spur,New Marisa,WA,US,44219,2026-01-19T14:15:58Z,DELIVERED,Contact carrier on arrival,2017
+183896,151589,Smith Plains,North Jonathanfurt,AZ,US,14030,Michael Corner,Bethville,KS,US,72590,2025-12-29T05:53:07Z,SCHEDULED,Pickup during business hours,777
+685638,613687,Alicia Wall,North Erica,WA,US,35758,Kimberly Lodge,Espinozaburgh,AZ,US,52419,2025-12-15T01:17:31Z,DELIVERED,Call before pickup,1210
+791183,875431,Emily Highway,East Richard,NY,US,20268,Eric Hills,East Tina,IL,US,21114,2026-02-22T00:05:38Z,DELIVERED,Call before pickup,2736
+992123,166985,Angela Bypass,Port Jonathanfurt,TX,US,65361,Warner Cliffs,Rosetown,KS,US,24019,2026-01-10T11:55:23Z,IN_TRANSIT,Call before pickup,961
+890646,339268,Brown Way,Castillomouth,TX,US,73674,Anderson Landing,Harringtonberg,NY,US,64394,2025-12-15T19:41:52Z,IN_TRANSIT,Pickup during business hours,2037
+239758,991183,Kimberly Ports,Carolynfort,NJ,US,83804,Jeremy Points,Johnmouth,GA,US,87318,2025-12-13T06:14:36Z,DELIVERED,Call before pickup,754
+649056,772469,Dominique Coves,Wilsonburgh,TX,US,55428,Pham Turnpike,Sarahburgh,WA,US,81774,2025-12-17T10:48:55Z,IN_TRANSIT,Contact carrier on arrival,1451
+775048,391273,Lisa Forge,Millerview,NY,US,50642,Parks Parkway,Russellborough,KS,US,51938,2026-01-09T00:21:56Z,SCHEDULED,Call before pickup,1771
+468551,121070,Eric Overpass,Meaganside,NJ,US,12603,Hernandez Mount,Courtneyland,FL,US,58469,2026-01-06T19:30:15Z,CANCELLED,Contact carrier on arrival,813
+935646,890458,Gene Stravenue,West Michelle,WA,US,17474,Fisher Valleys,East Michaelfurt,NY,US,45908,2025-12-20T19:52:20Z,SCHEDULED,Handle with care,2049
+462903,785997,Harris Via,Susanberg,IL,US,16428,Gibson Springs,South Lisa,GA,US,55784,2026-01-25T20:16:46Z,SCHEDULED,Contact carrier on arrival,2997
+682208,790340,Eric Turnpike,Bowenbury,KS,US,93035,Gamble Path,Micheleville,NY,US,19252,2025-12-03T21:42:18Z,IN_TRANSIT,Call before pickup,2308
+425956,359488,James Mill,Katherineshire,KS,US,14750,Smith Rapid,West Daniel,GA,US,04622,2025-12-20T23:48:54Z,CANCELLED,Pickup during business hours,1112
+731454,786174,Tyler Lodge,South Franciscoside,NY,US,22964,Julie Skyway,Jessicaside,IL,US,21980,2025-12-18T00:31:22Z,SCHEDULED,Call before pickup,2769
+303856,349474,Lowe Harbor,Bookerbury,IL,US,65583,James Expressway,North Scottmouth,NJ,US,79362,2026-02-20T04:44:08Z,IN_TRANSIT,Pickup during business hours,2848
+767896,852786,Amanda Cape,New Cameron,FL,US,50001,Henry Canyon,North Jasmine,WA,US,13946,2025-12-04T23:12:49Z,DELIVERED,Contact carrier on arrival,1058
+213238,587531,Dean Highway,Brettport,IL,US,09649,Ramos Mission,Lake Andreashire,CA,US,41488,2026-01-10T10:33:19Z,DELIVERED,Pickup during business hours,2599
+712492,538121,Regina Common,Lake Brent,NY,US,60310,Reed Forest,Catherinemouth,KS,US,83540,2025-12-12T18:57:14Z,SCHEDULED,Handle with care,685
+742057,136663,Garcia Circle,Richardtown,NY,US,70830,Crawford Streets,Williamtown,WA,US,34342,2025-12-03T21:08:33Z,SCHEDULED,Pickup during business hours,1533
+537066,379334,Bowers Ferry,North Teresafurt,GA,US,89312,Lori Curve,Lake Jessica,CA,US,12314,2026-01-26T03:32:33Z,CANCELLED,Handle with care,2582
+810914,840448,Brittany Forest,Blackwellland,AZ,US,38475,Huang Landing,Kaylabury,AZ,US,17155,2026-01-19T19:40:02Z,SCHEDULED,Call before pickup,776
+875261,261003,Michelle Green,South Kyle,CA,US,05184,Bryce Parkway,South Justinburgh,FL,US,49070,2025-12-20T14:10:09Z,CANCELLED,Handle with care,2244
+377550,944209,Dennis Forks,North Joe,NY,US,61307,Brittany Hills,West Josephfort,WA,US,23645,2025-12-20T04:58:03Z,DELIVERED,Contact carrier on arrival,952
+115180,328545,Kim Ridges,Castillomouth,AZ,US,97372,Torres Courts,Joshuaborough,NJ,US,12530,2026-03-02T06:00:25Z,SCHEDULED,Pickup during business hours,649
+481828,367031,Lori Meadows,Hannamouth,KS,US,70105,John Dam,North Brandon,NJ,US,86729,2026-01-27T23:39:38Z,IN_TRANSIT,Contact carrier on arrival,798
+899617,133317,Mark Mountains,Willieton,CA,US,36284,Shawn Pass,North Michelle,FL,US,39259,2026-02-24T02:26:55Z,SCHEDULED,Contact carrier on arrival,2838
+669321,889286,Newman Cliff,Kennethmouth,WA,US,64686,Matthew Flat,East Michaelview,CA,US,93705,2026-02-07T11:28:44Z,CANCELLED,Pickup during business hours,471
+150561,239730,Alan Lock,Diazview,NJ,US,27049,Jeffrey Cape,East Selenachester,CA,US,18787,2026-01-16T03:31:30Z,CANCELLED,Call before pickup,2772
+451968,594578,Donovan Viaduct,Owenfurt,FL,US,15092,Smith Crossing,Lake Brandon,TX,US,34266,2026-03-01T09:44:04Z,DELIVERED,Call before pickup,885
+302692,869810,Watts Summit,Samanthastad,FL,US,18975,John Hollow,Blackburnton,NY,US,08902,2026-02-26T15:57:10Z,CANCELLED,Call before pickup,555
+196747,515173,Perkins Flat,Lake Brianchester,AZ,US,19385,Jennifer Turnpike,East Nathanielshire,FL,US,54205,2026-02-09T03:41:36Z,CANCELLED,Contact carrier on arrival,2892
+742393,681898,Gilmore Park,West Jamesborough,KS,US,77169,Barber Valleys,East Kathrynfurt,IL,US,86754,2026-01-05T00:52:24Z,DELIVERED,Contact carrier on arrival,527
+792799,490722,Jenkins Landing,Barberville,NY,US,22064,Timothy Walk,Derekville,CA,US,38286,2026-01-29T10:38:04Z,SCHEDULED,Pickup during business hours,2241
+780403,935623,Savannah Streets,Lawrencebury,NJ,US,51294,Angela Landing,New Carol,NJ,US,68743,2026-02-10T18:11:15Z,CANCELLED,Handle with care,1713
+817692,537102,Nicole Lights,New Christopher,WA,US,43061,Cindy Streets,Port Heidi,WA,US,06789,2026-02-25T16:48:31Z,SCHEDULED,Call before pickup,1731
+497669,870723,Reyes Plaza,West Michaelfort,NJ,US,71874,Robertson Square,North Kristen,GA,US,91782,2026-03-03T04:06:04Z,DELIVERED,Contact carrier on arrival,703
+171082,785120,Joyce Roads,Michaelville,CA,US,96840,Sullivan Springs,West Hollyberg,NY,US,57013,2026-02-08T05:28:06Z,DELIVERED,Contact carrier on arrival,2006
+876204,847941,Ruben Forge,Port Edwardborough,KS,US,15980,Brown Ports,Hicksside,GA,US,18916,2025-12-11T09:08:53Z,SCHEDULED,Pickup during business hours,2307
+605253,939942,Tim Wells,Blakemouth,AZ,US,61999,Christopher Drives,Port Brendahaven,WA,US,30906,2026-01-22T21:24:45Z,DELIVERED,Call before pickup,828
+768080,645815,Rachel Neck,Jeffreyview,GA,US,17256,Anthony Plains,Weissside,TX,US,34409,2026-01-31T17:46:29Z,SCHEDULED,Call before pickup,2730
+303038,752030,Jeffrey Mountains,Angelaside,WA,US,94005,Brittany Knoll,West Thomas,WA,US,51645,2025-12-17T19:49:49Z,CANCELLED,Handle with care,1791
+242388,954625,Cameron Mountain,East Yolandahaven,AZ,US,34142,Susan Estate,Martinezside,FL,US,36541,2026-02-21T15:03:39Z,DELIVERED,Pickup during business hours,1550
+416299,850867,Ryan Glens,Phillipsberg,KS,US,83599,Mcclain Streets,Port Jamie,TX,US,14811,2025-12-27T14:46:25Z,SCHEDULED,Handle with care,853
+553597,527702,Adriana Mountain,Michaelton,AZ,US,65252,Morrison Coves,North Christopherborough,TX,US,97133,2025-12-06T05:41:44Z,CANCELLED,Pickup during business hours,2564
+390126,206193,Ryan Glens,Lake Brittney,NY,US,80317,Nathaniel Ferry,East Ryan,IL,US,08952,2026-02-28T22:54:03Z,SCHEDULED,Handle with care,2105
+669370,778415,Laurie Grove,North Mike,NY,US,27656,Patrick Mills,East Reginald,NY,US,25156,2025-12-24T00:23:07Z,IN_TRANSIT,Contact carrier on arrival,2418
+286115,879216,Dale Pass,Laurastad,FL,US,58881,Kevin Shores,Port Gregory,CA,US,95674,2026-01-17T11:21:25Z,SCHEDULED,Handle with care,735
+909868,563893,William Lakes,East Tracy,FL,US,24966,Garcia Stream,Markton,TX,US,77477,2025-12-12T03:50:06Z,CANCELLED,Contact carrier on arrival,1736
+682616,952806,Ware Forest,Lake Christopher,IL,US,23096,Jaime Radial,New Prestonborough,FL,US,94914,2026-02-08T10:03:46Z,DELIVERED,Handle with care,2051
+988132,759786,Howard Hill,New Dylanborough,TX,US,61935,Jeffrey Crossroad,South Claudia,TX,US,82898,2025-12-30T04:29:48Z,SCHEDULED,Call before pickup,2106
+443594,167297,Hannah Coves,North Andrea,AZ,US,05453,Dawn Gardens,Lake Diana,CA,US,57238,2025-12-13T18:55:03Z,DELIVERED,Pickup during business hours,369
+620106,619698,Campbell Ford,Leonardmouth,KS,US,70751,Gordon Haven,Annahaven,TX,US,75939,2026-01-01T05:54:24Z,IN_TRANSIT,Pickup during business hours,1000
+441911,643436,Hawkins Haven,Amandaberg,NJ,US,88550,Christian Crescent,Morganmouth,WA,US,97958,2026-01-04T07:06:46Z,IN_TRANSIT,Handle with care,1438
+765003,552689,Robin Points,Adamport,WA,US,90344,Burch Squares,Richardchester,NY,US,13890,2025-12-20T13:54:38Z,DELIVERED,Call before pickup,1626
+370164,673526,Nicole Rapids,Cardenasbury,GA,US,94232,Danielle Manors,Arnoldton,GA,US,11997,2025-12-09T09:59:04Z,DELIVERED,Contact carrier on arrival,526
+988323,442664,Patrick Square,Wardton,NY,US,04967,Kevin View,Port Jeanetteport,NJ,US,07423,2026-02-12T05:53:47Z,SCHEDULED,Call before pickup,1592
+528154,592118,Kimberly Hollow,Tanyafort,TX,US,73902,Copeland Lodge,Underwoodview,IL,US,83206,2025-12-30T04:48:56Z,SCHEDULED,Handle with care,850
+894691,935574,Hardy Valleys,South Alanstad,GA,US,47433,Jeremy Walk,Lake Debra,GA,US,79678,2026-01-11T15:23:08Z,IN_TRANSIT,Call before pickup,2538
+563062,147762,Lindsay Turnpike,Huntertown,WA,US,79418,Heather Trafficway,Michellefurt,GA,US,97112,2026-02-23T15:17:08Z,IN_TRANSIT,Call before pickup,2051
+979804,480952,Lauren Orchard,New Russell,NY,US,41778,James Hills,Pattonton,KS,US,28781,2026-02-03T17:10:26Z,IN_TRANSIT,Contact carrier on arrival,1471
+898353,290423,Hubbard Drive,Port Melinda,WA,US,65958,Mckinney Well,Coffeyland,TX,US,36622,2025-12-07T05:28:33Z,SCHEDULED,Call before pickup,1222
+885648,658919,Emily Bridge,Richardsonchester,NJ,US,24506,Russo Trafficway,North Patrick,IL,US,93180,2025-12-22T15:16:12Z,SCHEDULED,Contact carrier on arrival,1179
+730302,780798,Joshua Stravenue,West Amanda,NY,US,41142,Kristopher Common,Port Carolinehaven,GA,US,45354,2026-01-13T14:20:01Z,CANCELLED,Pickup during business hours,1825
+745361,785338,Dalton Inlet,Elizabethberg,NJ,US,53072,Aguilar Stravenue,North Darrell,NY,US,60011,2026-02-02T21:42:51Z,CANCELLED,Contact carrier on arrival,369
+913875,778880,Benjamin Stream,Lawsonmouth,NY,US,87786,Miller Park,Lake Jamie,TX,US,57316,2025-12-09T23:59:16Z,IN_TRANSIT,Handle with care,903
+628942,444078,Gibbs Well,East Steven,TX,US,63391,Hale Glen,Snyderhaven,FL,US,03616,2026-01-30T23:56:01Z,DELIVERED,Call before pickup,950
+888580,378474,James Canyon,Lake Matthew,TX,US,53472,David Mountains,Christopherbury,NY,US,95817,2026-02-17T21:51:17Z,CANCELLED,Pickup during business hours,500
+217335,476396,Lopez Square,Jenniferland,AZ,US,27574,Norman Orchard,Wattsberg,WA,US,91152,2026-02-27T17:05:18Z,IN_TRANSIT,Handle with care,1992
+509103,979670,Anderson Via,Matthewville,IL,US,36450,Lydia Plaza,North Raymond,TX,US,60942,2026-01-23T23:06:30Z,CANCELLED,Call before pickup,2780
+948036,610941,Angela Station,Andrewstad,WA,US,88042,Craig Row,New Malloryport,NY,US,03569,2026-02-24T21:41:49Z,IN_TRANSIT,Contact carrier on arrival,2681
+350797,444523,James Locks,East Gregoryfurt,WA,US,83545,Patricia Flats,South Mark,GA,US,47765,2026-02-16T00:41:29Z,IN_TRANSIT,Call before pickup,2473
+184294,511437,Brooks Islands,Lake Brendabury,KS,US,43138,Bryant Motorway,Lake Paul,AZ,US,64600,2026-02-15T12:48:11Z,CANCELLED,Handle with care,347
+926660,933366,Elizabeth Summit,Gilmoreland,WA,US,81474,Nancy Summit,Scottton,FL,US,85688,2025-12-29T13:41:14Z,IN_TRANSIT,Contact carrier on arrival,2086
+848294,377462,Allen Squares,North David,FL,US,62153,Baxter Lake,Harmonshire,TX,US,33011,2026-02-17T10:05:29Z,SCHEDULED,Call before pickup,378
+422441,686074,Orozco Rapids,Timbury,IL,US,60693,Richardson Spur,Lake Eugenemouth,AZ,US,67684,2026-02-18T15:47:22Z,SCHEDULED,Contact carrier on arrival,1530
+149067,852102,Hubbard Pike,Christianmouth,KS,US,99627,Louis Tunnel,Jeremyfurt,CA,US,79210,2026-02-06T04:16:23Z,CANCELLED,Call before pickup,2450
+463115,772201,Terry Drive,Justinville,AZ,US,94044,Keith Street,Karenton,GA,US,51380,2025-12-22T07:13:18Z,CANCELLED,Contact carrier on arrival,627
+579198,311561,Philip Knolls,Watsonton,NJ,US,78274,Nicholas Mill,Colleenfort,KS,US,39028,2026-02-22T04:19:22Z,CANCELLED,Contact carrier on arrival,2500
+333000,303567,Mason Groves,Bernardport,GA,US,57336,Richard Oval,Lake Gary,TX,US,36753,2025-12-23T10:16:13Z,CANCELLED,Pickup during business hours,722
+764529,421377,Kristopher Crescent,Mcintoshbury,FL,US,71203,Gibson Station,Brentmouth,FL,US,60310,2025-12-09T18:49:45Z,SCHEDULED,Call before pickup,949
+680006,677058,Pruitt Glens,West Anthonyland,KS,US,60649,Kennedy Place,Knightburgh,IL,US,82402,2025-12-28T19:17:19Z,DELIVERED,Handle with care,2958
+595718,341784,Flores Fort,South James,FL,US,90625,Wendy Trafficway,Stevenfurt,AZ,US,11369,2026-02-16T06:34:37Z,CANCELLED,Handle with care,889
+665937,559378,Eric Oval,Marychester,KS,US,02969,Brian Lights,North Nicole,CA,US,21245,2026-02-22T05:57:43Z,IN_TRANSIT,Call before pickup,2805
+959046,188217,Shawn Trail,Jasonview,CA,US,53410,Kristina Plaza,Sandersborough,IL,US,51792,2026-02-08T00:16:50Z,CANCELLED,Handle with care,1085
+731545,939011,Lindsey Valleys,Claudiaville,WA,US,89014,Jerry Knoll,Coxton,CA,US,49197,2026-01-01T09:14:54Z,SCHEDULED,Handle with care,1578
+741665,384278,Kevin Lock,Christopherbury,IL,US,97225,Valerie Pass,Port James,GA,US,32670,2025-12-04T04:57:53Z,DELIVERED,Pickup during business hours,2144
+205042,350310,Megan Estate,West Rebeccamouth,NY,US,80381,Kennedy Station,New John,CA,US,46732,2026-01-11T06:10:09Z,DELIVERED,Call before pickup,2690
+651641,281130,Paul Forest,New Williamview,WA,US,19337,William Knolls,Marshallborough,TX,US,60633,2025-12-23T00:00:52Z,IN_TRANSIT,Call before pickup,1315
+324940,484738,Adams Tunnel,Andrewhaven,CA,US,69230,Dawn Mountain,Waynefurt,CA,US,66242,2026-02-18T04:58:42Z,CANCELLED,Call before pickup,2425
+493076,855875,Hendricks Plaza,Lake Stephaniebury,KS,US,34407,Joy Expressway,Port Kristashire,CA,US,39989,2026-02-18T19:22:39Z,DELIVERED,Pickup during business hours,2776
+292117,102883,Smith Points,Lake Brittneyton,WA,US,96126,Laura Islands,Colehaven,TX,US,62281,2026-01-05T07:11:54Z,CANCELLED,Contact carrier on arrival,376
+184905,441661,James Locks,Terrybury,AZ,US,04601,Olson Coves,Martinezchester,NJ,US,21689,2026-01-28T02:21:57Z,DELIVERED,Pickup during business hours,2369
+495184,877920,Clark Oval,Richardside,GA,US,72591,Meyer Canyon,Cisnerosburgh,AZ,US,35993,2026-01-17T00:28:00Z,DELIVERED,Pickup during business hours,2542
+606285,508244,Kevin Glens,Eileenhaven,GA,US,69924,Bates Branch,Lake Laurie,GA,US,28887,2026-02-03T18:19:50Z,IN_TRANSIT,Handle with care,1597
+178494,865657,Sarah Turnpike,West Sandra,NY,US,26323,Johnson Villages,Lake Abigailberg,FL,US,38973,2025-12-28T01:51:09Z,SCHEDULED,Contact carrier on arrival,2096
+901945,347591,Fleming Lake,Hoganchester,KS,US,18199,Solis Roads,Wilsonberg,CA,US,45247,2025-12-03T17:26:36Z,SCHEDULED,Pickup during business hours,2320
+221957,593606,Irwin Mission,West Thomastown,GA,US,80065,Amanda Stravenue,South Howard,NJ,US,52680,2026-02-25T04:38:02Z,SCHEDULED,Handle with care,2919
+581121,687761,Renee Unions,Taylormouth,CA,US,00855,Andrews Field,Joshuaburgh,FL,US,92031,2026-01-02T22:28:10Z,DELIVERED,Pickup during business hours,2885
+384462,716343,Laura Point,East Mallory,AZ,US,91366,Michael Fords,New Evan,WA,US,87449,2026-01-03T01:26:28Z,DELIVERED,Pickup during business hours,1534
+316351,471497,Shields Ways,West Laura,WA,US,36068,April Lock,North Heather,WA,US,92026,2025-12-27T13:34:02Z,SCHEDULED,Pickup during business hours,953
+107541,160289,Moore Roads,Robertbury,IL,US,65061,Combs Groves,Hallburgh,FL,US,92498,2026-02-12T21:06:01Z,SCHEDULED,Contact carrier on arrival,1847
+599678,273629,Robert Road,Snyderville,NY,US,23382,Karen Trafficway,New Shawn,TX,US,96356,2025-12-22T08:22:08Z,CANCELLED,Handle with care,1735
+717453,175140,Moore Pine,South Robin,NJ,US,23357,James Street,New Lisa,AZ,US,62560,2026-02-14T01:36:18Z,CANCELLED,Contact carrier on arrival,2939
+378798,997471,Bailey Flat,Port Audreyfort,TX,US,13549,Schultz Rue,Carolynland,GA,US,40237,2025-12-14T05:40:59Z,SCHEDULED,Contact carrier on arrival,2737
+606937,279745,Jackson Tunnel,South Christine,NY,US,75263,Dunn Stream,Montgomerytown,CA,US,73705,2025-12-28T02:50:58Z,CANCELLED,Handle with care,1111
+706010,440095,Devin Plaza,East Lorettamouth,NJ,US,50297,Sullivan Pine,North Bruceshire,WA,US,17668,2026-02-14T20:20:49Z,CANCELLED,Contact carrier on arrival,1197
+716574,670333,Austin Expressway,East Kariborough,IL,US,01023,Johnston Estate,North Douglas,FL,US,25656,2026-02-23T08:01:35Z,DELIVERED,Handle with care,2026
+861929,289725,Clark Mount,Port Julie,KS,US,85719,Day Union,East Anthony,WA,US,09548,2026-03-01T14:46:30Z,DELIVERED,Contact carrier on arrival,1927
+589413,282835,Osborne Islands,Lake Caitlin,KS,US,08753,Miller Mountains,East Dennis,KS,US,07753,2026-02-25T23:31:44Z,DELIVERED,Call before pickup,2837
+375362,481487,Michael Junctions,Saraberg,NY,US,66199,Erin Circle,Katherineland,GA,US,43296,2025-12-19T13:57:43Z,IN_TRANSIT,Contact carrier on arrival,1253
+541600,409609,Melissa Plain,Lake Nataliebury,CA,US,81170,Cross Rest,Hernandezhaven,NY,US,56896,2026-02-08T02:26:31Z,IN_TRANSIT,Call before pickup,307
+174488,180235,Smith Ville,West Joseph,WA,US,97143,Friedman Freeway,Sherrichester,FL,US,78399,2026-02-19T18:52:30Z,CANCELLED,Contact carrier on arrival,1149
+318247,440559,Cynthia Rue,Saraton,NY,US,13368,Jasmine Ramp,East Ambershire,CA,US,49721,2026-02-26T10:20:42Z,CANCELLED,Handle with care,2862
+832117,444873,Vaughn Forks,East Thomas,CA,US,19632,Janet Meadow,West Melissa,NY,US,63880,2026-02-23T23:58:10Z,CANCELLED,Contact carrier on arrival,1812
+267978,427315,Christopher Coves,North Rebeccastad,IL,US,75557,Gonzalez Island,New Stevenchester,KS,US,11307,2025-12-31T21:49:27Z,IN_TRANSIT,Handle with care,2626
+217105,601565,Sarah Prairie,West Jeffreyhaven,IL,US,06988,Contreras Green,Turnerfurt,NY,US,25894,2026-02-23T01:36:48Z,DELIVERED,Call before pickup,771
+252814,362090,Nelson Alley,Gregorystad,KS,US,83487,Jordan Flats,Lake David,FL,US,26846,2026-02-03T06:18:57Z,IN_TRANSIT,Contact carrier on arrival,567
+284431,905361,Mcdaniel Forest,Garyhaven,TX,US,90644,Clark Pine,West Lindsayville,NY,US,15281,2026-01-24T18:20:12Z,DELIVERED,Contact carrier on arrival,347
+566713,667664,Erin Corner,New Michaelchester,NY,US,96633,Joshua Pine,South Eric,KS,US,35197,2026-02-20T03:15:06Z,DELIVERED,Pickup during business hours,668
+205807,606217,Owens Lodge,Arnoldchester,TX,US,90682,Martin Stravenue,Rodriguezburgh,GA,US,92165,2025-12-21T20:31:40Z,IN_TRANSIT,Pickup during business hours,1433
+180973,215942,Ellis Summit,Toddtown,TX,US,89633,Lopez Villages,Johnsonbury,GA,US,26281,2026-01-25T13:34:15Z,DELIVERED,Contact carrier on arrival,2122
+311176,940504,James Pass,Robertston,IL,US,83431,Vasquez Greens,Sandrafurt,NJ,US,60662,2026-01-12T12:27:22Z,DELIVERED,Pickup during business hours,1259
+725797,488236,Michele Curve,Mendezton,GA,US,60685,George Parkways,Lake Andrewmouth,AZ,US,48838,2026-01-04T09:25:34Z,DELIVERED,Call before pickup,856
+755495,915020,Jordan Ports,Johnsonhaven,WA,US,56423,Case Shores,Port Ginafort,GA,US,22791,2026-01-19T10:51:22Z,SCHEDULED,Contact carrier on arrival,843
+540992,629614,Benjamin River,Port Kathleenberg,WA,US,90997,Jones Turnpike,Port Aaron,IL,US,42008,2026-02-04T15:06:57Z,SCHEDULED,Call before pickup,1103
+265633,494278,Robert Dale,New Cherylmouth,NJ,US,18464,Giles Lodge,Adamsland,GA,US,53408,2026-01-10T19:54:05Z,IN_TRANSIT,Call before pickup,2777
+892442,440325,Martinez Harbor,Port Ryan,KS,US,43643,Terry Center,Steeleborough,WA,US,47306,2026-01-30T11:54:28Z,DELIVERED,Handle with care,1288
+652789,712413,Sanchez Mills,Lake Jamesview,KS,US,96674,Linda Roads,Jarvisshire,NY,US,73747,2026-01-12T07:42:26Z,IN_TRANSIT,Contact carrier on arrival,2089
+277102,835793,Moore Hollow,East Richard,IL,US,84616,Thomas Inlet,South Angelaview,TX,US,39853,2026-02-07T20:32:05Z,CANCELLED,Call before pickup,1184
+989009,882441,Henry Well,Jerrychester,NY,US,58070,Heather Lodge,East Anaborough,NJ,US,36048,2026-01-26T07:32:29Z,DELIVERED,Contact carrier on arrival,771
+703539,913501,Nelson Ville,East Heidifort,IL,US,29984,Joshua Valleys,Port Stephenview,NY,US,57066,2026-02-08T23:51:00Z,SCHEDULED,Call before pickup,1484
+768993,307781,Manning Village,South Rachelborough,TX,US,82385,Kaitlyn Mountain,Port Williamburgh,KS,US,09376,2026-02-16T14:57:09Z,CANCELLED,Pickup during business hours,1652
+400158,123068,Austin Drive,West Ricky,GA,US,81486,Reynolds Isle,New Charles,FL,US,61679,2025-12-23T10:31:00Z,SCHEDULED,Handle with care,2980
+423287,891200,Jonathan Landing,Chrismouth,IL,US,35197,Joseph Land,New Brittanyfurt,KS,US,78967,2026-01-26T20:21:24Z,DELIVERED,Pickup during business hours,2081
+578556,268794,Susan Corners,Cynthiaview,GA,US,87884,Scott Viaduct,Charlesborough,AZ,US,72321,2026-02-20T20:04:36Z,CANCELLED,Call before pickup,331
+715010,502479,English Port,Tammytown,CA,US,08386,Andrew Ramp,Benjaminborough,NJ,US,06520,2026-02-02T06:32:43Z,SCHEDULED,Handle with care,1960
+379136,513311,Jodi Plaza,Lake Anthonyshire,KS,US,17513,Michael Point,North Anthony,NJ,US,79856,2026-02-19T14:05:54Z,CANCELLED,Pickup during business hours,1906
+406171,197722,Carl Inlet,Gloverborough,TX,US,71456,Harris Extensions,Lake Michelle,CA,US,56285,2026-01-18T05:14:37Z,IN_TRANSIT,Call before pickup,599
+812067,372243,Lauren Valleys,Laurieton,GA,US,11177,Jeanne Path,New Stacey,FL,US,27045,2026-01-18T23:49:07Z,SCHEDULED,Contact carrier on arrival,701
+683391,674198,Smith Spurs,Port Phyllisfort,GA,US,41300,Davis Center,Cummingsburgh,NY,US,05332,2026-02-22T20:50:18Z,IN_TRANSIT,Pickup during business hours,1692
+442890,512206,Johnson Street,New Peterhaven,FL,US,83501,Amy Shore,South Mariastad,FL,US,23214,2025-12-16T12:34:06Z,DELIVERED,Contact carrier on arrival,984
+296487,261616,Kristen Viaduct,New Michael,GA,US,91232,Sawyer Ville,North Anthonyview,IL,US,96050,2026-01-19T12:05:36Z,SCHEDULED,Contact carrier on arrival,1272
+671288,809074,Tammy Vista,East Leslie,IL,US,60315,Montes Views,Lake Jane,NY,US,05673,2026-01-03T06:03:39Z,DELIVERED,Handle with care,2142
+800771,544051,Jacqueline Prairie,Terrymouth,KS,US,33622,Bradley Cove,New Stephanie,IL,US,72486,2026-01-02T04:28:22Z,DELIVERED,Handle with care,2589
+299794,607783,Alexander Shoal,Michaelville,NY,US,18568,Johnson Alley,North Bradley,NJ,US,88546,2026-01-29T19:35:19Z,IN_TRANSIT,Handle with care,2744
+234369,673189,Carter Falls,Port David,AZ,US,48734,Brian Tunnel,New Carlosfort,NJ,US,70652,2026-01-29T07:30:45Z,CANCELLED,Pickup during business hours,2031
+118838,254681,Walker Brook,Port Angelaville,GA,US,72665,Wright Brooks,Wrightfurt,WA,US,36527,2025-12-17T21:15:18Z,DELIVERED,Pickup during business hours,2202
+932431,907597,Heidi Mill,Annastad,CA,US,80699,Sawyer Bridge,South Ryan,AZ,US,60215,2025-12-10T08:31:32Z,SCHEDULED,Contact carrier on arrival,1177
+684957,765338,Morris Ramp,South Jenniferfort,IL,US,73634,Mark Cove,Lake Steven,WA,US,40431,2026-02-10T07:17:54Z,IN_TRANSIT,Call before pickup,303
+452478,112000,Tiffany River,North Kathleenburgh,WA,US,52423,Rivers Spur,Christopherhaven,AZ,US,13433,2026-02-07T15:34:39Z,IN_TRANSIT,Pickup during business hours,2076
+774694,126963,Margaret Loop,Clarkfurt,CA,US,38509,Kaiser Crossroad,Brentton,TX,US,59575,2025-12-15T17:40:01Z,CANCELLED,Call before pickup,1380
+874853,242259,Hill Hollow,New Johnborough,NJ,US,78863,Turner Court,Gilesbury,TX,US,34605,2026-03-03T00:15:40Z,DELIVERED,Pickup during business hours,1777
+427024,404763,Carrillo Flats,East Jeffrey,IL,US,59035,John Lake,Kellyborough,WA,US,09094,2025-12-17T04:28:14Z,SCHEDULED,Pickup during business hours,2160
+871185,410657,Small Plains,Lake Stephaniechester,FL,US,19632,Colon Roads,Williamsbury,CA,US,03106,2026-01-24T10:36:10Z,IN_TRANSIT,Pickup during business hours,2497
+277091,812521,Danny Isle,New Robert,NJ,US,88304,Reyes Parkways,Lake Lisa,WA,US,75014,2026-01-17T21:25:31Z,SCHEDULED,Handle with care,2259
+637803,248613,Coleman Squares,Jennifertown,CA,US,81738,Davis Plaza,Jasonfort,WA,US,74586,2025-12-18T07:24:59Z,IN_TRANSIT,Contact carrier on arrival,2246
+463221,339321,Christopher Garden,Lake Michael,IL,US,68536,Jon Groves,North Lisatown,TX,US,63238,2026-03-01T17:57:43Z,SCHEDULED,Contact carrier on arrival,2334
+399937,772617,Choi Cape,Lechester,NY,US,69761,Andrea Spur,Randallmouth,KS,US,98506,2026-02-13T07:07:19Z,DELIVERED,Handle with care,1259
+343140,338927,Mclaughlin Turnpike,Murphyview,GA,US,62156,Morales Lakes,Tylertown,GA,US,73013,2026-02-26T14:11:40Z,SCHEDULED,Pickup during business hours,858
+432115,567103,Phillips Inlet,South Reginaville,NJ,US,04367,Ponce Stravenue,Port Kevinport,CA,US,32899,2025-12-29T19:06:49Z,DELIVERED,Handle with care,1323
+757820,599668,Nicholas Trafficway,West Andremouth,AZ,US,37485,Taylor Route,Port Stephanieshire,GA,US,05912,2025-12-12T22:11:24Z,DELIVERED,Contact carrier on arrival,743
+268275,999258,Schneider Causeway,Butlershire,KS,US,51137,Wolf Highway,Heatherville,WA,US,30395,2026-02-04T11:01:06Z,IN_TRANSIT,Call before pickup,2970
+601829,510637,Bradshaw Station,West Timothyberg,KS,US,82665,James Pike,Scotthaven,GA,US,31199,2026-02-24T20:53:02Z,IN_TRANSIT,Pickup during business hours,1539
+925323,489601,Atkins River,West Dana,IL,US,22090,Evans Drives,North Martin,FL,US,68299,2025-12-17T23:31:49Z,IN_TRANSIT,Pickup during business hours,923
+106258,968825,Tom Pike,Solismouth,KS,US,80349,Jennifer Fords,Millerbury,WA,US,99925,2026-01-29T00:44:33Z,CANCELLED,Pickup during business hours,2267
+837605,560257,Alejandro Plaza,Schaeferland,WA,US,69912,Teresa Pine,South Robertside,WA,US,09858,2026-02-03T21:30:39Z,SCHEDULED,Pickup during business hours,2449
+405887,861262,Glover Points,Port Madisonmouth,NJ,US,11825,Kristy Station,Nancyfort,KS,US,60660,2026-02-13T05:11:58Z,SCHEDULED,Contact carrier on arrival,2956
+189690,357241,Adrian Views,Gonzalezfurt,WA,US,60244,Janet Court,Romeroborough,AZ,US,87733,2025-12-31T11:06:38Z,CANCELLED,Call before pickup,2525
+552266,543187,Phelps Harbors,Alexanderfurt,WA,US,56396,Matthew Springs,Shawnmouth,CA,US,09519,2025-12-30T19:53:04Z,IN_TRANSIT,Pickup during business hours,2830
+462525,225884,Jenkins Isle,Cookberg,GA,US,21343,Tyler Overpass,Melanieburgh,GA,US,53773,2026-01-26T06:46:07Z,IN_TRANSIT,Pickup during business hours,694
+290111,478306,Debra Cape,Seanburgh,CA,US,73041,Rivera Land,Rossside,IL,US,61344,2025-12-07T06:50:59Z,DELIVERED,Call before pickup,1846
+343979,344587,Tara Burgs,Thomasbury,FL,US,56820,April Forge,South Stuart,NJ,US,39229,2026-01-23T00:21:51Z,CANCELLED,Handle with care,1634
+773710,653927,Ronald Walk,Robertoberg,KS,US,08152,Andrea Plaza,Markville,CA,US,09369,2026-02-01T04:21:23Z,IN_TRANSIT,Handle with care,1899
+966526,148174,Reynolds Lock,Port Ryan,KS,US,58929,Diane Bypass,Lake Ruthland,NJ,US,67855,2026-01-26T18:06:46Z,SCHEDULED,Contact carrier on arrival,1784
+328762,288970,Bradford Ridge,Jessicaberg,AZ,US,36277,Perry Lake,Williamside,KS,US,96549,2025-12-14T17:53:04Z,DELIVERED,Contact carrier on arrival,1644
+956052,757568,Matthew Creek,Leeland,FL,US,27803,Snyder Avenue,New Martin,NY,US,81302,2026-01-21T16:40:39Z,SCHEDULED,Handle with care,1525
+351090,787090,Mccann Way,Sullivanstad,NJ,US,31720,Erin Brook,Ramirezton,TX,US,92635,2025-12-07T11:52:08Z,DELIVERED,Pickup during business hours,2720
+205111,727767,Patricia Burg,Port Vincentberg,NY,US,66766,Miller Walk,South Evanfort,AZ,US,20403,2026-02-17T19:24:40Z,SCHEDULED,Pickup during business hours,1318
+802100,714587,Miller Station,Wadeside,TX,US,26896,Luis Locks,New Georgestad,IL,US,27298,2026-01-18T10:05:09Z,DELIVERED,Handle with care,2228
+528563,326163,Donald Divide,Lake Danatown,WA,US,38815,Brandt Loop,Josephstad,NJ,US,42890,2026-02-28T02:05:18Z,DELIVERED,Handle with care,341
+159761,394495,Carter Canyon,West Daniel,IL,US,81529,Tammy Bypass,Ericafort,WA,US,87028,2026-01-10T08:43:18Z,IN_TRANSIT,Pickup during business hours,958
+225272,383965,Ward Port,Stevensmouth,FL,US,95726,Novak Wells,New Catherinestad,IL,US,71679,2026-01-03T17:46:47Z,CANCELLED,Call before pickup,2636
+597302,393866,Shane Springs,New Debraton,TX,US,36424,Payne Forges,Lake Christopherstad,FL,US,90899,2026-02-14T10:11:59Z,SCHEDULED,Handle with care,1624
+693316,333724,David Walk,Lake Karen,WA,US,42299,Lisa Path,Stonefort,CA,US,97008,2026-02-15T21:45:23Z,SCHEDULED,Pickup during business hours,708
+399672,754992,Nicole Groves,North Teresaview,NY,US,69574,Duke Mews,Jordanfort,CA,US,30420,2026-02-02T23:52:37Z,SCHEDULED,Handle with care,590
+139058,237669,Hutchinson Hill,Burnettchester,TX,US,55606,Bonnie Garden,South Pamela,WA,US,48086,2025-12-12T12:30:14Z,SCHEDULED,Call before pickup,1754
+371454,853461,Davis Meadow,Barkershire,CA,US,82977,Joel Forks,New David,KS,US,43067,2026-01-12T15:27:34Z,IN_TRANSIT,Call before pickup,1876
+779281,192174,Andrew Trace,Lake Maurice,AZ,US,27066,Monroe Islands,North Scott,KS,US,74948,2025-12-23T23:21:49Z,SCHEDULED,Pickup during business hours,1930
+921610,493904,Price Bridge,Kimberlychester,TX,US,60567,Stafford Falls,West Heather,IL,US,36803,2025-12-29T10:07:44Z,CANCELLED,Pickup during business hours,662
+207690,747061,Richard Forge,Port Laura,AZ,US,09516,Reginald Shores,Jesseport,NJ,US,36985,2025-12-18T19:15:32Z,SCHEDULED,Contact carrier on arrival,480
+706789,245424,Leonard Mission,East Julie,CA,US,57895,Richard Neck,Angelaside,WA,US,16762,2026-01-24T06:04:26Z,IN_TRANSIT,Handle with care,2943
+404871,833572,Noah Roads,Port Brandonchester,KS,US,93737,Erica Vista,Kingberg,NJ,US,16391,2025-12-19T23:51:12Z,CANCELLED,Contact carrier on arrival,2115
+114855,663116,James Cliffs,Bradleyburgh,TX,US,91545,Acevedo Fields,South Lisaville,FL,US,06112,2026-02-11T10:23:31Z,IN_TRANSIT,Pickup during business hours,1158
+405677,204174,Dickerson Forest,Kramermouth,GA,US,57391,Crystal Port,Wilkinsonhaven,WA,US,15759,2025-12-22T10:00:11Z,IN_TRANSIT,Call before pickup,1678
+314173,285567,Katie Rapids,Jamesfort,IL,US,99304,Elliott Via,Wilsonland,AZ,US,80956,2025-12-16T04:55:23Z,CANCELLED,Pickup during business hours,814
+506668,276165,Tamara Course,South Chad,TX,US,10781,Smith Villages,West Alexiston,WA,US,35116,2026-01-17T09:47:20Z,IN_TRANSIT,Contact carrier on arrival,1586
+428610,410802,Fernandez Manors,North Amber,NY,US,74706,Gonzalez Mountain,North Kathleen,CA,US,47579,2026-02-24T18:53:56Z,IN_TRANSIT,Contact carrier on arrival,867
+207731,980865,Sarah Road,Lake Scottchester,KS,US,92168,Kelley Springs,Lake Angelicaton,KS,US,10138,2026-02-16T11:32:46Z,IN_TRANSIT,Contact carrier on arrival,1917
+814699,770461,Riley Lights,Palmerberg,GA,US,94455,Aaron Roads,North Ambertown,IL,US,96040,2026-02-12T10:16:39Z,IN_TRANSIT,Contact carrier on arrival,444
+424517,702901,Nicholas Mall,Sarahchester,AZ,US,89255,Mark Prairie,Stefanieview,KS,US,62346,2026-01-17T13:46:10Z,SCHEDULED,Contact carrier on arrival,730
+314627,231180,Lauren Pines,Smithfort,IL,US,62733,Powell Landing,Lake Norma,IL,US,71252,2026-02-25T10:22:12Z,IN_TRANSIT,Call before pickup,1034
+762745,365121,Robinson Plaza,East Sharonmouth,FL,US,23658,Brown Land,Lake Christopherburgh,IL,US,44989,2025-12-20T10:22:12Z,SCHEDULED,Contact carrier on arrival,1173
+661191,266427,Garcia Canyon,Tuckerville,CA,US,31416,Dana Cliffs,Port Richard,NY,US,93654,2026-01-23T07:42:05Z,CANCELLED,Call before pickup,1484
+619579,830122,Woods Pine,Pittsmouth,GA,US,49601,Ryan Locks,Sethtown,AZ,US,38521,2026-01-03T02:24:07Z,CANCELLED,Handle with care,1348
+542398,608915,Hughes Causeway,South Williamton,CA,US,20871,Samantha Unions,Smithshire,NY,US,84367,2026-03-01T14:59:27Z,SCHEDULED,Pickup during business hours,639
+453338,630839,Danielle Mountains,Alexischester,GA,US,52161,Eric Curve,South Cassidyville,TX,US,94501,2026-02-02T09:29:30Z,CANCELLED,Call before pickup,791
+170383,506792,Timothy Creek,East Dylan,FL,US,39870,Amber Valleys,Dannyshire,KS,US,94725,2026-02-19T17:48:18Z,DELIVERED,Call before pickup,2137
+646260,673606,Jackson Lake,East Rebeccaport,TX,US,93368,Case Via,North Seanshire,KS,US,36000,2025-12-17T03:01:10Z,DELIVERED,Handle with care,1598
+244384,202001,Curry Bridge,New Glenville,AZ,US,20089,Kevin Drive,East Aaron,CA,US,14283,2025-12-29T19:39:41Z,IN_TRANSIT,Handle with care,636
+792196,651325,Matthew Parks,Danielfurt,KS,US,95890,Harrington Route,Richardstad,WA,US,77491,2025-12-19T23:14:39Z,SCHEDULED,Pickup during business hours,2485
+548951,110200,Melissa Road,South Lauraside,TX,US,30563,Lisa Burgs,Lake Katherine,NJ,US,33933,2026-01-27T11:42:33Z,CANCELLED,Call before pickup,641
+336620,554444,Patel Loop,Rochaburgh,NJ,US,75510,Jennings Spur,Traceyport,GA,US,63295,2025-12-11T15:41:02Z,DELIVERED,Pickup during business hours,2090
+877691,192816,Warner Ports,Ericstad,TX,US,07574,Matthew Rest,Daviston,AZ,US,75251,2026-02-10T07:18:33Z,DELIVERED,Handle with care,1469
+922988,626367,Kennedy Radial,North Drew,TX,US,90331,Shawn Expressway,Vegamouth,TX,US,07364,2025-12-16T01:02:10Z,CANCELLED,Handle with care,1554
+666263,915043,Jeffrey Stream,Dannyport,WA,US,08703,Hannah Village,East Stephanie,FL,US,02221,2026-02-07T17:15:36Z,IN_TRANSIT,Contact carrier on arrival,1171
+805299,898658,Turner Isle,South Brittney,WA,US,98650,Ricky Isle,Newtonview,KS,US,70434,2026-01-17T08:06:02Z,DELIVERED,Handle with care,1250
+777116,174704,Rowe Center,West Andrew,FL,US,20706,Regina Way,New Isaac,TX,US,40707,2026-01-06T12:43:59Z,CANCELLED,Handle with care,1457
+745027,502060,Vanessa Centers,Merrittport,CA,US,42792,Brittany Prairie,North Frankshire,WA,US,55921,2026-01-09T15:28:29Z,SCHEDULED,Call before pickup,1862
+426721,366996,Molly Center,South Jason,GA,US,04303,Cox Meadows,Katelynton,GA,US,88307,2026-02-03T00:12:28Z,DELIVERED,Call before pickup,2534
+341616,898212,Morgan Islands,Victoriamouth,TX,US,16067,Michael Branch,East Seanfurt,TX,US,71582,2026-02-04T18:21:21Z,IN_TRANSIT,Handle with care,2165
+827551,174807,Timothy Highway,East Amanda,KS,US,49157,Santana Coves,East Wendy,WA,US,11539,2026-01-10T03:03:20Z,DELIVERED,Call before pickup,2627
+980848,755805,Robinson Ridge,Port Angela,AZ,US,85314,Powell Burgs,Antoniobury,FL,US,91626,2026-01-01T11:11:45Z,CANCELLED,Call before pickup,336
+233390,722280,Mitchell Turnpike,Graystad,IL,US,03737,Black Cove,Galvanborough,CA,US,35061,2026-02-24T17:22:01Z,DELIVERED,Pickup during business hours,2308
+481215,728785,Peter Ports,West Anthonyland,KS,US,44100,Larry Skyway,Port Julieside,AZ,US,80545,2025-12-12T19:46:05Z,SCHEDULED,Call before pickup,1182
+742157,846365,Valerie Club,Stevenborough,KS,US,41831,Curtis Rue,Hobbsport,GA,US,81765,2026-02-28T01:33:48Z,DELIVERED,Call before pickup,443
+996081,895413,Strong Garden,Annaborough,AZ,US,72246,Roth Forge,North Mary,FL,US,48451,2026-02-10T11:20:44Z,SCHEDULED,Pickup during business hours,589
+322396,697268,Sherry View,Thompsonside,GA,US,27607,Cannon Forks,Garciaberg,GA,US,83510,2026-02-17T07:39:36Z,DELIVERED,Call before pickup,2222
+560819,649230,Barry Springs,Stevenport,WA,US,85682,Renee Walk,Hannahfort,NJ,US,44988,2025-12-15T18:29:37Z,DELIVERED,Contact carrier on arrival,593
+722349,248335,Wheeler Lane,Julieport,NJ,US,28889,Nicholas Glen,South Laurenside,CA,US,69041,2026-02-28T13:36:20Z,IN_TRANSIT,Handle with care,1598
+870815,119677,Emily Estates,Powersview,TX,US,21883,Ashley Meadow,Lake Dustinport,GA,US,35966,2025-12-16T21:56:11Z,SCHEDULED,Call before pickup,1777
+345134,830902,Adam Station,Melissaburgh,FL,US,10019,Jeffrey Burgs,East Matthew,NY,US,26918,2025-12-06T06:14:32Z,IN_TRANSIT,Handle with care,2127
+790341,389944,Roberson Canyon,South Edwinton,GA,US,63174,Castillo Drive,Port Victoria,CA,US,67666,2026-01-16T13:50:47Z,IN_TRANSIT,Handle with care,748
+342109,558191,Blankenship Flat,East Hannah,CA,US,79661,Monica Island,Cannonshire,TX,US,86350,2026-02-01T16:36:24Z,SCHEDULED,Pickup during business hours,2397
+121651,984261,Nicole Via,East Robert,TX,US,90610,Steven Rapids,Sandovalton,KS,US,82816,2026-02-20T11:12:21Z,DELIVERED,Call before pickup,1991
+679997,191999,Mcdonald Cove,Lake Franciscofurt,TX,US,16719,Kim Gardens,Andreahaven,GA,US,68283,2025-12-08T17:14:15Z,SCHEDULED,Contact carrier on arrival,389
+943714,738107,Jennifer Knoll,Port Joshuaborough,AZ,US,65744,Amanda Garden,Lake Sean,FL,US,76675,2026-02-17T00:42:50Z,SCHEDULED,Pickup during business hours,364
+903217,620146,Maldonado Mission,West Ginaville,KS,US,29237,Wright Falls,South Kevinland,KS,US,15320,2026-01-27T23:58:26Z,SCHEDULED,Pickup during business hours,2341
+468915,696320,Martin Fort,Lake Markland,NJ,US,19520,Perkins Mountain,North Jermainestad,NY,US,30934,2026-01-26T07:25:17Z,CANCELLED,Pickup during business hours,712
+509240,207325,Heather Way,Millsport,IL,US,40990,Burns Drive,New Monicaview,TX,US,46332,2025-12-14T20:57:05Z,CANCELLED,Handle with care,1979
+610689,755899,Hardin Village,Jonesburgh,NJ,US,30647,Christopher Track,Crystalborough,KS,US,95914,2025-12-25T01:21:37Z,SCHEDULED,Handle with care,1394
+129625,360306,Morris Center,East Barryview,IL,US,83709,Frazier Village,Lake Sheilaland,TX,US,63176,2026-01-22T21:47:15Z,IN_TRANSIT,Contact carrier on arrival,547
+836736,304117,Franklin Flats,South Mark,NJ,US,76678,Connor Brooks,North Laurenmouth,NJ,US,31907,2026-01-21T06:40:20Z,CANCELLED,Handle with care,1343
+513665,793346,Joshua Divide,Sawyermouth,CA,US,68258,Emily Square,Joneshaven,AZ,US,08564,2026-02-15T13:05:22Z,CANCELLED,Call before pickup,1524
+549199,666706,Caldwell Canyon,Davisview,FL,US,36016,Davis Circle,South Jason,TX,US,48597,2025-12-27T13:00:45Z,CANCELLED,Call before pickup,773
+689943,327609,Berry Pines,North Loriside,CA,US,74960,Logan Ford,Johnburgh,NY,US,96689,2025-12-08T20:22:09Z,CANCELLED,Pickup during business hours,351
+415608,346015,Cummings Locks,Chrisstad,IL,US,96810,Kelly Mountain,East Kevin,WA,US,23535,2025-12-19T12:59:52Z,DELIVERED,Pickup during business hours,743
+757606,651700,Reed Loaf,Moranfurt,CA,US,58030,Fuller Street,East Markfurt,GA,US,79802,2025-12-09T12:08:24Z,CANCELLED,Handle with care,1198
+326752,227685,Lopez Run,West Benjamin,NY,US,37167,Kimberly Parks,Diazview,TX,US,82486,2025-12-21T13:25:37Z,DELIVERED,Pickup during business hours,1654
+718149,397514,Burns Fall,Riveraland,KS,US,48207,Lee Motorway,Josephland,IL,US,93725,2025-12-21T11:26:56Z,DELIVERED,Call before pickup,504
+604789,384715,Amy Club,Lake Zoeland,TX,US,11928,Tonya Pine,West Kristenville,IL,US,39496,2025-12-07T05:35:40Z,CANCELLED,Call before pickup,2615
+749721,769819,Warren Trace,Zacharyhaven,WA,US,84659,Jessica Dale,Dustinland,TX,US,58130,2025-12-20T23:52:41Z,IN_TRANSIT,Call before pickup,2797
+550150,844673,Christine Square,East Kelly,CA,US,29148,Andrea Village,Ruthberg,KS,US,95766,2026-02-20T07:00:58Z,DELIVERED,Pickup during business hours,2460

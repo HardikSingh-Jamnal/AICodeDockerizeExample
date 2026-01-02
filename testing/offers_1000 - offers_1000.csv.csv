@@ -1,0 +1,1001 @@
+sellerId,vin,make,model,year,offerAmount,city,state,zipCode,country,mileage,exterior,interior,mechanical
+550150,T6SUSXB1JP1EJDEXB,BMW,X5,2019,28509,East Linda,Florida,80973,US,145318,Average,Average,Needs Service
+133564,1K2968Z48B64XUVA6,Toyota,Camry,2020,7894,Port Tracyborough,Michigan,59233,US,98250,Average,Clean,Working
+959253,KV2MFUVXMB5AAVALL,Ford,Escape,2019,16732,Brittanyton,Connecticut,58792,US,24466,Excellent,Average,Working
+587337,SE4C1XH7ABG0VZNY4,Ford,Escape,2020,49126,Lake Jennyhaven,Missouri,53857,US,47217,Excellent,Clean,Needs Service
+757440,ZCN03J4GKCT78BJKU,Honda,Civic,2023,38112,Westton,Montana,48843,US,87226,Excellent,Average,Working
+787724,UVXYVA5LTJHRMFMN4,BMW,X1,2020,42250,New Jessica,Kansas,48381,US,109282,Average,Excellent,Needs Service
+940195,7VF6R1SVK0FAL9XAS,Ford,Focus,2024,16148,New Julia,New York,70833,US,86618,Clean,Clean,Working
+317365,2GPYV4GK36SYECAGA,Toyota,Camry,2024,13322,South Charlesborough,Colorado,50647,US,140071,Excellent,Average,Needs Service
+320226,393K4V0NT2JT79H69,Toyota,RAV4,2018,43646,Marcomouth,Georgia,64362,US,144133,Average,Excellent,Needs Service
+754185,P93R24WV6D9ST2JG3,Audi,Q5,2017,25664,Cheyenneport,Idaho,19089,US,149874,Excellent,Average,Needs Service
+456784,1BLXTD81VKHVBDDBW,Ford,Mustang,2023,24588,Taraside,Alabama,96017,US,103368,Excellent,Clean,Working
+554061,R4YXPK7XPBVWFRRGN,BMW,X1,2024,34878,Port Patriciaport,Kentucky,69318,US,149836,Excellent,Clean,Needs Service
+510620,4LFU59LHZ27AF4SG7,Toyota,RAV4,2018,14980,Lake Mark,Vermont,55872,US,137598,Clean,Excellent,Working
+978203,RJCUV1RTTCFBA7NJ4,Toyota,RAV4,2016,17213,Colemanmouth,Nevada,59294,US,106763,Average,Clean,Needs Service
+715356,KC559URKJEN5BG7KJ,Ford,Escape,2020,15763,Tyroneshire,New Jersey,38402,US,117445,Clean,Clean,Working
+878311,8081W87SUXZWGKE6Z,BMW,X5,2019,16986,Port Stacy,Missouri,18320,US,121110,Clean,Clean,Working
+362985,4M4U4178B0TZVPDF7,Ford,Mustang,2018,47173,Wyattbury,Massachusetts,96535,US,3661,Average,Clean,Working
+395152,VHD8ZHD68NVLDAXP2,Audi,A6,2015,8274,Pruittstad,Missouri,67556,US,96743,Average,Average,Needs Service
+396589,PC0VWKLTX6HPDLYSF,Audi,A6,2018,24002,Hobbsland,Alabama,96444,US,58659,Excellent,Clean,Working
+774242,W5G7P8ZRCVXX72DC1,Toyota,RAV4,2017,18700,Allenfurt,Utah,4627,US,146976,Average,Excellent,Working
+809193,BPZXGAJ7G59VPHVLW,Honda,Civic,2018,24417,Jeffreyside,New Mexico,80553,US,108670,Average,Average,Working
+837603,5B7WL65EZ1895FPLM,Audi,A4,2017,25631,Kevinmouth,Louisiana,78949,US,92179,Clean,Average,Needs Service
+128263,YBEZLXWDHNU15AN4P,Honda,CR-V,2023,37258,Laurafort,Hawaii,65382,US,80393,Average,Average,Working
+274724,PDUWJ1PRY8XE3WTZ0,Ford,Escape,2020,31094,Port Jennifer,Pennsylvania,36359,US,81118,Average,Average,Needs Service
+315352,YS5X9JNWRVXBVNSS8,Honda,City,2015,35758,West Marissafort,Oklahoma,44966,US,53625,Excellent,Clean,Needs Service
+468123,8JB0E1NCZ2C0TH42D,Honda,Civic,2020,45730,Port Williamstad,Wyoming,80882,US,101273,Average,Excellent,Working
+780853,0309B6JC3HXSK26R5,Ford,Escape,2022,41893,Willisbury,Texas,97193,US,71305,Excellent,Excellent,Working
+405887,RJLHU9M7ADPW9V63Z,Ford,Focus,2017,6400,Gregorymouth,Maryland,5156,US,74639,Excellent,Clean,Needs Service
+613597,WH96KM9EA97M95MCH,Toyota,Camry,2021,46533,Scottberg,Virginia,38721,US,122772,Excellent,Excellent,Working
+836030,XY1G46Z36F7VGVB1G,Ford,Escape,2022,5759,Port Emily,Hawaii,31938,US,24437,Average,Excellent,Working
+422090,7MPBMVCZUXKU5CGEJ,Audi,Q5,2024,39968,Wilsonport,Wisconsin,35247,US,70507,Excellent,Average,Working
+225055,9H62PNS2WKT3F5160,Ford,Escape,2015,29860,North Elizabeth,Maryland,57662,US,100292,Clean,Clean,Needs Service
+104270,MU6CW7UXNDW76PR9N,BMW,X3,2020,44741,Deannafort,Florida,34078,US,122986,Excellent,Clean,Working
+427933,1YS123NKLN7MSZJPD,BMW,X5,2022,34783,Port Nathanhaven,Georgia,86555,US,71668,Clean,Excellent,Needs Service
+969046,SFYUBKVKH8BKXF4YA,Audi,Q5,2018,19529,Port John,New York,71525,US,108455,Average,Excellent,Working
+671327,SUG9YU3T0075HTLEV,Honda,CR-V,2022,30034,Allenton,New York,4862,US,3227,Excellent,Excellent,Needs Service
+178989,9TT4MSNZX8N7K9EAS,Honda,City,2023,18761,South Timothy,Tennessee,20585,US,134175,Excellent,Clean,Needs Service
+801765,3K9NKLP60EFAFH9VD,Honda,CR-V,2019,18993,Austinberg,New Mexico,91289,US,56542,Clean,Excellent,Needs Service
+814929,PXKTAG26HFZFB1M4G,Ford,Focus,2017,37447,North Josephmouth,Alaska,50110,US,39326,Average,Excellent,Needs Service
+431936,BAUUR8NPG8P5ARHMT,Toyota,Camry,2023,13592,North Lisa,Hawaii,48188,US,61686,Average,Average,Working
+411132,VLEVBHEZT1PVVEWBH,Toyota,Camry,2019,37957,Justinhaven,Florida,82235,US,90713,Excellent,Average,Needs Service
+950143,W2NLR1WX248LCEDEJ,Audi,A4,2017,40959,Lake Chrismouth,Mississippi,97445,US,4986,Excellent,Clean,Working
+597091,5ETVNY66366HRDL1L,Toyota,Camry,2016,5897,East Patriciaberg,Missouri,77192,US,31682,Average,Average,Needs Service
+797814,ZRG5ZMEW1TH78UG0M,Audi,A6,2017,44880,Emilyburgh,Nevada,40808,US,13878,Average,Clean,Needs Service
+821770,PNNGFWRX470V4DUJX,Ford,Focus,2017,16534,South Jeffrey,Kansas,55431,US,31225,Excellent,Excellent,Needs Service
+974624,X334VMDMP5836VM56,BMW,X3,2017,4317,New Jessicaborough,Colorado,28876,US,85577,Excellent,Clean,Needs Service
+940919,NYK6X131D1A7MA7MZ,BMW,X5,2017,44580,Scottchester,Florida,11912,US,3574,Average,Excellent,Needs Service
+818406,G1M947XLXDYZVUPFW,Honda,CR-V,2024,8584,East Elizabeth,Georgia,77532,US,140139,Clean,Average,Needs Service
+406392,UK53ZZTSVZKWSB1AJ,Ford,Mustang,2023,5482,Hopkinsbury,Texas,92345,US,99204,Average,Clean,Working
+587509,J39WVKHUGPRAWB942,Honda,Civic,2016,21942,Joshuaview,Arkansas,57662,US,106490,Average,Excellent,Working
+620342,CNBCX1GRFFG1D5YL9,Honda,Civic,2018,19872,West Reginald,Maine,86656,US,97456,Clean,Excellent,Working
+916944,K7HCM0EYVFTP9FVE4,Toyota,Camry,2024,10872,Lynchhaven,Missouri,21432,US,146599,Excellent,Excellent,Working
+973155,C4HSJBDGZ9FBSG48X,Toyota,Camry,2022,36466,Douglasport,Michigan,69887,US,101780,Excellent,Excellent,Needs Service
+981479,4J6Y3Y41K3001PTPT,BMW,X3,2021,12046,South Racheltown,South Dakota,25746,US,106791,Clean,Excellent,Working
+962518,A44KYV29JJCB5B615,Ford,Escape,2022,49071,South Mitchellhaven,Florida,26879,US,136786,Clean,Excellent,Needs Service
+124627,CXVXKEB9NFHAS349W,BMW,X3,2023,18899,West Tylershire,Nevada,6751,US,12596,Average,Excellent,Needs Service
+596876,HNLG0KA1RS7LD85DK,Ford,Escape,2015,40032,South Jose,Wisconsin,97397,US,113581,Average,Excellent,Working
+243109,56HG58TEFBZ41482S,Ford,Escape,2019,35180,Garnerland,Georgia,6012,US,18572,Clean,Average,Working
+703697,NW65BKG2VXECRGH5Y,Honda,Civic,2018,36095,Frankland,California,16951,US,143230,Average,Clean,Needs Service
+129537,WTHTL3VLMVXAZBXXH,Audi,A6,2020,47840,Lesterborough,Rhode Island,94626,US,123379,Clean,Average,Needs Service
+477887,N8TFJAXRWSFZSG119,Ford,Mustang,2020,26907,Duranstad,Ohio,20932,US,144346,Excellent,Clean,Working
+161194,TABD13AZKEN45JG7K,Honda,Civic,2024,14192,North Jamestown,Ohio,67995,US,133271,Average,Excellent,Needs Service
+194215,JUAS1K0SYARR65CD4,Audi,Q5,2024,20047,South Matthew,Oregon,27068,US,105889,Excellent,Clean,Needs Service
+841490,CGRB9DLYRUBNHVX6G,Honda,CR-V,2022,40918,South Michael,Alabama,56074,US,130964,Excellent,Average,Working
+725968,YDWBZENW8XLAC60JT,Ford,Escape,2019,4828,East Tonya,West Virginia,91163,US,68883,Average,Excellent,Needs Service
+813122,151RXAKGZE1BJW4AF,BMW,X3,2017,38107,Robinfurt,Idaho,52060,US,27362,Clean,Clean,Needs Service
+131548,6V37DF193JWU3W29W,Ford,Mustang,2022,3540,Burchport,Arizona,18846,US,147802,Average,Clean,Needs Service
+394416,CH4FP7HXPSE7Z4WS5,Toyota,Camry,2018,17256,New Mindyport,Montana,40400,US,53632,Clean,Excellent,Needs Service
+641367,3GT0P83Y96P265N3H,Audi,A4,2015,13602,Jacksonchester,Illinois,53533,US,82795,Excellent,Average,Working
+592895,GHEUE8EXWR8CEFRG0,Honda,City,2020,4439,Butlerland,Iowa,7342,US,60412,Clean,Average,Needs Service
+392424,YDF3T1SNSJPFH9ZJ8,Audi,A4,2023,4010,Port Robert,South Carolina,67665,US,59277,Clean,Average,Needs Service
+132530,CE4MN8ADGMLKS5XFX,BMW,X5,2023,15369,Jodymouth,Wisconsin,83153,US,140689,Clean,Average,Needs Service
+483314,943ZX4R2F0PRXC1VW,Audi,A6,2023,9548,West Robertoside,California,63629,US,39666,Average,Clean,Working
+296507,2478T06GGES8S2TNE,Honda,CR-V,2023,20444,Lake Barbara,Michigan,67421,US,106364,Average,Clean,Working
+987640,RDPBFPHLT82LGX7N6,Audi,A4,2020,4383,Knightshire,Indiana,46412,US,44899,Clean,Excellent,Working
+402853,69UNY81HVAUVU4YDY,Honda,City,2022,10108,North Stephenstad,Delaware,86509,US,116597,Clean,Excellent,Needs Service
+915110,UCV56P0UYFD4EUVCG,BMW,X3,2015,35587,West Nicole,New Jersey,38689,US,40314,Average,Average,Needs Service
+363094,EFMZCDFM2RZKCADDT,BMW,X3,2015,6144,Carolborough,Ohio,88957,US,67001,Clean,Average,Working
+500201,9XJPZWRVHE34NV6NM,Honda,Civic,2023,46473,West Jason,Rhode Island,85873,US,106684,Average,Average,Working
+666572,TFB5CFKH2J3WZYVPW,BMW,X5,2020,33122,Davidland,New York,29753,US,52917,Clean,Excellent,Needs Service
+319350,ZJJK7PFE3DRBXLZPE,Ford,Focus,2023,18890,Rosalesshire,Wisconsin,94829,US,13195,Excellent,Excellent,Working
+299752,L1NYRCFUEXFWEYMYK,Toyota,Corolla,2016,17449,Jenniferport,Michigan,82197,US,110455,Clean,Excellent,Needs Service
+657029,AH4MVA3TFNZGH36JC,Honda,CR-V,2023,28795,South Jacquelinetown,Oklahoma,26560,US,16845,Excellent,Excellent,Needs Service
+338245,SD9AKTNHTPTBP1KJV,BMW,X3,2021,5958,West Michael,Alaska,37996,US,59481,Clean,Clean,Working
+559729,Y8ERMJFKN512V7J11,BMW,X5,2016,24992,Gonzaleston,Kansas,93850,US,28726,Excellent,Excellent,Working
+348108,0PFAG0336BMF1SU99,Ford,Mustang,2017,8724,Johnstad,North Carolina,34692,US,77634,Excellent,Excellent,Needs Service
+421395,6VZPMUKGJP2C7ZRCG,BMW,X1,2017,37535,North Jennifer,California,68365,US,14285,Average,Excellent,Needs Service
+546743,47EMSG05KX5FG510B,BMW,X5,2022,26887,Nguyenstad,Colorado,20867,US,25075,Excellent,Clean,Needs Service
+638198,TF07886TSMCD8RLJ1,Toyota,RAV4,2021,26508,Curryburgh,New York,32658,US,59319,Clean,Excellent,Working
+433670,1YGM7RAME064498Y1,Audi,A4,2023,25948,West Cynthiaview,Indiana,50295,US,144317,Clean,Excellent,Working
+295355,LTE7BLTXM0K17RYZD,Audi,A6,2019,32926,East Nicholas,Virginia,79075,US,133198,Excellent,Excellent,Working
+520110,XM0FR2EFGWH2AW40L,Audi,A6,2017,36691,Lake Katie,South Dakota,31300,US,123687,Average,Average,Working
+464731,SDGLWTU63H9HA2L0N,Honda,Civic,2024,15831,Lake Davidborough,Michigan,8275,US,149465,Average,Average,Working
+250467,B3DYGUUE27LMDTHLW,Ford,Escape,2021,43635,South Jason,California,18592,US,10276,Average,Average,Working
+395049,392M7NSPMY45CCNMJ,Audi,A6,2019,43643,Davidchester,Alaska,65654,US,143942,Excellent,Average,Needs Service
+886949,0T2LJ5L12N1NSS12X,Audi,A4,2018,41881,Kimberlyhaven,Maryland,75885,US,137451,Average,Clean,Needs Service
+514833,WB3CKV4ZJ40H161MK,Honda,City,2024,29944,New David,Iowa,46047,US,119987,Average,Excellent,Working
+816265,3H06DP1RBDC04K68A,BMW,X1,2016,35054,Christensenberg,Idaho,26619,US,110061,Excellent,Excellent,Needs Service
+236518,HU3596GK25TK50NU9,BMW,X3,2015,47530,South Sarahview,Texas,10707,US,95910,Average,Clean,Needs Service
+990093,JUZHMXYCTEMNHF6JP,Audi,A6,2018,49680,Sandersmouth,South Carolina,34703,US,109730,Excellent,Average,Needs Service
+526483,5ELGZBDLRBJTENAWK,Toyota,Corolla,2023,30690,Kimberlyport,Maryland,99447,US,111568,Average,Excellent,Working
+835060,1VSS1LBCHXC4501TM,Ford,Focus,2017,38713,Vincentville,Nebraska,56165,US,72111,Excellent,Clean,Working
+439469,N8B54T1NDDM7J9ABK,Toyota,RAV4,2024,24802,North Stephanie,Missouri,59895,US,2826,Average,Average,Needs Service
+444106,MHH9CS0JH2N5ZREFL,Ford,Mustang,2017,22435,West Anthonyview,Oklahoma,73637,US,59430,Average,Average,Needs Service
+752633,GHVWVYMDW7TBVMV2U,Audi,Q5,2019,5531,Joanneview,New Hampshire,14514,US,89778,Excellent,Clean,Needs Service
+205644,9MF0TD4HYDBET1S83,Honda,City,2015,12270,Josephland,Virginia,9334,US,41613,Clean,Excellent,Needs Service
+271469,YH4WX64L1CKMX34UA,Toyota,Camry,2015,24174,East Dale,West Virginia,57282,US,86740,Excellent,Average,Working
+236182,PNFRUGY5Z1ZPPTU3R,BMW,X5,2018,3747,Lake Amandamouth,Kansas,70412,US,86863,Average,Excellent,Working
+482262,WLGC7LD4GKABNX0NB,Audi,A4,2023,10696,Lake Patriciaton,West Virginia,44733,US,96599,Clean,Average,Needs Service
+306453,32ZAZX7NVXHSHC56N,BMW,X5,2018,28404,Haleymouth,Nebraska,23786,US,49155,Excellent,Average,Needs Service
+171173,M76X3TWC4GEY18AS0,Ford,Focus,2018,41644,Williamsfurt,Delaware,18833,US,142191,Clean,Clean,Needs Service
+972586,9XFBH2BJ835HLCKVY,Honda,CR-V,2022,9604,Andreaview,Tennessee,66131,US,46656,Average,Excellent,Needs Service
+592406,1UWUTJN7FYUHPYC45,Toyota,Camry,2018,28638,Jamesview,Nebraska,22338,US,38550,Average,Average,Needs Service
+443779,GYZ7WLPHS0TP9YL35,BMW,X1,2015,35624,Matthewsfort,Rhode Island,93853,US,7817,Clean,Clean,Needs Service
+893052,3BJG5HVWVGCCEU2F2,Audi,A4,2021,25316,Port Roberttown,North Dakota,75482,US,29607,Average,Clean,Needs Service
+217410,F1XUJ31VKU8P79PWB,BMW,X3,2015,32785,East Bianca,Arizona,80913,US,36795,Clean,Excellent,Working
+390529,3LB9W8PXNHJ9LUBWM,BMW,X1,2021,32682,Port Jaredshire,Illinois,13847,US,8786,Average,Average,Working
+400268,LJ6YNCU24V2R0BG2A,Audi,Q5,2016,47033,Lake Alyssaville,Tennessee,34553,US,131550,Average,Excellent,Needs Service
+199342,JG6SCZUP2NM5M0CM7,Ford,Focus,2019,36934,North Patriciashire,Massachusetts,19282,US,87125,Average,Excellent,Needs Service
+246481,JEGW6X8XTWG5THFXR,Honda,Civic,2016,48001,Thomasshire,Ohio,71244,US,59028,Clean,Average,Needs Service
+211727,T1B6B7FTTBJWG6EL4,Ford,Focus,2016,36225,Triciaburgh,Indiana,22285,US,14877,Average,Excellent,Needs Service
+526053,CVP7L5SR24ZKZPSKD,Honda,Civic,2022,6978,New James,Colorado,3184,US,16742,Clean,Excellent,Working
+344199,JVN7WCZHNTPTW9VB0,Ford,Focus,2017,45330,New Johnmouth,West Virginia,71930,US,15344,Excellent,Excellent,Working
+235278,PMMMKS5AA7X7ZDG9S,Ford,Focus,2020,30743,Roachton,Virginia,26991,US,101416,Excellent,Average,Needs Service
+911073,S6FJV2HM6X0WNA7XP,BMW,X5,2019,18998,Houstonton,North Carolina,71680,US,97649,Excellent,Average,Working
+895248,H2GV09104CN70XUGH,Honda,City,2022,41285,Port Kristen,Washington,36502,US,116027,Clean,Average,Working
+350038,HDECG2DJM3AA0KH99,Ford,Escape,2018,49065,Brianhaven,Maine,74546,US,92534,Average,Average,Working
+871742,772J5SVLARD9V0GHT,Audi,A4,2022,26894,Ginatown,Rhode Island,11561,US,149648,Excellent,Clean,Working
+118367,6SPZG6YT46T1L7JG8,Ford,Focus,2015,4547,Lake Jennifertown,Utah,54810,US,85596,Clean,Clean,Needs Service
+603006,X2WHP178HBVYF59UZ,Ford,Escape,2023,18291,Millerport,Georgia,37419,US,86134,Clean,Clean,Working
+316270,CPJ37PWV4DBR3GJKM,Audi,A6,2023,8226,East Brandi,Rhode Island,38086,US,91648,Clean,Clean,Needs Service
+894251,JK94D3V94JSZL03BB,Honda,CR-V,2023,37812,East Melanie,Rhode Island,52498,US,18850,Average,Clean,Working
+337576,UF7W76PPURJADR8GD,Toyota,Corolla,2015,5391,Terrellport,Montana,36404,US,118248,Clean,Clean,Working
+128722,B2VDK8D7R1L1Z0KWZ,Ford,Mustang,2017,5462,Port Chase,Illinois,63947,US,86469,Average,Average,Working
+698522,0X83GEY9V02XKRD39,Audi,A6,2019,21612,Johnsonberg,Iowa,42139,US,32413,Average,Clean,Working
+564005,32545MCXGNPJYV5NL,Honda,CR-V,2018,9833,Santiagofort,Massachusetts,51184,US,88690,Clean,Clean,Needs Service
+274108,E5YAF5785J21PAJHH,Audi,A6,2016,7388,South Jonathan,Rhode Island,4014,US,37884,Excellent,Average,Needs Service
+401912,BANJT9NRBU4YW1TSK,Honda,CR-V,2021,46399,East Brianburgh,Utah,47679,US,31666,Average,Clean,Working
+108312,1FXTJA37XLUJUY7MW,Honda,City,2018,3689,Cindyfurt,Mississippi,43102,US,62903,Clean,Excellent,Needs Service
+403030,8V5FAPC6F0D30CZB9,Ford,Focus,2020,27183,Orozcomouth,Minnesota,59502,US,37486,Clean,Clean,Needs Service
+782850,XPBLSRXWS7CHNCG6H,Toyota,Corolla,2017,23041,New Mariahport,South Dakota,50148,US,52305,Excellent,Excellent,Working
+519828,GST3W75AY5CRSTZX5,BMW,X3,2024,8337,Smithside,Montana,71023,US,7567,Clean,Excellent,Needs Service
+210824,YDEX00HHJC17FBC6M,Ford,Focus,2024,26698,New Sheryl,Maine,69144,US,20820,Clean,Average,Working
+176371,R5Z9LF98CPZ9G2HW5,Honda,Civic,2020,48008,Douglasside,Minnesota,68569,US,43750,Clean,Clean,Needs Service
+309697,PXSR5K2GG9E2DFH7R,Toyota,RAV4,2017,14378,Port Anthonymouth,New Mexico,73972,US,3472,Average,Excellent,Needs Service
+819593,98L1U4VUXMNKL7444,Audi,Q5,2020,40882,Annafurt,Delaware,30640,US,14324,Clean,Average,Needs Service
+325958,PSWUASWP6FF3WN1ES,Audi,A4,2024,30513,West Jennifermouth,West Virginia,60307,US,125845,Average,Average,Needs Service
+902138,S9X1PZGJWZVZTAVM7,BMW,X5,2020,28939,Port Sarahshire,Colorado,5867,US,97051,Average,Average,Working
+921592,SBU1NS30P8ZLAME78,Toyota,Camry,2018,12400,New Larryton,Oregon,99718,US,94733,Average,Excellent,Needs Service
+610236,WXV88A23DDY574EFH,Honda,CR-V,2024,27300,Lake Ginaland,Oklahoma,86744,US,103955,Average,Clean,Needs Service
+770376,FWJZ7P5VP90UU67RZ,Audi,A4,2018,47442,Cruzport,North Dakota,35359,US,74411,Average,Clean,Needs Service
+197580,9UVX7T16LSZELB81H,Toyota,Camry,2018,24425,New Ronald,Rhode Island,55754,US,122778,Clean,Excellent,Working
+317998,1SNYG02R8ZT35GFCP,Honda,CR-V,2022,23910,Lake Richard,Florida,84121,US,40805,Excellent,Average,Needs Service
+574298,HLVN7TKVU51N1J4YL,Toyota,RAV4,2021,15594,East Morgan,Oklahoma,89771,US,117527,Clean,Clean,Needs Service
+550633,G7NZ0V96J1AU6L5V5,Ford,Mustang,2015,49620,South Nicoleborough,Washington,38373,US,51182,Clean,Excellent,Needs Service
+730807,U37G75Z6G4JXXK809,Honda,City,2024,3437,Christopherburgh,Louisiana,85415,US,107213,Excellent,Excellent,Working
+118951,Z8YJN0VEYG42PMT23,Toyota,Camry,2020,15638,New Shelly,Louisiana,97261,US,132728,Average,Average,Needs Service
+678173,NHC5WD91KT1MDJAFU,Audi,A6,2020,17981,Katrinatown,Alabama,98253,US,94573,Average,Excellent,Working
+100753,5CZX98KG5RA4WEHPD,Ford,Mustang,2017,33905,New Gregory,North Carolina,45921,US,59429,Excellent,Excellent,Working
+297139,FPKDKC4R5XZEHN1R4,Toyota,RAV4,2024,39960,New Wesleymouth,Arizona,91524,US,108910,Clean,Clean,Working
+789232,0D4CDZLGN6W6UHJX4,Audi,A6,2019,7444,Lake Natalie,Oklahoma,42557,US,50004,Average,Average,Needs Service
+968393,ZR50SL15Y3004GXUJ,Honda,City,2019,26068,Georgefort,Maryland,4310,US,62046,Clean,Excellent,Needs Service
+945975,0SFF1PKDS9MBJM3J3,Ford,Escape,2019,37888,North Kathleen,South Dakota,99141,US,148229,Clean,Average,Needs Service
+553483,54TAE6FPCKRVSYS4K,Ford,Mustang,2016,43673,West Leonberg,New Mexico,57247,US,142050,Excellent,Average,Needs Service
+132618,L29KG8EYANGKKU5HJ,Toyota,RAV4,2016,31930,West Jeffrey,New York,85595,US,104267,Average,Clean,Needs Service
+208587,7838GU996DS7WFH09,Honda,Civic,2018,23754,North John,New Mexico,22326,US,134617,Clean,Clean,Needs Service
+363846,471FF0P3XMNRVE567,Toyota,Corolla,2015,16416,East Megan,Mississippi,58247,US,15820,Average,Average,Needs Service
+732904,FAAG5BXUDSCNHA8TG,Toyota,RAV4,2018,27328,South Donna,Missouri,37924,US,135532,Average,Clean,Needs Service
+391455,N73MSN1JHA4GC1LRL,Toyota,Camry,2017,14657,North Gregory,Michigan,54543,US,95594,Average,Clean,Needs Service
+727260,H6Y9HZM8WTNZA3YRF,Honda,Civic,2022,6453,South Phyllisburgh,Minnesota,62331,US,33201,Clean,Average,Needs Service
+250391,5AAKW4GNX4TC0YVLK,BMW,X1,2018,28660,Port Susanport,South Dakota,88547,US,54080,Clean,Excellent,Working
+748126,7LG7FABMJ24UB5FCS,Ford,Escape,2023,42940,New Ronnieview,Georgia,8071,US,9816,Average,Excellent,Needs Service
+141072,PHL3H1B47PM8D32SD,Ford,Escape,2020,48756,Morenoville,North Dakota,71551,US,115260,Average,Excellent,Needs Service
+750942,71118CTEU9VRACWP0,Honda,City,2018,22363,Davisview,Arkansas,1311,US,80224,Average,Average,Needs Service
+309189,FEANTYRV9SVMMGXDL,BMW,X3,2020,5298,New Ronaldmouth,Ohio,89259,US,107466,Average,Average,Working
+659133,DUX71TH3BK96XP7AW,Honda,Civic,2020,34016,East Alanchester,Vermont,76795,US,97270,Excellent,Clean,Working
+123154,HLRKLP7D2LB286PMT,Audi,A6,2019,31812,East Christianberg,South Dakota,56390,US,88232,Average,Average,Needs Service
+133078,DFPM475LNX6ZEBKY4,Toyota,Camry,2023,46746,Traciemouth,Minnesota,2555,US,13938,Average,Excellent,Needs Service
+402919,U9B52VCB8LY1VV81H,Audi,A6,2016,13853,South Mariabury,Alaska,39946,US,25732,Clean,Excellent,Needs Service
+501410,E60FXW5E1A19LRTE0,Ford,Mustang,2020,45425,Michaelstad,California,81287,US,57195,Average,Excellent,Working
+698995,ND2ZK9UMNPGDBAHC8,BMW,X1,2022,6530,Jacquelineport,Maine,77045,US,144565,Average,Clean,Needs Service
+129623,CA0GMRXBXNY11ERJV,Toyota,Camry,2017,48397,Hernandezshire,Utah,70009,US,100211,Average,Average,Working
+342366,49P8VCB3Z051UCGB1,Ford,Escape,2022,42864,Port Heather,Iowa,64559,US,19430,Excellent,Clean,Working
+750918,JWBBCZ3U4DE14281L,Audi,A6,2024,33872,Franklinton,North Dakota,50791,US,128982,Average,Average,Needs Service
+894197,MXBW1PK89HGCVHCGK,Audi,Q5,2024,45392,West Joseph,Oklahoma,24798,US,496,Average,Average,Needs Service
+318646,LTN9W9YN4336MJFH4,Ford,Escape,2016,40269,Carolynport,Alabama,4987,US,103470,Average,Excellent,Needs Service
+129152,7MNWXABB8G28RA3CU,Honda,City,2015,42977,Ramosburgh,California,54335,US,70356,Excellent,Excellent,Needs Service
+922129,T9BBEUEEKL5WLJG4E,Audi,A4,2017,33265,New James,West Virginia,66195,US,126264,Average,Average,Needs Service
+438082,NJJXS03D27MR0F4KX,Toyota,Corolla,2021,5409,Deanchester,Minnesota,81677,US,89193,Excellent,Excellent,Needs Service
+178244,8ZEDWADZ78N5R8KZT,Honda,CR-V,2022,41731,West Deanbury,New Mexico,56202,US,104137,Average,Excellent,Working
+262945,D0RCUBU5UHA56BNSC,Ford,Focus,2021,36357,Prestonland,North Dakota,41760,US,26594,Clean,Excellent,Working
+543635,VSXMFLGHXHC38E9WZ,Toyota,RAV4,2023,14044,Johnsonbury,Utah,36827,US,97199,Clean,Clean,Needs Service
+882056,BVRHB492FKVZT5T0K,Toyota,RAV4,2018,8845,Lake Zacharyberg,Tennessee,44144,US,32127,Clean,Clean,Needs Service
+195104,LX0M3L3CSV0HN9LUM,Ford,Focus,2019,28920,Kleinton,Illinois,14201,US,63985,Excellent,Clean,Working
+296093,C44WTJMV2XW7LU9ZU,Audi,A6,2022,29094,Nixonville,Texas,18779,US,52733,Clean,Excellent,Working
+378629,MPCDPMTP8DV8GHRJT,Audi,Q5,2018,8587,Port Crystal,North Carolina,97393,US,45321,Excellent,Average,Needs Service
+576624,MUA8BBNTA3E04HTZX,BMW,X1,2022,39014,Liview,Rhode Island,95612,US,25634,Average,Average,Working
+122704,8121RH5HBU8JMH9FK,Ford,Escape,2019,21674,East Pam,Michigan,9327,US,106248,Clean,Excellent,Needs Service
+258083,W2A9J6Y7Z4F5BLEBG,Ford,Mustang,2023,41738,Lake Karen,Florida,84425,US,96040,Clean,Clean,Working
+346353,LW7B6YNAUUB1MPY9X,Honda,Civic,2018,14046,North Cindytown,North Carolina,86488,US,53934,Excellent,Clean,Needs Service
+922592,XVRPU7EECEDP41SL0,Ford,Focus,2018,18625,Port Becky,Indiana,66950,US,107725,Clean,Average,Needs Service
+696908,MVYTFC7E4U55KCPMV,Honda,CR-V,2020,30983,New Ashley,Kentucky,30970,US,119799,Average,Excellent,Needs Service
+512011,MD4KJ36XRK1VWF0DG,Honda,Civic,2018,5662,East Gregory,Indiana,95693,US,19302,Clean,Average,Needs Service
+893251,GFFPG6XAM96ZG7WAS,Ford,Escape,2021,33867,Lloydside,New Mexico,81442,US,2853,Clean,Average,Needs Service
+521854,XVGJ1XTB19K7G7X3H,Ford,Mustang,2022,37119,South Charles,Rhode Island,24686,US,52602,Clean,Clean,Working
+912670,W4RN8BCPGD82HLKR8,BMW,X5,2015,38267,Rosariofurt,Minnesota,54957,US,98645,Clean,Average,Needs Service
+837725,426Z54E2YVMEH7YGZ,BMW,X5,2023,27085,West Ericamouth,Delaware,75019,US,10587,Clean,Average,Working
+364604,D0BE3JZRPA447J4KE,Toyota,Camry,2016,21725,West Jameshaven,South Dakota,28822,US,26057,Average,Average,Working
+457812,S3ND0ZE4JACBU1NRC,Ford,Mustang,2024,7802,East Laura,Illinois,27028,US,101277,Excellent,Excellent,Needs Service
+649266,E06Y2X80GAKFRJ1FM,Honda,Civic,2018,37833,Charlesside,California,2745,US,31529,Excellent,Excellent,Working
+640468,EKPEPUJFY8LT22NCE,Ford,Escape,2022,34164,Jeremyberg,Iowa,13938,US,147403,Excellent,Average,Needs Service
+805494,EP1USZPX8HS9SPTRD,Ford,Focus,2016,27228,Port Jasonborough,Missouri,1528,US,66441,Clean,Average,Working
+115030,XAZF2J7P720E098BR,Toyota,Corolla,2016,35521,Lake Peter,Mississippi,83625,US,10161,Average,Average,Working
+267728,78LBADSUEVAVTVWCX,Honda,City,2024,18107,East Charlesmouth,Wyoming,61380,US,99538,Clean,Average,Working
+710008,1WJEYXJU2YFMHCWBD,Audi,Q5,2019,32332,Richardburgh,Arkansas,20498,US,101322,Average,Clean,Needs Service
+214928,8GWBJ34XXX4NSJ0VS,Toyota,RAV4,2021,47872,Curtisside,Arkansas,23045,US,46833,Excellent,Clean,Working
+445393,2RBL61KKC46C8E9DT,BMW,X5,2022,37127,Justinland,New York,67324,US,26582,Clean,Clean,Needs Service
+653854,PD7AB3NHEWV27EWZJ,Audi,A4,2015,19134,Berryfurt,Kansas,70087,US,35537,Average,Excellent,Working
+238087,NYJG8VRDH2VW0XREW,BMW,X5,2022,28396,Port Jonathan,Massachusetts,15089,US,77456,Clean,Clean,Working
+496602,6H20SZN6EA7FYC5FD,Ford,Escape,2023,24467,Lake Michellefort,Montana,34493,US,136611,Clean,Average,Working
+265168,96E2JF7VYR2WX4CZJ,Ford,Escape,2017,33333,West Brandon,Wyoming,97789,US,115276,Excellent,Average,Working
+101271,XJPUCSU79UMAXSG4T,Honda,City,2021,20880,Johnsonbury,Nevada,32998,US,226,Clean,Excellent,Working
+567295,LM563KUJ48CBFU197,Audi,A6,2015,3243,North Jeffrey,Utah,24669,US,69714,Average,Average,Needs Service
+516550,AUZ7X27ZTBCTMRJK0,Ford,Escape,2019,38961,Jasminebury,Illinois,61614,US,28001,Clean,Excellent,Needs Service
+589900,XD2K4J16BEMMC564G,Honda,City,2018,44469,Williamsville,Ohio,46902,US,125440,Excellent,Clean,Needs Service
+761284,UV1THZP28YHK5XUGM,BMW,X3,2018,27371,Williamsland,West Virginia,63724,US,18298,Average,Excellent,Working
+624237,M6C8BGU71S46ZHT5Z,Toyota,RAV4,2021,42942,Masonbury,Maryland,37140,US,13109,Excellent,Clean,Needs Service
+921641,CM6JD35GT2P21ECHK,Honda,Civic,2020,34893,West Joyceshire,Minnesota,730,US,133317,Clean,Excellent,Needs Service
+757254,GFSE9C4B6EVHL4RHB,Ford,Mustang,2021,15257,South Melindaberg,Hawaii,60052,US,129187,Average,Average,Working
+436616,N8XHVPFR893NFZ8LS,Honda,Civic,2019,8342,Hernandezberg,Wyoming,35366,US,66495,Clean,Average,Needs Service
+238072,P5UMWZBMLFMCZ22C7,BMW,X3,2021,38599,Castrostad,Alaska,62041,US,125286,Average,Average,Working
+329130,SDNW5JYCS34YNAUXV,BMW,X3,2019,17745,Denniston,South Carolina,70149,US,60569,Excellent,Clean,Working
+518783,PVRAEAM1LE62LL459,BMW,X1,2021,30864,Ashleyshire,Washington,96332,US,28301,Excellent,Clean,Working
+974336,RN8LGF58V17W7CP0D,BMW,X1,2024,11345,Ramoshaven,New Mexico,35915,US,5786,Clean,Clean,Working
+235829,H31JBK42ZHBM6RE4Z,Ford,Focus,2021,8696,Lake Mariemouth,Arkansas,25456,US,90819,Excellent,Average,Needs Service
+634066,V7HJSTWWJ3GC07TJH,Audi,Q5,2017,5065,Hamiltonstad,Minnesota,78890,US,110513,Clean,Average,Needs Service
+875456,YU6SZWGVR0KUNS6CR,Honda,Civic,2015,47613,East Jessica,Iowa,67054,US,86496,Average,Excellent,Working
+826491,2ECA07SHB0CTKR62F,Honda,City,2017,19573,Port Ashley,Florida,87925,US,119329,Clean,Clean,Needs Service
+815839,L5VYFFEBDJH5XY81R,Honda,City,2023,15076,Ryanchester,Maryland,75982,US,55386,Excellent,Average,Working
+311868,BRPRVNKNJUKHG3AHF,Ford,Mustang,2024,19709,North Shannon,Minnesota,89962,US,24902,Clean,Clean,Needs Service
+818397,454HAUBG9GFKUBGMH,Audi,Q5,2022,33683,West Dylanburgh,Arizona,2115,US,133123,Average,Clean,Needs Service
+213365,XRZBHVMG9CJXNFJ0G,Ford,Mustang,2015,7572,West Kristinetown,Ohio,14504,US,143380,Average,Excellent,Working
+675439,6MJU5YZRS3ZGEWD1X,Audi,A4,2017,10434,Port Saraborough,Nebraska,42076,US,127462,Clean,Average,Working
+697388,T7S37BM8P7HNF961U,Toyota,RAV4,2018,15376,West Jessicatown,New York,27014,US,119022,Average,Average,Working
+605542,NM6AA2D1C5JCLMNS5,Ford,Focus,2019,28320,Levinemouth,North Carolina,57458,US,142941,Clean,Excellent,Needs Service
+310528,ADEP2817RS0TX0BV8,Ford,Escape,2018,7846,Tuckerburgh,West Virginia,53774,US,108144,Excellent,Clean,Working
+391725,4RCNF7T1V2U56UERN,Honda,CR-V,2019,48154,Summerborough,Ohio,67039,US,2137,Clean,Average,Needs Service
+719389,KXEFZN1DAGW1HC7R3,BMW,X1,2016,28597,East Karinaton,Texas,11556,US,100836,Average,Excellent,Working
+391493,4TPJU6TYYGULFG4T6,Honda,Civic,2019,49574,New Anthonybury,Kentucky,90660,US,42216,Average,Average,Needs Service
+192348,11Z0MZEE3L6RG31GM,Toyota,Camry,2017,39731,Port Carlos,Vermont,44495,US,42948,Excellent,Excellent,Working
+515539,YN5WKV2BKVY5TJ4T9,Audi,A6,2021,16765,New Dawnland,Pennsylvania,50202,US,148792,Average,Clean,Working
+733180,SE33SXMAR0KA1BZDL,Ford,Focus,2018,41019,South Mirandaport,Kentucky,33299,US,92855,Excellent,Excellent,Needs Service
+640040,W3B8UJSLFPX8LPNBN,Audi,A6,2023,28271,North Melanieland,Massachusetts,58421,US,113939,Average,Clean,Needs Service
+279478,6UAEYJ7P8TW6BKUPD,Toyota,Corolla,2016,9799,West Ericburgh,South Dakota,70404,US,67058,Clean,Average,Needs Service
+449779,T82M4D3YBBN363G11,Audi,A6,2023,41444,Changmouth,California,71375,US,3265,Average,Excellent,Working
+357199,69ZDWBE20HKSCDGHA,Audi,A4,2021,6762,Lake Derekstad,Oklahoma,93532,US,28841,Clean,Average,Needs Service
+442349,6VMSSB1YT4ZP3BFUK,Toyota,Corolla,2018,29527,New Zacharystad,Arkansas,10154,US,98718,Clean,Clean,Working
+742817,HRV0AMHJCRRNFYDM2,BMW,X1,2016,22834,West Coreyfurt,Illinois,73900,US,71446,Excellent,Excellent,Working
+267420,4VHT4874N1PGDMB9W,Honda,City,2022,42062,Sheliachester,West Virginia,39319,US,137903,Excellent,Average,Working
+418010,62T0G9HZ57WK0VZC1,Audi,A4,2015,37451,Harperland,South Carolina,89980,US,120659,Excellent,Average,Working
+825657,HHYLZWFVJ5ELT8DR9,Toyota,Corolla,2021,9620,South Brian,Connecticut,76827,US,92045,Clean,Average,Needs Service
+461331,8SJ12MEDAAK90H7PA,Audi,A6,2023,35667,West Roberto,Vermont,41669,US,125149,Clean,Excellent,Working
+741983,Y29MLWAXBP6DS07ET,Ford,Focus,2016,25944,Stewartberg,Utah,31749,US,49677,Excellent,Average,Needs Service
+885464,R9ENPUR8DWPB2HB1G,Audi,A6,2017,3140,Keithtown,Texas,72747,US,90797,Average,Clean,Working
+211261,GJCZ3XJHEK80NZSMU,BMW,X5,2020,47693,Lake Thomas,Oklahoma,91717,US,113866,Clean,Average,Working
+539318,BT6GX3XLXV5HR98X5,Honda,Civic,2024,23260,Jesseton,Rhode Island,95035,US,130372,Clean,Average,Working
+126529,HCKEBEMWT49C2BVSY,Toyota,Corolla,2019,32182,New Edwardview,Nevada,72833,US,109660,Excellent,Average,Needs Service
+368892,W4K1B5LR7G7U7GKHR,Toyota,Camry,2019,45588,Warrenberg,New Hampshire,86187,US,72016,Clean,Clean,Needs Service
+953840,5L7CHUYF9WNFC7T38,Toyota,Camry,2024,10860,Petersonland,Utah,32688,US,112179,Clean,Clean,Working
+250042,T0ZX14ZR277PG2U3G,Audi,A4,2020,28773,North Craig,Kansas,51261,US,31562,Average,Average,Needs Service
+839830,5BJGPH3M6W6G10PA5,Honda,City,2024,33293,Port Victorborough,New York,76725,US,59464,Clean,Average,Needs Service
+595172,7VTALUFZ3EDVPAYCC,Ford,Focus,2020,10336,East Jamesview,Arkansas,19562,US,19605,Excellent,Excellent,Needs Service
+197462,RURTC39G7DNVRTZ73,Ford,Mustang,2020,29946,Williamfort,Maryland,20073,US,104542,Average,Average,Needs Service
+705816,PD74B8XFJZX63PFJ1,Honda,Civic,2016,42485,Yorkchester,Montana,66518,US,18715,Average,Clean,Working
+146775,L8LNJVX29XH07UKV0,BMW,X5,2022,45285,South Kellymouth,Texas,66460,US,72877,Clean,Excellent,Working
+993249,AUB0DGCDXEC1VXWAE,Toyota,Corolla,2018,35556,South Jefferyport,New Hampshire,9170,US,120652,Average,Average,Needs Service
+161613,U0D0D0LNS4AS3R8C9,Honda,City,2023,43200,Cherylside,Arkansas,31787,US,82488,Average,Clean,Working
+847787,RNAJP4M9GNMWX4X33,Honda,City,2023,25638,Aprilshire,Washington,16117,US,53981,Excellent,Clean,Needs Service
+163340,VBE9PYYH7HPLD30WS,BMW,X3,2015,39080,South Hannahport,Vermont,40710,US,70780,Excellent,Average,Needs Service
+591023,8R60X2WABJLLRWZZP,Ford,Mustang,2022,21299,South Gabrielbury,West Virginia,92369,US,36815,Clean,Average,Needs Service
+120266,B4N90GLM3WWDBKANU,Ford,Escape,2015,45942,Cassandrafort,Tennessee,14319,US,119324,Excellent,Average,Needs Service
+251328,W41CM5L7N4EDSD89F,Honda,CR-V,2017,3778,Lake Donald,Nebraska,15288,US,4446,Average,Excellent,Working
+205030,3C63WXH1CXNEFP9TL,Audi,Q5,2024,12609,Lake Michael,Alaska,559,US,5242,Clean,Excellent,Working
+708699,WW5A18BW91XS9HK9V,BMW,X5,2023,18349,Justinside,Texas,2800,US,88197,Average,Average,Needs Service
+710261,ZPEMEU34NXHP6L6RB,BMW,X5,2022,4224,East Garrett,Arizona,80094,US,93540,Average,Excellent,Needs Service
+732026,3X4WA8BK6N83DZS3C,Honda,City,2022,5357,Owensville,Colorado,4575,US,101518,Clean,Clean,Needs Service
+290188,NZ0AYMZBSS324UFSB,Ford,Mustang,2016,29213,Francobury,Colorado,31856,US,35081,Average,Average,Needs Service
+245911,PF0EGY6JH2AVTDRRG,Honda,CR-V,2020,36602,South Amandaport,Montana,62199,US,13600,Excellent,Excellent,Working
+254817,1CT6CT00VTFHTABBP,BMW,X3,2024,6380,Patelhaven,Idaho,62506,US,119272,Excellent,Clean,Working
+777319,FYKDY1J1K42DMYK4K,Toyota,Camry,2015,27599,Jillianville,New Jersey,34797,US,148925,Average,Clean,Working
+881465,CCS7PB66ERZL9R52X,Ford,Escape,2017,27273,Breannachester,Idaho,57461,US,143634,Clean,Average,Working
+219426,JJCXEAP78JBAW8BU2,Toyota,Corolla,2024,29774,Jeffersonberg,Montana,19437,US,46500,Clean,Excellent,Working
+998002,2CEYFLJ5UPHTNYXUJ,Honda,CR-V,2015,32653,Goodmanfort,West Virginia,8855,US,14027,Average,Average,Working
+204040,4UU8SR0EBRX5L2ZFR,BMW,X5,2017,42160,Frankberg,Arizona,48116,US,57480,Clean,Excellent,Needs Service
+345198,UNVA6BT5WJWE376KP,Honda,Civic,2020,9020,Laurastad,Massachusetts,44306,US,57394,Excellent,Excellent,Working
+720822,2Z6N8LZBAGBM5B9S3,Toyota,RAV4,2022,43439,Serranoburgh,Wyoming,544,US,80341,Clean,Excellent,Needs Service
+324633,9LWJB9KRUBWD3FDHH,Ford,Focus,2021,33034,North Mary,Illinois,46533,US,46808,Clean,Clean,Needs Service
+373339,H6MM7FE6B55ZMPTNK,Honda,City,2017,47471,Rossland,Colorado,72926,US,28615,Excellent,Average,Needs Service
+945790,YCVXCTUVKTKEBLA8Z,Toyota,Camry,2021,31771,New Jessicatown,Minnesota,31811,US,22209,Excellent,Average,Working
+470014,ZBZVJKA7U5YHWCECP,Audi,A6,2016,43121,North Gregorymouth,Minnesota,47007,US,147453,Clean,Average,Working
+950619,SKSYRGFMELT2UK9ZF,BMW,X1,2020,47455,West John,Florida,99443,US,893,Excellent,Excellent,Needs Service
+168038,1FXY1TSF1Z1CGEAW8,Audi,A4,2024,9372,Vanessaville,Missouri,76895,US,110924,Average,Average,Needs Service
+416450,5E06A3Y54DRCH4K00,BMW,X1,2022,49987,West Melanie,West Virginia,90021,US,33305,Clean,Excellent,Needs Service
+491024,3GENEG23Z8DNLG8XY,Ford,Focus,2020,41519,Johnmouth,Florida,12514,US,125881,Average,Average,Needs Service
+761241,M0DADMT8MNTCZFVLA,BMW,X5,2018,23074,West Anthonystad,Maine,73514,US,132124,Clean,Clean,Working
+315973,AJLBVZ69PUED5F9FR,Toyota,Camry,2021,44692,Walkerville,South Dakota,33615,US,134624,Excellent,Average,Working
+817876,NAE0FHLK31WLBKK51,Ford,Escape,2024,9525,Longfort,Montana,21250,US,12873,Clean,Clean,Working
+474773,KP7X0H7N7EYJ4MXWC,Toyota,Camry,2018,40197,Sheilaville,Texas,65065,US,82102,Clean,Average,Needs Service
+823507,40L54VJG24MSU53VU,Honda,Civic,2017,24855,Edwardsstad,Hawaii,4230,US,14383,Clean,Excellent,Working
+933909,8G61LBK1H4GCEXKF6,BMW,X5,2022,48918,Lucasberg,South Carolina,64798,US,22299,Average,Clean,Working
+855282,J44HS9EP7ACD73HSE,Audi,A6,2024,23321,Lake Christopher,Florida,70353,US,115244,Clean,Clean,Needs Service
+436038,36ECHC8VG50LXGLFY,Toyota,Camry,2015,17147,Byrdshire,New Mexico,8037,US,88960,Average,Excellent,Working
+430491,F6WRSKF9MEXBUWRGN,BMW,X5,2017,24525,Port Howardshire,Illinois,19783,US,16139,Average,Average,Needs Service
+280623,XWL5NWAPMWBKXH7TK,Honda,Civic,2024,9396,Lopezview,Georgia,38533,US,144959,Excellent,Clean,Working
+394389,95VMAMVJWPMB7L0YJ,Toyota,Corolla,2015,36292,Port Ashley,Oregon,41453,US,58242,Clean,Clean,Working
+467629,HM10FV0KR228LNJFT,Audi,Q5,2021,48090,Rebeccastad,Montana,86213,US,81352,Excellent,Average,Working
+382085,F45P7DPSVW2XJA62C,Audi,A4,2018,33716,Robertstad,New Hampshire,72678,US,12032,Excellent,Average,Working
+653848,VJNAG8SYT3PAX4NYY,BMW,X3,2017,38219,Lake Kayla,Oregon,20271,US,32195,Average,Excellent,Needs Service
+270051,U4RFYD697JKKJ822B,Audi,Q5,2024,46377,Port Sandra,Virginia,55305,US,17962,Excellent,Excellent,Working
+174602,VA831BM3HCPDZ6F1Y,Ford,Escape,2024,24502,Paulfurt,Arkansas,76631,US,147554,Clean,Average,Needs Service
+298989,C2GTUU3V4X76Y5MAJ,Honda,City,2023,15207,Port Peter,Wyoming,52007,US,12772,Average,Average,Needs Service
+329386,SRXN7G6W751R4KJ2C,Ford,Escape,2015,6185,Port Rogerburgh,Virginia,65031,US,86448,Excellent,Clean,Needs Service
+805176,SFVXV367MLCA7BKK2,Toyota,RAV4,2023,16496,West Jennifer,Connecticut,81583,US,69122,Excellent,Average,Needs Service
+281560,0WDGT22EHRCSRW0PE,Audi,A4,2024,24624,Adamchester,Michigan,21974,US,36257,Average,Excellent,Working
+576259,ZR7V0TPJUCKCVHUKE,Toyota,Camry,2017,12988,Garciashire,Rhode Island,57094,US,124223,Excellent,Clean,Working
+840586,4VH1JVB2BR3KH2V5E,Honda,CR-V,2015,19277,Lake Shaun,New Mexico,32233,US,137086,Clean,Clean,Needs Service
+347413,TJJ3P9YMEAZW8NY34,Ford,Escape,2015,23250,Brianburgh,Kansas,84586,US,117508,Excellent,Excellent,Working
+214450,XDSYKGK5KENZ368JD,BMW,X1,2018,5282,Port Brandy,Colorado,4171,US,95040,Average,Excellent,Working
+689215,59F3C9KEAUYED04WC,Toyota,Camry,2017,8582,Kellerton,Arkansas,34800,US,85123,Average,Clean,Working
+220065,E5NP1CAHHG25BUX9B,BMW,X3,2021,22072,West Melanieview,Oklahoma,27994,US,20781,Excellent,Clean,Working
+565792,MTHAZWAW7WS3TUDWB,Ford,Focus,2019,4491,Port Laura,South Carolina,77355,US,16042,Excellent,Excellent,Working
+672265,WUYV82FTPVVRWHDL0,Honda,Civic,2023,49670,Lucasshire,Arkansas,98609,US,20703,Excellent,Excellent,Working
+489690,M2NTZ20K92HV41S1Y,Ford,Mustang,2022,38595,Laurenchester,Wyoming,98805,US,123807,Average,Clean,Needs Service
+538157,744NC2G5J6TH6YCWS,Ford,Mustang,2016,45126,Port Courtney,Georgia,19767,US,15137,Excellent,Average,Needs Service
+208378,PDKRHWPWBYP3HFW3L,Audi,A6,2016,38707,Michellestad,Colorado,36632,US,63569,Clean,Average,Needs Service
+529752,3P9KJFK7DCAFXDVSS,Honda,CR-V,2017,40439,West Alisonberg,Illinois,48265,US,71979,Clean,Clean,Working
+907172,M5NZSSL2NCY8YJ135,Toyota,Camry,2021,14077,Jameshaven,California,49966,US,49304,Excellent,Average,Working
+101195,JGKUS437USBETYTAB,Toyota,Camry,2021,34135,Lisaberg,Colorado,49143,US,105480,Excellent,Average,Working
+838388,DP7N9CX8FSBNJ2101,Honda,CR-V,2018,12286,Christopherbury,Iowa,37504,US,72349,Excellent,Excellent,Working
+654714,HFAM7PKZN381YWRU1,Honda,Civic,2017,47526,Bakerborough,Nevada,29820,US,130450,Clean,Clean,Needs Service
+745863,GJJ5WZUW0TX8G6N4L,Honda,Civic,2023,9385,Rossland,Maine,15104,US,36511,Average,Excellent,Needs Service
+849161,U6S4F2MLPNHLP578V,Ford,Mustang,2022,31956,Lake Markburgh,Alabama,11546,US,87635,Clean,Excellent,Working
+566069,B1EE6SU5RAM3SSACV,Honda,City,2018,9247,Thomasview,Florida,81928,US,134247,Excellent,Average,Needs Service
+444069,SNU8ZTARLFBS299CE,Audi,Q5,2015,17081,Port Gwendolyn,Nevada,79913,US,93388,Average,Excellent,Needs Service
+671420,LSMFZM3PWRH9HSGL4,Audi,A4,2015,28771,North Jenniferberg,North Dakota,29993,US,109784,Clean,Excellent,Working
+464779,S56SFGUJB3STH8ADZ,Toyota,RAV4,2015,44448,New Jeffreystad,Colorado,7492,US,122750,Excellent,Excellent,Needs Service
+603241,GGAM5TTHFLMZFWSL1,Toyota,Camry,2017,21517,West Josephstad,New Mexico,8388,US,64744,Excellent,Clean,Needs Service
+660501,EXXFPFHYVE0HWT34Y,Honda,CR-V,2020,23048,Port Jason,North Dakota,25793,US,121017,Excellent,Excellent,Working
+810784,45834R3NY9KZ0JRYU,Ford,Escape,2024,32387,East Jeffrey,Louisiana,60449,US,94409,Excellent,Average,Needs Service
+753851,BWT9VYLB3DJY0NZ5R,Ford,Escape,2019,36711,Andreaport,Georgia,19806,US,56062,Excellent,Average,Working
+386140,7HDY08S7YBUNAS18W,Ford,Focus,2024,29237,West Deborah,South Dakota,89035,US,83481,Clean,Average,Needs Service
+906072,9UV0J8ZT5ZD4ZSYC0,Honda,City,2018,45377,South Cassandra,Colorado,37818,US,15623,Average,Clean,Needs Service
+227565,LYZ6EV8RCYRUM7T2C,Audi,A6,2021,5628,Port Keith,South Dakota,46285,US,143157,Excellent,Clean,Needs Service
+213536,EME720MDGEZM2FKLX,Honda,Civic,2024,48722,South Susanville,Maine,72184,US,23742,Excellent,Average,Working
+669204,J4TC3N3ZSYXF1WWS8,Honda,Civic,2015,38795,Markmouth,Rhode Island,58470,US,86207,Excellent,Average,Needs Service
+136538,T3TAG79707P0L1PZE,BMW,X3,2018,48809,Lake Zacharyshire,Vermont,80728,US,19494,Excellent,Average,Needs Service
+846529,GVH6791ZZJ2S34GW2,Ford,Escape,2022,36221,East Davidview,Indiana,94594,US,98242,Average,Average,Needs Service
+776465,BGBXLAF6NFBHL72TZ,Audi,A6,2023,49253,Lake Hannah,Colorado,90442,US,101021,Clean,Average,Working
+990772,TRMGJL82VVY66YWFY,Honda,City,2024,34270,Mcknightport,Alaska,87423,US,81487,Average,Clean,Working
+331237,T3AMFR2SVY0400FV1,Ford,Escape,2017,19670,Bradytown,South Carolina,44626,US,51906,Excellent,Average,Working
+134926,V98RB7VLA65UGNCA3,BMW,X1,2020,8402,Matthewport,Mississippi,30400,US,118884,Average,Clean,Working
+142016,921S2WVEWY68JCR91,Honda,Civic,2018,12368,Kleinland,Mississippi,88685,US,10800,Average,Clean,Working
+582382,GYAGU3GYCBLWA3KTK,Audi,A6,2018,9708,Lake Kimberlyborough,West Virginia,14829,US,37355,Excellent,Clean,Needs Service
+563957,5T9Y4VBUYY8Z52N40,Toyota,RAV4,2017,49250,South Jamesport,North Carolina,17788,US,115178,Average,Average,Working
+172677,09BS9K580ASNM6GHU,Toyota,Corolla,2019,28228,Lake Richardtown,New York,35509,US,105713,Clean,Clean,Needs Service
+148063,VS67Z9CNKTJJSKUF2,Honda,Civic,2018,22205,West Cindy,Connecticut,34833,US,40447,Average,Excellent,Needs Service
+120633,9R0E3UD7URK6VYS1G,Ford,Mustang,2015,23893,East Kevinport,South Dakota,79722,US,7922,Average,Excellent,Working
+918139,H1S0SU999BUCZT620,Audi,A6,2021,6538,Lake Robertland,Texas,20321,US,45359,Average,Clean,Working
+360918,A46UYCCFYGLKBB007,Honda,Civic,2016,49668,Walkerberg,Alaska,3758,US,133527,Clean,Average,Working
+778570,E76KCZ9CSF9332ZK3,Ford,Mustang,2023,13933,Crystalview,California,99683,US,16840,Excellent,Excellent,Working
+319166,Z0L4ABXW7LZC84XK5,Audi,A6,2019,23432,East Lisa,Texas,79156,US,60423,Excellent,Average,Working
+647829,H3JVDJFGGB7HKTS64,BMW,X3,2023,22573,Baileyton,Nebraska,40085,US,125295,Average,Excellent,Working
+600289,CB121NWUHX66BHRKA,Toyota,Camry,2016,44035,Theresachester,West Virginia,13185,US,90683,Average,Excellent,Working
+776141,N24HB8A5Z6VNBEZYV,BMW,X5,2023,15221,Sweeneyburgh,South Dakota,57329,US,17737,Average,Excellent,Working
+259911,ML1S2SEKKWECJFLC9,Honda,CR-V,2015,25075,New Kristinshire,Alabama,70972,US,52154,Excellent,Excellent,Needs Service
+568191,SG5W2EBH1TT2NK51W,Toyota,Camry,2024,17918,Brianport,Arkansas,50631,US,87381,Average,Average,Working
+347643,82K1VMF45Y0CA0F41,Ford,Escape,2023,13532,Paultown,South Carolina,44581,US,89940,Average,Average,Working
+305127,5V05U9GLZA47WY9BA,BMW,X3,2016,19036,North Johnburgh,Nevada,71732,US,84828,Excellent,Average,Working
+595183,JB48UBC86PTK3W7PY,Audi,A4,2020,3958,Longberg,Minnesota,37160,US,38585,Average,Clean,Working
+664390,4T9803F5AXU9G8A88,Honda,City,2022,14848,Jamesville,Pennsylvania,74931,US,149362,Average,Clean,Needs Service
+481175,ZGWM70NE1N3BMND4X,Honda,CR-V,2022,8867,Port Robert,West Virginia,31090,US,103774,Excellent,Average,Needs Service
+172110,2K7AM6GZ9S8YTC04T,Honda,City,2016,27777,Lewisshire,California,28882,US,52878,Excellent,Excellent,Needs Service
+871104,R7VWTFSCD3NNG54FP,Ford,Mustang,2023,19933,East Christine,West Virginia,61359,US,116371,Excellent,Average,Working
+685738,833TN2F2GAVFG8VDL,BMW,X5,2022,4827,Watsonhaven,Virginia,45993,US,1569,Average,Clean,Working
+662644,DT3VGUF5914G3A2V8,Ford,Mustang,2021,24776,Shawnville,Maine,89601,US,14510,Clean,Clean,Needs Service
+350440,LBH46TU0WSEF3L7KT,Audi,Q5,2015,28478,Deborahhaven,Arkansas,83483,US,143556,Average,Clean,Working
+278717,31EE7YXEKW2KSH0N8,Toyota,Corolla,2024,25598,East Kathleen,Tennessee,83380,US,98628,Excellent,Clean,Working
+560419,F8A4GK7307BAEECVH,Honda,CR-V,2020,7511,Brettmouth,Washington,87812,US,54991,Clean,Clean,Needs Service
+214807,7RU5UU4CL6AHNMF2K,BMW,X3,2016,11585,Port Gregory,Texas,11474,US,64419,Clean,Average,Working
+102180,9F4TS65V5CWS8V081,Toyota,RAV4,2015,7609,Angelaview,South Carolina,65409,US,107153,Clean,Excellent,Working
+605623,JUEU541M0JTN5R4VB,Audi,Q5,2022,40224,Tammyshire,Virginia,26597,US,16446,Excellent,Average,Working
+763079,D1A53R9FV79HAHBFN,Audi,A4,2019,6766,Norrisport,Maryland,58629,US,60190,Average,Excellent,Needs Service
+338694,TJ5YGPKRB0496HMG3,BMW,X1,2022,26566,Jenniferside,North Dakota,79090,US,59625,Clean,Average,Needs Service
+756011,P7G63H3XCTYGAASZT,Toyota,Camry,2022,40127,Dennisshire,New Mexico,30533,US,123132,Excellent,Average,Needs Service
+731853,AM5UAM0KU9ZK84016,Toyota,Corolla,2017,8021,Melissafort,Virginia,64640,US,30829,Excellent,Excellent,Working
+649010,4PZSLLA5SKHRGWZ56,Audi,Q5,2020,37100,Parkerton,Minnesota,72720,US,118820,Clean,Clean,Working
+478113,1FK9E53FJDUJ6USHH,BMW,X1,2016,5805,Heatherberg,Illinois,24515,US,17646,Clean,Clean,Needs Service
+466958,M1PF8XMU1VLJDKCS5,Toyota,Camry,2021,42918,Katrinaland,Oregon,1165,US,58633,Clean,Excellent,Needs Service
+893367,DWB8SUZ1D9AG67J6C,Toyota,Camry,2022,34682,West Ryanburgh,Tennessee,83224,US,112265,Clean,Clean,Working
+169828,LSL1SEWJ03V5BMK78,Ford,Escape,2022,41840,Lake Marcusville,Kentucky,20984,US,115719,Average,Clean,Working
+722289,1SUEX8LL5ZTETJ3Z5,Honda,CR-V,2022,15422,West Rebecca,New Mexico,9430,US,13890,Excellent,Excellent,Needs Service
+957413,CW1UD875HELWWBR5R,Ford,Mustang,2023,5710,Mezaton,Georgia,6541,US,51329,Excellent,Average,Working
+247671,AJNLC191DEM16RB0W,Honda,Civic,2021,17566,West Shannonchester,Michigan,71514,US,94289,Excellent,Excellent,Needs Service
+392211,P3L4E1E8PK6P1C6BW,BMW,X5,2019,24142,Ashleyport,Arkansas,11116,US,99082,Excellent,Average,Working
+179676,VNRUGRKM3EAV7H369,Ford,Escape,2015,14144,West Penny,Alabama,46621,US,31809,Clean,Excellent,Working
+461224,HVLM0EJ2YEJRCJJ6P,BMW,X5,2024,40872,Port Mark,Idaho,40215,US,131584,Clean,Excellent,Needs Service
+369555,M8AFWAX0MHR20HLMG,BMW,X5,2022,6118,Port Kristin,Florida,30223,US,57118,Clean,Excellent,Needs Service
+471713,4WHCP841WLWHF3J68,Audi,Q5,2023,27223,East Lauren,North Carolina,81417,US,93918,Average,Average,Needs Service
+229890,L3U09G01NJLURRU48,Honda,CR-V,2015,24306,Smithburgh,Kentucky,63156,US,124300,Average,Excellent,Working
+549700,63GCNAPGW9DF7Z6T4,Audi,Q5,2020,28545,Knightchester,Utah,41743,US,110645,Clean,Clean,Working
+898213,RRT33JYTSZ9R5S33H,BMW,X5,2021,19397,Daviston,Minnesota,86584,US,77593,Excellent,Excellent,Working
+437340,HJDDZJPGXCPFS969T,Ford,Escape,2020,34116,Carterchester,Iowa,64541,US,86666,Clean,Excellent,Needs Service
+319727,A3K6PRYPH8AVB9740,Honda,City,2018,49296,Wardside,Kansas,94807,US,96897,Clean,Clean,Needs Service
+806050,T4FPE8KJJYJ3PFMKP,Honda,City,2024,5601,Johnsonmouth,Nevada,29542,US,82657,Excellent,Excellent,Working
+837219,83Z3UNSHAGNBUVR53,Ford,Escape,2020,35335,Brianmouth,California,18719,US,29531,Excellent,Average,Working
+846976,HSGF3NBRYV8KV482V,Honda,Civic,2023,13773,Peterland,New York,88144,US,32234,Average,Average,Working
+318704,39FU5KK25ADD7CVRD,Honda,Civic,2019,17671,South Matthewview,Connecticut,81133,US,76152,Excellent,Average,Needs Service
+312840,4EX3UXRX0ZCTF095V,BMW,X3,2016,43146,Port Beth,Montana,61179,US,2562,Average,Excellent,Working
+181062,7MGS2SRHKE94VLUEY,Honda,City,2022,6395,New Tracey,Tennessee,14093,US,69199,Average,Average,Needs Service
+601640,YLBJKXUUU4BEK6AWZ,Honda,City,2022,14690,Jenniferburgh,Georgia,28838,US,74343,Average,Excellent,Needs Service
+515932,D4ZTXSL9X45TLZ4JD,BMW,X1,2018,25421,North Sandramouth,Minnesota,98840,US,100243,Clean,Clean,Needs Service
+329255,54TKY1USDHMH933UC,BMW,X1,2022,25023,New Daniel,Mississippi,15360,US,20954,Average,Excellent,Needs Service
+910174,NW904JHD9ESFB02LC,Toyota,Corolla,2020,3385,East Brendabury,Maine,81712,US,130483,Clean,Clean,Needs Service
+206917,G9EJKZ07XMHYCY1AT,Honda,City,2024,36916,Russellstad,Utah,40187,US,32451,Excellent,Excellent,Needs Service
+508235,6LSXEX4VTAMN5LCXC,Ford,Focus,2024,46833,East Samanthatown,Maryland,90229,US,101238,Clean,Average,Needs Service
+451160,1MFP1UKFW2L1Z6GRE,BMW,X5,2017,44037,West Jordanberg,Georgia,96110,US,15208,Clean,Excellent,Needs Service
+810327,SWG5BKHPUKK6G1X8H,Ford,Focus,2020,6747,Whitetown,Pennsylvania,68119,US,134902,Average,Average,Working
+911928,F4MNK31HU3TDYD4Y4,Audi,A6,2019,17133,Perezfort,Missouri,20308,US,25915,Clean,Excellent,Working
+205243,G00H1DDNG0U2P257D,Toyota,RAV4,2021,24559,Meghanborough,Mississippi,75001,US,78217,Clean,Average,Needs Service
+549389,ZV8JY9NESHKKL38AB,Honda,CR-V,2022,44653,Joseberg,Kentucky,13312,US,72971,Average,Clean,Working
+409287,WX2DTBKAUAM5GUPD0,Audi,A4,2024,23603,Alexanderland,Virginia,13418,US,83846,Excellent,Clean,Needs Service
+390892,Z8451GNRX0PA1XNGH,BMW,X5,2023,42821,East Jonathan,Delaware,75670,US,18012,Average,Clean,Needs Service
+788950,27572P03LYYUC9VPG,Honda,City,2022,39317,Port Eric,Missouri,22928,US,94360,Clean,Average,Needs Service
+956519,VZ8W2ZAYNVK0Y0DZG,Audi,Q5,2015,47636,Port Alyssaland,Florida,20049,US,62963,Excellent,Average,Working
+992309,WHMSJKUEPNH0FXKGH,Ford,Escape,2017,18038,Lake Alex,Wisconsin,93597,US,90702,Average,Excellent,Working
+277439,GDC9DE5GDC41JWG8Y,Ford,Focus,2015,48326,Debrafurt,New York,99870,US,102008,Excellent,Excellent,Needs Service
+700496,4EDAJ3DXXMCWTJB4D,Audi,A6,2019,19615,West Andrew,Tennessee,83618,US,94628,Clean,Excellent,Needs Service
+963710,P1LMM8AUU4RGGCSDB,Toyota,Camry,2017,29820,Port Jeanne,Alabama,14059,US,45630,Clean,Average,Working
+213584,1U3GC5LY6GM9PR1CG,Audi,A4,2020,12630,New Sydney,Florida,2314,US,18962,Excellent,Clean,Needs Service
+274116,L2TR4871LF294JG0H,Audi,A4,2020,43672,Sullivanview,Oklahoma,95698,US,97086,Excellent,Average,Needs Service
+471174,1HSHHELKXCN7ETUTE,Toyota,RAV4,2023,8861,Perezstad,Arkansas,7883,US,69785,Average,Average,Needs Service
+213063,UUPM8KFP7VPUMRM9T,Ford,Escape,2021,33296,Delgadoport,Maine,15262,US,123249,Excellent,Average,Working
+125078,MC933P2VNGT40K54A,BMW,X5,2018,44749,East Jason,North Dakota,11205,US,88164,Clean,Average,Needs Service
+520224,D75E21K309N1T8956,BMW,X3,2024,33486,Lake Ashleyshire,Missouri,98409,US,2292,Average,Excellent,Working
+596962,0C95KC9P05SSXL96M,BMW,X1,2016,49936,South Toddfurt,New Jersey,5036,US,117322,Average,Clean,Needs Service
+997481,3FD37ACAWJDE9BHT8,Audi,A4,2021,5028,New Annehaven,Mississippi,55555,US,142996,Clean,Clean,Needs Service
+339459,YJAGFB2Y6JU6S9PCU,BMW,X5,2019,4019,Andersontown,Illinois,10477,US,20534,Excellent,Clean,Needs Service
+538442,9ZAV6XM38UL8408VR,BMW,X5,2023,49499,Jasonfurt,Louisiana,88970,US,107263,Excellent,Clean,Needs Service
+500092,S62CMMYYYVG610DXK,BMW,X1,2021,17865,West Rhondaton,North Dakota,69191,US,53650,Average,Excellent,Needs Service
+851056,DN2ES0TCNS7X2VUJG,Toyota,RAV4,2021,45236,Carlburgh,Kentucky,46521,US,94580,Average,Average,Needs Service
+888327,G1DUB9DVV0060LLCT,BMW,X5,2021,15591,Williamville,North Dakota,11497,US,25972,Excellent,Excellent,Needs Service
+634863,TV5UU6BW5BH4FT9Z2,Audi,A4,2021,24588,Port Spencerburgh,Alaska,53640,US,132092,Clean,Clean,Working
+408432,F4VRPXMHHPS6A8H21,Ford,Focus,2022,31489,South Deborah,South Carolina,15868,US,67007,Excellent,Clean,Working
+207605,TU9MM86Z4B82B8DMC,Ford,Mustang,2015,43932,Williamsonview,Georgia,56733,US,86330,Excellent,Excellent,Working
+590078,G670WA50DACFWP892,Audi,A6,2020,42951,Seanfurt,Massachusetts,36003,US,121878,Average,Excellent,Working
+185117,AGGKFHXCB734GNYM6,Audi,Q5,2019,39940,West Kimberlyview,Maryland,20266,US,50867,Clean,Clean,Working
+775619,2T1A7P0NA0YF5E95W,Honda,City,2015,24397,New Tracey,Montana,81862,US,105924,Excellent,Excellent,Needs Service
+578966,UDVSZ1C84TB9GPGCW,Honda,City,2015,6434,Johnsonstad,Delaware,82726,US,93174,Average,Average,Needs Service
+506856,4R574WJSHWLZZL52T,Honda,CR-V,2024,25855,North John,Missouri,83547,US,61640,Clean,Clean,Needs Service
+382936,DX6HX77R1VT2S3U99,Honda,City,2019,4693,Ramireztown,New Jersey,42513,US,27494,Average,Average,Needs Service
+678102,VC4B4K5LNS0T0HLL0,Toyota,RAV4,2018,18952,East Anthony,New Hampshire,20798,US,135516,Clean,Excellent,Working
+486498,SL8VH81UUZ0744LY5,BMW,X3,2021,48784,East Ricardoshire,Utah,58277,US,30545,Clean,Excellent,Working
+325140,50NB1CVVGXEEF8H57,Honda,City,2019,35598,Alanland,South Carolina,78996,US,112771,Average,Average,Needs Service
+802032,URHVYCNZ96FDW9UER,Toyota,Corolla,2023,9065,West Melanie,Minnesota,4381,US,70505,Clean,Clean,Needs Service
+557247,U89S8JHSBANCU34LG,Ford,Mustang,2016,14166,Amandastad,Utah,44699,US,72289,Clean,Clean,Working
+875374,RB794ZY1FXUMZRC2F,Ford,Focus,2023,23264,South Johnathanside,Kansas,27093,US,111448,Excellent,Clean,Working
+413894,NGAS5RBR8JPL9BPFS,Audi,Q5,2024,21549,Collinsmouth,Alaska,83415,US,1710,Excellent,Average,Working
+489443,GL7B1HRYLS1JRJTBL,Ford,Focus,2018,42036,South Matthewfurt,South Carolina,33050,US,146746,Average,Excellent,Needs Service
+980613,BKDM3DABRSGV7F2G7,BMW,X5,2021,18132,South David,North Dakota,98536,US,55965,Average,Clean,Working
+969979,CWG3TWLXDZA0PA657,Honda,Civic,2020,25706,Lake Andrewfurt,North Dakota,89087,US,102019,Excellent,Average,Working
+445153,LAGZ6JB1T7SN23PV8,Honda,City,2016,48797,Port Lauren,Montana,91245,US,122074,Clean,Clean,Working
+784818,Y8X4C9M3W0K1TFH0Y,Honda,CR-V,2015,47838,New Heidi,Wisconsin,63121,US,41208,Average,Average,Needs Service
+276290,3EJ34RTR3XZYDZDSJ,Ford,Focus,2020,36342,Brownmouth,New Mexico,90342,US,67298,Clean,Clean,Needs Service
+124994,WX24X5KPBR3UTW6PW,Audi,Q5,2022,44899,New Deniseshire,Arizona,87787,US,51555,Excellent,Clean,Needs Service
+504390,K1R4DHAK7HAC5JZXN,Toyota,RAV4,2016,17068,North Johnmouth,Georgia,3607,US,81437,Average,Average,Working
+861567,D9H8Z9FYA7WD0GY17,Honda,CR-V,2018,6805,West Jerry,Nevada,15127,US,130621,Average,Clean,Working
+785693,29BE3YW8478WAW3X1,Audi,A4,2024,4472,South Nicholasfort,Hawaii,41294,US,62168,Excellent,Average,Working
+691225,H5WT3UEX6AN3LJLW9,BMW,X5,2017,28817,West Christopherberg,Alabama,38535,US,130718,Clean,Excellent,Needs Service
+515744,DLU0ZLUW2EEA7VVJ8,Honda,City,2018,8961,Ramirezside,Georgia,71222,US,112867,Average,Clean,Working
+916119,HJVELML7W7DPLLG03,BMW,X5,2021,9581,Lawrenceview,Massachusetts,40117,US,100489,Clean,Excellent,Needs Service
+545664,60KXGULFRMY7GX2S3,Toyota,Camry,2015,17503,Graveshaven,Wyoming,30206,US,76947,Clean,Clean,Needs Service
+259913,81UHGUV1RFXE0CRT4,Honda,CR-V,2019,35769,East Brandonfurt,Idaho,60613,US,69262,Excellent,Clean,Needs Service
+823549,XGN3KKYJKZL4VDYDF,Ford,Mustang,2023,42245,South Melissa,New Hampshire,60733,US,73930,Average,Clean,Working
+562861,0XVVZTVG4D2D3A49F,Toyota,Corolla,2024,9514,West Shannonmouth,Kansas,47241,US,144410,Average,Clean,Needs Service
+914743,N6KBUT681GLN7M8JR,Ford,Escape,2023,21555,North Tanya,Missouri,33930,US,97831,Excellent,Clean,Needs Service
+931529,E7NTZWVGKGTF1E8E5,BMW,X3,2023,20702,South Leslieberg,Alabama,72846,US,124985,Excellent,Clean,Working
+120378,5K8EFL3HX75WVG38L,Toyota,Camry,2021,8345,Marieview,Washington,76926,US,119002,Excellent,Average,Working
+519594,CJCGGXLKW6SUV1U47,Toyota,Corolla,2021,45052,New Jesse,Indiana,76546,US,121362,Excellent,Excellent,Needs Service
+644964,YSWWGRHKXF1VNTEA5,Ford,Escape,2018,49278,West Cynthia,New Mexico,51353,US,12229,Clean,Excellent,Working
+416900,ZS5U2967HEZP8DWHZ,Ford,Focus,2020,36782,Port Stevenborough,Alabama,66022,US,49961,Excellent,Excellent,Needs Service
+243762,2EVUH8NLAJSC0Y5GW,Ford,Focus,2021,25996,New Joshua,Alabama,49136,US,39207,Excellent,Excellent,Needs Service
+429311,SFW3K6W6CB9KEUT8K,BMW,X5,2015,3575,Barbarafort,Maryland,55949,US,56490,Excellent,Average,Working
+346396,WKF08NPJYBT2CPUWK,Toyota,RAV4,2015,27714,Wallaceborough,Nebraska,45832,US,70352,Excellent,Clean,Needs Service
+385409,6JU0GNCMP85SL213V,Honda,Civic,2017,14546,Chandlerfort,Maine,39997,US,96042,Excellent,Clean,Needs Service
+335797,2HHPBY0KY1MC12ZZY,BMW,X1,2021,3078,Schaeferhaven,Maine,40439,US,29548,Clean,Excellent,Needs Service
+289566,VSBAACJK5X49SJZBH,Ford,Escape,2017,14373,West Joshua,Florida,58444,US,121366,Average,Average,Working
+830863,CMR462A4SXVZ3VN19,Honda,CR-V,2018,9291,Denisemouth,Washington,25563,US,225,Excellent,Average,Needs Service
+215984,4LCD1BZURXV95JWZT,BMW,X5,2023,26074,Graveston,Michigan,97004,US,138257,Average,Average,Needs Service
+366412,8FCKUY725FRUU31D9,Honda,CR-V,2021,33214,Lake Kathleen,Utah,15712,US,39907,Clean,Average,Working
+172684,C3R6SGFVG5FEMRKDJ,Ford,Escape,2023,26964,Walkerside,Illinois,59927,US,81627,Clean,Average,Working
+202152,GAZH5TUXKHPVNYJTA,BMW,X1,2018,11134,Brandyfort,Nebraska,56347,US,123557,Clean,Average,Needs Service
+390739,YVBEA3MFASS8YRVV6,Honda,Civic,2015,9201,Lake Monicafurt,California,83963,US,1870,Clean,Excellent,Working
+314705,46JB415DZ5NAT6ZDT,Toyota,Corolla,2020,45422,West Zacharyport,Rhode Island,65427,US,36396,Clean,Clean,Working
+638675,CC1Z0ZCJVFY5NW5T2,Ford,Focus,2015,44688,Lake Alanton,Maine,6530,US,69765,Average,Clean,Working
+874222,D9874L907B7CYXAME,BMW,X3,2019,12771,West Amanda,Rhode Island,22542,US,126599,Average,Clean,Working
+447211,KRBTRDD4K8J9K3YFE,Toyota,Corolla,2024,13338,West Lauren,Maryland,50156,US,98707,Average,Average,Working
+829360,SD8BVD72UYKNNNUEA,Ford,Escape,2021,43346,Port Matthew,Mississippi,82451,US,123310,Clean,Clean,Working
+920343,P9G4FE9RPTT2RZFE9,Ford,Mustang,2015,23436,New Rebeccaton,Montana,14946,US,136983,Clean,Average,Working
+523934,ZBPHKJKZGW5BGJMXR,Audi,Q5,2023,45171,Matthewsview,Georgia,76934,US,91010,Clean,Average,Working
+337221,0U2S6N00CJ10PLSK4,Honda,CR-V,2020,22538,West Michaelside,Wyoming,19319,US,14032,Clean,Average,Needs Service
+935407,M1PTBDNR2A2EEGXRZ,BMW,X5,2017,15630,Lisamouth,Mississippi,85676,US,61977,Excellent,Excellent,Needs Service
+322957,A4ZBE40S1GAVM763Y,Honda,Civic,2019,25519,West Alexis,South Carolina,52021,US,32396,Clean,Clean,Working
+519249,VRHED78MUJ5AJKTU4,Honda,City,2016,11692,South Danatown,Missouri,24025,US,63456,Average,Clean,Needs Service
+874974,564594NRK74L7K9UE,Ford,Escape,2022,27826,New Ryan,Nevada,81478,US,125176,Excellent,Clean,Needs Service
+366793,YS5H9P9PW3K91ZECK,BMW,X5,2018,26339,Alanton,Rhode Island,59735,US,106444,Average,Clean,Needs Service
+765921,U5Y574RGHY06TKURX,Toyota,RAV4,2015,47249,Kellystad,Minnesota,84445,US,100918,Clean,Clean,Working
+670032,PV4JCT1CL4AAX2HH9,Ford,Escape,2023,3943,Christopherton,Louisiana,65107,US,92219,Clean,Average,Needs Service
+439404,H2ZMWMRSKZE63LUP8,Honda,CR-V,2022,31317,Nealton,Ohio,59205,US,15086,Average,Average,Working
+879907,VRDJAN1NHRHLTR9F9,Honda,Civic,2018,46422,Stewartborough,Virginia,79661,US,91611,Average,Excellent,Needs Service
+195690,RZP44Y82SL56YJSVC,Audi,Q5,2017,14767,East Ashley,Missouri,58193,US,102058,Average,Average,Working
+113638,F72VZKBAZGVCYA91H,Audi,A6,2016,40217,Quinnfurt,Arkansas,57593,US,50914,Excellent,Excellent,Needs Service
+786326,CSHJ01MXPFY86U3X0,BMW,X1,2018,16356,Crawfordshire,South Carolina,49113,US,33420,Excellent,Excellent,Needs Service
+490130,XSPW9GW5TZMKLKFRL,Toyota,Camry,2018,13722,New Amanda,New Hampshire,23420,US,25621,Clean,Average,Needs Service
+742248,UU4UDCSCY7GKL5VUD,Ford,Escape,2023,29465,Monicamouth,New Hampshire,78074,US,3991,Clean,Excellent,Working
+970218,4LREJKGNTG0NTBJY7,Ford,Focus,2018,27151,Teresashire,Nevada,43118,US,13787,Clean,Clean,Needs Service
+243390,7WH7UHP8RUJ348LN3,BMW,X1,2015,49922,Lake Joshua,Virginia,60261,US,116685,Clean,Clean,Needs Service
+320306,278NDLAD1PZKMAB8U,Toyota,Camry,2016,40203,East Matthewville,Montana,73102,US,131559,Average,Average,Needs Service
+684502,B4TXKXZSESS0H9ZFH,BMW,X5,2022,36932,South Thomas,Colorado,15589,US,78187,Average,Average,Working
+393662,TZ2EFF48KVH9UW092,Audi,Q5,2020,49095,New Luke,New Mexico,38234,US,116272,Clean,Excellent,Needs Service
+780715,PT9FXC94T3HK1JAFE,Ford,Mustang,2021,37921,Ellisshire,Ohio,71785,US,54469,Clean,Average,Needs Service
+360547,SDKCSTVL8AWEMLEZ3,Ford,Mustang,2017,34023,North Troy,North Carolina,56921,US,3473,Excellent,Clean,Working
+772317,CTWRD0R48FVG1UNU1,Toyota,RAV4,2016,15753,Susanmouth,Wisconsin,35358,US,128403,Excellent,Clean,Needs Service
+987503,GZDM7ZPAHXE5MBEL3,Honda,City,2020,48339,West Tonyaville,Kentucky,29027,US,80365,Average,Average,Working
+562073,SWMNVU5SJD4ER2D4W,Toyota,Camry,2017,13455,Port Ivanport,Utah,36682,US,35295,Average,Average,Needs Service
+784378,R714WUL29BK08S4XM,Toyota,Camry,2020,28947,Stevensport,Idaho,47186,US,59008,Clean,Average,Needs Service
+399214,04MNRV64K4YD987HW,Toyota,Corolla,2015,25995,Port Dawnmouth,Michigan,21148,US,8354,Average,Clean,Working
+211850,V7WBBU1ZVKR265C6G,BMW,X3,2015,28696,Port Roger,South Carolina,29134,US,53200,Clean,Excellent,Needs Service
+443985,NNRP34LH2MAUZAS7W,Toyota,Corolla,2023,25029,Ellenberg,Missouri,33569,US,97002,Average,Excellent,Needs Service
+899206,NNU2X6J0RBGTFCE3D,Toyota,Corolla,2023,31678,East Janet,Kentucky,74480,US,49087,Average,Clean,Working
+195035,8YDMAMW127BX5XBE0,BMW,X3,2021,12413,Williamschester,Delaware,98755,US,86458,Average,Average,Needs Service
+634925,820KLT5M24J1E3JVX,Honda,Civic,2017,22162,Pinedahaven,South Carolina,4390,US,108518,Clean,Average,Needs Service
+451610,WMX51BAAVFS2WY8RU,Audi,A4,2021,20941,Codyland,Maine,60650,US,132971,Average,Excellent,Needs Service
+492131,Z7ZL8NK632ZAS8PS6,Honda,CR-V,2019,5778,West Martin,New Jersey,8363,US,9082,Average,Average,Working
+400592,AXE8P7V7PXV5BF4WG,BMW,X1,2015,7544,Whiteberg,Florida,70966,US,57174,Clean,Average,Working
+624927,3K553T70NSJYAY94B,BMW,X1,2018,39889,Cynthiahaven,California,24272,US,64426,Average,Clean,Working
+776224,DNRRUD35AAY527RVD,Ford,Focus,2022,49578,Amybury,North Dakota,13166,US,87434,Excellent,Average,Working
+795187,WWDYWTS2J8SP9TFEN,Toyota,RAV4,2019,5344,Barreraville,North Carolina,16493,US,66687,Average,Clean,Needs Service
+487724,DFDU9BZ7BZJLYFDWA,BMW,X3,2018,39632,Jillland,West Virginia,42671,US,100414,Clean,Clean,Needs Service
+499748,DZR0VT3FJRZBRTK0K,BMW,X1,2020,3138,Suarezmouth,Tennessee,21853,US,73508,Excellent,Excellent,Needs Service
+554884,KXDELE1DYXMS5J75J,Ford,Escape,2021,10190,Marymouth,Georgia,62915,US,18030,Average,Excellent,Needs Service
+596689,T0BP2RZCWZVEG37SM,Ford,Escape,2023,17419,South Jennifer,Arkansas,62851,US,114114,Average,Clean,Working
+590454,WC62W5288JRTLRKYE,Audi,A4,2024,46403,Kimberlyburgh,Missouri,37354,US,31686,Excellent,Clean,Working
+919539,0JS0FYGGSEEZH80MC,Audi,A4,2018,41465,East Sarahbury,Georgia,43082,US,34367,Clean,Clean,Working
+354918,YD9EYRE6XLHRYM1X3,BMW,X3,2016,44958,Jaytown,Utah,27368,US,23695,Excellent,Clean,Needs Service
+563942,7V0CXJBA6XLNLHUDE,Audi,A6,2024,35468,Pittmanview,Alabama,57950,US,24944,Excellent,Clean,Needs Service
+252210,MLZ3XJ2V52M1WBTB7,BMW,X3,2021,44839,Sarahland,Arizona,37362,US,129616,Average,Excellent,Needs Service
+542248,KW68380D14P471URD,Toyota,Corolla,2024,4226,Donnaton,Michigan,6245,US,70223,Average,Average,Needs Service
+833527,A8XF5SGYC2LUHBNHL,BMW,X3,2020,36749,Lake Bryanton,Alaska,73097,US,115775,Excellent,Excellent,Needs Service
+653702,V6AHF2BH1PZ53T0TY,Audi,A4,2020,28146,West Melissamouth,Oklahoma,83795,US,68878,Average,Clean,Working
+229347,LU66UA4CHNFEZJR8K,BMW,X5,2022,45913,Rebeccamouth,Florida,68465,US,46230,Excellent,Average,Needs Service
+131276,LL80749DZLYYW63ZY,Toyota,RAV4,2023,21959,Laurachester,Kentucky,65538,US,9080,Excellent,Excellent,Needs Service
+931745,P7A9JBZSD76GND9MP,Toyota,RAV4,2015,15183,Fryport,Wyoming,76278,US,21140,Average,Clean,Needs Service
+104086,M2NY0WNPVS6K0YZNM,BMW,X1,2019,25006,Jacobburgh,New Jersey,82245,US,84356,Clean,Average,Needs Service
+580842,0U16YKV32R1C0ZFGX,BMW,X1,2021,28487,Adamborough,Nebraska,12707,US,66544,Excellent,Excellent,Working
+488734,XBUAH8AEAV3AGK74B,Honda,Civic,2021,8910,Morganfort,New Jersey,87406,US,102767,Clean,Clean,Working
+751034,PTUCPP743WJX77U6E,BMW,X3,2023,16020,Jameschester,Oregon,38653,US,116995,Clean,Clean,Needs Service
+563929,0MBN8B4P5XRWLYTE6,Honda,CR-V,2021,44472,Kennethstad,Wyoming,88454,US,46341,Average,Excellent,Working
+866233,NY4MN0BSZKPPA0B0X,Honda,Civic,2020,34179,West Michael,Florida,97703,US,57341,Clean,Excellent,Needs Service
+217221,P1AR6AVA2515SV7F3,Toyota,Corolla,2016,49513,Watsonside,Kansas,47370,US,89398,Clean,Average,Working
+479329,JWWEWXZ3RJVECMTBF,Audi,A6,2015,15972,Blakeburgh,Michigan,12511,US,148404,Excellent,Excellent,Working
+936769,D9NU76ZM1W82G10JY,Audi,A4,2020,20306,Port Denisefort,Mississippi,30819,US,78930,Clean,Clean,Working
+846229,URG4UTGCGAL8TGABC,Audi,A4,2020,12855,Michellechester,Massachusetts,62758,US,10937,Clean,Average,Needs Service
+570875,49NR2D3ZU27D47CDJ,Honda,Civic,2015,42405,Port Juan,Pennsylvania,88803,US,77250,Clean,Excellent,Working
+327820,ZR78Z0MN6098V3W61,BMW,X5,2021,48415,Lake Curtishaven,Georgia,19247,US,106447,Excellent,Clean,Working
+940078,86K5PJYG85WV7UNFK,Honda,Civic,2024,9102,Emilychester,Pennsylvania,60770,US,91548,Excellent,Clean,Needs Service
+680993,VW59K2MTFNDBLB4GX,Audi,A6,2018,36021,Lake Jessicaborough,California,23056,US,32947,Excellent,Average,Working
+612175,TK2TEAV1EDXAT43G6,Ford,Mustang,2016,8689,Roberthaven,Hawaii,85150,US,34874,Excellent,Average,Working
+611622,X4YDGRWTARNU9C7R4,BMW,X1,2019,38282,Fordstad,Tennessee,68609,US,149281,Clean,Excellent,Working
+825604,SHFEW7FSDYGGUEDTU,Toyota,Camry,2015,40630,Lake Michelletown,Montana,63873,US,92245,Excellent,Excellent,Needs Service
+291562,9ERRWN7KZPA35SZ8L,Audi,A6,2023,42041,Jasonhaven,Oregon,49901,US,6406,Clean,Excellent,Needs Service
+279800,KS1XNE94EW9BRLN1H,Toyota,Corolla,2019,21084,West Kennethview,Washington,21083,US,12240,Clean,Average,Working
+288852,FS7AF2ZJ3HY2RFBZM,Toyota,Corolla,2021,3760,North Pamela,South Carolina,47602,US,120911,Excellent,Average,Needs Service
+247268,W0X1T7SJ47NH7X539,Ford,Escape,2021,6445,Marymouth,North Carolina,96493,US,129879,Clean,Average,Working
+928913,A12LDJ2HDDS89DBBY,BMW,X5,2017,45721,East Robertton,Alabama,60861,US,128297,Excellent,Average,Needs Service
+644587,G83G8HENWK14KSMT5,BMW,X1,2023,4575,Lake Kyleton,Maryland,6494,US,49557,Average,Excellent,Needs Service
+481318,GAJUJFEXK45XRYX6P,Audi,A6,2015,14261,Moralesview,West Virginia,59541,US,15977,Average,Clean,Working
+431955,7TTPD5UBRE4LDDKL8,BMW,X1,2017,33812,Jasonside,Utah,31862,US,26638,Clean,Excellent,Working
+920735,KNDK52YA7AVGJ3LWG,Toyota,Corolla,2022,16751,Breannaton,Washington,53515,US,129748,Average,Clean,Needs Service
+473528,965YBXL66JBN84ARH,Toyota,Camry,2020,29550,Andradehaven,Nevada,83076,US,28256,Average,Excellent,Needs Service
+855101,KH23VAJZBT69G1H7C,Honda,City,2021,39733,Lake Jenny,Arkansas,75493,US,107850,Clean,Excellent,Working
+406883,R1W6WK7FJLF239GFK,Toyota,RAV4,2015,42436,North Garretthaven,West Virginia,73060,US,76751,Clean,Excellent,Needs Service
+475267,K2636MS4TSUYCS9RG,BMW,X1,2023,44174,Victoriastad,Maine,49596,US,35982,Excellent,Excellent,Working
+776568,1LCNUZPWVL9ZPVKZ3,BMW,X5,2015,33912,Lake Julia,Ohio,40527,US,44349,Clean,Average,Working
+792333,6JBSMNX9J0YWDE38K,Audi,A4,2022,36142,Longside,Nevada,30253,US,22971,Excellent,Average,Working
+343596,ZV3XZPHUURKNW6UNL,Toyota,RAV4,2019,14945,Adrianborough,New Hampshire,11530,US,107979,Clean,Excellent,Working
+106205,20FV7ZP1SG61EYKLC,Ford,Focus,2015,35217,West Gregory,Nevada,6972,US,135823,Average,Excellent,Needs Service
+640065,K45BZTTDNU1CCMU24,Honda,Civic,2015,42244,Hoberg,Delaware,1144,US,125850,Excellent,Average,Needs Service
+460073,TS0V15A3Z53YTJW1Z,Ford,Escape,2023,49361,Nicholasmouth,Massachusetts,99166,US,90813,Average,Average,Needs Service
+403836,9WLPGM81Z3BKXH601,BMW,X3,2017,32350,Lake Christyborough,Vermont,23770,US,42706,Excellent,Average,Needs Service
+395912,VL71NEVG29JUTVCYD,Audi,A6,2015,26132,Lake James,Colorado,80602,US,138059,Clean,Clean,Needs Service
+559134,SKV4040462D0NABFZ,Ford,Escape,2024,26309,West Ryan,Iowa,73961,US,4662,Clean,Average,Needs Service
+660340,U6LNG8YHWA5PNP5UV,Toyota,Corolla,2019,28138,South Teresa,Iowa,55379,US,123045,Excellent,Clean,Working
+727847,RZ9UA4XYRX2UDL8K6,Honda,City,2018,35045,Nicolasberg,Alabama,68195,US,64582,Average,Clean,Working
+787522,MA3566B4J5S6ARWFL,BMW,X3,2016,35177,Meghanville,Maine,67681,US,70276,Clean,Clean,Working
+628314,N3HFU558MZHBVLUMP,Honda,Civic,2021,28030,West Sandra,North Carolina,82343,US,18926,Average,Clean,Working
+215544,1JV90WPWYKX8GN4CY,Audi,Q5,2023,24527,Lindseyview,West Virginia,56699,US,104875,Average,Excellent,Working
+178666,6B9UETVRNS974YJZJ,BMW,X3,2024,8684,Lake Randy,Oklahoma,51335,US,51963,Excellent,Average,Needs Service
+401827,6DBZA4LWRE6VVRC9E,Ford,Mustang,2019,9322,Herrerafurt,North Carolina,48120,US,16026,Clean,Excellent,Needs Service
+145640,T2FS8ZZTTUYTZ4S65,Audi,A4,2022,29157,North Raymondmouth,Wyoming,26082,US,91110,Clean,Excellent,Working
+753207,2Z7ADPGP8GSZWAF6X,Ford,Focus,2021,47171,Shannonstad,North Dakota,70840,US,42548,Average,Clean,Working
+894011,4WR6358YN4UEWTGXM,Honda,CR-V,2019,42096,East Whitneychester,Massachusetts,83644,US,112184,Average,Clean,Needs Service
+781199,1TZK7MGZC0UGV084X,Honda,Civic,2015,10770,Andrewschester,New York,62741,US,126194,Clean,Excellent,Working
+745175,KB68A02UKX8AYDXYG,Toyota,Corolla,2016,27643,Port David,Utah,51528,US,20357,Clean,Average,Working
+855089,NYF8V2M6RTLGHYUJ9,BMW,X1,2019,17145,East Jamie,North Carolina,16549,US,88197,Clean,Excellent,Working
+895975,FXPJKY3VYV0LVA27B,Ford,Escape,2022,23004,East Jason,North Carolina,66836,US,45196,Excellent,Average,Needs Service
+547954,LN87SNK3KAXF9X23B,Honda,Civic,2019,17783,Courtneybury,South Carolina,10763,US,6167,Clean,Clean,Working
+663722,EZ8PMZ665C3HG0BV5,Honda,City,2017,3605,Paulport,North Dakota,27577,US,102019,Excellent,Clean,Working
+771836,SACUB01SCH4WEYZGW,Audi,Q5,2017,36572,South Adrian,Montana,67625,US,74102,Clean,Average,Needs Service
+602024,XSZYP2BK6AFCH7TYK,Honda,City,2015,46829,New Pamela,Tennessee,92691,US,124453,Average,Excellent,Needs Service
+342994,2B168AXBHL7XF6W3H,Ford,Focus,2017,9427,West Erik,Mississippi,93158,US,45855,Excellent,Clean,Working
+386096,BPEJEEZUV3EWGD4RJ,Audi,A6,2021,20822,East Gail,New York,36527,US,103981,Excellent,Clean,Working
+170940,TH5LLS35PB7L6Y9DZ,Toyota,RAV4,2015,24017,Stevenshire,Connecticut,28616,US,145121,Clean,Clean,Working
+552779,N1GK05WV59J165ZEB,Ford,Focus,2018,43780,Benjaminborough,Wisconsin,21005,US,37282,Clean,Clean,Working
+520394,BEP5JXA3WW7TYZD5Z,Honda,City,2018,13904,Waltonbury,Kentucky,71830,US,4352,Excellent,Average,Needs Service
+897112,PFYR4ZG6N4MKNDDLA,BMW,X3,2020,46426,Montesview,Alaska,94998,US,104386,Clean,Excellent,Needs Service
+923367,3EATCNFJ06XH9AUZG,Ford,Mustang,2018,48667,Port Ashleyborough,Mississippi,41220,US,34716,Clean,Clean,Working
+993405,SR21M8KF4H1SYLCE4,BMW,X1,2018,49362,New Harry,Florida,45059,US,83901,Average,Average,Working
+145482,MA21RJMCM9A401P5G,Audi,Q5,2020,19330,Taylormouth,Indiana,10528,US,43496,Average,Average,Needs Service
+782053,33P6DBWF9EZDWK7J5,Toyota,RAV4,2018,6706,Port David,New York,30514,US,119157,Average,Average,Needs Service
+439460,1BKPFFD2DN4XV04H7,BMW,X1,2016,38820,Port Meganborough,Virginia,62795,US,140588,Excellent,Excellent,Needs Service
+494918,B6GFZDNBEE20266H7,Ford,Escape,2018,4402,West Jasmine,North Dakota,88650,US,97843,Clean,Clean,Working
+251141,LJ9WY2TZC4G07BFZM,Audi,Q5,2022,10079,Katieland,Virginia,75528,US,7114,Average,Clean,Working
+423495,SYCRHFPEYULLVE9PH,Toyota,Corolla,2019,36806,West Randyfort,Connecticut,75395,US,66665,Clean,Clean,Working
+755023,MERCKBW3H4TKZYDRX,Audi,Q5,2023,18293,Lake Malloryport,Kansas,20400,US,15604,Clean,Clean,Working
+766168,3ERL7CMW1UN1AJV69,Audi,A4,2021,39311,New Bradleychester,South Dakota,42631,US,90851,Excellent,Excellent,Working
+558993,NNSEPWH6ZTTN7VZ04,Honda,City,2022,23666,Lake Katherine,Oregon,12074,US,95196,Average,Clean,Needs Service
+312717,NBA2NTHEFVF1SFZJA,Ford,Focus,2021,22909,New Jameshaven,Florida,74334,US,59744,Average,Excellent,Working
+424384,V1ZD0CW9VT9RYN1WX,Toyota,Corolla,2022,35635,East Reneeburgh,Wyoming,97602,US,75853,Excellent,Excellent,Working
+868397,1DUCJMGW9ZVNECRZL,Audi,A4,2022,32104,Hoffmanfort,West Virginia,60733,US,7359,Excellent,Average,Working
+215682,ZN9ZBX4VD3NJBZYX9,BMW,X3,2018,24238,Thompsonburgh,South Carolina,41888,US,64255,Average,Average,Needs Service
+170478,3Y4EUMTHCSFSM05GG,Ford,Focus,2024,39488,Lake Kellyton,Minnesota,11678,US,43463,Excellent,Excellent,Working
+459176,VCJXNKL3UVFUE4MHY,BMW,X3,2019,9225,East Robert,Montana,50402,US,52672,Clean,Clean,Working
+855581,Z2350J43M6JYZ30UD,BMW,X5,2023,17509,Port Joannastad,Kansas,93670,US,86476,Excellent,Clean,Needs Service
+381493,65WVYLSUS77PAAU13,Toyota,Camry,2020,40806,Brendaburgh,Delaware,46030,US,99312,Clean,Clean,Working
+645868,5UF8YPF75A7KKAFSA,Toyota,Camry,2015,22692,Bakershire,Iowa,3312,US,51720,Excellent,Clean,Needs Service
+382559,PE3U3L95X0K110AWW,Ford,Focus,2016,20201,Drakeside,South Dakota,84392,US,112046,Average,Average,Working
+835079,93WT8XEXPVKFXDCEH,Audi,Q5,2022,29844,Johnsonmouth,Ohio,40038,US,104213,Clean,Clean,Working
+442970,0TTAH6GK8PRCD7NPP,BMW,X1,2020,44274,Thompsonburgh,Delaware,24914,US,64678,Excellent,Excellent,Needs Service
+173339,TYDKR9Y584D8GD401,Audi,A6,2016,9149,Richardport,North Carolina,58741,US,3130,Clean,Clean,Needs Service
+373241,LCEPLY96UKX5ZHPLP,BMW,X5,2016,27257,Serranoport,New Hampshire,83485,US,38178,Clean,Clean,Working
+742513,P6VVA1JBMYYEKBAC2,Ford,Escape,2023,45482,Carriehaven,Georgia,58308,US,106100,Excellent,Excellent,Needs Service
+488468,15BYNSF25848NN8ZU,Honda,CR-V,2017,30865,Gonzalezhaven,Michigan,47683,US,49977,Clean,Average,Needs Service
+904920,EWMKWB5K97HGARPFJ,Honda,Civic,2018,44245,New Timothy,Arizona,82744,US,67640,Clean,Excellent,Needs Service
+804385,CJ7RN4TB5PR5RRY1C,BMW,X3,2024,12790,Russellchester,Massachusetts,86967,US,129391,Excellent,Clean,Working
+477967,URPETW715CRKBPHGK,Toyota,Camry,2018,43857,New Davidmouth,Maine,36387,US,89335,Average,Average,Working
+427427,K8R1YU0TAN9NFG1PP,Audi,A4,2020,5495,Nathanielchester,Connecticut,91173,US,145216,Clean,Excellent,Working
+417376,6TLS9AG2CWKXFGLDL,Ford,Escape,2022,3588,Keithville,Missouri,68610,US,107272,Excellent,Average,Working
+833098,YDD5HBVPEP4HF14N6,Audi,A6,2020,7145,New Manuel,North Dakota,17881,US,9735,Clean,Excellent,Needs Service
+215684,1KWH0PJ1J3YVG4ESP,BMW,X1,2015,32613,New Priscilla,Washington,79699,US,77671,Average,Average,Needs Service
+802000,VFSK8MS338R3B5JDL,Ford,Escape,2021,32360,West Kyleville,Oklahoma,32960,US,86763,Clean,Clean,Needs Service
+528623,JNM2YKNLKXALV3FX9,Honda,CR-V,2023,21171,Mariaville,Wisconsin,65739,US,61563,Average,Clean,Working
+836213,VHFJZSSSALY68FXMS,Toyota,RAV4,2018,34331,Parrishfurt,Ohio,54262,US,117105,Average,Excellent,Needs Service
+648084,854R4RL6R46UK0VTR,BMW,X1,2020,29025,Timothybury,Washington,88176,US,103752,Clean,Average,Needs Service
+376793,0ATWGGNCZAXEA4V0D,Ford,Mustang,2018,12197,Carpentermouth,Wisconsin,85540,US,31767,Clean,Excellent,Needs Service
+799695,ZVSLB69GMNNG336R8,Toyota,Corolla,2016,42232,Morrisbury,Colorado,3413,US,77907,Average,Excellent,Working
+821015,14WU2E4BDDPSARSLN,Toyota,Camry,2016,12414,Fernandezside,Utah,87756,US,29990,Excellent,Excellent,Working
+595250,LYR5NB5A0LKWUVPXX,Toyota,RAV4,2024,3522,New Henry,Mississippi,5572,US,53183,Excellent,Average,Needs Service
+287092,9P5Y8D9Z4WDJ5TLC1,Toyota,Camry,2019,33252,Smithland,Alabama,97409,US,27230,Clean,Clean,Working
+296805,H650PHBW8F01SLK6E,Honda,City,2018,46182,Dianaland,Vermont,66895,US,146183,Average,Clean,Needs Service
+177132,L75XPWJPWP0KXAFKF,Audi,A4,2019,25635,Port Joelmouth,Arkansas,97365,US,84477,Clean,Clean,Needs Service
+761797,EJMG2N7YKKXX3K85M,Honda,City,2023,8433,Port Wayne,Maine,45723,US,13010,Average,Average,Needs Service
+649496,VMBJXX5PYHVCTTK7L,Ford,Mustang,2021,47300,North Gabrielleville,Delaware,25718,US,26689,Clean,Excellent,Working
+403516,L4N01AFUHRX2RBVY5,Ford,Mustang,2015,47424,Morrischester,Vermont,59965,US,124160,Clean,Clean,Working
+653297,10SFL73R36F1PXS24,BMW,X3,2024,32668,New Lindamouth,New York,51763,US,84562,Excellent,Excellent,Working
+683356,U72FJMS2D4TFY79GE,Toyota,Camry,2017,35659,East Tracie,Montana,57118,US,84348,Average,Clean,Needs Service
+104943,ELE5XF0P539ZTWTZS,Toyota,Camry,2021,11114,Michaelberg,Rhode Island,94789,US,75616,Excellent,Clean,Needs Service
+430553,60NSKWKJT88CHUAGU,BMW,X1,2024,32832,South Melissa,Vermont,35933,US,35565,Excellent,Excellent,Working
+771915,1JXADUN1BX7LSA6GR,Toyota,RAV4,2021,3894,West Scottton,Pennsylvania,71325,US,56877,Clean,Clean,Needs Service
+521975,264X99ABWAUGHT351,Audi,A4,2021,10469,New Jacobside,Utah,15887,US,110082,Average,Clean,Needs Service
+514270,R1EUGL3AAR27MDU9G,Audi,A4,2019,30232,Perryhaven,Delaware,79636,US,109871,Clean,Average,Working
+948150,XEDYBKXBGRTYVSKHB,Audi,Q5,2016,44691,Lake Annmouth,Wyoming,34281,US,51398,Clean,Clean,Working
+727779,AFHML9F53S04XST4E,Honda,Civic,2016,44566,West Michael,Georgia,15823,US,49273,Excellent,Average,Working
+515278,A6CLVL6E2XTEWWU3X,BMW,X3,2019,24616,Heatherfurt,Arizona,4050,US,119635,Clean,Excellent,Working
+410670,WJFTYYDX2G0F64Y0C,BMW,X3,2024,10605,North Ashleyberg,Nevada,47086,US,101860,Clean,Clean,Needs Service
+746694,HBR1A139B6X8J8JRX,Honda,CR-V,2020,37511,New Vincenthaven,Vermont,84413,US,115698,Clean,Clean,Working
+688822,43S0WF2LJNLZEB0V8,BMW,X5,2019,3047,Jessemouth,Kentucky,31451,US,54694,Clean,Excellent,Needs Service
+298888,6XP9DSVBH5CBVYYFD,Ford,Escape,2020,10670,Shepherdview,Massachusetts,15085,US,141225,Clean,Excellent,Working
+381010,GA63N439SM4JP4VRE,BMW,X1,2023,4515,Suzanneborough,New York,90974,US,20093,Clean,Excellent,Working
+533987,CFEPPV2F1V1DZF0DP,Honda,Civic,2018,47619,New Hannah,Maine,50711,US,125268,Excellent,Excellent,Needs Service
+682596,49648XFFVV62KJ902,Toyota,Camry,2023,37881,North Danielborough,Washington,62263,US,107076,Average,Excellent,Needs Service
+520270,R2UCETKXDGHB0RS8N,Audi,A6,2022,28024,Brianborough,Montana,84523,US,59924,Excellent,Average,Needs Service
+612263,CW3JBYAFLYT7FU7W7,Honda,Civic,2023,8196,East William,South Dakota,20213,US,20602,Clean,Excellent,Needs Service
+620768,M1NV5PBDUJ5Z4V09X,Ford,Escape,2019,11679,Robinhaven,South Carolina,86222,US,20079,Excellent,Excellent,Working
+376316,75ALG8H71REHUEBP9,Ford,Mustang,2021,10736,Lake Jamesberg,Montana,4892,US,2062,Clean,Clean,Needs Service
+633763,U067VNXBMYZ0T7GUA,Toyota,Camry,2016,7141,Katherineview,Tennessee,67704,US,118474,Excellent,Clean,Needs Service
+871045,45PJZ04UN2GWXUK67,Audi,A6,2022,42944,Elainefort,Arizona,86275,US,29631,Clean,Clean,Needs Service
+689328,AWEKJZS9AWUSKELXK,Audi,A4,2022,44171,Port Monica,Arkansas,82334,US,56660,Average,Excellent,Working
+798619,S6H4K6SCU9T6BTPKF,Ford,Escape,2020,33116,South Steven,Iowa,6815,US,27945,Average,Average,Needs Service
+652673,F2A7HNAUYCN9KP6RP,Audi,A4,2018,28242,Alvarezview,Iowa,15144,US,140777,Excellent,Clean,Working
+811387,6ZPAG50UBX8S013Y5,BMW,X1,2016,31914,East William,North Carolina,7944,US,24744,Excellent,Clean,Needs Service
+436589,XXRKETFN9VXJ2K7P9,Audi,A4,2016,30489,East Brooke,Pennsylvania,50734,US,148922,Clean,Clean,Needs Service
+842214,X1CAVP11KF5UHH8ZA,Ford,Mustang,2017,17924,Robertport,Maryland,83646,US,132619,Clean,Average,Needs Service
+359685,EJD86F2X79YZTLH15,Toyota,Corolla,2019,11946,South Kristen,Montana,81856,US,61708,Excellent,Excellent,Needs Service
+499096,KUXYMYD67WT57G151,Ford,Mustang,2023,34843,Port Jefferymouth,Wyoming,53451,US,14326,Clean,Clean,Needs Service
+209239,ZGDJ1PVCSG3N6K4MZ,Toyota,RAV4,2023,14884,New Kristenmouth,Alabama,61831,US,62904,Excellent,Clean,Needs Service
+385596,Y9NJV06LZH2NZ56RM,Ford,Escape,2015,13015,Josephfort,North Dakota,64462,US,100229,Clean,Excellent,Working
+196453,XD6WBC23EA3YDJA6T,Ford,Escape,2018,3064,Gillespiemouth,Oregon,87182,US,130345,Clean,Excellent,Working
+220281,YEWPYUNCC6NDP87GR,Honda,City,2019,43037,Richardsonshire,Hawaii,19039,US,131974,Average,Average,Needs Service
+811471,WYHC7492Z37CKW3XC,Ford,Focus,2017,21634,Kevintown,Maine,19024,US,53038,Average,Excellent,Needs Service
+322185,JLR85FCK0UZ1Y9BZA,Honda,Civic,2017,24900,East Maryland,Arkansas,40681,US,108640,Excellent,Clean,Needs Service
+675138,C1UBD6R8532VS20RM,Ford,Focus,2017,30539,West Nicholas,Nebraska,88100,US,44383,Average,Clean,Needs Service
+994406,5A1FTBT8BMDCKZYAF,Honda,CR-V,2020,5650,Ramirezhaven,Mississippi,86015,US,119155,Average,Average,Needs Service
+384158,L32V3U7A9XB28AH1P,BMW,X1,2017,4033,New Sarahmouth,Wyoming,4973,US,72142,Clean,Average,Working
+983997,6JVR1PLGB94MWNM2E,BMW,X1,2021,30807,Brownport,Indiana,45041,US,119196,Excellent,Clean,Needs Service
+474579,V8U38LWV6DW2ZJ3YL,Audi,Q5,2024,3789,Shirleymouth,Alabama,12351,US,41331,Clean,Excellent,Working
+417130,3UXANV744HWLN6MZ2,Ford,Escape,2017,21422,West Anthony,New Mexico,53343,US,47126,Excellent,Excellent,Needs Service
+114222,PM61MERGWK24BYDJK,Toyota,RAV4,2024,5286,Maryton,North Dakota,81007,US,146967,Clean,Average,Working
+824124,258CZFD74N6X7EU0J,Toyota,RAV4,2015,19787,Tiffanyhaven,Nebraska,90731,US,52074,Excellent,Clean,Working
+876603,YC37VY5PKJRXB2NWL,Audi,Q5,2022,19605,Ryanton,Mississippi,47936,US,101712,Excellent,Clean,Needs Service
+670056,JZH5KBVMSS3RHD383,BMW,X5,2017,12465,Lewiston,Nebraska,72993,US,26093,Average,Clean,Needs Service
+922732,TXGVJAN1J0EPSAFT3,Ford,Escape,2022,38369,Port Jeremy,Missouri,79232,US,70258,Clean,Average,Working
+979274,6Z09PLPTE99KZGH60,Honda,Civic,2021,20103,Samuelburgh,Colorado,22371,US,38148,Clean,Average,Needs Service
+583302,NDJ3GXJAX9LK1MGJP,Honda,CR-V,2018,22676,Port Adriana,Vermont,20335,US,111695,Excellent,Excellent,Needs Service
+929408,5A1Y3JSZGASV1G9A5,Toyota,Corolla,2018,45585,Nancytown,North Carolina,90806,US,133887,Average,Average,Needs Service
+604688,KDW3KD6YBMZN27EF2,BMW,X1,2020,44878,Lake Rebecca,Nebraska,63264,US,149700,Clean,Clean,Needs Service
+996003,83SZCF689NCBY3DCT,Honda,CR-V,2019,9450,Lake Jessica,New Jersey,94830,US,1495,Clean,Average,Working
+445781,YG0F7C8U5UKGYD0FL,BMW,X3,2020,8271,South Eric,South Dakota,68108,US,99454,Excellent,Average,Working
+523390,5P0P7JFN8T3PJM8U9,Toyota,RAV4,2023,20060,Carlfurt,Alaska,19462,US,85876,Clean,Average,Working
+594681,PT8DGLJNEENN119H8,Ford,Escape,2017,31194,West Tracey,Indiana,9790,US,42951,Average,Clean,Needs Service
+856037,FVECBZBZ5JMHTCBTC,Audi,A4,2016,31176,Port David,Tennessee,71226,US,146066,Excellent,Clean,Needs Service
+151179,RMEJBB75M61V1G0W1,Ford,Focus,2016,42694,Ryanborough,South Dakota,99315,US,77830,Clean,Clean,Needs Service
+344032,Z30MUKPVXZSE6F4C4,BMW,X3,2015,37893,West Katherineport,Utah,31482,US,90788,Excellent,Average,Working
+345035,89HWJT35AK2KTKJ4A,Toyota,RAV4,2024,46476,Whitebury,Washington,7288,US,38776,Excellent,Average,Working
+520167,TESH5AV3J5D9A40L8,Ford,Focus,2021,26049,Nicholsonton,Wisconsin,63045,US,105662,Excellent,Average,Working
+161428,6F3HXRY0L6SU9VK9Z,BMW,X3,2019,9671,Lake Debbiemouth,Wisconsin,91435,US,14820,Clean,Excellent,Needs Service
+356072,0EBYHMXU47PU3TGH2,Ford,Focus,2022,43332,Kimchester,North Dakota,65298,US,131602,Average,Excellent,Needs Service
+992375,4DG2JZAWHBVZ3DUAT,Honda,Civic,2024,6041,New Michael,Utah,45210,US,104501,Average,Excellent,Needs Service
+267386,RMBR7V504A56TDLXH,BMW,X3,2022,44307,Kingchester,Alaska,26619,US,5884,Clean,Excellent,Working
+233232,HX9FM1XRAXV0CJ6AN,BMW,X3,2019,22267,Williamsshire,New Jersey,55064,US,49686,Clean,Excellent,Needs Service
+877410,WVT0SSSN6DUM17VRS,Ford,Focus,2019,28580,South Justinland,Idaho,34384,US,108726,Average,Excellent,Working
+920972,WWLD50A83KP2PP768,Honda,City,2019,30793,East Tonyaside,California,50302,US,55350,Average,Excellent,Needs Service
+638258,REMCCUPGFTCML69XD,Honda,City,2024,37272,Robinsonville,Delaware,51012,US,72300,Excellent,Average,Needs Service
+155078,3M7PD114N09K4SWV0,Honda,Civic,2021,14934,Lake Mitchell,New Hampshire,92249,US,30953,Clean,Clean,Needs Service
+773086,BMGG48S2ZSEF5WVP8,Ford,Mustang,2021,6455,Shanebury,New Jersey,67231,US,92521,Average,Average,Working
+778193,7MTCF4XXWPLP49C7V,Toyota,RAV4,2022,49330,East Ronald,Delaware,54488,US,117085,Clean,Excellent,Needs Service
+657150,2AGMJRU70S8G7BML5,Ford,Focus,2016,11887,North David,Maryland,76490,US,97786,Clean,Excellent,Needs Service
+662728,0RP0VK8VLPH4714KB,Toyota,RAV4,2024,17120,Tamaraport,Georgia,16103,US,68246,Clean,Average,Working
+282510,XC7SVY05WEHGAV27L,Audi,A4,2022,20984,Port Courtneychester,West Virginia,73227,US,37173,Excellent,Average,Working
+940461,G933JTGWCBP3ASVA8,BMW,X1,2017,49993,Kristinview,New York,61194,US,103009,Average,Clean,Needs Service
+183896,Y0USAB2KN70JK958R,BMW,X3,2015,29042,Dunnfurt,Maryland,56607,US,121742,Excellent,Clean,Working
+685638,HNA7UKN8UL1N9251H,BMW,X5,2020,22999,South Jessicaborough,Rhode Island,60298,US,64978,Average,Excellent,Working
+791183,JFHLV8EK42B1TFGDH,BMW,X3,2016,20505,Port Carlport,Idaho,57867,US,105154,Average,Excellent,Working
+992123,GSMNB98ZTDPYHYARY,Ford,Escape,2018,42622,Matthewton,Kentucky,66472,US,139771,Excellent,Clean,Working
+890646,WL4KTATGXSCMTSPCS,Audi,A4,2024,35523,North Wendy,Missouri,58919,US,32120,Clean,Excellent,Needs Service
+239758,KV9TPL40PT7HMUSRS,Ford,Mustang,2016,10025,Carrshire,Washington,10114,US,131469,Clean,Average,Working
+649056,ZH626LHE5MV9EGW59,Ford,Escape,2021,21002,New Deniseport,Pennsylvania,97640,US,54405,Average,Clean,Needs Service
+775048,BUUW6P4FXBNBV640C,BMW,X5,2019,6308,Lake Jessica,Utah,43899,US,104718,Clean,Clean,Needs Service
+468551,8GJWUAVLMUKD84B1B,Ford,Mustang,2018,46458,Port Alison,Alaska,49720,US,96896,Clean,Excellent,Needs Service
+935646,WKU0UAMJDY0HTVJK0,Ford,Mustang,2021,30027,West Teresa,North Dakota,53321,US,118916,Average,Excellent,Working
+462903,MGCNKSCVBUMSGX2TX,Audi,A4,2020,32791,Port Mariah,California,91090,US,123472,Average,Average,Needs Service
+682208,55H2PTWD500S4YYHY,Toyota,Camry,2020,39543,East Stephenfort,Maine,36804,US,80140,Average,Excellent,Needs Service
+425956,46Z16Y5AXSPKJU6AL,Audi,A6,2023,45624,East Kathrynborough,Illinois,65437,US,125779,Average,Excellent,Working
+731454,ED9RFJH9B915EYN4N,Audi,A4,2017,14910,Anthonymouth,South Carolina,87700,US,66649,Average,Average,Working
+303856,4G3BMJL6W444E3E6J,BMW,X3,2019,5501,West Johnfort,Connecticut,38604,US,107144,Average,Clean,Needs Service
+767896,H8N1YF54HX4E1LLKL,Toyota,Camry,2016,13594,Kingburgh,Arizona,52750,US,4911,Excellent,Clean,Working
+213238,C1M5SMVJ2XN8AVBYW,Toyota,RAV4,2015,8892,Melissahaven,Colorado,16804,US,6301,Excellent,Average,Needs Service
+712492,0853FVLHNJEL64WL1,Ford,Escape,2023,33466,New Markmouth,Wyoming,56459,US,124564,Clean,Average,Needs Service
+742057,3S1XPBBV6U15PHNG4,Honda,CR-V,2024,15671,Robertport,Alaska,20503,US,17594,Average,Average,Working
+537066,A9HMYZH4Z38RLB463,Audi,Q5,2021,28323,North Jordanstad,California,83624,US,96137,Excellent,Clean,Needs Service
+810914,6P04F33ZGAL4ML2KP,Toyota,Camry,2022,12912,Jillbury,Iowa,26753,US,27573,Average,Clean,Needs Service
+875261,EGTWC00ULBDUSCP6Z,Audi,A6,2015,14365,Hensonhaven,Nevada,42903,US,119587,Clean,Clean,Working
+377550,RWZKPXSJWZVP15HNR,Honda,Civic,2021,22539,Cuevasburgh,Virginia,47948,US,4659,Excellent,Excellent,Working
+115180,2C1U08KW4NHST5TMA,Honda,Civic,2017,19317,Combsborough,Louisiana,38631,US,82060,Average,Average,Needs Service
+481828,KECHP9CNMNFRKZ620,Toyota,RAV4,2021,11438,Lake Paul,Colorado,16731,US,123202,Average,Clean,Needs Service
+899617,JADWMX8A24EGRR8EY,Audi,A6,2024,24206,Scotttown,Nebraska,4011,US,92657,Average,Clean,Working
+669321,5D7R9YNTS0HAKNRED,Honda,Civic,2021,6188,Port Jonathonfort,Nebraska,15374,US,110896,Excellent,Clean,Working
+150561,8D16FCLUX9F35NYCU,Ford,Escape,2022,7813,New Jessicastad,Connecticut,56693,US,132942,Excellent,Clean,Working
+451968,8D666808UPY3M8ZUE,Honda,CR-V,2024,36789,Sanchezstad,Rhode Island,83535,US,114316,Excellent,Excellent,Working
+302692,7MHCMDC70EVHV3RYG,BMW,X5,2024,47767,East Mariaborough,New Hampshire,51045,US,81770,Clean,Clean,Needs Service
+196747,4GARPKC2X35TLXN7M,Ford,Focus,2017,21738,South Coreyton,West Virginia,1229,US,71865,Excellent,Average,Working
+742393,C3E2SN6WUTK469K0R,BMW,X1,2018,17128,New Adam,North Carolina,49213,US,142769,Clean,Clean,Needs Service
+792799,9L3GLGE2XMGY66DAH,Toyota,RAV4,2021,16207,Lake Georgefurt,Kentucky,69906,US,74078,Average,Clean,Working
+780403,1RP26R6DTS8Z65SX8,Toyota,RAV4,2019,44929,New Angelamouth,Michigan,41820,US,118,Average,Excellent,Needs Service
+817692,NZ7WUCEJJTFZKHSRL,Ford,Focus,2019,38480,Lake Carlos,Indiana,25802,US,140283,Average,Average,Needs Service
+497669,CHYVGB0DJJZVT4A8Y,Ford,Escape,2015,23885,Diamondview,Colorado,81072,US,102767,Average,Average,Working
+171082,8E7CA6GVC5MEGXCMN,Ford,Escape,2015,33474,Port Bruce,New Hampshire,87462,US,13380,Excellent,Excellent,Needs Service
+876204,RDBDSC8HY525VRE5C,Toyota,Corolla,2016,11350,Wattsborough,North Dakota,25709,US,65199,Excellent,Average,Working
+605253,9LJHP68TVGPFMCM4C,Honda,CR-V,2021,4971,North Jonathanchester,New Jersey,99618,US,22157,Clean,Average,Working
+768080,A66DYY1MDSC61EGCV,Honda,City,2015,10781,South Leah,Missouri,33222,US,140700,Average,Average,Working
+303038,ZWL6YCSTZX9VKCDTK,BMW,X1,2024,21469,East Christian,Maine,46270,US,66265,Average,Clean,Working
+242388,5U6ZR9FGCEYUYGPJN,Ford,Focus,2023,29295,Port Brett,Pennsylvania,15977,US,31435,Excellent,Excellent,Working
+416299,CUC03BRH6TNGSN12A,BMW,X1,2017,47900,East Samanthaberg,New Jersey,33909,US,37525,Average,Average,Working
+553597,FHKYSNCCEX2STNDH0,BMW,X3,2018,39417,Bautistatown,Pennsylvania,50192,US,90959,Average,Excellent,Working
+390126,C65AJ2GLXHB0CH6PB,Honda,CR-V,2021,41032,New Judithborough,Washington,17698,US,127804,Average,Excellent,Working
+669370,TEV0X0LG30X5Y7M8Y,Ford,Focus,2021,13500,East Rebeccaport,California,90912,US,6528,Excellent,Excellent,Working
+286115,LUJD8T734WFZNMBSP,Audi,A4,2017,49049,New Jeffrey,Colorado,87831,US,23882,Clean,Clean,Needs Service
+909868,0J1F19PH1YDDSS347,Honda,City,2018,4077,Victorchester,Wyoming,96336,US,89641,Average,Excellent,Working
+682616,446UGKBNPZBG2J6WA,Toyota,Camry,2020,45556,South Sheryl,Connecticut,64148,US,24848,Average,Clean,Needs Service
+988132,5AGX1P1ML7CYUJESB,BMW,X3,2022,13330,Lambmouth,Hawaii,23032,US,59455,Clean,Average,Needs Service
+443594,276ZXFGNN3RN9P9U7,Honda,Civic,2017,19685,Robinsonport,Hawaii,20039,US,69742,Clean,Clean,Needs Service
+620106,G66L7X4UY4C4P2SG4,Ford,Mustang,2016,29210,Skinnerfurt,Rhode Island,71881,US,39291,Excellent,Clean,Needs Service
+441911,WRGVJR6E6C4KZMMGW,Audi,Q5,2021,13363,Michaelborough,Alabama,26070,US,28140,Excellent,Clean,Working
+765003,LYE0RNUBZU2KD4X5G,Honda,City,2022,17961,Christopherland,New Mexico,36367,US,82835,Clean,Average,Needs Service
+370164,AAAMM78B7WW1TD2Z6,BMW,X3,2017,25326,Grossview,Iowa,81332,US,8607,Clean,Clean,Needs Service
+988323,2GFUBK1FP6RAW52YD,Audi,A6,2022,24974,East Lawrencehaven,Nebraska,60188,US,136130,Average,Clean,Needs Service
+528154,WV3LRN1MKN0ULERDU,BMW,X3,2020,19435,Zacharybury,Vermont,99671,US,66394,Clean,Average,Working
+894691,K24DK3HDZU1Z4F5ZM,Honda,City,2023,4065,West Colleenmouth,Kansas,62918,US,136717,Average,Excellent,Needs Service
+563062,86V8U3CYPWR8W7BRH,BMW,X3,2018,33674,New Peggy,New York,22715,US,51849,Average,Clean,Working
+979804,HGJW9XCEY0L3H1LEV,Audi,A4,2018,12064,East Lisafurt,West Virginia,6643,US,88384,Clean,Average,Needs Service
+898353,W930R1ZE9CW3P5N61,Ford,Mustang,2024,28046,Reidborough,Louisiana,66354,US,102890,Clean,Clean,Working
+885648,K0ZGLUG8S7JHMEMW8,BMW,X1,2019,25690,New Jared,Iowa,29560,US,116750,Average,Average,Working
+730302,DXLZGFVT3E4X955NJ,BMW,X1,2023,24022,Andrewview,Utah,68016,US,111545,Clean,Average,Needs Service
+745361,3GTMBXJ7CBKX1MHSZ,Honda,CR-V,2024,10671,Edwardstad,New Jersey,13774,US,38384,Clean,Clean,Needs Service
+913875,CKE3E4E58LRPPCH2W,Toyota,Camry,2020,11446,Timothyview,New Mexico,49050,US,29743,Clean,Clean,Needs Service
+628942,1BEUT00Z5LSYJAJVS,Honda,City,2020,34715,Lake Christopher,Arkansas,24546,US,16897,Excellent,Clean,Needs Service
+888580,24D2MVJHADW2VZURK,Ford,Escape,2019,10201,South David,Nebraska,68053,US,63992,Excellent,Excellent,Needs Service
+217335,93UZV3T86PDFC260F,BMW,X3,2023,36379,Dominguezside,Wyoming,93708,US,104809,Excellent,Average,Needs Service
+509103,JPVP87YKGTNZK2CU4,Honda,Civic,2021,5266,West Alexander,Indiana,28829,US,47624,Excellent,Excellent,Working
+948036,DX3V3MXW2T0KFB25N,BMW,X5,2022,17784,Perryside,North Carolina,21564,US,96993,Average,Average,Needs Service
+350797,LMB4SPE482L3MUXEG,Audi,Q5,2015,9916,Danielmouth,Maryland,59707,US,115459,Clean,Average,Working
+184294,E8GXK6GN0J633CYEF,Honda,CR-V,2022,26978,South Cynthiaborough,Kansas,99814,US,99423,Average,Excellent,Working
+926660,8UTY0S6WR1RXXWBJB,Honda,CR-V,2023,7664,Cookmouth,Connecticut,74829,US,88591,Excellent,Clean,Working
+848294,DPHB60VXMK49696HT,Ford,Focus,2015,45697,Thomasberg,South Carolina,73991,US,130955,Average,Average,Needs Service
+422441,MEKG72EDZC97ECDWT,Audi,A6,2022,23191,Penaton,Maine,28041,US,123053,Average,Clean,Working
+149067,6FSU3R6E9HZNLFVDC,BMW,X3,2015,9519,Port Teresa,Kansas,562,US,102353,Clean,Average,Working
+463115,J5TRL2WJMCHCB9Y2D,BMW,X1,2023,47173,New Erika,Massachusetts,91643,US,28581,Clean,Average,Needs Service
+579198,EP71MS77VCC6BAS1T,Honda,Civic,2021,45401,South Frankmouth,Tennessee,34999,US,96576,Average,Clean,Working
+333000,06986ETZWMF3PY9Y2,Honda,City,2015,6427,Richardmouth,South Carolina,98910,US,124169,Excellent,Excellent,Working
+764529,LKP3HN0VCUAA71CPU,Ford,Mustang,2016,30505,Hendersonland,California,820,US,84272,Average,Excellent,Working
+680006,MZZFBVV00S2F6GNT9,Honda,CR-V,2024,11815,Mcdowellstad,New Jersey,47381,US,70988,Average,Average,Needs Service
+595718,W8S2VEPYUJMVTES1J,Honda,CR-V,2024,24614,South Janetstad,Arizona,52143,US,79359,Excellent,Excellent,Working
+665937,Z34Z6BASRAZHDCNRX,BMW,X3,2015,17915,North Briannachester,New Hampshire,37671,US,118923,Excellent,Average,Working
+959046,0PH2K5DNU2T2RFRZ3,Ford,Escape,2022,19744,Amymouth,Arizona,42559,US,25793,Excellent,Excellent,Working
+731545,NJ3APF0R0SLHZEWDR,Toyota,Camry,2023,7936,Lake Jared,North Dakota,87911,US,54072,Average,Excellent,Working
+741665,806VLGRV852BGA3GJ,Toyota,Corolla,2020,28186,West Natalieberg,New Jersey,93919,US,38061,Average,Average,Working
+205042,7FS0VN9C8W35RXXSS,Toyota,Camry,2016,16954,Lake Susanfort,Hawaii,59549,US,82669,Average,Average,Needs Service
+651641,A6DAZCHL9G82A758W,Ford,Mustang,2016,8440,Davidville,Oregon,13841,US,48138,Clean,Average,Working
+324940,VGNPXTS67792NBS0K,BMW,X5,2024,31133,South Jeffreyhaven,Georgia,75196,US,18632,Excellent,Excellent,Needs Service
+493076,XB2XCDPKR7U1H5Z70,Ford,Escape,2024,37190,Port Glenda,Alaska,14076,US,91469,Average,Average,Needs Service
+292117,VC1F5WEP3BYTD7BZP,Honda,CR-V,2019,4754,Smithberg,Nebraska,9526,US,9175,Clean,Clean,Needs Service
+184905,VRA1SFZ8W2B8ERAA4,Audi,A6,2023,46185,North Phillipstad,Vermont,59809,US,17170,Average,Average,Working
+495184,E4WTDGWPU7GRGTWFT,Honda,Civic,2015,42828,Jamesview,New Hampshire,81104,US,24003,Clean,Excellent,Working
+606285,A08VSN20JMEBGSDLE,Audi,A6,2017,46354,South Daniel,New Hampshire,95887,US,38293,Excellent,Clean,Needs Service
+178494,0C6G63F2UT8NNH1B1,Toyota,RAV4,2022,4691,Port Ericfort,Kansas,87710,US,146474,Clean,Excellent,Working
+901945,NRD11EZKZD2B51KBL,BMW,X5,2019,47406,Thomasfort,New York,40949,US,144795,Clean,Average,Working
+221957,86Y5BFZ8Y591564A4,Ford,Escape,2019,40959,Port Jessica,Ohio,85222,US,58430,Excellent,Average,Needs Service
+581121,L7EP083Y2T93NYV05,Ford,Focus,2023,40879,Shelbymouth,South Carolina,12903,US,89018,Average,Average,Needs Service
+384462,VYGDJZY6VK1ASLYNV,BMW,X5,2018,7709,North Melanie,Colorado,51510,US,109814,Excellent,Clean,Needs Service
+316351,ETJZ4719FGLZZC8UK,Ford,Escape,2015,47733,New Billyfurt,Texas,57218,US,68069,Excellent,Clean,Needs Service
+107541,BYP457E4RCM7T5U55,Ford,Focus,2019,39685,Garybury,Nebraska,15878,US,93815,Average,Excellent,Needs Service
+599678,LHT29RZ2Y38RYXKLD,Audi,A6,2024,30370,Lake Ashley,California,19912,US,144705,Average,Excellent,Needs Service
+717453,UZK7W3KMW6EKAB6P8,BMW,X3,2024,4341,North Coltonmouth,Colorado,77889,US,114657,Average,Excellent,Working
+378798,LR6A039RZZ52ZZ4XD,Audi,A6,2024,49615,Lake Michellefort,Delaware,47529,US,146439,Clean,Average,Needs Service
+606937,03CDWP433W9LB41N7,BMW,X1,2017,22384,Jeffreymouth,Arizona,51368,US,72516,Clean,Average,Needs Service
+706010,P60UHNM6495FH4VR6,BMW,X5,2022,4549,Rogerview,Maryland,99252,US,15081,Excellent,Average,Working
+716574,A50ZT16U39UW7KN03,Audi,A6,2023,23357,Port Elizabeth,Nevada,81980,US,32118,Average,Excellent,Needs Service
+861929,FZ6JAGV1KMFC3GPGE,Honda,City,2018,5015,Hawkinsmouth,Utah,21579,US,8213,Average,Average,Needs Service
+589413,DRT8ZCJKD74GV0HZ8,Honda,CR-V,2017,40473,Port Tylermouth,Vermont,42964,US,112119,Excellent,Average,Working
+375362,7ZMMKL58LG5DKKYMW,Honda,City,2017,40924,Brianshire,Wyoming,57649,US,112612,Excellent,Excellent,Working
+541600,16WPGXSV9MMFK5309,Honda,City,2024,37639,New Thomasside,Connecticut,29493,US,96110,Excellent,Excellent,Working
+174488,P8RVB4YP754T52J26,BMW,X1,2017,5977,Port Stephen,Pennsylvania,33367,US,3380,Excellent,Average,Needs Service
+318247,M71CZSCBKBXMASPRR,BMW,X5,2022,11631,East Jessica,Nebraska,51285,US,44028,Clean,Excellent,Needs Service
+832117,79U2JRYNV7CKFGRM7,Audi,A6,2019,24017,New Jessica,Alaska,54526,US,65746,Clean,Clean,Working
+267978,RU6J3TV7HXJ3GPBFP,Honda,CR-V,2021,11021,Lake Sylvia,Missouri,18528,US,125717,Excellent,Average,Working
+217105,EKY670PCN0P98UMCJ,Audi,A4,2018,3154,Johnmouth,Idaho,16989,US,72598,Average,Clean,Needs Service
+252814,H2SXZ91FK20Z02FER,Ford,Focus,2020,19797,Phillipsmouth,Kentucky,66834,US,22499,Excellent,Excellent,Needs Service
+284431,JX6T5059J37KUCRY9,Toyota,RAV4,2023,39029,New Jason,Colorado,33850,US,121259,Clean,Clean,Working
+566713,3MSBJ5DDKME9DNWUX,BMW,X1,2016,46068,South Amyside,Pennsylvania,8430,US,101579,Clean,Average,Needs Service
+205807,4KPCZ6YHWXW7GXTYE,BMW,X5,2015,6628,Hilltown,Kansas,92993,US,102910,Average,Excellent,Needs Service
+180973,2F8HSASRGG8L30M8G,Audi,Q5,2020,3392,Jordantown,Utah,91240,US,52134,Average,Excellent,Working
+311176,HX4VGC2YXVX4TAFF0,Honda,CR-V,2023,42634,North William,New York,86360,US,49501,Clean,Excellent,Working
+725797,W0ALP7861K23BCBTP,Honda,Civic,2021,17420,Millerstad,Oregon,69502,US,128406,Average,Average,Needs Service
+755495,2BS4PNX5JC27VA23J,Audi,A6,2019,10341,South Amandastad,Oklahoma,45215,US,143653,Clean,Average,Working
+540992,CM22DYAK8J3CD2ZP6,Honda,CR-V,2022,27425,Garciaport,Maryland,87955,US,119693,Average,Clean,Needs Service
+265633,RX4MX7AX50B0JJDM6,Honda,Civic,2015,8160,Alexandraton,Indiana,75698,US,144704,Clean,Excellent,Needs Service
+892442,SX5NB2FB379KMDA6L,Audi,A4,2021,33136,West Williamland,Iowa,10496,US,25422,Excellent,Excellent,Needs Service
+652789,PTLGP1WB611LVPVUY,BMW,X1,2016,47693,West Erinchester,Delaware,42123,US,117204,Excellent,Average,Working
+277102,0ALMJX5H27MBZ5W8D,Audi,Q5,2022,28981,Kimberlyside,Alaska,92054,US,94222,Clean,Excellent,Needs Service
+989009,1N5TVYXTH1X0F1ZUP,Audi,A6,2023,34544,Smithton,Connecticut,91310,US,43375,Excellent,Average,Working
+703539,D0E39D4WLGDMB5UCH,Ford,Escape,2018,13265,Williamberg,Tennessee,17707,US,108708,Clean,Excellent,Needs Service
+768993,B6CPP6GDCPDDSWTDG,Toyota,Camry,2016,49543,Carterstad,Louisiana,53937,US,51671,Clean,Average,Needs Service
+400158,MVRHU1XVJ03Y1XH9M,Ford,Mustang,2022,25293,Carlmouth,Montana,10125,US,7977,Clean,Average,Working
+423287,X7HDU0KXDPR6DUU21,Honda,City,2018,3402,Thomasmouth,Arizona,33107,US,71050,Average,Clean,Needs Service
+578556,VJ2PLTKWKU5NPZJFR,Honda,City,2016,6454,South Lauren,Utah,11529,US,48061,Average,Clean,Needs Service
+715010,LPCSTLE0WZ4VPWSJ8,Honda,CR-V,2023,11142,Edwardsfurt,Minnesota,51011,US,8215,Average,Average,Working
+379136,JWA4V26ZGT4TZT9U1,Honda,City,2020,4763,Port Matthewstad,Iowa,3376,US,39821,Clean,Clean,Needs Service
+406171,T1KMJ18T2HG4G8XWL,Honda,Civic,2021,40074,South Courtney,Tennessee,61837,US,142783,Clean,Excellent,Working
+812067,3URR5VDUZ9LGGNRGL,Honda,CR-V,2020,27834,North Jerryton,Michigan,40004,US,37607,Average,Clean,Needs Service
+683391,KP6XMVUTYT08NMT9A,Toyota,Corolla,2022,14871,Hahnland,Oklahoma,53021,US,48663,Average,Average,Needs Service
+442890,D2HS1SS007JS0Y0CK,Ford,Escape,2024,9897,Lake Ashleyberg,New Jersey,79172,US,91075,Excellent,Average,Working
+296487,FUAKS8H2F4R2JK86G,Audi,A4,2023,29590,New Emilyshire,Arizona,39458,US,14185,Clean,Excellent,Needs Service
+671288,HZJXMESAYCDGGM3BT,BMW,X3,2022,29648,Lake Emmaview,Washington,26636,US,19051,Clean,Excellent,Needs Service
+800771,KUFZLUVHRHMFGU1BR,BMW,X5,2023,45362,East Rhondatown,Iowa,29380,US,21233,Average,Excellent,Working
+299794,SZSW478TYBDX2EBDU,Ford,Escape,2016,42158,South Dustinport,Kentucky,89923,US,97821,Average,Average,Working
+234369,R43Y6N9PJ3NYMWAAR,Toyota,Camry,2024,4089,Ricardoborough,Montana,58668,US,47097,Average,Clean,Needs Service
+118838,GFXG45V9NVV5BPN0T,Audi,Q5,2018,18108,South Markfort,Massachusetts,44965,US,100460,Excellent,Excellent,Needs Service
+932431,RTHPY5M9ZK5VR0ML2,Audi,A4,2021,5573,Nancyberg,California,61025,US,69228,Average,Average,Working
+684957,7XCNAZYLFUMLUN6JN,Audi,A4,2019,32366,Lake Garrett,California,90014,US,60950,Average,Clean,Needs Service
+452478,PUJGVRGYCW3G7YEBA,Audi,A4,2023,12202,South Amyport,Oklahoma,30916,US,124187,Average,Excellent,Working
+774694,LKY0MKHF98TAXSRMV,BMW,X1,2021,4851,Davidton,Michigan,18917,US,96708,Clean,Average,Working
+874853,GCH4L3204KB8A9C6S,Honda,Civic,2016,4402,Levineville,Idaho,81023,US,29550,Clean,Clean,Needs Service
+427024,T60MSMPEC5CVRW479,BMW,X1,2022,34998,North Jennifer,Ohio,99625,US,64367,Clean,Clean,Needs Service
+871185,1N5TVHA5UMKUVYA7Z,Audi,Q5,2019,33319,Mitchellbury,North Dakota,75927,US,87690,Clean,Clean,Working
+277091,1W8506CG9U1JLF7KJ,BMW,X3,2018,41423,West Jasonton,Iowa,5399,US,68470,Excellent,Average,Working
+637803,LN5Y0FY144JKWE0XK,Honda,Civic,2017,26568,Ericaport,South Dakota,8668,US,11249,Clean,Excellent,Working
+463221,KKY6K0GUFKLYEJU9U,Honda,Civic,2018,21986,North Angela,Utah,39229,US,11139,Average,Excellent,Needs Service
+399937,8KFCZC6DWZ1D38WNH,Audi,A6,2024,5233,Port Michael,North Dakota,77334,US,109940,Average,Clean,Working
+343140,4ZAYSDZYJFLL7Z4Y9,BMW,X1,2019,46343,Lake Jessebury,Oklahoma,91124,US,58096,Excellent,Average,Working
+432115,C0ML3FB3LF5Z4JAPE,Ford,Mustang,2016,25565,Bryantstad,Virginia,72160,US,84657,Clean,Average,Working
+757820,TEZ9ZWPKL7ZHLJLLP,Toyota,Camry,2018,46900,Brownborough,Michigan,76346,US,117127,Excellent,Clean,Working
+268275,K8K1DEDBHFG6TCHVZ,Honda,CR-V,2018,33649,Kathrynmouth,West Virginia,61286,US,140829,Excellent,Average,Working
+601829,TRSEH4ERCX80KU7UZ,Ford,Escape,2017,30716,Jamesport,Alabama,42162,US,105614,Excellent,Clean,Needs Service
+925323,FD13VN1PW1N9HE3PA,Ford,Mustang,2022,29587,South Tamara,Ohio,62439,US,41220,Average,Average,Needs Service
+106258,A0WGW4L07T3XW0E15,Audi,Q5,2016,10485,West Faithport,Arizona,96557,US,77514,Excellent,Clean,Needs Service
+837605,9RV9ZZYGH07RXJKF6,Honda,Civic,2022,5963,South Erinbury,Illinois,37455,US,3133,Clean,Excellent,Working
+405887,ZYWYR6RE1G1E0A9BM,Ford,Escape,2016,22350,South Juanton,Michigan,71036,US,115592,Clean,Average,Needs Service
+189690,KK326M9K1JRYXRNBC,Honda,Civic,2015,14313,Ortizshire,South Carolina,36500,US,38380,Clean,Excellent,Needs Service
+552266,LM9D0YP0Z1XAM34G3,Audi,A4,2020,33132,Lake Amy,Ohio,84646,US,51258,Clean,Average,Needs Service
+462525,65ULBHCZDZ8SZNY1K,Ford,Focus,2018,39923,New Gregoryport,Iowa,17685,US,107328,Average,Excellent,Working
+290111,WP7PRH1DBBFJDYNFT,Honda,City,2021,35613,Scottberg,Delaware,16833,US,49299,Clean,Average,Working
+343979,J50EZRX6GPHVADLGC,BMW,X1,2017,35440,Lake Sandra,South Carolina,18662,US,112443,Clean,Average,Needs Service
+773710,UHAFA2P3EXM61R6US,Honda,City,2019,10413,New Angela,Kentucky,35169,US,12723,Excellent,Average,Needs Service
+966526,BWRZPXFU64CEPALHJ,Audi,A4,2015,34089,Jenniferbury,Montana,50508,US,70856,Clean,Clean,Working
+328762,N34DDS7Z399N3G47B,Honda,Civic,2019,10030,East Stephenview,North Carolina,74263,US,149777,Clean,Clean,Working
+956052,1UWHBARYUPKWTHHML,Toyota,Corolla,2023,9361,Mathiston,New Hampshire,61202,US,76476,Excellent,Clean,Needs Service
+351090,RV4MM2L0E6SEXJMRS,Toyota,RAV4,2024,10651,North Mark,Louisiana,19288,US,117950,Clean,Average,Needs Service
+205111,YWP66S6PDW3NCYDVW,Audi,A4,2016,27221,Hensleyport,Utah,53044,US,130478,Average,Average,Working
+802100,H1J3GRA00HFPKYJNT,BMW,X1,2016,25664,Davidtown,Illinois,88493,US,5848,Average,Excellent,Working
+528563,RPYNGDB5VDUXV4CN6,Audi,A4,2017,33485,North Johnstad,Florida,97552,US,116336,Excellent,Average,Needs Service
+159761,WC6AJ2CYPWN24VH9C,Toyota,Camry,2015,49516,Lake William,Colorado,8442,US,18946,Clean,Average,Working
+225272,WCXTDN5WD2LANCY0Z,Audi,A6,2019,26969,West Amytown,Arizona,31913,US,6585,Excellent,Average,Needs Service
+597302,V7JYXERT8FTNNLBLW,Honda,Civic,2021,13046,East Nicole,Texas,33165,US,17493,Excellent,Excellent,Working
+693316,FX8ENPRMGFL7G5HK8,Ford,Focus,2023,19943,New Gregoryberg,Alaska,10760,US,71453,Excellent,Clean,Working
+399672,6ED3KPEUWCRE5TAYS,Toyota,Camry,2015,25811,North Alexa,Montana,18159,US,109136,Clean,Clean,Needs Service
+139058,UCNXK91Z3KTA1ATAW,Toyota,RAV4,2016,11324,Francesville,Ohio,25120,US,98057,Average,Average,Working
+371454,V4Z0L3KT5MSURXL91,Toyota,RAV4,2015,31245,North Brittany,Nebraska,86147,US,50608,Excellent,Excellent,Needs Service
+779281,L123WS1XP6BN4U0YH,Honda,CR-V,2016,39425,Harristown,Maine,24169,US,24115,Excellent,Excellent,Working
+921610,85Y6CNEZ4RP0GGUFV,BMW,X5,2017,48661,Williamview,New Mexico,95625,US,72314,Excellent,Clean,Working
+207690,A6DG8AZ7DVHTBU63S,Audi,Q5,2021,41526,East Nathaniel,Hawaii,16129,US,140144,Average,Average,Working
+706789,1ZETLZN1A6DJVWDCB,BMW,X1,2017,26859,Normahaven,Louisiana,9041,US,7506,Average,Excellent,Needs Service
+404871,XSFGCJ3TF0CDLVB15,Audi,A6,2022,32569,Sophialand,North Carolina,41372,US,144274,Average,Average,Working
+114855,F6CNZK2JNVTKLVFDA,Ford,Escape,2024,23474,Martinezchester,Oregon,10043,US,20719,Clean,Clean,Needs Service
+405677,NYXZYPKE00FB37VE0,Audi,Q5,2024,5987,Fosterport,Oklahoma,28740,US,27594,Clean,Clean,Needs Service
+314173,BCAPVVF2CLYU5VGXT,Toyota,Camry,2019,9907,Lake Diane,New Hampshire,95833,US,53141,Excellent,Clean,Needs Service
+506668,C5VELW0TRAXB7UZLS,BMW,X3,2021,7648,New Noah,Pennsylvania,35819,US,65510,Average,Average,Needs Service
+428610,LEKT17ZVJLUAXJM2D,Honda,CR-V,2018,39131,Marystad,Montana,48048,US,43254,Clean,Excellent,Working
+207731,EFHTK10TD9LNKRZS9,BMW,X5,2024,39880,Jamesbury,Louisiana,72013,US,103412,Average,Average,Needs Service
+814699,BSUL4X1MVJT7DFP57,Toyota,Camry,2023,19047,North Jeffery,Georgia,47126,US,2280,Excellent,Clean,Working
+424517,W002B1FPWWZSZ5CZX,BMW,X3,2021,39683,South Joseph,Missouri,47429,US,29510,Excellent,Clean,Needs Service
+314627,GK7R8XFE8PF12ABPX,Honda,City,2023,4750,North Eric,Vermont,80596,US,100790,Excellent,Clean,Needs Service
+762745,265LFK0YJJGPEBJS1,Toyota,Camry,2024,38459,South Henry,North Carolina,98430,US,147316,Excellent,Excellent,Needs Service
+661191,FW5L9XMCMVY99Z0FT,Toyota,Camry,2017,7162,East Jorge,Connecticut,49330,US,140751,Excellent,Clean,Working
+619579,ET35U95D8X2DTC8EE,Ford,Focus,2017,21918,North Megan,Indiana,70142,US,23192,Clean,Clean,Working
+542398,79G9ZUTYT8AD6B68S,Toyota,Corolla,2016,6324,Josephchester,Arkansas,7376,US,31102,Clean,Average,Working
+453338,VVN5WRM2WDGY2S37X,Ford,Focus,2023,10450,Port Daniel,Oklahoma,69827,US,43393,Average,Average,Working
+170383,2DPHVDKFF8B2RGBH3,Toyota,Corolla,2016,32149,Patrickport,New Hampshire,54930,US,3893,Clean,Clean,Working
+646260,E72R6C34EF95LLBAL,Toyota,Camry,2024,12644,Victorbury,North Carolina,31679,US,39021,Excellent,Excellent,Needs Service
+244384,C5GMR2W6ZS2L0AHJ1,Honda,City,2023,25793,Lisaberg,Wisconsin,83841,US,5521,Clean,Excellent,Needs Service
+792196,M0ZZ8DSR6HKFG1U44,Honda,Civic,2016,18111,Port Diana,Washington,79162,US,119197,Average,Average,Working
+548951,5G6JLNH9EB3SUVWVS,BMW,X5,2021,27355,Morrischester,Delaware,6399,US,95051,Clean,Excellent,Needs Service
+336620,8CBTPPY6WRUMKBG0U,Audi,Q5,2019,42251,Martinezmouth,South Carolina,40640,US,94563,Average,Average,Needs Service
+877691,DGLCSN5J54VETZULG,Honda,CR-V,2024,47669,Port Nicholemouth,Hawaii,31517,US,14260,Average,Excellent,Working
+922988,24GJ0PECU8CZ2HCY1,Ford,Focus,2023,29492,Sherrystad,Kansas,1051,US,64026,Clean,Average,Needs Service
+666263,7FZEET73KYDLJBTCN,Toyota,Camry,2017,25690,Butlerview,Michigan,93372,US,33617,Average,Average,Working
+805299,HE0YUAJRECU4U8YDV,BMW,X1,2018,14703,Joseburgh,Alabama,50017,US,52477,Excellent,Average,Needs Service
+777116,C0PNTWDLHFDU4U431,Honda,CR-V,2024,46602,East Brandonburgh,Louisiana,84499,US,60205,Average,Excellent,Working
+745027,G1XC9RJN003CBACSH,Honda,CR-V,2020,23960,Rodriguezton,South Carolina,9446,US,9616,Clean,Average,Needs Service
+426721,DEF2GZLWCL2URNHNU,Audi,A4,2020,14292,Andrewbury,Nebraska,23664,US,64479,Clean,Clean,Working
+341616,2A5HR2ZPSEV7PMF3N,Ford,Mustang,2020,5169,Port Brittanyborough,Ohio,4641,US,148958,Excellent,Average,Working
+827551,37BGD6JFVFAN7YHKF,BMW,X5,2016,11316,Whiteberg,Mississippi,72823,US,94850,Average,Clean,Working
+980848,9J6TZVF3R25Y45W7T,Honda,CR-V,2020,19591,Davistown,Mississippi,37094,US,25899,Clean,Clean,Working
+233390,T2F1PEJE0JZ31B2U5,Ford,Mustang,2019,18228,Port Ana,North Dakota,67340,US,34501,Excellent,Clean,Needs Service
+481215,N7JUYE0H4C370512P,BMW,X5,2015,10328,South Emmamouth,Alabama,40638,US,65567,Excellent,Clean,Working
+742157,E7302HCWR44BF0121,BMW,X3,2016,19306,West Mark,Mississippi,67239,US,39000,Average,Clean,Needs Service
+996081,KMY901E60Y11TN2CL,Audi,A4,2024,38965,Nicholashaven,Rhode Island,82463,US,134226,Clean,Clean,Needs Service
+322396,80T3TLBUA6MPD58HC,Honda,Civic,2016,3736,Lake Corey,Missouri,39323,US,52657,Clean,Clean,Needs Service
+560819,LGT94F7L4H6RGXY64,Honda,Civic,2023,32960,Lake Marieside,Mississippi,9367,US,181,Excellent,Average,Working
+722349,0KY8GWNSSPUT1390D,Toyota,Corolla,2015,35875,Carterside,Florida,20284,US,50813,Average,Average,Needs Service
+870815,YDRG8J0G0DETDKE02,Toyota,Corolla,2024,11924,Brownfurt,Kentucky,76159,US,131507,Average,Average,Needs Service
+345134,B7JD1SSK5FU2VV238,BMW,X5,2020,6042,East Shelly,California,41890,US,17107,Excellent,Clean,Needs Service
+790341,E0A2VZ8CKGKK9PCWB,Honda,City,2019,44160,Payneland,Kansas,72803,US,81988,Average,Excellent,Working
+342109,T7ZYVEG2F3ZU1771J,Honda,Civic,2015,30328,West Richardhaven,Arkansas,70304,US,129630,Average,Clean,Working
+121651,ECHUZS9W5K0UG23MM,BMW,X3,2019,37406,South Rebecca,Montana,556,US,94749,Average,Clean,Working
+679997,M4NCZTBFW4KNLMZRZ,Audi,A6,2019,27007,East Russell,Illinois,67291,US,12932,Average,Average,Working
+943714,X6WJVYPMXRVD15UV4,BMW,X5,2016,36102,Clarkberg,Michigan,36587,US,82963,Clean,Clean,Working
+903217,M5RJZJX4SZA9J4FJG,Ford,Focus,2018,22888,Jennifermouth,Indiana,13906,US,121000,Average,Excellent,Needs Service
+468915,Y4AAYMA71B8TA91ZZ,Honda,City,2018,32817,Martinezhaven,Maryland,50560,US,47586,Average,Clean,Working
+509240,5H6R905C03V5H9S4L,Toyota,Corolla,2024,8349,Stoneton,North Carolina,85276,US,79919,Excellent,Clean,Working
+610689,1JT44V9U0RJUPE50Y,Honda,Civic,2022,12177,Lake Mitchell,North Dakota,20701,US,49967,Average,Excellent,Working
+129625,GBBMYC8EUYSNL6MP3,BMW,X5,2017,4659,New Richardfurt,Alaska,13801,US,23033,Excellent,Average,Working
+836736,4A2P020FFB290YP8K,Ford,Escape,2023,26213,Butlermouth,Connecticut,34335,US,144559,Average,Clean,Needs Service
+513665,4ZKXLW4R8VB9LT714,Audi,A6,2017,36750,South Pamela,Pennsylvania,20611,US,94803,Excellent,Average,Working
+549199,XGH9RGHFGS25RD1EL,Toyota,Camry,2020,35064,East Sherryshire,Montana,38895,US,89479,Average,Clean,Working
+689943,7053SJ724KCESWURC,Toyota,Camry,2019,17115,South Christychester,Nebraska,93082,US,31394,Excellent,Excellent,Working
+415608,57WYNR9W6UC8W3U4B,Ford,Focus,2016,45934,South Adamstad,Nevada,57839,US,89374,Average,Average,Working
+757606,PW71N8T51YXWH0114,Audi,A4,2023,35688,New Johnbury,Nebraska,18238,US,5212,Clean,Excellent,Working
+326752,HX1R5HDSF4M3T8NWD,Honda,CR-V,2024,45912,Willisfurt,Wyoming,35491,US,100850,Average,Average,Working
+718149,47K0MHZ2L6VWYYT4U,BMW,X1,2021,23135,Jacksonmouth,Nevada,9993,US,15247,Average,Average,Needs Service
+604789,SELYXTURJS0X8H7VD,Ford,Focus,2017,35545,South Henryborough,Georgia,19186,US,124527,Average,Clean,Needs Service
+749721,ZPH98TJR89JBFF92L,Ford,Escape,2017,14788,Port Phillip,South Carolina,26284,US,135143,Clean,Clean,Working
