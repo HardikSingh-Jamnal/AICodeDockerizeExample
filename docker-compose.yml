@@ -36,7 +36,7 @@ services:
       - "5006:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Host=purchase-db;Database=purchase_db;Username=user;Password=password
+      - ConnectionStrings__DefaultConnection=Host=purchase-db;Database=purchase_db;Username=user;Password=${PURCHASE_DB_PASSWORD}
       - ConnectionStrings__Redis=purchase-cache
       - MessageBroker__Host=rabbitmq
       - MessageBroker__Port=5672
@@ -62,7 +62,7 @@ services:
       - "5004:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Host=transport-db;Database=transport_db;Username=user;Password=password
+      - ConnectionStrings__DefaultConnection=Host=transport-db;Database=transport_db;Username=user;Password=${TRANSPORT_DB_PASSWORD}
       - ConnectionStrings__Redis=transport-cache
       - MessageBroker__Host=rabbitmq
       - MessageBroker__Port=5672
@@ -88,7 +88,7 @@ services:
       - "5005:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Host=offers-db;Database=offers_db;Username=user;Password=password
+      - ConnectionStrings__DefaultConnection=Host=offers-db;Database=offers_db;Username=user;Password=${OFFERS_DB_PASSWORD}
       - ConnectionStrings__Redis=offers-cache
       - MessageBroker__Host=rabbitmq
       - MessageBroker__Port=5672
@@ -205,8 +205,8 @@ services:
   rabbitmq:
     image: rabbitmq:3-management
     environment:
-      - RABBITMQ_DEFAULT_USER=admin
-      - RABBITMQ_DEFAULT_PASS=password
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
     ports:
       - "5672:5672" # AMQP protocol
       - "15672:15672" # Management UI
@@ -257,6 +257,38 @@ services:
       timeout: 10s
       retries: 5
 
+  # Frontend Service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_SEARCH_API=http://localhost:5007
+      - NEXT_PUBLIC_OFFERS_API=http://localhost:5005
+      - NEXT_PUBLIC_PURCHASE_API=http://localhost:5006
+      - NEXT_PUBLIC_TRANSPORT_API=http://localhost:5004
+    depends_on:
+      - search-api
+      - purchase-api
+      - transport-api
+      - offers-api
+    networks:
+      - frontend-network
+      - backend-network
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "require('http').get('http://localhost:3000', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) }).on('error', () => { process.exit(1) })",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
 volumes:
   purchase-db-data:
   offers-db-data:
@@ -264,5 +296,7 @@ volumes:
   elasticsearch-data:
 
 networks:
+  frontend-network:
+    driver: bridge
   backend-network:
     driver: bridge
