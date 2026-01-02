@@ -30,8 +30,8 @@ services:
 
   transport-api:
     build:
-      context: ./backend
-      dockerfile: ./Transport/Dockerfile
+      context: ./backend/Transport
+      dockerfile: Dockerfile
     ports:
       - "5004:8080"
     environment:
